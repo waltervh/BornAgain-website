@@ -1,4 +1,4 @@
-baseURL = "https://jmf1sh.github.io/hugo-from-scratch/"
+baseURL = "https://scgmlz.github.io/scgdoc-hugo/"
 theme = "zafta"
 languageCode = "en-us"
 title = "My New Hugo Site"
