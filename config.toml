@@ -1,0 +1,5 @@
+baseURL = "https://jmf1sh.github.io/hugo-from-scratch/"
+theme = "zafta"
+languageCode = "en-us"
+title = "My New Hugo Site"
+MetaDataFormat = "toml"
