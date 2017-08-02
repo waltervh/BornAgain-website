@@ -3,3 +3,14 @@ theme = "scgclean"
 languageCode = "en-us"
 title = "My New Hugo Site"
 MetaDataFormat = "toml"
+
+[[menu.main]]
+  name = "home"
+  url = "/"
+  weight = -200
+
+[[menu.main]]
+  name = "Documentation"
+  url = "/documentation/"
+  weight = -180
+
