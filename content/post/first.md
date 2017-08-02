@@ -5,7 +5,7 @@ draft = false
 +++
 
 
-my first post
+my first post 1.1
 
 https://themes.gohugo.io/theme/greyshade/post/creating-a-new-theme/
 
