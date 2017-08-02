@@ -5,12 +5,23 @@ title = "My New Hugo Site"
 MetaDataFormat = "toml"
 
 [[menu.main]]
-  name = "home"
+  name = "Home"
   url = "/"
   weight = -200
+
+[[menu.main]]
+  name = "News"
+  url = "/posts/"
+  weight = -190
 
 [[menu.main]]
   name = "Documentation"
   url = "/documentation/"
   weight = -180
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = -170
+
 
