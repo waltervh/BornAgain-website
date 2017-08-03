@@ -2,6 +2,11 @@
 
 XXX: scgclean/layouts/index.html
 
+{{ define "main_body" }}
+{{ .Content }}
+{{ end }}
 {{ partial "body.html" .}}
+
+
 {{ partial "footer.html" .}}
 

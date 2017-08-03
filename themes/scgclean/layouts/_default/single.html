@@ -2,6 +2,10 @@
 
 DEBUG > scgclean/layouts/_default/single.html
 
-{{ partial "body.html" . }}
+{{ define "main_body" }}
+{{ .Content }}
+{{ end }}
+{{ partial "body.html" .}}
+
 
 {{ partial "footer.html" . }}
