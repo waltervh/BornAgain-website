@@ -15,13 +15,27 @@
      </div>
     </header>
 
-        XXX: scgclean/layouts/index.html
+        XXX: "scgclean/layouts/_default/news.html"
 
     <!-- Main Content -->
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           {{ .Content }}
+<!--           {{ $posts := or .Site.Params.PostSummariesFrontPage 4 }}
+          {{ range first $posts (where .Data.Pages "Type" "post") }}
+              {{ .Render "summary"}}
+          {{ end }}
+ -->      {{ range (where .Site.Pages "Section" "post") }} 
+              {{ .Render "summary"}}
+          {{ end }}
+
+          <!-- Pager -->
+          <ul class="pager">
+            <li class="next">
+              <a href="{{ .Site.BaseURL }}/post/">Older Posts &rarr;</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

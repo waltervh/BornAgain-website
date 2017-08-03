@@ -4,6 +4,16 @@ languageCode = "en-us"
 title = "My New Hugo Site"
 MetaDataFormat = "toml"
 
+[params]
+  DateForm = "Mon, Jan 2, 2006"
+  Description = "Your site description"
+  Author = "James Bond"
+  email = "james.bond@gmail.com"
+
+[[params.social]]
+    title = "github"
+    url = "https://github.com/gamesbond"
+
 [[menu.main]]
   name = "Home"
   url = "/"
@@ -11,7 +21,7 @@ MetaDataFormat = "toml"
 
 [[menu.main]]
   name = "News"
-  url = "/posts/"
+  url = "/news/"
   weight = -190
 
 [[menu.main]]

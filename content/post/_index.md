@@ -1,6 +1,5 @@
 +++
-title = "Posts"
-draft = false
+title = "Page with posts"
 +++
 
-hello and welcome to the posts section!
+This is content/post/_index.md file. Nothing is here.
