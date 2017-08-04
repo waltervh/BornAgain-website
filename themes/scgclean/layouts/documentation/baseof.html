@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+            {{ block "main_body" . }}
+                <h5> DEBUG: scgclean/layouts/documentation/baseof.html </h5>
+            {{ end }}
+
+        </div>
+      </div>
+    </div>
+
+
+{{ partial "footer.html" . }}
