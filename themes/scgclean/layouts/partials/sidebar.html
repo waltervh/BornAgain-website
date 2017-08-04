@@ -1,0 +1,14 @@
+<h6> This is a menu </h6>
+
+<ul>
+  {{ range .Site.Sections }}
+  <li> {{ .Title }}
+    <ul>
+      {{ range .Data.Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+
+    </ul>
+  </li>
+  {{ end }}
+</ul>
