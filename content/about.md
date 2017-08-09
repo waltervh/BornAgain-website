@@ -27,4 +27,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recus
 http://xvelopers.com/html/knowledge/Demo2/single.html
 https://electron.atom.io/
 
+Abstract backgrounds
+http://www.freepik.com/index.php?goto=2&searchform=1&k=abstract
 
