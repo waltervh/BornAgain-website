@@ -1,6 +1,10 @@
 +++
-title = "Tutorial #1"
+title = "General markdown"
 weight = 10
 +++
 
-This is content/documentation/Tutorials/tutorial1.md file.
+Tutorial demonstrates basic markdown usage.
+
+* sections
+* links
+* lists
