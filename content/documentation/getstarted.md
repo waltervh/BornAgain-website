@@ -1,6 +1,6 @@
 +++
 title = "Get started"
-weight = 10
+weight = 20
 +++
 
 This is content/documentation/getstarted.md file.

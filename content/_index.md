@@ -1,5 +1,5 @@
 +++
-title = "Home Page"
+title = "Home"
 Description = "No description"
 +++
 

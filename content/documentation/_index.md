@@ -1,5 +1,5 @@
 +++
-title = "Documentation index"
+title = "Documentation"
 weight = 10
 +++
 

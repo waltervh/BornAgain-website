@@ -1,27 +1,16 @@
-<h6> This is a menu </h6>
-
 {{ $currentNode := . }}
 {{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
 
-{{range .Site.Home.Sections.ByTitle}}
-{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
+{{range .Site.Sections.ByWeight.Reverse}}
+	{{ if eq .Type  "documentation" }}
+    {{.Title }}
+		{{ if ne .Title "Documentation" }}
+		{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
+	{{ end }}
+	{{ end }}
 {{end}}
 
 
-<!-- <ul>
-  {{ range .Site.Sections }}
-  <li> {{ .Title }}
-    <ul>
-      {{ range .Data.Pages }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-      {{ end }}
-
-    </ul>
-  </li>
-  {{ end }}
-</ul> 
- -->
- 
 <!-- templates -->
 {{ define "section-tree-nav" }}
 {{ $showvisitedlinks := .showvisitedlinks }}

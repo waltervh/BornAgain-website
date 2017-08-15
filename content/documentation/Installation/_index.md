@@ -1,6 +1,6 @@
 +++
-title = "Installation index"
-weight = 10
+title = "Installation"
+weight = 30
 +++
 
 This is content/documentation/Instasllation/_index.md file.
