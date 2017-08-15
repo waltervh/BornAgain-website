@@ -1,12 +1,10 @@
+
 {{ $currentNode := . }}
 {{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
 
 {{range .Site.Sections.ByWeight.Reverse}}
 	{{ if eq .Type  "documentation" }}
-    {{.Title }}
-		{{ if ne .Title "Documentation" }}
 		{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
-	{{ end }}
 	{{ end }}
 {{end}}
 
