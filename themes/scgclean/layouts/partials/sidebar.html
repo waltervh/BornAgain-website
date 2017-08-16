@@ -37,7 +37,7 @@
         {{if .Params.alwaysopen}}parent{{end}}
         ">
 
-      <i class="fa-li fa fa-fw {{$liIcon}} "></i>
+      <i class="fa-li fa fa-fw {{$liIcon}} doctree-icon"></i>
 
 
       <a href="{{ .RelPermalink}}">
@@ -83,7 +83,7 @@
   {{ else }}
     {{ if not .Params.Hidden }}
       <li data-nav-id="{{.URL}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
-        <i class="fa-li fa fa-circle-o"></i>
+        <i class="fa-li fa fa-caret-right doctree-icon"></i>
         <a href="{{ .RelPermalink }}">
         <span>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</span> 
         {{ if $showvisitedlinks }}<i style="color:grey" class="fa fa-circle-thin read-icon"></i>{{ end }}

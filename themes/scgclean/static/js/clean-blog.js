@@ -1039,8 +1039,8 @@ jQuery(document).ready(function($) {
 // });
 
 
-$('.category-icon').click(function () {
-  $( this ).toggleClass("fa-angle-down fa-angle-right") ;
+$('.doctree-icon').click(function () {
+  $( this ).toggleClass("fa-minus-square-o fa-plus-square-o") ;
   // $( this ).parent().parent().children('ul').toggle() ;
 });
 
