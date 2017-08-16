@@ -4,7 +4,7 @@
 
 {{range .Site.Sections.ByWeight.Reverse}}
   {{ if eq .Type  "documentation" }}
-    <ul class="doctree fa-ul">
+    <ul class="doctree">
       {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
     </ul>
   {{ end }}
@@ -31,14 +31,30 @@
     {{ end }}
     {{ $liIcon := (.Scratch.Get "li_icon") }}
 
+
+    {{ .Scratch.Set "li_class" "liSingle" }}
+    {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
+    {{ if ne $numberOfPages 0 }}
+      {{ if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
+        {{ .Scratch.Set "li_class" "liOpened" }}
+      {{ else }}
+        {{ .Scratch.Set "li_class" "liClosed" }}
+      {{ end }}
+    {{ end }}
+    {{ $liClass := (.Scratch.Get "li_class") }}
+
+
+
+
     <li data-nav-id="{{.URL}}" class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
         {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}
         {{if .Params.alwaysopen}}parent{{end}}
+        {{ $liClass }}
         ">
 
-      <i class="fa-li fa fa-fw {{$liIcon}} doctree-icon"></i>
-
+<!--       <i class="fa-li fa fa-fw {{$liIcon}} doctree-icon"></i>
+ -->
 
       <a href="{{ .RelPermalink}}">
         <span>{{ safeHTML .Params.Pre }}{{ .Title }}{{ safeHTML .Params.Post }}</span>
@@ -54,7 +70,7 @@
  -->
       </a>
       {{ if ne $numberOfPages 0 }}
-        <ul class="fa-ul">
+        <ul>
           {{ .Scratch.Set "pages" .Pages }}
           {{ if .Sections}}
             {{ .Scratch.Set "pages" (.Pages | union .Sections) }}
@@ -82,11 +98,10 @@
 
   {{ else }}
     {{ if not .Params.Hidden }}
-      <li data-nav-id="{{.URL}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
-        <i class="fa-li fa fa-caret-right doctree-icon"></i>
-        <a href="{{ .RelPermalink }}">
+      <li data-nav-id="{{.URL}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}} liSingle">
+<!--         <i class="fa-li fa fa-caret-right doctree-icon"></i>
+ -->        <a href="{{ .RelPermalink }}">
         <span>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</span> 
-        {{ if $showvisitedlinks }}<i style="color:grey" class="fa fa-circle-thin read-icon"></i>{{ end }}
         </a></li>
      {{ end }}
   {{ end }}

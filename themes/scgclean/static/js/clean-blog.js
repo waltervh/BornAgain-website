@@ -1039,9 +1039,14 @@ jQuery(document).ready(function($) {
 // });
 
 
-$('.doctree-icon').click(function () {
-  $( this ).toggleClass("fa-minus-square-o fa-plus-square-o") ;
-  // $( this ).parent().parent().children('ul').toggle() ;
+// $('.doctree-icon').click(function () {
+//   $( this ).toggleClass("fa-minus-square-o fa-plus-square-o") ;
+//   // $( this ).parent().parent().children('ul').toggle() ;
+// });
+
+$('.dd-item').click(function () {
+  $( this ).toggleClass("liOpened liClosed") ;
+  // $( this ).parent().children('ul').toggle() ;
 });
 
 
