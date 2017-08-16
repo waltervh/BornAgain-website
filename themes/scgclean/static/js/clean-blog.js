@@ -1031,3 +1031,24 @@ jQuery(document).ready(function($) {
             });
     }
 });
+
+// Collapse/extend documentation tree
+
+// $('.tree-toggle').click(function () {
+//   $(this).parent().children('ul.tree').toggle(200);
+// });
+
+
+$('.category-icon').click(function () {
+  $( this ).toggleClass("fa-angle-down fa-angle-right") ;
+  // $( this ).parent().parent().children('ul').toggle() ;
+});
+
+
+$('#sidebar').affix({
+      offset: {
+        top: 230,
+        bottom: 100
+      }
+}); 
+
