@@ -1044,9 +1044,13 @@ jQuery(document).ready(function($) {
 //   // $( this ).parent().parent().children('ul').toggle() ;
 // });
 
-$('.dd-item').click(function () {
+function l() { console.log(arguments); }
+
+$('li.dd-item').click(function () {
+  // l('L', this, event);
   $( this ).toggleClass("liOpened liClosed") ;
-  // $( this ).parent().children('ul').toggle() ;
+  $( this ).children('ul').toggle() ;
+  event.stopPropagation();
 });
 
 
