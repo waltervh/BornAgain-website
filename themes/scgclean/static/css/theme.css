@@ -361,6 +361,10 @@ body {
 	webkit-tap-highlight-color: #0085a1
 }
 
+/* ------------------------------------------------------------- *
+ *  Item list for documentation menubar
+/* ------------------------------------------------------------- */
+
 ul.doctree ul {
     display: none;
 }
@@ -396,3 +400,51 @@ ul.doctree .liSingle:before {
 	content: '\25E6';
 	margin-right: .25em
 }
+
+/* ------------------------------------------------------------- *
+ *  Table of page's content
+ *  (see discussion https://github.com/gohugoio/hugo/issues/1778)
+/* ------------------------------------------------------------- */
+
+#TableOfContents > ul {
+	list-style: none;
+    padding-left: 0em
+}
+
+#TableOfContents > ul  > li {
+    list-style: none;
+}
+
+#TableOfContents > ul  > li > ul {
+    padding-left: 1.0em
+}
+
+#TableOfContents > ul  > li > ul > li > ul{
+    padding-left: 1.0em
+}
+
+
+/*#TableOfContents {
+    font-size: 13px !important;
+    max-height: 85vh;
+    overflow: auto;
+    padding: 15px !important;
+}
+
+#TableOfContents > ul > li > ul > li > ul li {
+  margin-right: 8px;
+}
+
+#TableOfContents > ul > li > a   {
+  font-weight: bold; padding: 0 18px; margin: 0 2px;
+}
+
+#TableOfContents > ul > li > ul > li > a {
+  font-weight: bold;
+}
+
+#TableOfContents > ul > li > ul > li > ul > li > ul > li > ul > li  {
+    display: none;
+}
+
+*/
