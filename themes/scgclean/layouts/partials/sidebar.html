@@ -20,25 +20,25 @@
   {{ if .IsSection }}
     {{ safeHTML .Params.head }}
 
-    {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
-    
-    {{ .Scratch.Set "li_icon" "liSingle" }}
-    {{ if ne $numberOfPages 0 }}
-      {{ if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
-        {{ .Scratch.Set "li_icon" "liOpened" }}
-      {{ else }}
-        {{ .Scratch.Set "li_icon" "liClosed" }}
-      {{ end }}
-    {{ end }}
-    {{ $liIcon := (.Scratch.Get "li_icon") }}
-
     <li data-nav-id="{{.URL}}" class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
         {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}
         {{if .Params.alwaysopen}}parent{{end}}
         ">
 
-    <i class="fa {{$liIcon}} li-item-icon"></i>
+      {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
+      {{ .Scratch.Set "li_icon" "liSingle" }}
+      
+      {{ if ne $numberOfPages 0 }}
+        {{ if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
+          {{ .Scratch.Set "li_icon" "liOpened" }}
+        {{ else }}
+          {{ .Scratch.Set "li_icon" "liClosed" }}
+        {{ end }}
+      {{ end }}
+      {{ $liIcon := (.Scratch.Get "li_icon") }}
+
+      <i class="fa {{$liIcon}} li-item-icon"></i>
 
       <a href="{{ .RelPermalink}}">
         <span>{{ safeHTML .Params.Pre }}{{ .Title }}{{ safeHTML .Params.Post }}</span>
