@@ -361,22 +361,30 @@ body {
 	webkit-tap-highlight-color: #0085a1
 }
 
-
-ul.doctree, ul.doctree ul, ul.doctree li{
+ul.doctree, ul.doctree ul, ul.doctree li {
     list-style: none;
+	padding-left: 1.0em;
+	color: #404040;
+}
+
+ul.doctree li.active, ul.doctree li.active > a {
+    color: #00a4f0 !important;
 }
 
 ul.doctree .liOpened:before {
 	cursor: pointer;
 	content: '\f147';
+	margin-right: .25em
 }
 
 ul.doctree .liClosed:before {
 	cursor: pointer;
 	content: '\f196';
+	margin-right: .25em
 }
 
 ul.doctree .liSingle:before {
 	cursor: pointer;
 	content: '\25E6';
+	margin-right: .25em
 }
