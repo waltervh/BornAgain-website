@@ -1,11 +1,10 @@
 
 {{ $currentNode := . }}
-{{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
 
 {{range .Site.Sections.ByWeight.Reverse}}
   {{ if eq .Type  "documentation" }}
     <ul class="doctree">
-      {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+      {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
     </ul>
   {{ end }}
 {{end}}
@@ -14,7 +13,6 @@
 <!-- templates -->
 {{ define "section-tree-nav" }}
 
-{{ $showvisitedlinks := .showvisitedlinks }}
 {{ $currentNode := .currentnode }}
 {{ with .sect }}
   {{ if .IsSection }}
@@ -28,7 +26,7 @@
 
       {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
       {{ .Scratch.Set "li_icon" "liSingle" }}
-      
+
       {{ if ne $numberOfPages 0 }}
         {{ if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
           {{ .Scratch.Set "li_icon" "liOpened" }}
@@ -56,14 +54,14 @@
           {{ range $pages.ByTitle }}
             {{ if and .Params.hidden (not $.showhidden) }}
             {{ else }}
-              {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+              {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
             {{ end }}
           {{ end }}
         {{ else }}
           {{ range $pages.ByWeight }}
             {{ if and .Params.hidden (not $.showhidden) }}
             {{ else }}
-            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
             {{ end }}
           {{ end }}
         {{ end }}
