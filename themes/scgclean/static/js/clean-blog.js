@@ -1044,20 +1044,11 @@ jQuery(document).ready(function($) {
 //   // $( this ).parent().parent().children('ul').toggle() ;
 // });
 
-function l() { console.log(arguments); }
 
-$('li.dd-item').click(function () {
+$('li.dd-item .before').click(function () {
   // l('L', this, event);
   $( this ).toggleClass("liOpened liClosed") ;
-  $( this ).children('ul').toggle() ;
-  event.stopPropagation();
+  return false;
+  // event.stopPropagation();
+  // $( this ).children('ul').toggle() ;
 });
-
-
-$('#sidebar').affix({
-      offset: {
-        top: 230,
-        bottom: 100
-      }
-}); 
-
