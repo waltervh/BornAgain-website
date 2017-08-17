@@ -51,12 +51,11 @@
           {{ $pages := (.Scratch.Get "pages") }}
           
           {{ range $pages.ByWeight }}
-            {{ if and .Params.hidden (not $.showhidden) }}
-            {{ else }}
+            {{ if or (not .Params.hidden) (not $.showhidden) }}
               {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
             {{ end }}
           {{ end }}
-          
+
         </ul>
       {{ end }}
     </li>
