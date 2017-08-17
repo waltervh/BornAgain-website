@@ -361,6 +361,14 @@ body {
 	webkit-tap-highlight-color: #0085a1
 }
 
+ul.doctree ul {
+    display: none;
+}
+
+ul.doctree li.parent > ul, li.active > ul {
+    display: block;
+}
+
 ul.doctree, ul.doctree ul, ul.doctree li {
     list-style: none;
 	padding-left: 1.0em;
