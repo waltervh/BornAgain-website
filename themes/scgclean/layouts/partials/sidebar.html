@@ -20,18 +20,6 @@
   {{ if .IsSection }}
     {{ safeHTML .Params.head }}
 
-    {{ .Scratch.Set "li_icon" "circle-o" }}
-    {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
-    {{ if ne $numberOfPages 0 }}
-      {{ if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
-        {{ .Scratch.Set "li_icon" "fa-minus-square-o" }}
-      {{ else }}
-        {{ .Scratch.Set "li_icon" "fa-plus-square-o" }}
-      {{ end }}
-    {{ end }}
-    {{ $liIcon := (.Scratch.Get "li_icon") }}
-
-
     {{ .Scratch.Set "li_class" "liSingle" }}
     {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
     {{ if ne $numberOfPages 0 }}
@@ -43,9 +31,6 @@
     {{ end }}
     {{ $liClass := (.Scratch.Get "li_class") }}
 
-
-
-
     <li data-nav-id="{{.URL}}" class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
         {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}
@@ -53,22 +38,10 @@
         {{ $liClass }}
         ">
 
-<!--       <i class="fa-li fa fa-fw {{$liIcon}} doctree-icon"></i>
- -->
-
       <a href="{{ .RelPermalink}}">
         <span>{{ safeHTML .Params.Pre }}{{ .Title }}{{ safeHTML .Params.Post }}</span>
-
-
-<!--         {{ if ne $numberOfPages 0 }}
-          {{ if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
-          {{ else }}
-            <i class="fa fa-angle-right fa-lg category-icon"></i>
-          {{ end }}
-        {{ end }}
- -->
       </a>
+
       {{ if ne $numberOfPages 0 }}
         <ul>
           {{ .Scratch.Set "pages" .Pages }}
