@@ -20,23 +20,25 @@
   {{ if .IsSection }}
     {{ safeHTML .Params.head }}
 
-    {{ .Scratch.Set "li_class" "liSingle" }}
     {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
+    
+    {{ .Scratch.Set "li_icon" "liSingle" }}
     {{ if ne $numberOfPages 0 }}
       {{ if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
-        {{ .Scratch.Set "li_class" "liOpened" }}
+        {{ .Scratch.Set "li_icon" "liOpened" }}
       {{ else }}
-        {{ .Scratch.Set "li_class" "liClosed" }}
+        {{ .Scratch.Set "li_icon" "liClosed" }}
       {{ end }}
     {{ end }}
-    {{ $liClass := (.Scratch.Get "li_class") }}
+    {{ $liIcon := (.Scratch.Get "li_icon") }}
 
     <li data-nav-id="{{.URL}}" class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
         {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}
         {{if .Params.alwaysopen}}parent{{end}}
-        {{ $liClass }}
         ">
+
+    <i class="fa {{$liIcon}} li-item-icon"></i>
 
       <a href="{{ .RelPermalink}}">
         <span>{{ safeHTML .Params.Pre }}{{ .Title }}{{ safeHTML .Params.Post }}</span>
@@ -71,9 +73,9 @@
 
   {{ else }}
     {{ if not .Params.Hidden }}
-      <li data-nav-id="{{.URL}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}} liSingle">
-<!--         <i class="fa-li fa fa-caret-right doctree-icon"></i>
- -->        <a href="{{ .RelPermalink }}">
+      <li data-nav-id="{{.URL}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
+        <i class="fa liSingle li-item-icon"></i>
+        <a href="{{ .RelPermalink }}">
         <span>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</span> 
         </a></li>
      {{ end }}

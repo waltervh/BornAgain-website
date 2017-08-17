@@ -366,20 +366,17 @@ ul.doctree, ul.doctree ul, ul.doctree li{
     list-style: none;
 }
 
-ul.doctree li.liOpened:before {
+ul.doctree .liOpened:before {
 	cursor: pointer;
-	font-family: 'FontAwesome';
 	content: '\f147';
-	margin: 0 5px 0 -15px;
 }
-ul.doctree li.liClosed:before {
+
+ul.doctree .liClosed:before {
 	cursor: pointer;
-	font-family: 'FontAwesome';
 	content: '\f196';
-	margin: 0 5px 0 -15px;
 }
-ul.doctree li.liSingle:before {
+
+ul.doctree .liSingle:before {
 	cursor: pointer;
 	content: '\25E6';
-	margin: 0 5px 0 -15px;
 }

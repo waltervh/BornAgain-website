@@ -1034,21 +1034,8 @@ jQuery(document).ready(function($) {
 
 // Collapse/extend documentation tree
 
-// $('.tree-toggle').click(function () {
-//   $(this).parent().children('ul.tree').toggle(200);
-// });
-
-
-// $('.doctree-icon').click(function () {
-//   $( this ).toggleClass("fa-minus-square-o fa-plus-square-o") ;
-//   // $( this ).parent().parent().children('ul').toggle() ;
-// });
-
-
-$('li.dd-item .before').click(function () {
-  // l('L', this, event);
+$('.li-item-icon').click(function () {
   $( this ).toggleClass("liOpened liClosed") ;
+  $( this ).parent().children('ul').toggle() ;
   return false;
-  // event.stopPropagation();
-  // $( this ).children('ul').toggle() ;
 });
