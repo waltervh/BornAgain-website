@@ -1,39 +1,36 @@
-{{ partial "header.html" . }}
+{{ partial "header_doc.html" . }}
 
+<div class="breadcrumb">
+  <div class="container">
+    {{ template "breadcrumb" dict "page" . "value" .Title }}   
+  </div>
+</div>
 
-    <div class="breadcrumb">
-    <div class="container">
-                {{ template "breadcrumb" dict "page" . "value" .Title }}   
-    </div>
-    </div>
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-            {{ block "main_body" . }}
-                <h5> DEBUG: scgclean/layouts/documentation/baseof.html </h5>
-            {{ end }}
-
-        </div>
-
-        <div class="col-lg-4">
-            {{ partial "sidebar.html" . }}
-
-        </div>
-
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      {{ block "main_body" . }}
+        <h5> DEBUG: scgclean/layouts/documentation/baseof.html </h5>
+      {{ end }}
     </div>
 
+    <div class="col-lg-4">
+      {{ partial "sidebar.html" . }}
+    </div>
+
+  </div>
+</div>
 
 {{ partial "footer.html" . }}
 
 {{define "breadcrumb"}}
+
 {{ if .page.Parent}}
-{{$value := (printf "<a href='%s'>%s</a> > %s" .page.Parent.URL .page.Parent.Title .value)}}
-{{ template "breadcrumb" dict "page" .page.Parent "value" $value }} 
+  {{$value := (printf "<a href='%s'>%s</a> > %s" .page.Parent.URL .page.Parent.Title .value)}}
+  {{ template "breadcrumb" dict "page" .page.Parent "value" $value }} 
 {{else}}
- {{.value|safeHTML}}
+  {{.value|safeHTML}}
 {{end}}
+
 {{end}}
 
