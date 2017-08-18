@@ -344,6 +344,15 @@ body {
  *  Item list for documentation menubar
 /* ------------------------------------------------------------- */
 
+.widget {
+  border: 3px solid #f7f7f7;
+  border-radius: 5px;
+  padding: 25px; }
+
+/* ------------------------------------------------------------- *
+ *  Item list for documentation menubar
+/* ------------------------------------------------------------- */
+
 ul.doctree ul {
     display: none;
 }

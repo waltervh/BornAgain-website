@@ -1,6 +1,6 @@
 +++
 title = "Basic markdown"
-weight = 20
+weight = 10
 +++
 
 Section demonstrates basic markdown elements.
