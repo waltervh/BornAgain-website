@@ -3,4 +3,5 @@ title = "Tutorials"
 weight = 40
 +++
 
-This is content/documentation/Tutorials/_index.md file.
+This section demonstrates various types of markups possible with Hugo + Markdown. Inspite of its name - Tutorials - the 
+main purpose of the section is to tune css styling of thema.
