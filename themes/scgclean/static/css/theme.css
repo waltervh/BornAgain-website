@@ -228,7 +228,7 @@ body {
 /* ------------------------------------------------------------- */
 
 .icon-right {
-  background: url("../img/icon/icon-right.png");
+  background: url("../img/icon-right.png");
   background-repeat: no-repeat;
   display: inline-block;
   width: 35px;
@@ -237,7 +237,7 @@ body {
   margin-left: 40px; }
 
 .icon-git {
-  background: url("../img/icon/icon-git.png");
+  background: url("../img/icon-git.png");
   background-repeat: no-repeat;
   display: inline-block;
   width: 25px;
@@ -326,7 +326,7 @@ body {
     color: #fff;
     border-radius: 5px;
     padding: 10px 20px;
-    margin-top: 50px; }
+    margin-top: 20px; }
   .masthead .btn-hero:hover {
     background: rgba(255, 255, 255, 0.2);
     -webkit-transition: background-color 500ms ease-out 0.2s;
@@ -337,7 +337,7 @@ body {
 .single-masthead {
   padding: 0 0 40px; }
   .single-masthead .btn-hero {
-    margin-top: 30px;
+    margin-top: 20px;
     float: right; }
 
 /* ------------------------------------------------------------- *
