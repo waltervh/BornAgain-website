@@ -1,6 +1,6 @@
 +++
 title = "Insert images"
-weight = 20
+weight = 30
 +++
 
 This tutorial explains, how to insert image in the text.

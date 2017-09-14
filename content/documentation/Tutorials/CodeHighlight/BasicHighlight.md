@@ -1,6 +1,6 @@
 +++
-title = "Python code highlighted (server side)"
-weight = 30
+title = "Basic highlight"
+weight = 10
 +++
 
 This tutorial explains, how to insert Python snippets in the text with and without line numbering.
