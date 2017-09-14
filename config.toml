@@ -3,6 +3,7 @@ theme = "scgclean"
 languageCode = "en-us"
 title = "My New Hugo Site"
 MetaDataFormat = "toml"
+canonifyURLs = true
 
 # Code
 PygmentsCodeFences = true
