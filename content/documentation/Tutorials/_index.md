@@ -1,6 +1,6 @@
 +++
 title = "Tutorials"
-weight = 40
+weight = 30
 +++
 
 This section demonstrates various types of markups possible with Hugo + Markdown. Inspite of its name - Tutorials - the 
