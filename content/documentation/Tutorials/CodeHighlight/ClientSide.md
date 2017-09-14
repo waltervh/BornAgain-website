@@ -3,7 +3,7 @@ title = "Highlight on client side"
 weight = 30
 +++
 
-This tutorial explains how to highlight using javascript library.
+#### Code highlight using javascript library.
 
 {{< prettify python >}}
 class Base:
