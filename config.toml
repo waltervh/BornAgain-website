@@ -4,6 +4,11 @@ languageCode = "en-us"
 title = "My New Hugo Site"
 MetaDataFormat = "toml"
 
+# Code
+PygmentsCodeFences = true
+PygmentsUseClasses = false
+PygmentsStyle = "vs"
+
 [params]
   DateForm = "Mon, Jan 2, 2006"
   Description = "Your site description"
@@ -33,5 +38,4 @@ MetaDataFormat = "toml"
   name = "About"
   url = "/about/"
   weight = -170
-
 
