@@ -1,5 +1,5 @@
 +++
-title = "Python code highlighted"
+title = "Python code highlighted (server side)"
 weight = 30
 +++
 
@@ -42,3 +42,52 @@ if __name__ == '__main__':
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. 
 
+
+#### Highlighting with line numbers (inlined)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. 
+
+{{< highlight python "linenos=inline,hl_lines=5">}}
+
+class Base:
+    """
+    Base class
+    """
+    def __init__(self):
+        self.x = None
+        self.y = numpy.sin(numpy.pi/2.0)
+
+    def value(self):
+        return self.y
+
+{{< /highlight >}}
+
+
+#### Highlighting with line numbers (as table)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. 
+
+{{< highlight python "linenos=table,hl_lines=5">}}
+
+class Base:
+    """
+    Base class
+    """
+    def __init__(self):
+        self.x = None
+        self.y = numpy.sin(numpy.pi/2.0)
+
+    def value(self):
+        return self.y
+
+{{< /highlight >}}
+
+#### Very long lines
+
+{{< highlight python >}}
+
+def hello_world():
+      ln_distr = ba.DistributionLogNormal(self.radius.value, self.sigma.value)
+      par_distr = ba.ParameterDistribution("/Particle/FullSphere/Radius", ln_distr, nparticles, nfwhm, ba.RealLimits.limited(0.0, self.hmdso_thickness.value/2.0))
+
+{{< /highlight >}}
