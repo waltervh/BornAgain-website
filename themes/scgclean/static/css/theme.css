@@ -393,8 +393,16 @@ ul.doctree .liSingle:before {
  *  Standard unordered and ordered lists
 /* ------------------------------------------------------------- */
 
-ul, ol {
-    padding-left: 1.0em
+div > ul, div > ol {
+    padding-left: 1.0em;
+}
+
+div > ul ul, div > ol ul {
+    padding-left: 1.0em;
+}
+
+div > ul ol, div > ol ol {
+    padding-left: 1.0em;
 }
 
 /* ------------------------------------------------------------- *
