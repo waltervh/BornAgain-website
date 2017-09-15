@@ -7,4 +7,5 @@ This tutorial explains how to embed Python code from a script, located in certai
 
 #### Highlight the file located in static directory
 
-{{% highlightfile file="/content/static/code_snippet.py" language="python" %}}
+{{% highlightfile file="/static/files/code_snippet.py" language="python" %}}
+
