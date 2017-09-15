@@ -434,3 +434,28 @@ div > ul ol, div > ol ol {
 #TableOfContents > ul  > li > ul > li > ul{
     padding-left: 1.0em
 }
+
+/* ------------------------------------------------------------- *
+ * Hack to adjust images placed via default markdown syntax
+ * http://www.ebadf.net/2016/10/19/centering-images-in-hugo/
+/* ------------------------------------------------------------- */
+
+img[src$='#center']
+{
+    display: block;
+    margin: 0.7rem auto;
+}
+
+img[src$='#floatleft']
+{
+    float:left;
+    margin: 0.7rem;
+}
+
+img[src$='#floatright']
+{
+    float:right;
+    margin: 0.7rem;
+}
+
+
