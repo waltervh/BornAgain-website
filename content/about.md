@@ -21,6 +21,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam ev
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!
 
+## Hugo resources
+
+[Fantastic Gallery](https://www.liwen.id.au/heg/)
 
 ### Good looking documentation sites
 
