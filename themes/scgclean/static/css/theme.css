@@ -344,15 +344,6 @@ body {
  *  Item list for documentation menubar
 /* ------------------------------------------------------------- */
 
-.widget {
-  border: 3px solid #f7f7f7;
-  border-radius: 5px;
-  padding: 25px; }
-
-/* ------------------------------------------------------------- *
- *  Item list for documentation menubar
-/* ------------------------------------------------------------- */
-
 ul.doctree ul {
     display: none;
 }
@@ -458,4 +449,16 @@ img[src$='#floatright']
     margin: 0.7rem;
 }
 
+/* ------------------------------------------------------------- *
+ * Alert panels
+/* ------------------------------------------------------------- */
+
+.alert {
+	padding: 10px 15px 10px 15px;
+}
+
+.alert > p, .alert > ul {
+    margin-bottom: 0;
+    margin-top: 0;
+}
 
