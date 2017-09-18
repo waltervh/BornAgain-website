@@ -462,3 +462,11 @@ img[src$='#floatright']
     margin-top: 0;
 }
 
+/* ------------------------------------------------------------- *
+ * Figure classes
+/* ------------------------------------------------------------- */
+
+.box.alignment-center {
+    display: block;
+    margin: auto;
+}
