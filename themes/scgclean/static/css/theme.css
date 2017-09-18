@@ -470,3 +470,10 @@ img[src$='#floatright']
     display: block;
     margin: auto;
 }
+
+.box.alignment-center img{
+    display: block;
+    margin: auto;
+}
+
+
