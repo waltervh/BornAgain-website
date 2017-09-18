@@ -476,4 +476,35 @@ img[src$='#floatright']
     margin: auto;
 }
 
+/* ------------------------------------------------------------- *
+ * Children shortcode
+/* ------------------------------------------------------------- */
+
+.children a{
+    color: #2053AB;
+}
+
+.children p {
+    font-size: small;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom:  0px;
+    padding-bottom: 0px;
+}
+.children-li p {
+    font-size: small;
+    font-style: italic;
+
+}
+.children-h2 p, .children-h3 p {
+    font-size: small;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom:  0px;
+    padding-bottom: 0px;
+}
+.children h3,.children h2 {
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
 
