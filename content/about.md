@@ -28,6 +28,11 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recus
 * [Mmark syntax](https://github.com/miekg/mmark/wiki/Syntax)
 * [Mmark on GitHub](https://github.com/miekg/mmark)
 
+#### Hugo themes to learn
+
+* [Academic theme](https://themes.gohugo.io/theme/academic/post/writing-markdown-latex/)
+* [Docdoc theme](https://themes.gohugo.io/theme/docdock/)
+
 #### Good looking documentation sites
 
 http://xvelopers.com/html/knowledge/Demo2/single.html
