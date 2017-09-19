@@ -508,3 +508,20 @@ img[src$='#floatright']
     margin-top: 5px;
 }
 
+/* ------------------------------------------------------------- *
+ * Tables
+/* ------------------------------------------------------------- */
+
+table {
+	width: 100%;
+    border: 1px solid #eaeaea;
+    table-layout: auto;
+}
+th {
+    background: #f7f7f7;
+    padding: 0.5rem;
+}
+td {
+    padding: 0.5rem;
+    border: 1px solid #eaeaea;
+}
