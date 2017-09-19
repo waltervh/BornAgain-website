@@ -1030,6 +1030,9 @@ jQuery(document).ready(function($) {
                 this.previousTop = currentTop;
             });
     }
+
+$( ".highlighttable" ).wrap("<div class='table-responsive'></div>");
+    
 });
 
 // Collapse/extend documentation tree
