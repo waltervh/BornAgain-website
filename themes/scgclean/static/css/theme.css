@@ -13,8 +13,9 @@ body {
 p {
 	margin: 15px 0px 15px 0px;
 }
-p a {
-	text-decoration: underline
+p a, li a {
+	text-decoration: none;
+    color: #1982d1;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 30px;
@@ -344,6 +345,11 @@ body {
  *  Item list for documentation menubar
 /* ------------------------------------------------------------- */
 
+.dd-item a {
+	text-decoration: none;
+    color: #404040;	
+}
+
 ul.doctree ul {
     display: none;
 }
@@ -481,7 +487,7 @@ img[src$='#floatright']
 /* ------------------------------------------------------------- */
 
 .children a{
-    color: #2053AB;
+    color: #1982d1;
 }
 
 .children p {
