@@ -533,6 +533,47 @@ td {
 }
 
 /* ------------------------------------------------------------- *
+ * Highlight shortcode
+/* ------------------------------------------------------------- */
+
+.table-responsive { 
+	color: #333; 
+	border: 1px 
+	solid #ccc; 
+	border-radius: 4px; 
+	margin-bottom: 10px; 
+}
+
+table.highlighttable {
+	width: auto;
+	padding: 0px;
+	margin: 0px
+	solid: #f0f0f0;
+	border: none;
+}
+
+table.highlighttable td {
+	padding: 0px;
+	width: auto;
+	border: none;
+}
+
+table.highlighttable td.code {
+	width: 100%;
+	border: none;
+}
+
+table.highlighttable td .linenodiv {
+	width: 40px;
+}
+
+.linenodiv pre { margin: 6px 0px; color: #aaa; border-radius: 0; border: none; border-right: solid 1px; word-wrap: normal; }
+.linenodiv pre code { white-space: pre; }
+.code .highlight pre { margin: 6px 0px; border-radius: 0; border: none; word-wrap: normal; }
+.highlighttable { width: 100%; background-color: #F5F5F5;  table-layout: fixed; }
+
+
+/* ------------------------------------------------------------- *
  * Notices shortcode
 /* ------------------------------------------------------------- */
 
