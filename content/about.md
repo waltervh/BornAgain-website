@@ -30,8 +30,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recus
 
 #### Hugo themes to learn
 
-* [Academic theme](https://themes.gohugo.io/theme/academic/post/writing-markdown-latex/)
+* [Clean blog](https://themes.gohugo.io/startbootstrap-clean-blog/)
 * [Docdoc theme](https://themes.gohugo.io/theme/docdock/)
+* [Academic theme](https://themes.gohugo.io/theme/academic/post/writing-markdown-latex/)
 
 #### Good looking documentation sites
 
