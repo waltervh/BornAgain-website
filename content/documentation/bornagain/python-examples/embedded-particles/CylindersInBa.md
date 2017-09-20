@@ -21,7 +21,4 @@ Scattering from a monodisperse distribution of cylinders using the Born approxim
 {{< readfile file="/content/documentation/bornagain/python-examples/embedded-particles/CylindersInBA.py">}}
 {{< /highlight >}}
 
-{{% link xx %}}
-Some Text
-{{% /link %}}
 
