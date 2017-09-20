@@ -684,4 +684,6 @@ div.notices.tip p:first-child:after {
   background-image: none !important;
 }
 
-
+.glyphicon {
+  font-size: 18px !important;
+}
