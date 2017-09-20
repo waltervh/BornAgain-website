@@ -683,7 +683,3 @@ div.notices.tip p:first-child:after {
 .btn-default:active {
   background-image: none !important;
 }
-
-.glyphicon {
-  font-size: 18px !important;
-}
