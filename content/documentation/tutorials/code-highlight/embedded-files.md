@@ -17,7 +17,3 @@ This tutorial explains how to embed Python code from a script, located in certai
 
 #### Highlight the file from local directory (Not possible)
 
-{{< highlight python "linenos=table,hl_lines=5">}}
-{{< readfile file="another_code_snippet.py">}}
-{{< /highlight >}}
-
