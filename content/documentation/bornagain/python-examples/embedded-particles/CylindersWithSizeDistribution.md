@@ -18,4 +18,10 @@ Scattering from a polydisperse distribution of cylinders in Born Approximation.
 
 {{< figure src="../CylindersWithSizeDistribution_setup.jpg">}}
 
-{{% highlightfile file="/content/documentation/bornagain/python-examples/embedded-particles/CylindersWithSizeDistribution.py" language="python" %}}
+{{< highlight python "linenos=table">}}
+{{< readfile file="/content/documentation/bornagain/python-examples/embedded-particles/CylindersWithSizeDistribution.py">}}
+{{< /highlight >}}
+
+{{< link "documentation/bornagain/python-examples/embedded-particles/CylindersWithSizeDistribution.py" >}}
+CylindersWithSizeDistribution.py
+{{< /link >}}
