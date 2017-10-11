@@ -455,6 +455,14 @@ img[src$='#floatright']
     margin: 0.7rem;
 }
 
+img[alt="my_style1"]
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;  
+}
+
 /* ------------------------------------------------------------- *
  * Tuning standard figure shortcode
 /* ------------------------------------------------------------- */
@@ -465,6 +473,11 @@ figure.center img{
 }
 figure.center figcaption{
 text-align: center;
+}
+
+figure.floatleft img{
+  display: block;
+  float: left;
 }
 
 /* ------------------------------------------------------------- *
