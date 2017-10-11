@@ -471,12 +471,13 @@ figure.center img{
   margin-left: auto;
   margin-right: auto;
 }
-figure.center figcaption{
+figure.center, figure.floatleft figcaption{
 text-align: center;
 }
 
-figure.floatleft img{
+figure.floatleft {
   display: block;
+  padding-right: 15px;
   float: left;
 }
 
