@@ -456,20 +456,19 @@ img[src$='#floatright']
 }
 
 /* ------------------------------------------------------------- *
- * Alert panels
+ * Tuning standard figure shortcode
 /* ------------------------------------------------------------- */
-
-.alert {
-	padding: 10px 15px 10px 15px;
+figure.center img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.alert > p, .alert > ul {
-    margin-bottom: 0;
-    margin-top: 0;
+figure.center figcaption{
+text-align: center;
 }
 
 /* ------------------------------------------------------------- *
- * Figure classes
+ * Tuning fancyfig shortcode
 /* ------------------------------------------------------------- */
 
 .box.alignment-center {
@@ -480,6 +479,19 @@ img[src$='#floatright']
 .box.alignment-center img{
     display: block;
     margin: auto;
+}
+
+/* ------------------------------------------------------------- *
+ * Alert panels
+/* ------------------------------------------------------------- */
+
+.alert {
+	padding: 10px 15px 10px 15px;
+}
+
+.alert > p, .alert > ul {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 /* ------------------------------------------------------------- *

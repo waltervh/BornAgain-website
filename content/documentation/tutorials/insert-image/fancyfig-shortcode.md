@@ -1,5 +1,5 @@
 +++
-title = "Insert via figfancy shortcode"
+title = "Custom figfancy shortcode"
 weight = 30
 +++
 
