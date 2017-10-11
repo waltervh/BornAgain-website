@@ -466,6 +466,7 @@ img[alt="my_style1"]
 /* ------------------------------------------------------------- *
  * Tuning standard figure shortcode
 /* ------------------------------------------------------------- */
+
 figure.center img{
   display: block;
   margin-left: auto;
@@ -480,6 +481,11 @@ figure.floatleft {
   padding-right: 15px;
   float: left;
 }
+
+/* ------------------------------------------------------------- *
+ * Tuning custom figscg shortcode
+/* ------------------------------------------------------------- */
+
 
 /* ------------------------------------------------------------- *
  * Tuning fancyfig shortcode
