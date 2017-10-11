@@ -12,9 +12,9 @@ weight = 40
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. 
 
 {{< gallery >}}
-{{< figure link="/files/ff_images/anisopyramid.png" caption="Anisopyramid" >}}
-{{< figure link="/files/ff_images/box.png" caption="Box" >}}
-{{< figure link="/files/ff_images/cone6.png" caption="Cone6" >}}
+{{< figfancy link="/files/ff_images/anisopyramid.png" caption="Anisopyramid" >}}
+{{< figfancy link="/files/ff_images/box.png" caption="Box" >}}
+{{< figfancy link="/files/ff_images/cone6.png" caption="Cone6" >}}
 {{< /gallery >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. 
@@ -24,9 +24,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praes
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. 
 
 {{< gallery caption-effect="none" caption-position="bottom" >}}
-{{< figure link="/files/ff_images/cone.png" caption="Cone" >}}
-{{< figure link="/files/ff_images/cubeoct.png" caption="Cubeoct" >}}
-{{< figure link="/files/ff_images/cylinder.png" caption="Cylinder">}}
+{{< figfancy link="/files/ff_images/cone.png" caption="Cone" >}}
+{{< figfancy link="/files/ff_images/cubeoct.png" caption="Cubeoct" >}}
+{{< figfancy link="/files/ff_images/cylinder.png" caption="Cylinder">}}
 {{< /gallery >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. 
