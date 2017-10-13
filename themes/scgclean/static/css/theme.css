@@ -483,8 +483,17 @@ figure.floatleft {
 }
 
 /* ------------------------------------------------------------- *
- * Tuning custom figscg shortcode
+ * Tuning custom figscg and galleryscg shortcodes
 /* ------------------------------------------------------------- */
+.galleryscg {
+  width: 100%;
+  text-align: center;
+}
+
+.galleryscg figure {
+  margin: 0px 10px 0px 10px;
+  display: inline-block;
+}
 
 
 /* ------------------------------------------------------------- *
