@@ -13,9 +13,11 @@ Scattering from a monodisperse distribution of cylinders using the Born approxim
 * There is no substrate (particles are embedded in the air layer), hence no refraction, hence no distorted waves, hence DWBA boils down to regular Born approximation.
 * Scattering is not affected by inter-particle correlations (dilute-particles approximation).
 
-{{< figure src="../CylindersInBA.png" >}}
+{{< galleryscg >}}
+{{< figscg src="../CylindersInBA.png" width="320px" caption="A short caption">}}
+{{< figscg src="../CylindersInBA_setup.jpg" width="320px" caption="A short caption">}}
+{{< /galleryscg >}}
 
-{{< figure src="../CylindersInBA_setup.jpg" >}}
 
 {{< highlight python "linenos=table">}}
 {{< readfile file="/content/documentation/bornagain/python-examples/embedded-particles/CylindersInBA.py">}}

@@ -12,9 +12,11 @@ This example is similar to the simulation in Born Approximation, CylindersInBA, 
 * The incident angles are equal to αi = 0.2°, Φi = 0°.
 * No interference effects from inter-particle correlations (dilute-particles approximation).
 
-{{< figure src="../CylindersInDWBA.png">}}
+{{< galleryscg >}}
+{{< figscg src="../CylindersInDWBA.png" width="320px" caption="A short caption">}}
+{{< figscg src="../CylindersInDWBA_setup.jpg" width="320px" caption="A short caption">}}
+{{< /galleryscg >}}
 
-{{< figure src="../CylindersInDWBA_setup.jpg">}}
 
 {{< highlight python "linenos=table">}}
 {{< readfile file="/content/documentation/bornagain/python-examples/embedded-particles/CylindersInDWBA.py">}}

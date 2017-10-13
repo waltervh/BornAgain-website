@@ -14,9 +14,10 @@ Scattering from a polydisperse distribution of cylinders in Born Approximation.
 * There is no substrate (particles embedded in air layer, DWBA boils down to BA).
 * No interference effects from inter-particle correlations (dilute-particles approximation).
 
-{{< figure src="../CylindersWithSizeDistribution.png">}}
-
-{{< figure src="../CylindersWithSizeDistribution_setup.jpg">}}
+{{< galleryscg >}}
+{{< figscg src="../CylindersWithSizeDistribution.png" width="320px" caption="A short caption">}}
+{{< figscg src="../CylindersWithSizeDistribution_setup.jpg" width="320px" caption="A short caption">}}
+{{< /galleryscg >}}
 
 {{< highlight python "linenos=table">}}
 {{< readfile file="/content/documentation/bornagain/python-examples/embedded-particles/CylindersWithSizeDistribution.py">}}

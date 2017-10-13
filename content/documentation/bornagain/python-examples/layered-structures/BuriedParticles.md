@@ -14,9 +14,10 @@ Scattering from a sample containing spherical embedded particles.
 * The wavelength is equal to 1.5 Å.
 * The incident angles are αi = 0.15° and Φi = 0°.
 
-{{< figure src="../BuriedParticles.png">}}
-
-{{< figure src="../BuriedParticles_setup.png">}}
+{{< galleryscg >}}
+{{< figscg src="../BuriedParticles.png" width="320px" caption="A short caption">}}
+{{< figscg src="../BuriedParticles_setup.png" width="320px" caption="A short caption">}}
+{{< /galleryscg >}}
 
 {{< highlight python "linenos=table">}}
 {{< readfile file="/content/documentation/bornagain/python-examples/layered-structures/BuriedParticles.py">}}
