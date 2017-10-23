@@ -1,6 +1,6 @@
 +++
 title = "Table elements"
-weight = 30
+weight = 40
 +++
 
 Page demonstrates basic table elements and their appearance in difference context. 

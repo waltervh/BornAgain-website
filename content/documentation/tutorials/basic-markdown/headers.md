@@ -1,5 +1,5 @@
 +++
-title = "Basic text elements"
+title = "Paragraphs and headers"
 weight = 10
 +++
 

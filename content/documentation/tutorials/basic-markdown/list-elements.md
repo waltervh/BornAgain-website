@@ -1,6 +1,6 @@
 +++
 title = "List elements"
-weight = 20
+weight = 30
 +++
 
 Page demonstrates basic list elements. We are interested here in list identation, spaces between list and paragraphs etc.
