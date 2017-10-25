@@ -7,7 +7,7 @@ weight = 21
 
 For Mac OS X, we provide a 64-bit binary .dmg installer for Yosemite (10.10) or above and also support build and installation from source.
 Alternatively, you can build BornAgain from source by yourself following the 
-[Installation on Unix]({{% relref "documentation/bornagain/installation/unix-detailed/index.md" %}}) section.
+[Installation on Unix]({{% relref "documentation/bornagain/installation/unix-detailed" %}}) section.
 
 The rest of this section explains how to install BornAgain using `.dmg` installer.
 
