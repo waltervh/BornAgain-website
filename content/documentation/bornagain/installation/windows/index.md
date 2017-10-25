@@ -29,11 +29,11 @@ Download and install Anaconda Windows 64-bit — Python 2.7 — Graphical Instal
 
 #### Test the installation
 
-{{< figscg src="bornagainapp_32.png" class="floatleft">}} Use BornAgain icon located on the desktop to start GUI.
+{{< figscg src="/img/bornagainapp_32.png" class="floatleft">}} Use BornAgain icon located on the desktop to start GUI.
 
 <p style="clear: both;">
 
-{{< figscg src="python_icon_32.png" class="floatleft">}}
+{{< figscg src="/img/python_icon_32.png" class="floatleft">}}
 Run an example from BornAgain installation directory by double-clicking on the Python file.
 <p style="clear: both;">
 
