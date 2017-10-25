@@ -350,6 +350,7 @@ code {
 	background-color: #ffffff;
 	font-size: 100%;
 	font-family: monospace;
+	word-spacing: -5px;
 }
 
 /* ------------------------------------------------------------- *
