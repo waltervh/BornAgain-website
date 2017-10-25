@@ -490,8 +490,8 @@ text-align: center;
 
 figure.floatleft {
   display: block;
-  padding-top: 10px;
-  padding-right: 15px;
+/*  padding-top: 10px;
+*/  padding-right: 15px;
   float: left;
 }
 
