@@ -342,18 +342,6 @@ body {
     float: right; }
 
 /* ------------------------------------------------------------- *
- * Inline code 
-/* ------------------------------------------------------------- */
-
-code {
-	color: #550000;
-	background-color: #ffffff;
-	font-size: 100%;
-	font-family: monospace;
-	word-spacing: -5px;
-}
-
-/* ------------------------------------------------------------- *
  *  Item list for documentation menubar
 /* ------------------------------------------------------------- */
 
@@ -587,10 +575,24 @@ td {
 }
 
 /* ------------------------------------------------------------- *
+ * Inline code 
+/* ------------------------------------------------------------- */
+
+code {
+	color: #550000;
+	background-color: #ffffff;
+	font-size: 100%;
+	font-family: monospace;
+	word-spacing: -3px;
+}
+
+/* ------------------------------------------------------------- *
  * Highlight shortcode
 /* ------------------------------------------------------------- */
-.highlight {
+.highlight pre {
   margin-top: 20px;
+  font-family: monospace;
+  font-size: 13px;
 }
 
 .table-responsive { 
