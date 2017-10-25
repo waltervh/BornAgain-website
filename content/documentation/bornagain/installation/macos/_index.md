@@ -5,7 +5,7 @@ weight = 21
 
 ## Installation on MacOS
 
-For Mac OS X, we provide a 64-bit binary .dmg installer for Maverick (10.9) or above and also support build and installation from source.
+For Mac OS X, we provide a 64-bit binary .dmg installer for Yosemite (10.10) or above and also support build and installation from source.
 Alternatively, you can build BornAgain from source by yourself following the 
 [Installation on Unix]({{% relref "documentation/bornagain/installation/unix-detailed/index.md" %}}) section.
 
@@ -52,7 +52,7 @@ If your system is already equipped with [Homebrew](http://brew.sh/)
 (recommended) or [MacPorts](http://www.macports.org/)  package managers, you can certainly make use of it and  install Python with all required modules  by typing in the terminal
 
 For Homebrew users:
-```
+```bash
 $ brew install python homebrew/science/matplotlib numpy
 ```
 
