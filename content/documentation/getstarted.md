@@ -3,6 +3,29 @@ title = "Get started"
 weight = 20
 +++
 
+### How to get started
+
+Here we explain how to start playing with [Hugo](https://gohugo.io) and 
+our [Scientific Computing Group Thema](https://github.com/scgmlz/scgdoc-hugo).
+
+
+#### Install Hugo
+
+* Downloads latest hugo from [here](https://github.com/gohugoio/hugo/releases).
+* Archive will contain single binary which you will have to put to your `$HOME/bin` directory, for example
+
+#### Clone the prototype of our site, run Hugo on it
+
+```
+$ git clone https://github.com/scgmlz/scgdoc-hugo.git
+$ cd <source>
+$ hugo server -D
+```
+
+Open web-browser using address Hugo will tell you (most probably http://localhost:1313/scgdoc-hugo/)
+
+
+
 Please explain how to start.
 
 * How to install hugo
