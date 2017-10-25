@@ -1,22 +1,21 @@
 
-{{ $currentNode := . }}
+{{- $currentNode := . }}
 
-{{range .Site.Sections.ByWeight.Reverse}}
-  {{ if eq .Type  "documentation" }}
+{{- range .Site.Sections.ByWeight.Reverse}}
+  {{- if eq .Type  "documentation" }}
     <ul class="doctree">
-      {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+      {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
     </ul>
-  {{ end }}
-{{end}}
-
+  {{- end }}
+{{- end}}
 
 <!-- templates -->
-{{ define "section-tree-nav" }}
+{{- define "section-tree-nav" }}
 
-{{ $currentNode := .currentnode }}
-{{ with .sect }}
-  {{ if .IsSection }}
-    {{ safeHTML .Params.head }}
+{{- $currentNode := .currentnode }}
+{{- with .sect }}
+  {{- if .IsSection }}
+    {{- safeHTML .Params.head }}
 
     <li data-nav-id="{{.URL}}" class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
@@ -24,17 +23,17 @@
         {{if .Params.alwaysopen}}parent{{end}}
         ">
 
-      {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
-      {{ .Scratch.Set "li_icon" "liSingle" }}
+      {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
+      {{- .Scratch.Set "li_icon" "liSingle" }}
 
-      {{ if ne $numberOfPages 0 }}
-        {{ if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
-          {{ .Scratch.Set "li_icon" "liOpened" }}
-        {{ else }}
-          {{ .Scratch.Set "li_icon" "liClosed" }}
-        {{ end }}
-      {{ end }}
-      {{ $liIcon := (.Scratch.Get "li_icon") }}
+      {{- if ne $numberOfPages 0 }}
+        {{- if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
+          {{- .Scratch.Set "li_icon" "liOpened" }}
+        {{- else -}}
+          {{- .Scratch.Set "li_icon" "liClosed" }}
+        {{- end }}
+      {{- end }}
+      {{- $liIcon := (.Scratch.Get "li_icon") }}
 
       <i class="fa {{$liIcon}} li-item-icon"></i>
 
@@ -42,33 +41,33 @@
         <span>{{ safeHTML .Params.Pre }}{{ .Title }}{{ safeHTML .Params.Post }}</span>
       </a>
 
-      {{ if ne $numberOfPages 0 }}
+      {{- if ne $numberOfPages 0 }}
         <ul>
-          {{ .Scratch.Set "pages" .Pages }}
-          {{ if .Sections}}
-            {{ .Scratch.Set "pages" (.Pages | union .Sections) }}
-          {{ end }}          
-          {{ $pages := (.Scratch.Get "pages") }}
+          {{- .Scratch.Set "pages" .Pages }}
+          {{- if .Sections}}
+            {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
+          {{- end }}          
+          {{- $pages := (.Scratch.Get "pages") }}
           
-          {{ range $pages.ByWeight }}
-            {{ if or (not .Params.hidden) (not $.showhidden) }}
-              {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
-            {{ end }}
-          {{ end }}
+          {{- range $pages.ByWeight }}
+            {{- if or (not .Params.hidden) (not $.showhidden) }}
+              {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+            {{- end }}
+          {{- end }}
 
         </ul>
-      {{ end }}
+      {{- end }}
     </li>
 
-  {{ else }}
-    {{ if not .Params.Hidden }}
+  {{- else }}
+    {{- if not .Params.Hidden }}
       <li data-nav-id="{{.URL}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
         <i class="fa liSingle li-item-icon"></i>
         <a href="{{ .RelPermalink }}">
         <span>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</span> 
         </a></li>
-     {{ end }}
-  {{ end }}
-{{ end }}
+     {{- end }}
+  {{- end }}
+{{- end }}
 
-{{ end }}
+{{- end }}
