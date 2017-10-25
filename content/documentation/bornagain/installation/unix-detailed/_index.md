@@ -1,7 +1,9 @@
 +++
 title = "Installation on Unix (detailed version)"
-weight = 42
+weight = 40
 +++
 
 The following sections describe in details how to build BornAgain from source and get it running on Unix Platforms (MacOS included).
 
+{{% children  %}}
+ 
