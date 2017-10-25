@@ -348,6 +348,8 @@ body {
 .dd-item a {
 	text-decoration: none;
     color: #404040;	
+  	font-size: 15px;
+
 }
 
 ul.doctree ul {
@@ -358,7 +360,11 @@ ul.doctree li.parent > ul, li.active > ul {
     display: block;
 }
 
-ul.doctree, ul.doctree ul, ul.doctree li {
+ul.doctree, ul.doctree ul {
+	padding:none;
+}
+
+ul.doctree li {
     list-style: none;
 	padding-left: 1.0em;
 	color: #404040;
@@ -408,6 +414,7 @@ div > ul ol, div > ol ol {
 
 .breadcrumb {
 	margin-bottom: 10px;
+	font-size: 15px;
 }
 
 /* ------------------------------------------------------------- *
