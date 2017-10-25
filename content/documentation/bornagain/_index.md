@@ -1,6 +1,6 @@
 +++
 title = "BornAgain"
-weight = 40
+weight = 50
 +++
 
 BornAgain has two bodies of documentation:

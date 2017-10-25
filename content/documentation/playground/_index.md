@@ -1,6 +1,6 @@
 +++
 title = "Playground"
-weight = 30
+weight = 40
 +++
 
 This section demonstrates various types of markups possible with Hugo + Markdown. The 
