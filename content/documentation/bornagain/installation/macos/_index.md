@@ -81,7 +81,8 @@ $ python -c "import bornagain"
  
 ##### Alternatives
 
-If your prefer to install the BornAgain core libraries not to the site-packages folder of your Python interpreter, but to a custom folder, check the following instruction.
+If your prefer to install the BornAgain core libraries not to the site-packages folder of your Python interpreter, but to a custom folder, check 
+the [following instruction]({{% relref "advanced-tips.md" %}}).
 
 #### Test the installation
 

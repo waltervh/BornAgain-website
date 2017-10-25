@@ -1,5 +1,5 @@
 +++
-title = "MacOS advanced tips"
+title = "Advanced tips"
 weight = 21
 +++
 
