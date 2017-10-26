@@ -35,7 +35,7 @@ $ mkdir <build_dir>; cd <build_dir>;
 $ cmake -DCMAKE_INSTALL_PREFIX=<install_dir> <source_dir>
 $ make -j4
 $ ctest -j4
-$ make install
+$ make install 
 ```
 
 #### For Python3
