@@ -12,7 +12,7 @@ The theme was heavilly borrowed from the following projects
 * [docDoc - Documentation theme for Hugo](https://themes.gohugo.io/docdock/)
 * [Startboostrap Clean Blog](https://themes.gohugo.io/startbootstrap-clean-blog/)
 
-### Site layout
+#### Site layout
 
 This theme expects a relatively standard Hugo blog/personal site layout:
 
@@ -32,12 +32,17 @@ This theme expects a relatively standard Hugo blog/personal site layout:
             ├── basic-markdown
 ```
 
-**Limitations**
+#### Limitations
 
 * Every directory with new branch should contain `_index.md`
 * Weight of page specified in _index.md is actually for one level up
 
-### Useful links
+#### Unteresting facts
+
+* `scgdoc` theme contains 800 lines of `go+html` code
+* Main `theme.css` has 700 lines of code
+
+#### Useful links
 
 During theme development following links were found to be very useful
 

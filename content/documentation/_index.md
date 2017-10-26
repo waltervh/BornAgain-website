@@ -19,5 +19,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praes
 
 * Documentation page has the layout which is different from other pages of web site
 * `breadcrumb` and `sidemenu` are automatically generated from markdown directory structure
+* Side menu is collapsible
 
 {{% children depth="2" %}}
