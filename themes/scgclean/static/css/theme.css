@@ -57,7 +57,7 @@ hr.small {
 	color: #0085a1
 }
 .post-preview>a>.post-title {
-	font-size: 30px;
+	font-size: 20px;
 	margin-top: 30px;
 	margin-bottom: 10px
 }
@@ -82,7 +82,7 @@ hr.small {
 }
 @media only screen and (min-width:768px) {
 	.post-preview>a>.post-title {
-		font-size: 36px
+		font-size: 25px
 	}
 }
 .section-heading {
@@ -524,6 +524,7 @@ figure.floatleft {
 
 .alert {
 	padding: 10px 15px 10px 15px;
+	margin-top:20px;
 }
 
 .alert > p, .alert > ul {

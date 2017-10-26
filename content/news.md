@@ -4,5 +4,3 @@ title = "News"
 Description = "What's new"
 layout = "news"
 +++
-
-This is "content/news.md".
