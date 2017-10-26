@@ -66,3 +66,5 @@ Push new version of site to `gh-pages` using worktree syncronization.
 cd public && git add --all && git commit -m "Publishing to gh-pages" && git push origin gh-pages
 ```
 See details in [Deployment to gh-pages branch](https://discourse.gohugo.io/t/simple-deployment-to-gh-pages/5003)
+
+In few minutes, check [https://scgmlz.github.io/scgdoc-hugo/](https://scgmlz.github.io/scgdoc-hugo/) to see if your changes have been successfully published.
