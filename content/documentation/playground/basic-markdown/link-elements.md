@@ -38,20 +38,20 @@ Tibique maluisset duo ne. Ea falli viderer sit, eos novum argumentum at. Posse a
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
 
-* [Text elements]({{% relref "documentation/tutorials/basic-markdown/headers.md" %}}) link.
+* [Text elements]({{% relref "documentation/playground/basic-markdown/headers.md" %}}) link.
 * [Text elements]({{% relref "headers.md" %}}) link without specifying full path.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
 
 #### Special case: link to the documentation list page
 
-[Basic markdown]({{% relref "documentation/tutorials/basic-markdown" %}}) link.
+[Basic markdown]({{% relref "documentation/playground/basic-markdown" %}}) link.
 
 #### Links to anchors
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
 
-* [Link to heading anchor]({{% relref "documentation/tutorials/basic-markdown/link-elements.md#just-a-lot-of-text-to-test-anchors" %}}) link.
+* [Link to heading anchor]({{% relref "documentation/playground/basic-markdown/link-elements.md#just-a-lot-of-text-to-test-anchors" %}}) link.
 * [Link to custom anchor]({{% relref "#custom-anchor" %}}) link.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
