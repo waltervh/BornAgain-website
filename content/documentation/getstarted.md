@@ -68,3 +68,15 @@ cd public && git add --all && git commit -m "Publishing to gh-pages" && git push
 See details in [Deployment to gh-pages branch](https://discourse.gohugo.io/t/simple-deployment-to-gh-pages/5003)
 
 In few minutes, check [https://scgmlz.github.io/scgdoc-hugo/](https://scgmlz.github.io/scgdoc-hugo/) to see if your changes have been successfully published.
+
+#### Cleaning previous publication
+
+To clean from remnants of previous publication
+
+```
+rm -rf public
+mkdir public
+git worktree prune
+rm -rf .git/worktrees/public/
+git worktree add -B gh-pages public origin/gh-pages
+```
