@@ -20,6 +20,8 @@ weight = 30
 * Provide additional Hugo magic
   * Automotize new release publishing (e.g. BornAgain version number in download links)
   * Provide documentation versioning (is it still necessary?)
+  * Provide layout for automatic generation of Python example summary table
+  * Provide authors handling for News section instead of James Bond
 
 #### Create BornAgain web site
 
