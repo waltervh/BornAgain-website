@@ -3,7 +3,7 @@ title = "Easy gallery"
 weight = 50
 +++
 
-#### 
+### Easy gallery
 
 {{< load-photoswipe >}}
 

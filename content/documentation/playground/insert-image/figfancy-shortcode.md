@@ -3,7 +3,7 @@ title = "Custom figfancy shortcode"
 weight = 30
 +++
 
-#### 
+### Custom figfancy shortcode
 
 #### Default insert
 

@@ -3,6 +3,8 @@ title = "BornAgain"
 weight = 50
 +++
 
+### BornAgain
+
 BornAgain has two bodies of documentation:
 
 * web-only documentation, accessible from this start page;

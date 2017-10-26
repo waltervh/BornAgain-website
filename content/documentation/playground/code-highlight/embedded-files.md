@@ -3,6 +3,8 @@ title = "Python code embedded"
 weight = 20
 +++
 
+### Python code embedded
+
 This tutorial explains how to embed Python code from a script, located in certain directory.
 
 #### Highlight the file located in static directory

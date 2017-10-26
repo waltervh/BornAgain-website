@@ -3,6 +3,8 @@ title = "Action buttons"
 weight = 70
 +++
 
+### Action buttons
+
 Tutorial demonstrates, how to insert action buttons (i.e. links to travis builds, "follow me" etc)
 
 #### Buttons: success, info etc...

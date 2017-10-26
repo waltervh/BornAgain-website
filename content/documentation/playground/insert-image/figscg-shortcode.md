@@ -3,7 +3,7 @@ title = "Custom figscg shortcode"
 weight = 40
 +++
 
-#### 
+### Custom figscg shortcode
 
 #### Default insert
 

@@ -3,6 +3,8 @@ title = "Paragraphs and headers"
 weight = 10
 +++
 
+### Paragraphs and headers
+
 Page demonstrates basic text elements of markdown. We are interested here in size of headers, spaces between text elements, etc.
 The content of this page is shown via shortcode.
 

@@ -1,6 +1,6 @@
 +++
 title = "Installation on Unix (short version)"
-weight = 30
+weight = 31
 +++
 
 ### Installation on Unix (short version)
@@ -23,7 +23,7 @@ This page shortly explains how to build and install BornAgain from source on Uni
 #### Get the source
 
 Download the BornAgain source [tarball](http://apps.jcns.fz-juelich.de/src/BornAgain/BornAgain-1.10.0.tar.gz) or use the following git repository
-
+  
 ```
 $ git clone https://github.com/scgmlz/BornAgain.git
 ```

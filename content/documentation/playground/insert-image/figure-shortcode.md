@@ -3,7 +3,7 @@ title = "Standard figure shortcode"
 weight = 20
 +++
 
-#### 
+### Standard figure shortcode
 
 #### Default insert
 
