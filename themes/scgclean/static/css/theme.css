@@ -591,7 +591,6 @@ code {
 	background-color: #ffffff;
 	font-size: 100%;
 	font-family: monospace;
-	word-spacing: -3px;
 }
 
 /* ------------------------------------------------------------- *
@@ -603,7 +602,7 @@ code {
   font-size: 13px;
 }
 
-.highlight pre code * {
+.highlight pre code {
   white-space: nowrap;    // this sets all children inside to nowrap
 }
 

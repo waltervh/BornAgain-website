@@ -174,8 +174,8 @@ class Base:
         return self.y
 
 def hello_world():
-      ln_distr = ba.DistributionLogNormal(self.radius.value, self.sigma.value)
-      par_distr = ba.ParameterDistribution("/Particle/FullSphere/Radius", ln_distr, nparticles, nfwhm, ba.RealLimits.limited(0.0, self.hmdso_thickness.value/2.0))
+    ln_distr = ba.DistributionLogNormal(self.radius.value, self.sigma.value)
+    par_distr = ba.ParameterDistribution("/Particle/FullSphere/Radius", ln_distr, nparticles, nfwhm, ba.RealLimits.limited(0.0, self.hmdso_thickness.value/2.0))
 
 {{< /highlight >}}
 
