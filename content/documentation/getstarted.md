@@ -34,7 +34,7 @@ $ git worktree add -B gh-pages public origin/gh-pages
 Put `public` branch in `.gitignore`.
 
 ```
-$ touch gitignore; echo '.public' >> .gitignore;  echo '.gitignore' >> .gitignore
+$ echo 'public/*' >> .gitignore;  echo '.gitignore' >> .gitignore
 ```
 
 #### Run Hugo, make you first changes
