@@ -23,6 +23,11 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 800
 }
+
+/* ------------------------------------------------------------- *
+ *  Linking
+/* ------------------------------------------------------------- */
+
 a {
 	color: #404040
 }
@@ -32,6 +37,13 @@ a:hover, a:focus {
 a img:hover, a img:focus {
 	cursor: zoom-in
 }
+
+a.linktofile[href$='.py'] {
+  background: url("../img/save.png") no-repeat left;
+  padding-left: 25px;
+  white-space:nowrap;  
+}
+
 blockquote {
 	color: gray;
 	font-style: italic
@@ -645,8 +657,13 @@ table.highlighttable td .linenodiv {
 	width: 40px;
 }
 
+.linenodiv pre, .code pre {
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.3em;
+}
+
 .linenodiv pre { margin: 6px 0px; color: #aaa; border-radius: 0; border: none; border-right: solid 1px; word-wrap: normal; }
-.linenodiv pre code { white-space: pre; }
 .code .highlight pre { margin: 6px 0px; border-radius: 0; border: none; word-wrap: normal; }
 .highlighttable { width: 100%; background-color: #F5F5F5;  table-layout: fixed; }
 

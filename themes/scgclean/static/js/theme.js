@@ -1006,6 +1006,16 @@ $(function() {
 jQuery(document).ready(function($) {
     var MQL = 1170;
 
+
+    jQuery('.li-item-icon').on('click', function() {
+      $( this ).toggleClass("liOpened liClosed") ;
+      $( this ).parent().children('ul').toggle() ;
+      return false;
+        return false;
+    });
+
+
+
     //primary navigation slide-in effect
     if ($(window).width() > MQL) {
         var headerHeight = $('.navbar-custom').height();
@@ -1037,8 +1047,8 @@ $( ".highlighttable" ).wrap("<div class='table-responsive'></div>");
 
 // Collapse/extend documentation tree
 
-$('.li-item-icon').click(function () {
-  $( this ).toggleClass("liOpened liClosed") ;
-  $( this ).parent().children('ul').toggle() ;
-  return false;
-});
+// $('.li-item-icon').click(function () {
+//   $( this ).toggleClass("liOpened liClosed") ;
+//   $( this ).parent().children('ul').toggle() ;
+//   return false;
+// });
