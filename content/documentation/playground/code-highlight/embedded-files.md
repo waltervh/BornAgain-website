@@ -19,6 +19,6 @@ This tutorial explains how to embed Python code from a script, located in certai
 
 #### Highlight the file from local directory, with icon to download
 
-{{< highlightfile file="/content/documentation/playground/code-highlight/another_code_snippet.py" language="python" >}}
+{{< highlightloc file="another_code_snippet.py" language="python" >}}
 
 

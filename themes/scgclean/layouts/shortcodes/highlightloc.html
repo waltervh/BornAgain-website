@@ -1,0 +1,16 @@
+<!--
+Highlight file, provide download link.
+File is located in local directory
+-->
+
+{{ $file_param := (.Get "file") }}
+{{ $file := (printf "%s%s" $.Page.File.Dir $file_param) }}
+
+{{ $lang := .Get "language" }}
+
+{{ highlight (readFile (printf "content/%s" $file)) $lang "linenos=table"}}
+
+<a class="linktofile" href="{{ absURL $file }}"/>
+    {{ $file_param }}
+</a>
+
