@@ -43,7 +43,7 @@ Run Hugo server on `master` branch.
 
 ```
 $ cd <source>
-$ hugo server -D
+$ hugo server --disableFastRender
 ```
 
 Open web-browser using address Hugo will tell you (most probably http://localhost:1313/scgdoc-hugo/).

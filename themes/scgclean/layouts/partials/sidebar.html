@@ -1,10 +1,9 @@
-
 {{- $currentNode := . }}
 
-{{- range .Site.Sections.ByWeight.Reverse}}
+{{- range .Site.Sections.ByWeight}}
   {{- if eq .Type  "documentation" }}
     <ul class="doctree">
-      {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+      {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
     </ul>
   {{- end}}
 {{- end}}
@@ -14,8 +13,7 @@
 
 {{- $currentNode := .currentnode }}
 {{- with .sect}}
-  {{- if .IsSection}}
-    {{- safeHTML .Params.head}}
+  {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
 
     <li data-nav-id="{{.URL}}" class="dd-item
         {{- if .IsAncestor $currentNode}} parent{{end}}
@@ -24,7 +22,6 @@
         ">
         
       {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
-
       {{- if ne $numberOfPages 0 }}
         {{- if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
           <i class="fa liOpened li-item-icon"></i>
@@ -32,11 +29,9 @@
           <i class="fa liClosed li-item-icon"></i>
         {{- end}}
       {{- end}}
-
       <a href="{{ .RelPermalink}}">
         <span>{{ safeHTML .Params.Pre }}{{ .Title }}{{ safeHTML .Params.Post }}</span>
       </a>
-
       {{- if ne $numberOfPages 0 }}
         <ul>
           {{- .Scratch.Set "pages" .Pages }}
@@ -44,20 +39,15 @@
             {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
           {{- end}}          
           {{- $pages := (.Scratch.Get "pages") }}
-          
-          {{- range $pages.ByWeight.Reverse }}
-            
+          {{- range $pages.ByWeight }}
             {{- if and .Params.hidden (not $.showhidden) }}
             {{- else}}
             {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
-            {{- end}}            
-            
+            {{- end}}                        
           {{- end}}
-
         </ul>
       {{- end}}
     </li>
-
   {{- else}}
     {{- if not .Params.Hidden }}
       <li data-nav-id="{{.URL}}" class="dd-item {{- if eq .URL $currentNode.URL}} active{{end -}}">
@@ -68,5 +58,4 @@
      {{- end}}
   {{- end}}
 {{- end}}
-
 {{- end}}
