@@ -6,9 +6,10 @@ File is located in local directory
 {{ $file_param := (.Get "file") }}
 {{ $file := (printf "%s%s" $.Page.File.Dir $file_param) }}
 
-{{ $lang := .Get "language" }}
+{{- $lang := .Get "language" | default ("python") }}
+{{- $opt := .Get "opt" | default ("linenos=table") }}
 
-{{ highlight (readFile (printf "content/%s" $file)) $lang "linenos=table"}}
+{{ highlight (readFile (printf "content/%s" $file)) $lang $opt}}
 
 <a class="linktofile" href="{{ absURL $file }}"/>
     {{ $file_param }}

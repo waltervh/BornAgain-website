@@ -1,17 +1,17 @@
 <!--
 Highlight file, provide download link.
-File name should contain full path
+File name should contain full path.
 -->
 
+{{- $lang := .Get "language" | default ("python") }}
+{{- $opt := .Get "opt" | default ("linenos=table") }}
+
 {{- $filelink := (trim (.Get "file") "/content") -}}
-
 {{$file := .Get "file" | readFile}}
-{{ $lang := .Get "language" }}
-
 {{ $justTheSplit := split $filelink "/" }}
 {{ $lastPartOnly := index (last 1 $justTheSplit) 0}}
 
-{{ highlight (print $file) $lang "linenos=table"}}
+{{ highlight (print $file) $lang $opt}}
 <a class="linktofile" href="{{ .Site.BaseURL }}/{{$filelink}}"/>
     {{$lastPartOnly}}
 </a>
