@@ -6,16 +6,16 @@
     <ul class="doctree">
       {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
     </ul>
-  {{- end }}
+  {{- end}}
 {{- end}}
 
 <!-- templates -->
 {{- define "section-tree-nav" }}
 
 {{- $currentNode := .currentnode }}
-{{- with .sect }}
-  {{- if .IsSection }}
-    {{- safeHTML .Params.head }}
+{{- with .sect}}
+  {{- if .IsSection}}
+    {{- safeHTML .Params.head}}
 
     <li data-nav-id="{{.URL}}" class="dd-item
         {{- if .IsAncestor $currentNode}} parent{{end}}
@@ -30,8 +30,8 @@
           <i class="fa liOpened li-item-icon"></i>
         {{- else -}}
           <i class="fa liClosed li-item-icon"></i>
-        {{- end }}
-      {{- end }}
+        {{- end}}
+      {{- end}}
 
       <a href="{{ .RelPermalink}}">
         <span>{{ safeHTML .Params.Pre }}{{ .Title }}{{ safeHTML .Params.Post }}</span>
@@ -42,28 +42,31 @@
           {{- .Scratch.Set "pages" .Pages }}
           {{- if .Sections}}
             {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
-          {{- end }}          
+          {{- end}}          
           {{- $pages := (.Scratch.Get "pages") }}
           
-          {{- range $pages.ByWeight }}
-            {{- if or (not .Params.hidden) (not $.showhidden) }}
-              {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
-            {{- end }}
-          {{- end }}
+          {{- range $pages.ByWeight.Reverse }}
+            
+            {{- if and .Params.hidden (not $.showhidden) }}
+            {{- else}}
+            {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+            {{- end}}            
+            
+          {{- end}}
 
         </ul>
-      {{- end }}
+      {{- end}}
     </li>
 
-  {{- else }}
+  {{- else}}
     {{- if not .Params.Hidden }}
       <li data-nav-id="{{.URL}}" class="dd-item {{- if eq .URL $currentNode.URL}} active{{end -}}">
         <i class="fa liSingle li-item-icon"></i>
         <a href="{{ .RelPermalink }}">
         <span>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</span> 
         </a></li>
-     {{- end }}
-  {{- end }}
-{{- end }}
+     {{- end}}
+  {{- end}}
+{{- end}}
 
-{{- end }}
+{{- end}}
