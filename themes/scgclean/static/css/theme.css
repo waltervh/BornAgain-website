@@ -42,6 +42,7 @@ a.linktofile[href$='.py'] {
   background: url("../img/save.png") no-repeat left;
   padding-left: 25px;
   white-space:nowrap;  
+  color:#1982d1;
 }
 
 blockquote {
@@ -599,10 +600,10 @@ td {
 /* ------------------------------------------------------------- */
 
 code {
-	color: #550000;
-	background-color: #ffffff;
-	font-size: 100%;
-	font-family: monospace;
+  color: #550000;
+  background-color: inherit;
+  font-size: 100%;
+  font-family: monospace;
 }
 
 /* ------------------------------------------------------------- *

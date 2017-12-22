@@ -24,11 +24,4 @@ Scattering from a multilayered sample with correlated roughness.
 {{< figscg src="../CorrelatedRoughness_setup.jpg" width="320px" caption="A short caption">}}
 {{< /galleryscg >}}
 
-{{< highlight python "linenos=table">}}
-{{< readfile file="/content/documentation/bornagain/python-examples/layered-structures/CorrelatedRoughness.py">}}
-{{< /highlight >}}
-
-{{< link "documentation/bornagain/python-examples/layered-structures/CorrelatedRoughness.py" >}}
-CorrelatedRoughness.py
-{{< /link >}}
-
+{{< highlightloc file="CorrelatedRoughness.py">}}
