@@ -7,9 +7,9 @@ weight = 30
 
 #### Resolve few remaining hugo-related technical issues
 
-* Occasional failures during side bar generation
+* ~~Occasional failures during side bar generation~~
+* ~~Less verbose shortcode for embedded Python scripts~~
 * Math expressions in Latex inlined
-* Less verbose shortcode for embedded Python scripts
 
 #### Create final BornAgain thema for Hugo
 

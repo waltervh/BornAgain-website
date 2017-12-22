@@ -19,10 +19,4 @@ Scattering from a sample containing spherical embedded particles.
 {{< figscg src="../BuriedParticles_setup.png" width="320px" caption="A short caption">}}
 {{< /galleryscg >}}
 
-{{< highlight python "linenos=table">}}
-{{< readfile file="/content/documentation/bornagain/python-examples/layered-structures/BuriedParticles.py">}}
-{{< /highlight >}}
-
-{{< link "documentation/bornagain/python-examples/layered-structures/BuriedParticles.py" >}}
-BuriedParticles.py
-{{< /link >}}
+{{< highlightloc file="BuriedParticles.py">}}

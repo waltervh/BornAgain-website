@@ -17,12 +17,5 @@ This example is similar to the simulation in Born Approximation, CylindersInBA, 
 {{< figscg src="../CylindersInDWBA_setup.jpg" width="320px" caption="A short caption">}}
 {{< /galleryscg >}}
 
-
-{{< highlight python "linenos=table">}}
-{{< readfile file="/content/documentation/bornagain/python-examples/embedded-particles/CylindersInDWBA.py">}}
-{{< /highlight >}}
-
-{{< link "documentation/bornagain/python-examples/embedded-particles/CylindersInDWBA.py" >}}
-CylindersInDWBA.py
-{{< /link >}}
+{{< highlightloc file="CylindersInDWBA.py">}}
 
