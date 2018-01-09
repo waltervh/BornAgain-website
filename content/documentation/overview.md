@@ -7,8 +7,9 @@ weight = 10
 
 Prototype of the documentation site made with [Hugo](https://gohugo.io/) and [Bootstrap](http://getbootstrap.com/).
 The documentation theme is called `scgdoc` and is supported by the Scientific Computing Group at MLZ.
-The theme was heavilly borrowed from the following projects
+The theme is heavilly based on following projects
 
+* [hugo-theme-learn - Documentation theme for Hugo](https://github.com/gpospelov/hugo-theme-learn)
 * [docDoc - Documentation theme for Hugo](https://themes.gohugo.io/docdock/)
 * [Startboostrap Clean Blog](https://themes.gohugo.io/startbootstrap-clean-blog/)
 
