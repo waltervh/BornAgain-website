@@ -6,8 +6,6 @@
     </ul>
   {{- end}}
 {{- end}}
-
-<!-- templates -->
 {{- define "section-tree-nav" }}
 {{- $currentNode := .currentnode }}
 {{- with .sect}}
@@ -26,11 +24,11 @@
       <a href="{{ .RelPermalink}}"><span>{{ .Title }}</span></a>
       {{- if ne $numberOfPages 0 }}
         <ul>
-          {{- .Scratch.Set "pages" .Pages }}
+          {{- $currentNode.Scratch.Set "pages" .Pages }}
           {{- if .Sections}}
-            {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
+            {{- $currentNode.Scratch.Set "pages" (.Pages | union .Sections) }}
           {{- end}}          
-          {{- $pages := (.Scratch.Get "pages") }}
+          {{- $pages := ($currentNode.Scratch.Get "pages") }}
           {{- range $pages.ByWeight }}
             {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
           {{- end}}
