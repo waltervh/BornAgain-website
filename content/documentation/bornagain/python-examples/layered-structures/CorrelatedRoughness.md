@@ -20,8 +20,9 @@ Scattering from a multilayered sample with correlated roughness.
 * The incident angles are αi = 0.2° and Φi = 0°.
 
 {{< galleryscg >}}
-{{< figscg src="../CorrelatedRoughness.png" width="320px" caption="A short caption">}}
-{{< figscg src="../CorrelatedRoughness_setup.jpg" width="320px" caption="A short caption">}}
+{{< figscg src="../CorrelatedRoughness_setup.jpg" width="320px" caption="Real-space model">}}
+{{< figscg src="../CorrelatedRoughness.png" width="320px" caption="Intensity Image">}}
 {{< /galleryscg >}}
 
-{{< highlightloc file="CorrelatedRoughness.py">}}
+#### Python script
+{{< highlightloc file="CorrelatedRoughness.py" language="python" >}}

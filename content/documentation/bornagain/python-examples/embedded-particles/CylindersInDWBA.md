@@ -3,6 +3,8 @@ title = "Cylinders in Distorted Wave Born Approximation"
 weight = 20
 +++
 
+### Cylinders in Distorted Wave Born Approximation
+
 Scattering from a monodisperse distribution of cylindrical particles using the Distorted Wave Born Approxiamtion (DWBA).
 
 This example is similar to the simulation in Born Approximation, CylindersInBA, but now the particles sit on top of a substrate. Therefore incoming and scattered waves are distorted by reflections from the substrate surface, as described by the DWBA.
@@ -13,9 +15,9 @@ This example is similar to the simulation in Born Approximation, CylindersInBA, 
 * No interference effects from inter-particle correlations (dilute-particles approximation).
 
 {{< galleryscg >}}
-{{< figscg src="../CylindersInDWBA.png" width="320px" caption="A short caption">}}
-{{< figscg src="../CylindersInDWBA_setup.jpg" width="320px" caption="A short caption">}}
+{{< figscg src="../CylindersInDWBA_setup.jpg" width="320px" caption="Real-space model">}}
+{{< figscg src="../CylindersInDWBA.png" width="320px" caption="Intensity Image">}}
 {{< /galleryscg >}}
 
-{{< highlightloc file="CylindersInDWBA.py">}}
-
+#### Python script:
+{{< highlightloc file="CylindersInDWBA.py" language="python" >}}
