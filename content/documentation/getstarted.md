@@ -25,7 +25,7 @@ Clone our site.
 $ git clone https://github.com/scgmlz/scgdoc-hugo.git
 ```
 
-While being in `master` branch configure `public` directory to be a worktree for `gh-pages` branch (should be done only once).
+While being in `master` branch configure `public` directory to be a worktree for `gh-pages` branch (should be done only once). This step can be skipped when using the more classical approach of creating an extra clone.
 
 ```
 $ git worktree add -B gh-pages public origin/gh-pages
@@ -55,6 +55,8 @@ $ cd <source>; git add _index.md; git commit -m "my changes"; git push
 
 #### Publishing new version of web site on GitHub
 
+##### Using the git worktree
+
 To generate new site in `public` run `hugo` without parameters.
 
 ```
@@ -68,6 +70,33 @@ cd public && git add --all && git commit -m "Publishing to gh-pages" && git push
 See details in [Deployment to gh-pages branch](https://discourse.gohugo.io/t/simple-deployment-to-gh-pages/5003)
 
 In few minutes, check [https://scgmlz.github.io/scgdoc-hugo/](https://scgmlz.github.io/scgdoc-hugo/) to see if your changes have been successfully published.
+
+##### Using a local git clone
+
+Follow these steps:
+
+```bash
+# remove previous publication
+rm -rf public
+mkdir public
+
+# clone gh-pages branch from the local repo into a repo located within "public"
+git clone .git --branch gh-pages public
+  
+# generate
+hugo
+  
+# commit the changes in the clone and push them back to the *local* gh-pages branch    
+cd public
+git commit -a -m "Publishing to gh-pages"
+git push origin gh-pages
+
+# push the changes to the remote origin
+cd ..
+git push origin :
+```
+
+
 
 #### Cleaning previous publication
 
