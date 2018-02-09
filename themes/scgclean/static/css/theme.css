@@ -631,14 +631,15 @@ code {
 	color: #333; 
 	border: 1px 
 	solid #ccc; 
-	border-radius: 4px; 
+    border-radius: 4px;
+    margin-top: 20px;
 	margin-bottom: 10px; 
 }
 
 table.highlighttable {
 	width: auto;
 	padding: 0px;
-	margin: 0px
+    margin: 0px;
 	solid: #f0f0f0;
 	border: none;
 }

@@ -5,19 +5,18 @@ weight = 30
 
 ### Basic simulation tutorial
 
-![experiment-view](cylinders-prisms.jpg#floatleft)
+{{< figscg src="cylinders-prisms.jpg" alignment="center">}}
+
 In this example, we simulate the scattering from a mixture of cylinder and prism nanoparticles without any interference between them. These particles are placed in air, on top of a substrate. We will go through each step of the simulation. Each section starts with a short Python code snippet, followed by a discussion. The full code can be found at the end of this page.
 
 #### Importing the Python modules
 
-We start by importing the basic packages for scientific computing and plotting. Line 4 imports the BornAgain Python API.
+We start by importing the BornAgain Python API and alias it as `ba`. Then we import some often used unit designations from BornAgain.
 
-{{< highlight python "linenos=table">}}
+{{< highlight python >}}
 
-import numpy
-import matplotlib
-from matplotlib import pyplot as plt
-from bornagain import *
+import bornagain as ba
+from bornagain import deg, nm
 
 {{< /highlight >}}
 
@@ -26,66 +25,65 @@ from bornagain import *
 
 The different materials that will be used in the sample description will now be defined.
 
-{{< highlight python "linenos=table">}}
+{{< highlight python >}}
 
 def get_sample():
     """
-    Build and return the sample representing cylinders and prisms on top of
-    substrate without interference.
+    Returns a sample with uncorrelated cylinders and prisms on a substrate.
     """
     # defining materials
-    m_air = HomogeneousMaterial("Air", 0.0, 0.0)
-    m_substrate = HomogeneousMaterial("Substrate", 6e-6, 2e-8)
-    m_particle = HomogeneousMaterial("Particle", 6e-4, 2e-8)
+    m_air = ba.HomogeneousMaterial("Air", 0.0, 0.0)
+    m_substrate = ba.HomogeneousMaterial("Substrate", 6e-6, 2e-8)
+    m_particle = ba.HomogeneousMaterial("Particle", 6e-4, 2e-8)
 
 {{< /highlight >}}
 
-Line 1 marks the beginning of the function to define our sample. Lines 7-9 define different materials using the class HomogeneousMaterial. The general syntax is as follows
+The first line marks the beginning of the function to define our sample. We then define different materials using the class HomogeneousMaterial. The general syntax is as follows
 
 ```python
 <material> = HomogeneousMaterial("name", delta, beta)
 ```
 
-where `name` is the arbitrary name of the material associated with its complex refractive index $n = 1 - delta + i*beta$. Variable `<material>` is later used when referring to this particular material. The three materials defined in this example are `Air` with a refractive index of 1 (delta = beta = 0), a `Substrate` associated with a complex refractive index equal to $1 - 6x10-6 + i2x10-8$, and the material of the particles, whose refractive index is $n = 1 - 6x10-4 + i2x10-8$.
+where `name` is the arbitrary name of the material associated with its complex refractive index $n = 1 - delta + i \cdot beta$. Variable `<material>` is later used when referring to this particular material. The three materials defined in this example are `Air` with a refractive index of 1 (delta = beta = 0), a `Substrate` associated with a complex refractive index equal to $1 - 6\cdot 10^{-6} + i2\cdot 10^{-8}$, and the material of the particles, whose refractive index is $n = 1 - 6\cdot 10^{-4} + i2\cdot 10^{-8}$.
 
 #### Defining particles
 
 We define two different shapes of particles: cylinders and prisms (elongated particles with a constant equilateral triangular cross section):
 
-{{< highlight python "linenos=table">}}
+{{< highlight python >}}
 
-# collection of particles
-cylinder_ff = FormFactorCylinder(5*nanometer, 5*nanometer)
-cylinder = Particle(m_particle, cylinder_ff)
-prism_ff = FormFactorPrism3(10*nanometer, 5*nanometer)
-prism = Particle(m_particle, prism_ff)
+    # collection of particles
+    cylinder_ff = ba.FormFactorCylinder(5*nm, 5*nm)
+    cylinder = ba.Particle(m_particle, cylinder_ff)
+    prism_ff = ba.FormFactorPrism3(10*nm, 5*nm)
+    prism = ba.Particle(m_particle, prism_ff)
 
 {{< /highlight >}}
 
 All particles implemented in BornAgain are defined by their form factors (see formfactors), their sizes and the material they are made of. Here, for the cylindrical particle, we input its radius and height.  For the prism, the possible inputs are the length of one side of its equilateral triangular base and its height.
 
-In order to define a particle, we proceed in two steps. For example, for the cylindrical particle, we first specify the form factor of a cylinder with its radius and height, both equal to 5 nanometers in this particular case (see line 2). Then we associate this shape with the correct material as in line 3. The same procedure has been applied for the prism in lines 4 and 5, respectively.
+In order to define a particle, we proceed in two steps. For example, for the cylindrical particle, we first specify the form factor of a cylinder with its radius and height, both equal to 5 nanometers in this particular case. Then we associate this shape with the correct material. The same procedure is been used for the prism in the following two lines.
 
 #### Characterizing a particle assembly
 
 
-{{< highlight python "linenos=table">}}
+{{< highlight python >}}
 
-particle_layout = ParticleLayout()
-particle_layout.addParticle(cylinder, 0.5)
-particle_layout.addParticle(prism, 0.5)
-interference = InterferenceFunctionNone()
-particle_layout.setInterferenceFunction(interference)
+    particle_layout = ba.ParticleLayout()
+    particle_layout.addParticle(cylinder, 0.5)
+    particle_layout.addParticle(prism, 0.5)
+    interference = ba.InterferenceFunctionNone()
+    particle_layout.setInterferenceFunction(interference)
 
 {{< /highlight >}}
 
-The object which holds the information about the positions and densities of particles in our sample is called a `ParticleLayout` (line 28). We use the associated function `addParticle` for each particle shape. Its general syntax is
+The object which holds the information about the positions and densities of particles in our sample is called a `ParticleLayout`. We use the associated function `addParticle` for each particle shape. Its general syntax is
 
 ```python
 addParticle(<particle>, abundance=1.0, position=kvector_t(0,0,0), rotation=None)
 ```
 
-Here `<particle>` is the name of the variable used to define the particles. `abundance` is the proportion of the given type of particles, normalized to the total number of particles. Here we have 50% of cylinders and 50% of prisms. The parameter position represents coordinates of particle's reference point (expressed in nanometers) in the coordinate system of a given layer (the association with a particular layer will be done during the next step). In this example the position is set to the default value (0,0,0) which means particles sitting on top of the interface.
+Here `<particle>` is the name of the variable used to define the particles. `abundance` is the proportion of the given type of particles, normalized to the total number of particles. Here we have 50% of cylinders and 50% of prisms. The parameter `position` represents coordinates of particle's reference point (expressed in nanometers) in the coordinate system of a given layer (the association with a particular layer will be done during the next step). In this example the position is set to the default value $(0,0,0)$ which means particles sitting on top of the interface.
 
 {{% notice note %}}
 See tutorials [Particles positioning]({{% relref "FIXME" %}}) and [Particles rotation]({{% relref "FIXME" %}}) for more detailed explanations.
@@ -95,20 +93,21 @@ Finally, the last two lines specify that there is no coherent interference betwe
 
 #### Define a multilayer
 
-{{< highlight python "linenos=table">}}
+{{< highlight python >}}
 
-# air layer with particles and substrate form multi layer
-air_layer = Layer(m_air)
-air_layer.addLayout(particle_layout)
-substrate_layer = Layer(m_substrate)
-multi_layer = MultiLayer()
-multi_layer.addLayer(air_layer)
-multi_layer.addLayer(substrate_layer)
-return multi_layer
+    # air layer with particles and substrate form multi layer
+    air_layer = ba.Layer(m_air)
+    air_layer.addLayout(particle_layout)
+    substrate_layer = ba.Layer(m_substrate)
+    multi_layer = ba.MultiLayer()
+    multi_layer.addLayer(air_layer)
+    multi_layer.addLayer(substrate_layer)
+    print(multi_layer.treeToString())
+    return multi_layer
 
 {{< /highlight >}}
 
-We now have to configure our sample. The particles, cylinders and prisms, are on top of the substrate in an air layer. Both layers are considered to be semi-infinite. The air layer is constructed on line 2 using the previously defined air material as a constructor parameter. With the next line, the air layer is populated with particles using the previously defined particle layout object. The substrate layer is constructed on line 4 using the substrate material as a constructor parameter.
+We now have to configure our sample. The particles, cylinders and prisms, are on top of the substrate in an air layer. Both layers are considered to be semi-infinite. The air layer is constructed first using the previously defined air material as a constructor parameter. With the next line, the air layer is populated with particles using the previously defined particle layout object. The substrate layer is constructed afterwards using the substrate material as a constructor parameter.
 
 In the general case, if the user constructs a multilayer with more than 2 layers (taking the air and substrate layers into account), the thickness of intermediate layers has to be specified using the constructor below. The `thickness` parameter is expressed in nanometers.
 
@@ -116,29 +115,31 @@ In the general case, if the user constructs a multilayer with more than 2 layers
 <layer> = Layer(<material>, thickness)
 ```
 
-Our two layers are now fully characterized. The whole sample is represented by a `MultiLayer` object which is constructed on line 5. We assemble the sample by adding the top air layer, containing the particles, and the bottom substrate layer. The order in which layers are added to the multilayer is important: we start from the top layer down to the bottom one.
+Our two layers are now fully characterized. The whole sample is represented by a `MultiLayer` object. We assemble the sample by adding the top air layer, containing the particles, and the bottom substrate layer. The order in which layers are added to the multilayer is important: we start from the top layer down to the bottom one.
 
 The last line of the function returns the fully constructed sample.
 
 #### Define the beam and detector
 
-{{< highlight python "linenos=table">}}
+{{< highlight python >}}
 
 def get_simulation():
     """
-    Create and return GISAXS simulation with beam and detector defined
+    Returns a GISAXS simulation with beam and detector defined.
     """
-    simulation = GISASSimulation()
-    simulation.setDetectorParameters(100, phi_min*degree, phi_max*degree, 100, alpha_min*degree, alpha_max*degree)
-    simulation.setBeamParameters(1.0*angstrom, 0.2*degree, 0.0*degree)
+    simulation = ba.GISASSimulation()
+    simulation.setDetectorParameters(100, -1.0*deg, 1.0*deg,
+                                     100, 0.0*deg, 2.0*deg)
+    simulation.setBeamParameters(1.0*angstrom, 0.2*deg, 0.0*deg)
     return simulation
 
 {{< /highlight >}}
 
-The function `get_simulation` creates and returns a simulation object. The first step is to create a simulation object (line 5) of the GISASSimulation class type. Then we define the detector (line 6) and the beam parameters (line 7) using the corresponding class methods.
+The function `get_simulation` creates and returns a simulation object. The first step is to create a simulation object of type GISASSimulation. Then we define the detector and the beam parameters using the corresponding class methods.
 
-![beam-detector](beam-detector.png#floatleft)
-The GISAS setup and the coordinate system used in `BornAgain`. The incoming beam propagates with the incidence angles alpha_i and phi_i with respect to the sample axes as shown. A scattered (outgoing) beam, characterized by alpha_f and phi_f propagates toward the area detector. The angles alpha_i and alpha_f are defined in such a way that those shown in the Figure are positive.
+{{< figscg src="beam-detector.png" alignment="center">}}
+
+The GISAS setup and the coordinate system used in `BornAgain`. The incoming beam propagates with the incidence angles $\alpha_i$ and $\phi_i$ with respect to the sample axes as shown. A scattered (outgoing) beam, characterized by $\alpha_f$ and $\phi_f$ propagates toward the area detector. The angles $\alpha_i$ and $\alpha_f$ are defined in such a way that those shown in the figure are positive.
 
 The detector parameters are set using ranges of angles via the method:
 
@@ -165,37 +166,30 @@ In BornAgain, the scattering vector $q$ is defined as $ki - kf$, where $ki$ is t
 
 #### Running the simulation and plotting the results
 
-{{< highlight python "linenos=table">}}
+{{< highlight python >}}
 
 def run_simulation():
     """
-    Run simulation and plot results
+    Runs simulation and returns resulting intensity map.
     """
-    sample = get_sample()
     simulation = get_simulation()
-    simulation.setSample(sample)
+    simulation.setSample(get_sample())
     simulation.runSimulation()
-    result = simulation.result()
+    return simulation.result()
 
 {{< /highlight >}}
 
-The function `run_simulation` gathers together all previously defined items. We create the sample and simulation objects at the lines 5 and 6, using calls to the previously defined functions. We assign the sample to the simulation at line 7 and finally launch the simulation at line 8. In the last line, we obtain the result of the simulation as a SimulationResult object, which contains the axes definition and the simulated intensity as a function of outgoing angles `phi_f` and `alpha_f`.
+The function `run_simulation` gathers together all previously defined items. We first create the sample and simulation objects using calls to the previously defined functions. We then assign the sample to the simulation and finally launch the simulation with `runSimulation`. In the last line, we obtain the result of the simulation as a SimulationResult object, which contains the axes definition and the simulated intensity as a function of outgoing angles `phi_f` and `alpha_f`.
 
-{{< highlight python "linenos=table">}}
+{{< highlight python >}}
 
-im = plt.imshow(result.getArray(),
-                norm=matplotlib.colors.LogNorm(1.0, result.getMaximum()),
-                extent=[result.getXmin()/deg, result.getXmax()/deg, result.getYmin()/deg, result.getYmax()/deg],
-                aspect='auto')
-cb = plt.colorbar(im)
-cb.set_label(r'Intensity (arb. u.)', size=16)
-plt.xlabel(r'$\phi_f (^{\circ})$', fontsize=16)
-plt.ylabel(r'$\alpha_f (^{\circ})$', fontsize=16)
-plt.show()
+if __name__ == '__main__':
+    result = run_simulation()
+    ba.plot_simulation_result(result)
 
 {{< /highlight >}}
 
-To be able to plot the data using matplotlib routines, we convert our SimulationResult object into a standard numpy array (using the `array()` method). The rest of the code snippet contains typical function calls for plotting a numpy array as a heat map.
+To plot the data using matplotlib routines, we use a convenience function, defined in the BornAgain namespace: `plot_simulation_result()`.
 
 As a result of executing the whole script in the python interpreter
 ```bash
