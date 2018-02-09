@@ -3,11 +3,11 @@ title = "Quick Start"
 weight = 10
 +++
 
-### Quick Start
+## Quick Start
 
 This tutorial demonstrates how to run the simulation and get simulated intensity data image in a few mouse clicks.
 
-#### 1. Run BornAgain Graphical User Interface
+### 1. Run BornAgain Graphical User Interface
 {{< figscg src="BornAgain_48x48.png" width="48px" class="floatleft" >}}
 Use BornAgain icon located on the desktop (Windows) or on Launchpad (MacOS) to start the GUI.
 
@@ -16,13 +16,13 @@ For Linux users: run an executable located in BornAgain installation directory f
 $ <install_dir>/bin/BornAgain
 ```
 
-#### 2. Switch to the Sample View
+### 2. Switch to the Sample View
 
 {{< figscg src="gui_quickstart1.png" width="800px" class="center">}}
 
 When you start the BornAgain GUI, you will be presented with the Welcome View as shown on the plot. Switch to the Sample View by clicking on the pictogram marked on the left panel.
 
-#### 3. Construct the sample
+### 3. Construct the sample
 
 {{< figscg src="gui_quickstart2a.png" width="800px" class="center">}}
 
@@ -32,7 +32,7 @@ Drag the predefined standard sample with the name Example#1  from the item toolb
 
 You will get the sample representing the multilayer with two types of particles on top of substrate. 
 
-#### 4. Run the simulation
+### 4. Run the simulation
 
 {{< figscg src="gui_quickstart3.png" width="800px" class="center">}}
 
