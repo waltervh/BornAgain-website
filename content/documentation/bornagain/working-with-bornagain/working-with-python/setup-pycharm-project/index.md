@@ -23,21 +23,21 @@ The project `Untitled1` will be created in the default projects directory and wi
 
 As soon as you push `Create` button, you will be presented with the initial project view. The tree view on the left shows that your project consists of two parts: the `untitled1` directory for your python scripts (which is empty for the moment) and the `External Libraries` directory.
 
-{{< figure src="create-new3.png" alignment="center">}}
+{{< figscg src="create-new3.png" alignment="center">}}
 
 #### Add the BornAgain libraries to your project
 
 At this point it might be necessary to help PyCharm find the correct `BornAgain` libraries. The easiest way to do this, is to add the BornAgain library path to your project. Go to the `File/Settings` menu:
 
-{{< figure src="add-libs.png" alignment="center">}}
+{{< figscg src="add-libs.png" alignment="center">}}
 
 On the left, select `Project -> Project Structure` and then push the button `+ Add Content Root` on the right:
 
-{{< figure src="add-libs2.png" alignment="center">}}
+{{< figscg src="add-libs2.png" alignment="center">}}
 
 A new window will appear, select the `C:\BornAgain-<X.x.x>\bin` directory and click the `OK` button:
 
-{{< figure src="add-libs3.png" alignment="center">}}
+{{< figscg src="add-libs3.png" alignment="center">}}
 
 As a result, the directory `C:\BornAgain-<X.x.x>\bin` will be aded to your project. The directory contains the BornAgain core libraries and PyCharm will now be able to load them if other project files require this.
 
@@ -45,8 +45,8 @@ As a result, the directory `C:\BornAgain-<X.x.x>\bin` will be aded to your proje
 
 Optionally, you now might want to add the BornAgain examples path to you project to be able to see, modify and run the examples at any time. As was explained in the previous section, go to the project settings and add `C:\BornAgain-<X.x.x>\Examples` as a new content root. The final project settings window should look like this:
 
-{{< figure src="add-examples.png" alignment="center">}}
+{{< figscg src="add-examples.png" alignment="center">}}
 
 Close the settings window. The final project will look like shown below. Try to run some examples one by one, or start creating your own BornAgain Python script.
 
-{{< figure src="add-examples2.png" alignment="center">}}
+{{< figscg src="add-examples2.png" alignment="center">}}
