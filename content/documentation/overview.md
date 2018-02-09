@@ -50,7 +50,6 @@ During theme development following links were found to be very useful
 * [Embedding partials in markdown using a shortcode](https://gohugohq.com/partials/shortcode-embedding-partials-from-content-markdown-files/)
 * [Code tabs widgets](https://discourse.gohugo.io/t/code-tabs-widget/975/5)
 * [Bootstrap Tabs as Hugo Shortcodes](https://stackoverflow.com/questions/46207512/bootstrap-tabs-as-hugo-shortcodes)
-* [How to use Latex expressions in blogdown?](https://github.com/rstudio/blogdown/issues/36)
 * [Align images side by side in html](https://stackoverflow.com/questions/24680030/align-images-side-by-side-in-html)
 * [How to Align Images Side-by-Side Using HTML](https://owlcation.com/stem/how-to-align-images-side-by-side)
 * [How to change image size Markdown?](https://stackoverflow.com/questions/14675913/how-to-change-image-size-markdown)
@@ -72,3 +71,9 @@ During theme development following links were found to be very useful
 * [Hugo as documentation tool](https://discourse.gohugo.io/t/hugo-as-a-documentation-tool/112/39)
 * [Convert an existing site to Hugo](http://whipperstacker.com/2016/09/22/convert-an-existing-site-into-hugo/)
 * [Moving Wordpress to Hugo](https://blog.philipphauer.de/moving-wordpress-hugo/)
+
+##### Latex in Hugo
+
+* [Setting MathJax](https://divadnojnarg.github.io/blog/mathjax/)
+* [Better Tex in Hugo](http://www.latkin.org/blog/2016/08/07/better-tex-math-typesetting-in-hugo/)
+* [How to use Latex expressions in blogdown?](https://github.com/rstudio/blogdown/issues/36)
