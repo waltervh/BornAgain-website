@@ -181,3 +181,26 @@ def hello_world():
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
 
+
+#### Highlighting with line numbers starting from given value.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
+
+{{< highlight python "linenos=table,hl_lines=5,linenostart=42">}}
+
+class Base:
+    """
+    Base class
+    """
+    def __init__(self):
+        self.x = None
+        self.y = numpy.sin(numpy.pi/2.0)
+
+    def value(self):
+        return self.y
+
+def hello_world():
+    ln_distr = ba.DistributionLogNormal(self.radius.value, self.sigma.value)
+    par_distr = ba.ParameterDistribution("/Particle/FullSphere/Radius", ln_distr, nparticles, nfwhm, ba.RealLimits.limited(0.0, self.hmdso_thickness.value/2.0))
+
+{{< /highlight >}}
