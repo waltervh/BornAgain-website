@@ -72,7 +72,7 @@ If this is the case, a first possible cause for this to happen, is that `cmake` 
 $ export PATH=/<Qt5InstallDir>/Qt/<QtVersion>/gcc_64/bin:$PATH
 ```
 
-Another cause is a miss-configuration in Qt5 as provided by your Linux's package manager. For example, Ubuntu 14.04.1 LTS is known to have this problem. The solution will be to install Qt5 via the online installer, as explained in our [Qt5 alternative installation instruction]({{% relref "FIXME" %}}).
+Another cause is a miss-configuration in Qt5 as provided by your Linux's package manager. For example, Ubuntu 14.04.1 LTS is known to have this problem. The solution will be to install Qt5 via the online installer, as explained in our Qt5 alternative installation instruction *FIXME*.
 
 If this still doesn't work, please send us an email with your `cmake` configuration log and your distro name.
 
