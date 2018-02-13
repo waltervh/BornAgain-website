@@ -5,7 +5,7 @@ weight = 40
 
 ### Examples of BornAgain usage
 
-This section presents BornAgain simulations of various model systems. All Python scripts are shipped with BornAgain. They can be found in the Examples directory:
+This section presents BornAgain simulations of various model systems. All Python scripts are shipped with BornAgain. They can be found in the "Examples" directory:
 
 > **Windows**:  
 `C:\BornAgain-1.10.0\Examples\python\simulation`  
@@ -16,5 +16,9 @@ This section presents BornAgain simulations of various model systems. All Python
  **Linux**:  
 `<install-dir>/share/BornAgain-1.10/Examples/python/simulation`
 
-{{% children description="true" %}}
+The examples are subdivided into the following categories:
+{{% children %}}
+\
+\ 
+
 

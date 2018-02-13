@@ -15,11 +15,11 @@ In this example we demonstrate the difference between GISAS simulation using def
 * We run two simulations for two different detectors independently, and then compare results.
 Both simulations looks very much alike. The relative difference plot indicates the difference on the level $10^{-1}-10^{-3}$.
 * The difference is coming from the fact, that detector pixel shapes, as well as coordinates of pixel centers in $\phi\_f$, $\alpha\_f$ space, are slighly different in the case of spherical and rectangular detectors.
-* Please have in mind, that `Simulation::getIntensityData()` returns a Histogram2D object with axes defined in native detector coordinates (radians for `SphericalDetector` and millimeters for `RectangularDetector`). In the case of `SphericalDetector`, radians are converted during the plotting into degrees for convenience.
+* Please have in mind, that `Simulation::getIntensityData()` returns a `Histogram2D` object with axes defined in native detector coordinates (radians for `SphericalDetector` and millimeters for `RectangularDetector`). In the case of `SphericalDetector`, radians are converted during the plotting into degrees for convenience.
 
 {{< galleryscg >}}
-{{< figscg src="../RectangularDetector_setup.jpg" width="600px" caption="Real-space model">}}
-{{< figscg src="../RectangularDetector.png" width="600px" caption="Intensity image">}}
+{{< figscg src="../RectangularDetector_setup.jpg" width="650px" caption="Real-space model">}}
+{{< figscg src="../RectangularDetector.png" width="700px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

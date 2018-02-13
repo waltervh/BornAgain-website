@@ -19,18 +19,14 @@ Specular scattering from a multilayered sample with surface roughness.
     * a cross correlation length $\xi_{\perp}$ equal to $0$ nm.
 * The incident beam is characterized by a wavelength of $1.54$ $\unicode{x212B}$.
 * The incident angle $\alpha\_i$ varies between $0^{\circ}$ and $2^{\circ}$.
-* The numerical results are plots of the Fresnel coefficients $|R|$ and $|T|$ for different layers as functions of the incident angle $\alpha\_i$. The layers are numbered starting from the top layer (air). Therefore
-    * Layer 0 is the air layer, for which $|T|=1$,
-    * Layer 1 is the first material layer (layer A),
-    * Layer 20 is the last material layer (layer B),
-    * Layer 21 is the substrate, for which $|R|=0$.
+* The numerical result is a plot of the detected signal data for the selected layer as a function of the incident angle $\alpha\_i$.
 
 {{< galleryscg >}}
-{{< figscg src="../SpecularSimulation_setup.jpg" width="450px" caption="Real-space model">}}
-{{< figscg src="../SpecularSimulation.png" width="650px" caption="Intensity image">}}
+{{< figscg src="../BasicSpecularSimulation_setup.jpg" width="450px" caption="Real-space model">}}
+{{< figscg src="../BasicSpecularSimulation.png" width="670px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:
-{{% highlightfile file="/static/files/python/simulation/ex05_BeamAndDetector/SpecularSimulation.py" language="python" %}}
+{{% highlightfile file="/static/files/python/simulation/ex06_Reflectometry/BasicSpecularSimulation.py" language="python" %}}
 
 

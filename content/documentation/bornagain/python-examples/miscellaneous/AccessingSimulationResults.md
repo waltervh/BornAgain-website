@@ -12,8 +12,8 @@ This is an extended example for the further treatment of simulation results: acc
 
 
 {{< galleryscg >}}
-{{< figscg src="../AccessingSimulationResults.png" width="600px" caption="Intensity Image">}}
+{{< figscg src="../AccessingSimulationResults.png" width="670px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:
-{{< highlightloc file="AccessingSimulationResults.py" language="python" >}}
+{{% highlightfile file="/static/files/python/simulation/ex07_Miscellaneous/AccessingSimulationResults.py" language="python" %}}

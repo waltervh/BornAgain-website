@@ -5,4 +5,7 @@ weight = 20
 
 ### Interference functions
 
-{{% children description="true" %}}
+The following examples are available: 
+{{% children %}}
+\
+\ 

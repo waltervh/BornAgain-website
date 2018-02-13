@@ -5,4 +5,7 @@ weight = 20
 
 ### Beam and Detector
 
-{{% children description="true" %}}
+The following examples are available: 
+{{% children %}}
+\
+\ 

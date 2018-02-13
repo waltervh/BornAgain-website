@@ -5,4 +5,7 @@ weight = 20
 
 ### Miscellaneous
 
-{{% children description="true" %}}
+The following examples are available: 
+{{% children %}}
+\
+\ 
