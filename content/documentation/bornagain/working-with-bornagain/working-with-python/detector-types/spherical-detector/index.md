@@ -38,6 +38,14 @@ will create a detector plane with a total number of bins equal to 200 and with a
 
 Here, the vertical and horizontal lines denote bin boundaries while blue dots show the bin centers. During the simulation, the bin intensity will be calculated for values of $\phi_f$ and $\alpha_f$ corresponding to the bin centers and then normalized to the bin area.
 
+{{% alert theme="info" %}}
+**Note**
+
+`GISASSimulation` has a special setting to calculate the intensity in a bin as the 2D integral along the detector bin area. This mode will be explained elsewhere.
+
+{{% /alert %}}
+
+
 #### Alternative way to create SphericalDetector
 
 The detector can be initialized separately and then later assigned to the simulation object as shown in the script below. The results will be exactly the same as in the previous example
