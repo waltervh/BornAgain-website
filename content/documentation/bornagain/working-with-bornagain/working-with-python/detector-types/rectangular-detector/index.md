@@ -7,13 +7,13 @@ weight = 20
 
 A `RectangularDetector` object in BornAgain is used to represent a two dimensional neutron/x-ray detector. The following sections provide details on this type of detector:
 
-   * [General description]({{% relref "#general-description" %}}) 
-   * [Rectangular detector definition]({{% relref "#rectangular-detector-definition" %}})
-   * [Positioning the rectangular detector]({{% relref "#positioning-the-rectangular-detector" %}}) 
-   * [The detector is perpendicular to the sample plane]({{% relref "#the-detector-is-perpendicular-to-the-sample-plane" %}}) 
-   * [The detector is perpendicular to the direct beam]({{% relref "#the-detector-is-perpendicular-to-the-direct-beam" %}}) 
-   * [The detector is perpendicular to the reflected beam]({{% relref "#the-detector-is-perpendicular-to-the-reflected-beam" %}}) 
-   * [Additional convenience methods]({{% relref "#additional-convenience-methods" %}}) 
+* [General description]({{% relref "#general-description" %}}) 
+* [Rectangular detector definition]({{% relref "#rectangular-detector-definition" %}})
+* [Positioning the rectangular detector]({{% relref "#positioning-the-rectangular-detector" %}}) 
+* [The detector is perpendicular to the sample plane]({{% relref "#the-detector-is-perpendicular-to-the-sample-plane" %}}) 
+* [The detector is perpendicular to the direct beam]({{% relref "#the-detector-is-perpendicular-to-the-direct-beam" %}}) 
+* [The detector is perpendicular to the reflected beam]({{% relref "#the-detector-is-perpendicular-to-the-reflected-beam" %}}) 
+* [Additional convenience methods]({{% relref "#additional-convenience-methods" %}}) 
 
 
 #### General description

@@ -23,3 +23,6 @@ The `SphericalDetector` object represents a portion of a sphere, whose center is
 The `RectangularDetector` object, as follows from its name, strives to represent a real rectangular 2D detector. In particular, it allows to define an arbitrary position/orientation with respect to the sample and/or the beam.
 
 Both detector types are explained in detail in the following sections of the tutorial.
+
+* [Spherical detector]({{% relref "spherical-detector" %}}) 
+* [Rectangular detector]({{% relref "rectangular-detector" %}})
