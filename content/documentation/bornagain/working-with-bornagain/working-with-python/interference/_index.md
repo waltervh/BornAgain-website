@@ -1,6 +1,6 @@
 +++
 title = "Interference functions"
-weight = 40
+weight = 90
 +++
 
 ## Interference functions
