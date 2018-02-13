@@ -48,6 +48,8 @@ On the instrument settings window (2) you can modify the settings of the current
    * The name of the instrument
    * The beam parameters
    * The detector parameters
+   * Parameters for the polarization analysis
+   * Background
 
 
 ### Sample View
@@ -58,11 +60,12 @@ The Sample View allows you to design the sample via a drag-and-drop interface. I
    * The sample canvas (2) is used to assemble the sample
    * The sample tree view (3) represents the hierarchy of the objects composing the sample
    * The property editor (4) can be used to edit the parameters of the currently selected item
+   * The script view (5) shows the automatically generated Python script
 
 
 {{< figscg src="gui_sampleview_l.png" width="800px" class="center">}}
 
-> The sample constructed in this figure comprises a substrate on which are deposited, in equal proportion, cylinders and prisms. The interference between scattered waves is provided via the two-dimensional paracrystal interference function. The property editor shows the parameters of the currently selected cylindrical particles (radius and height of cylinders, their material, the particles depth and abundance).
+> The sample constructed in this figure comprises a substrate on which are deposited cylindrical particles. The interference between scattered waves is provided via the two-dimensional paracrystal interference function. The property editor shows the parameters of the currently selected cylindrical particles (radius and height of cylinders, their material, the particles position and abundance).
 
 The sample is constructed by dragging items from the item toolbox (1), dropping them on the sample canvas (2), connecting the items of the appropriate types together and adjusting their properties, if necessary, using the property editor (4). Particularly, the sample shown on this plot was constructed using the following steps:
 
@@ -70,8 +73,8 @@ The sample is constructed by dragging items from the item toolbox (1), dropping 
    * Two layer items were taken from the item toolbox and placed on top of the multilayer
        * The materials of the top and bottom layers were changed from the default one using the property editor
    * ParticleLayout item was taken from the item toolbox, placed on the sample canvas and connected with the top layer
-   * Cylinders and prisms were dropped on the sample canvas and connected with the ParticleLayout
-       * The materials of the particles were changed from the default one using the property editor
+   * Cylinders were dropped on the sample canvas and connected with the ParticleLayout
+       * The material of the particles was changed from the default one using the property editor
    * The interference function representing a 2D paracrystal was placed on the sample canvas and connected with the ParticleLayout item
 
 {{% alert theme="info" %}}
@@ -86,13 +89,13 @@ The Simulation View contains three important elements
 
    * The data selection box for selecting the instrument and the sample to simulate (1)
    * Simulation Parameters box for changing the main simulation parameters (2)
-   * The Run Simulation button (3)
+   * The `Run Simulation` and `Export to Python Script` buttons (3)
 
 {{< figscg src="gui_simulationview_l.png" width="800px" class="center">}}
 
 The names of the defined instruments and samples are displayed in the Data Selection box (1). From where the user can select a combination to run the simulation.
 
-Clicking on the Run Simulation button (3) immediately starts the simulation. When completed, the current view is automatically switched to the Jobs View showing the simulation results. This behaviour can be modified by changing Run Policy in (2).
+Clicking on the `Run Simulation` button (3) immediately starts the simulation. When completed, the current view is automatically switched to the Jobs View showing the simulation results. This behaviour can be modified by changing Run Policy in (2).
 
 ### Jobs View
 
@@ -110,8 +113,8 @@ The layout of the Job View Activity consists of three elements
    * The jobs selector widget (1) for selecting the specific job to be displayed
    * The job properties widget (2) contains basic information about the currently selected job
    * The intensity data widget (3) shows the intensity data of the currently selected job
-
-The toolbar (4) contains a set of control elements for the job selector and the intensity data widgets. The right corner of the toolbar is occupied by the Jobs Activity selector.
+   * The toolbar (4) contains a set of control elements for the job selector and the intensity data widgets. In the right corner of the toolbar one can switch to Projections widget.
+   * Control element on the right of the bottom toolbar (5) allows switching between Job View, Real Time View and Fitting activities. 
 
 {{< figscg src="gui_jobview_l.png" width="800px" class="center">}}
 
@@ -122,12 +125,12 @@ The toolbar (4) contains a set of control elements for the job selector and the 
 
    * Using the mouse wheel to zoom in and out
    * Dragging the color palette on the right of the image to change the min, max range of the z-axis
-   * The toolbar (4) on top of intensity data widget gives access to more options via the Plot Properties and Projections buttons
+   * The toolbar (4) on top of intensity data widget gives access to more options via the Plot Properties (left button) and Projections (right control)
 {{% /alert %}}
 
 {{< figscg src="gui_jobview_proj_l.png" width="800px" class="center">}}
 
-> The image represents the results of job2 with the Projections (1) and Plot Properties (2) widgets switched On. The type of colorbar gradient is changed from the default Polar to Spectrum.
+> The image represents the results of job2 with the Projections (1) and Plot Properties (2) widgets switched On. The type of colorbar gradient is changed from the default `Jet` to `Cold`.
 
 #### Real Time Activity
 

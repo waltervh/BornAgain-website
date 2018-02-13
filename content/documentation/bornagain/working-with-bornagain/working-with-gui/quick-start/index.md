@@ -26,7 +26,7 @@ When you start the BornAgain GUI, you will be presented with the Welcome View as
 
 {{< figscg src="gui_quickstart2a.png" width="800px" class="center">}}
 
-Drag the predefined standard sample with the name Example#1  from the item toolbox and drop it on the canvas.
+Drag the predefined standard sample with the name "Cylinder and Prisms"  from the item toolbox and drop it on the canvas.
 
 {{< figscg src="gui_quickstart2b.png" width="800px" class="center">}}
 
