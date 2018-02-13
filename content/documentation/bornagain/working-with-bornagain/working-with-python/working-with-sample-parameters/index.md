@@ -15,37 +15,48 @@ is used for fitting real data. In this case, the fitting kernel requires a list 
 mechanism for changing the values of these parameters in order to find their optima.
 
 In BornAgain this is done using the so-called sample parameter pool mechanism.
-We are going to briefly explain this approach using the code from the example [Working With Sample Parameters]({{% relref "documentation/playground/basic-markdown/headers.md" %}}).
+We are going to briefly explain this approach using the code from the example [Working With Sample Parameters]({{% relref "documentation/bornagain/python-examples/fitting/SampleParametersIntro.md" %}}).
 
-In BornAgain a sample is described by a hierarchical tree of objects. For the multilayer created in this example, this tree can be graphically represented as shown in Fig. 1.
-Similar trees can be printed in a Python session by running
+In BornAgain a sample is described by a hierarchical tree of objects. For the multilayer created in this example,
+this tree can be printed in a Python session by running
 
-{{< highlight python "linenos=table,hl_lines=5,linenostart=63">}}
+{{< highlight python "linenos=table,linenostart=63">}}
 
-sample.printSampleTree()
+print(sample.treeToString())
 
 {{< /highlight >}}
 
-{{< figscg src="./bornagain-sample-tree.png" caption="Fig. 1. Tree representation of the sample structure." class="left" >}}
+with subsequent output
+
+```bash
+MultiLayer ('CrossCorrelationLength':0 'ExternalFieldX':0 'ExternalFieldY':0 'ExternalFieldZ':0)
+    Layer0
+        ParticleLayout ('TotalParticleDensity':1)
+            Particle0 ('Abundance':0.5 'PositionX':0 'PositionY':0 'PositionZ':0)
+                Cylinder ('Radius':5 'Height':5)
+            Particle1 ('Abundance':0.5 'PositionX':0 'PositionY':0 'PositionZ':0)
+                Prism3 ('BaseEdge':5 'Height':5)
+            InterferenceNone
+    LayerInterface
+    Layer1
+```
 
 The top MultiLayer object is composed of three children, namely Layer #0, Layer Interface #0 and <nobr>Layer #1</nobr>. 
 The children objects might themselves also be decomposed into tree-like structures. 
 For example, Layer #0 contains a ParticleLayout object, which holds information related to the two
- types of particles populating the layer. All numerical values used during the sample construction (thickness of layers, size of particles, roughness parameters) are part of the 
-same tree structure. They are marked in the figure with shaded gray boxes.
-
-These values are registered in the sample parameter pool using the name composed of the corresponding nodes’ names.
+types of particles populating the layer. All numerical values used during the sample construction (thickness of layers, size of particles, etc.) are part of the 
+same tree structure. These values are registered in the sample parameter pool using the name composed of the corresponding nodes’ names.
 A list of the names and values of all registered sample’s parameters can be displayed using the command
 
-{{< highlight python "linenos=table,hl_lines=5,linenostart=66">}}
+{{< highlight python "linenos=table,linenostart=66">}}
 
-sample.printParameters()
+print(sample.parametersToString())
 
 {{< /highlight >}}
 
 The output will be:
 
-```
+```bash
 '/MultiLayer/CrossCorrelationLength':0
 '/MultiLayer/ExternalFieldX':0
 '/MultiLayer/ExternalFieldY':0
@@ -68,7 +79,7 @@ The output will be:
 These values can be accessed/changed during run time. For example, the height of the cylinders populating
 the first layer can be changed from the current value of 5 nm to 10 nm by running the command
 
-{{< highlight python "linenos=table,hl_lines=5,linenostart=80">}}
+{{< highlight python "linenos=table,linenostart=80">}}
 
 sample.setParameterValue(
         "/MultiLayer/Layer0/ParticleLayout/Particle0/Cylinder/Height",
@@ -79,7 +90,7 @@ sample.setParameterValue(
 Wildcards `*` can be used to reduce typing or to work on a group of parameters. In the example below, the first command will change the height of all cylinders in the same way,
 as in the previous example.
 
-{{< highlight python "linenos=table,hl_lines=5,linenostart=97">}}
+{{< highlight python "linenos=table,linenostart=97">}}
 
 sample.setParameterValue("*/Cylinder/Height", 10.0*nm)
 
@@ -87,10 +98,10 @@ sample.setParameterValue("*/Cylinder/Height", 10.0*nm)
 
 The line below will change simultaneously both, the height and the half-side length of prisms.
 
-{{< highlight python "linenos=table,hl_lines=5,linenostart=98">}}
+{{< highlight python "linenos=table,linenostart=98">}}
 
 sample.setParameterValue("*/Prism3/*", 10.0*nm)
 
 {{< /highlight >}}
 
-See the complete code in the [working with sample parameters]({{% relref "documentation/playground/basic-markdown/headers.md" %}}) example.
+See the complete code in the [Working with sample parameters]({{% relref "documentation/bornagain/python-examples/fitting/SampleParametersIntro.md" %}}) example.
