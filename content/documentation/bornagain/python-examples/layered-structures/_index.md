@@ -5,4 +5,7 @@ weight = 20
 
 ### Layered structures
 
-{{% children description="true" %}}
+The following examples are available: 
+{{% children %}}
+\
+\ 
