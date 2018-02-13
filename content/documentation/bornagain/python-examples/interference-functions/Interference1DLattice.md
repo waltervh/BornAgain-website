@@ -19,7 +19,7 @@ Scattering from long boxes distributed along a one-dimensional lattice.
 > #### Note:
 > * By default, the axis of the one-dimensional lattice is the $x$-axis. A rotation can be applied to the particles (like in this example) or to the 1D lattice.  
 
-> * In the real-space model picture, the length of the boxes cannot be seen as it is too large, compared to its width and heigth.    
+> * In the real-space model picture, the full length of a boxes cannot be seen as it is too large compared to its width and heigth.    
 
 
 {{< galleryscg >}}
