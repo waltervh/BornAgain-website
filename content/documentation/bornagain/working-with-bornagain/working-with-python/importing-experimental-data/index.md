@@ -85,7 +85,7 @@ simulation.setBeamIntensity(1.2e7)
 
 ### Importing real data
 
-As explained in [???Accessing simulation results???]({{% relref "" %}}) tutorial,
+As explained in [Accessing simulation results]({{% relref "documentation/bornagain/working-with-bornagain/working-with-python/accessing-simulation-results/index.md" %}}) tutorial,
 the intensity data are stored in BornAgain in special objects of `Histogram2D` type.
 They are used both for retrieving the simulation results, and for passing the intensity data inside the fitting kernel.
 
