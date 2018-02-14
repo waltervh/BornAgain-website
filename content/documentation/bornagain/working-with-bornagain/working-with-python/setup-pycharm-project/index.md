@@ -1,6 +1,6 @@
 +++
 title = "Setup of a PyCharm project"
-weight = 20
+weight = 10
 +++
 
 ### How to setup a PyCharm project

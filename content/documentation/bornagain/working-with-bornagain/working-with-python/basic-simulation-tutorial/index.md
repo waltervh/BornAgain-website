@@ -1,6 +1,6 @@
 +++
 title = "Basic simulation tutorial"
-weight = 30
+weight = 15
 +++
 
 ### Basic simulation tutorial

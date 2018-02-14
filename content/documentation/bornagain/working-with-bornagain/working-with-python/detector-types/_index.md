@@ -1,6 +1,6 @@
 +++
 title = "Detector types"
-weight = 40
+weight = 25
 +++
 
 ### Detector types
@@ -24,5 +24,5 @@ The `RectangularDetector` object, as follows from its name, strives to represent
 
 Both detector types are explained in detail in the following sections of the tutorial.
 
-* [Spherical detector]({{% relref "spherical-detector" %}}) 
-* [Rectangular detector]({{% relref "rectangular-detector" %}})
+* [Spherical detector]({{% relref "documentation/bornagain/working-with-bornagain/working-with-python/detector-types/spherical-detector/index.md" %}}) 
+* [Rectangular detector]({{% relref "documentation/bornagain/working-with-bornagain/working-with-python/detector-types/rectangular-detector/index.md" %}})
