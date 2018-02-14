@@ -5,7 +5,7 @@ weight = 15
 
 ### Basic simulation tutorial
 
-{{< figscg src="cylinders-prisms.jpg" alignment="center">}}
+{{< figscg src="cylinders-prisms.jpg" class="center">}}
 
 In this example, we simulate the scattering from a mixture of cylinder and prism nanoparticles without any interference between them. These particles are placed in air, on top of a substrate. We will go through each step of the simulation. Each section starts with a short Python code snippet, followed by a discussion. The full code can be found at the end of this page.
 
@@ -137,7 +137,7 @@ def get_simulation():
 
 The function `get_simulation` creates and returns a simulation object. The first step is to create a simulation object of type GISASSimulation. Then we define the detector and the beam parameters using the corresponding class methods.
 
-{{< figscg src="beam-detector.png" alignment="center">}}
+{{< figscg src="beam-detector.png" class="center">}}
 
 The GISAS setup and the coordinate system used in `BornAgain`. The incoming beam propagates with the incidence angles $\alpha_i$ and $\phi_i$ with respect to the sample axes as shown. A scattered (outgoing) beam, characterized by $\alpha_f$ and $\phi_f$ propagates toward the area detector. The angles $\alpha_i$ and $\alpha_f$ are defined in such a way that those shown in the figure are positive.
 
@@ -198,7 +198,7 @@ $ python CylindersAndPrisms.py
 
 The following image should be displayed on the screen
 
-{{< figscg src="result.png" alignment="center">}}
+{{< figscg src="result.png" class="center">}}
 
 #### Complete script
 

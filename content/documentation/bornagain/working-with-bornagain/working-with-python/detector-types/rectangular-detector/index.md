@@ -20,7 +20,7 @@ A `RectangularDetector` object in BornAgain is used to represent a two dimension
 
 A `RectangularDetector` has a plane rectangular shape, a total given width and height and a given amount of pixels. The detector plane can placed in an arbitrary position and orientation with respect to the sample position.
 
-{{< figscg src="rectangular_detector.png" alignment="center">}}
+{{< figscg src="rectangular_detector.png" class="center">}}
 
 {{% alert theme="info" %}}
 **Note**
@@ -51,7 +51,7 @@ The local detector coordinate system is defined in such a way, that its origin c
 detector = RectangularDetector(10, 200.0, 9, 180.0)
 ```
 
-{{< figscg src="xy_plane_with_labels.png" alignment="center">}}
+{{< figscg src="xy_plane_with_labels.png" class="center">}}
 
 Here, the vertical and horizontal lines denote the bin boundaries while the blue markers show the bin centers. During a simulation, the bin intensity will be calculated for values of $\phi_f$ and $\alpha_f$ corresponding to the bin centers and then normalized to the bin area.
 
@@ -70,7 +70,7 @@ The position and the orientation of the detector can be defined in a generic way
 * the coordinate of the point `(u0, v0)` of intersection of the normal vector **n** and the detector plane, expressed in local detector coordinates
 * the detector axis direction vector **u** which defines the orientation of the detector axes with respect to the sample coordinate system
 
-{{< figscg src="rectangular_detector_genpos.png" alignment="center">}}
+{{< figscg src="rectangular_detector_genpos.png" class="center">}}
 
 In the plot above, the detector is inclined towards the sample by an angle of 20 degrees.
 
@@ -102,7 +102,7 @@ In the following, we will how to set the detector's parameters for the three mos
 
 In this case the normal vector **n** coincides with the x-axis of the sample coordinate system and the length of the vector is equal to the detector distance. The detector's local coordinates `(u0, v0)` denote the point where the sample x-axis crosses the detector plane.
 
-{{< figscg src="rectangular_detector_samplepos.png" alignment="center">}}
+{{< figscg src="rectangular_detector_samplepos.png" class="center">}}
 
 The following code demonstrates the creation of the detector shown in the plot. Please note, that the values of the parameters are given only as an example and do not reflect the relative proportions in the plot.
 
@@ -130,7 +130,7 @@ detector.setPerpendicularToSampleX(distance, u0, v0)
 
 In this case the normal vector **n** coincides with the beam direction. The length of the vector is equal to the sample-detector distance. The detector local coordinates `(u0, v0)` again denote the point where the direct beam hits the detector plane.
 
-{{< figscg src="rectangular_detector_directbeam.png" alignment="center">}}
+{{< figscg src="rectangular_detector_directbeam.png" class="center">}}
 
 The normal vector **n** can be easily calculated from the beam inclination angle $\alpha_i$.
 
@@ -161,7 +161,7 @@ In this case, the GISASSimulation will calculate the normal vector **n** during 
 
 In this case the normal vector **n** coincides with the reflected beam direction. The length of the vector is equal to the sample-detector distance. The detector local coordinates `(u0, v0)` denote the point where the reflected beam hits the detector plane.
 
-{{< figscg src="rectangular_detector_reflectedbeam.png" alignment="center">}}
+{{< figscg src="rectangular_detector_reflectedbeam.png" class="center">}}
 
 The normal vector **n** can be easily calculated from the beam inclination angle $\alpha_i$.
 

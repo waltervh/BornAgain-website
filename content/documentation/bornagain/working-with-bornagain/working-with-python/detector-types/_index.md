@@ -16,7 +16,7 @@ Additionally, the following detector features are available
 
 There are two major types of detectors in BornAgain.
 
-{{< figscg src="two_detectors.png" alignment="center">}}
+{{< figscg src="two_detectors.png" class="center">}}
 
 The `SphericalDetector` object represents a portion of a sphere, whose center is located at the origin of the sample coordinate system. The spherical detector has a simple interface and serves as a good approximation of real detectors for the majority of small angle experimental setups.
 
