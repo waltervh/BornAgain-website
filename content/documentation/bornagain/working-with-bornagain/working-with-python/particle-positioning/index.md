@@ -20,7 +20,7 @@ of  the surrounding layer is defined. The coordinate system
 for a full sphere is shown below. For all implemented shapes,
 please refer to the User Manual (section "Particle form factors").
 
-{{< figscg src="tutorial_positioning_fullsphere.png" alignment="center">}}
+{{< figscg src="tutorial_positioning_fullsphere.png" class="center">}}
 
 The following code will create a spherical particle of 10 nm radius, made of a material whose refractive index roughly corresponds to silver at 1 Angstrom wavelength.
 
@@ -69,7 +69,7 @@ of two or more different particles in a layer, while `z`-component defines the v
 
 The plot below represents a multi-layer with 3 layers: a semi-infinite air layer, a middle layer with a finite thickness and a semi-infinite substrate layer.
 
-{{< figscg src="tutorial_positioning_in_the_layer2.png" alignment="center">}}
+{{< figscg src="tutorial_positioning_in_the_layer2.png" class="center">}}
 
 For each of these 3 layers the z-axis is pointing up. For the air layer,
 the `z=0.0` coordinate corresponds to the interface between air and middle layer.

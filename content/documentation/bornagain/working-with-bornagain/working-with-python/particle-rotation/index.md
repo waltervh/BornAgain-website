@@ -16,7 +16,7 @@ In this tutorial we are going to use a box shaped particle with defined length, 
 The picture below represents the initial orientation of the box shape.
 For all implemented shapes, please refer to the User Manual (section "Particle form factors").
 
-{{< figscg src="tutorial_rotations_box_refframe.png" alignment="center">}}
+{{< figscg src="tutorial_rotations_box_refframe.png" class="center">}}
 
 The following code will create a box particle of `30 nm x 20 nm x 6 nm` size made of a material
 whose refractive index roughly corresponds to silver at 1 Angstrom wavelength.
@@ -78,7 +78,7 @@ particle = Particle(material, FormFactorBox(30, 20, 6), RotationZ(90.*degree))
 
 The following plot shows the reference box at the top as well as the 3 rotated boxes at the bottom
 
-{{< figscg src="tutorial_rotations_box_xyz.png" alignment="center">}}
+{{< figscg src="tutorial_rotations_box_xyz.png" class="center">}}
 
 Please note, that the rotation doesn't change the reference coordinate system of the box.
 The initial box reference point stays in the same place.
@@ -142,7 +142,7 @@ rotating it by 90 degrees about the `Y` axis.
 In this case it is important to have in mind that the rotation of the box doesn't change the reference point of the box.
 In the plot below 3 different cases are illustrated.
 
-{{< figscg src="tutorial_rotations_box_crossing.png" alignment="center">}}
+{{< figscg src="tutorial_rotations_box_crossing.png" class="center">}}
 
 ```python
 # box on the left
