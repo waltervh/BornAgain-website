@@ -1,6 +1,6 @@
 +++
 title = "Detector types"
-weight = 40
+weight = 25
 +++
 
 ### Detector types

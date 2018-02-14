@@ -1,6 +1,6 @@
 +++
 title = "Material types"
-weight = 10
+weight = 20
 +++
 
 ### Material types

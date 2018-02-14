@@ -1,6 +1,6 @@
 +++
 title = "Basic fitting tutorial"
-weight = 50
+weight = 75
 +++
 
 ## Basic fitting tutorial
