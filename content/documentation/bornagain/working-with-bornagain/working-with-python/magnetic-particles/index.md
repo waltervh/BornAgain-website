@@ -1,6 +1,6 @@
 +++
 title = "Magnetic particles"
-weight = 50
+weight = 100
 +++
 
 ## Magnetic particles

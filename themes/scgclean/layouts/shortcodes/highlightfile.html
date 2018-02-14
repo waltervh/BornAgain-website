@@ -6,7 +6,7 @@ File name should contain full path.
 {{- $lang := .Get "language" | default ("python") }}
 {{- $opt := .Get "opt" | default ("linenos=table") }}
 
-{{- $filelink := (trim (.Get "file") "/content") -}}
+{{- $filelink := (trim (.Get "file") "/static") -}}
 {{$file := .Get "file" | readFile}}
 {{ $justTheSplit := split $filelink "/" }}
 {{ $lastPartOnly := index (last 1 $justTheSplit) 0}}
