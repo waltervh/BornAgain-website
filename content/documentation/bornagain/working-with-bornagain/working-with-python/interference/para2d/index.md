@@ -139,8 +139,4 @@ The complete example can be found here.[FIXME]
 
 To initialize the `InterferenceFunction2DParaCrystal` in the graphical user interface, the corresponding object has to be connected with ParticleLayout and its parameters (lattice length, angles, PDF function parameters) adjusted in the property editor.
 
-{{< figscg src="interference_para2d_gui.png" width="600px" class="center">}}
-
-Please note, that the value of Delta parameter (angle between $x_d$, $y_d$ axes of the decay function) should not be changed. In the next versions of GUI it will be excluded from the interface.
-
-Please note, that the parameters CoherenceLengthX and CoherenceLengthY of the probability density functions in the GUI correspond to $\omega_x$, $\omega_y$ described in this tutorial. In the next versions of the GUI this notation will be changed to correspond with the notation in the tutorial.
+{{< figscg src="interference_para2d_gui.png" width="800px" class="center">}}

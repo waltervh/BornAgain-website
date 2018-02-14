@@ -129,8 +129,8 @@ The complete example can be found here[FIXME].
 
 ### Interference function of 1D lattice in GUI
 
-To Initialize `InterferenceFunction1DLattice` in the graphical user interface, the corresponding object has to be connected with ParticleLayout and the corresponding parameters (lattice length, rotation and parameters of decay distribution) have to be adjusted in the property editor.
+To Initialize `InterferenceFunction1DLattice` in the graphical user interface, the corresponding object has to be connected with ParticleLayout and the corresponding parameters (lattice length, rotation and parameters of decay function) have to be adjusted in the property editor.
 
 {{< figscg src="interference_1d_gui.png" width="800px" class="center">}}
 
-In the given example, an additional rotation module is attached to the box to provide a rotation around the z-axis and achieve the configuration of "Setup 3" from the example above.
+In the given example, an additional rotation module is attached to the box to provide a rotation around the z-axis and achieve the configuration of [Setup 3]({{% relref "#setup-3" %}})  from the example above.
