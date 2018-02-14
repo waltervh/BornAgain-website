@@ -106,7 +106,7 @@ layout.setParticleDensity(0.0001)
 
 {{< /highlight >}}
 
-The complete example can be found here.[FIXME]
+The complete example can be found [here]({{% relref "documentation/bornagain/python-examples/interference-functions/Interference1DRadialParaCrystal.md" %}}).
 
 ### Radial paracrystal in GUI.
 

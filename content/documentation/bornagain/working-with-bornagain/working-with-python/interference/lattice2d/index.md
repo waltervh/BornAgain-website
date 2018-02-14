@@ -120,7 +120,7 @@ particle_layout.setInterferenceFunction(interference)
 
 {{< /highlight >}}
 
-The complete example can be found here[FIXME].
+The complete example can be found [here]({{% relref "documentation/bornagain/python-examples/interference-functions/Interference2DSquareLattice.md" %}}).
 
 ### Interference function of 2D lattice in GUI
 
