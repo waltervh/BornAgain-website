@@ -33,11 +33,11 @@ The fitting library includes a number of minimization algorithms from
 
 In simple cases the user interacts with the framework through a Graphical User Interface.
 
-{{< figure src="nodes_architecture2_640.png" alignment="center">}}
+{{< figure src="nodes_architecture2_640.png" class="center">}}
 
 The advanced approach, allowing much higher levels of flexibility, consists in using BornAgain from Python. The user creates a Python script with a sample description and the simulation settings using the BornAgain API. The user then runs the simulation by executing the script in the Python interpreter. He assesses the simulation results using the graphics or analysis library of his choice, e.g. Python + numpy + matplotlib.
 
-{{< figure src="nodes_architecture3_640.png" alignment="center">}}
+{{< figure src="nodes_architecture3_640.png" class="center">}}
 
 #### Object Oriented Approach in Simulation Description
 
@@ -45,7 +45,7 @@ BornAgain uses an object-oriented approach in the simulation description to achi
 
 For example, to simulate the scattering from a mixture of cylinders and prisms deposited on a substrate, the following tree of objects has to be created.
 
-{{< figure src="nodes_architecture4.png" alignment="center">}}
+{{< figure src="nodes_architecture4.png" class="center">}}
 
 The parent MultiLayer object represents the sample and contains three children: the semi-infinite air layer, the semi-infinite substrate layer, and the interface between them. The air layer contains the so-called ParticleLayout object, which holds information about the particles populating the layer and the interference between them. Each particle is fully defined via its children: the material the particle is made of and the form factor representing the particle's shape.
 
@@ -57,7 +57,7 @@ The object-oriented approach in software design allows the users to have a much 
 
 In practice, for the users working from the Graphical User Interface the sample construction involves the usage of a drag-and-drop editor, where items of certain types should be placed on the canvas and connected with each other in order to create the sample structure (see figure below, on the left). For the users working from Python, a script similar to the one shown on the right of the figure below has to be created.
 
-{{< figure src="nodes_architecture5.png" alignment="center">}}
+{{< figure src="nodes_architecture5.png" class="center">}}
 
 Both approaches are explained in details in the following sections of this Documentation.
 

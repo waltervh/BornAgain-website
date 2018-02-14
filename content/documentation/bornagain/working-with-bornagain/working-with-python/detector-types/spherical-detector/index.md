@@ -7,7 +7,7 @@ weight = 10
 
 This shape of detector represents a portion of a sphere, defined by the range of $\phi$ and $\alpha$ angles as shown in the plot below. The sphere has its center located at the origin of the sample coordinate system.
 
-{{< figscg src="spherical_detector.png" alignment="center">}}
+{{< figscg src="spherical_detector.png" class="center">}}
 
 A GISAS or off-specular simulation creates a spherical detector by default. To set its parameters the method `setDetectorParameters` should be used
 
@@ -34,7 +34,7 @@ simulation.setDetectorParameters(20, -1.0*degree, 1.0*degree, 10, 0.0*degree, 1.
 
 will create a detector plane with a total number of bins equal to 200 and with a fixed bin size equal to `0.1*degree` along both directions
 
-{{< figscg src="phi_alpha_plane.png" alignment="center">}}
+{{< figscg src="phi_alpha_plane.png" class="center">}}
 
 Here, the vertical and horizontal lines denote bin boundaries while blue dots show the bin centers. During the simulation, the bin intensity will be calculated for values of $\phi_f$ and $\alpha_f$ corresponding to the bin centers and then normalized to the bin area.
 
@@ -99,4 +99,4 @@ simulation = GISASSimulation()
 simulation.setDetector(detector)
 ```
 
-{{< figscg src="phi_alpha_plane_variable.png" alignment="center">}}
+{{< figscg src="phi_alpha_plane_variable.png" class="center">}}
