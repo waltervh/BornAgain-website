@@ -187,7 +187,7 @@ fit_suite.printResults()
 
 {{< /highlight >}}
 
-[This example]({{% relref "documentation/bornagain/working-with-bornagain/working-with-python/working-with-sample-parameters/index.md" %}}) gives more details on accessing the fitting results.
+[This example]({{% relref "documentation/bornagain/python-examples/fitting/FitCylindersPrisms.md" %}}) gives more details on accessing the fitting results.
 
 ### How to get the right answer from fitting
 
