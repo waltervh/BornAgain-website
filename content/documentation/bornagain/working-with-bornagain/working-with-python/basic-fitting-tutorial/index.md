@@ -7,7 +7,7 @@ weight = 50
 
 In this section we are going to go through a complete example of fitting using BornAgain.
 Each step will be associated with a detailed piece of code written in Python.
-The script can also be found in the [Fit Cylinders and Prisms]({{% relref "documentation/playground/basic-markdown/headers.md" %}}) example.
+The script can also be found in the [Fit Cylinders and Prisms]({{% relref "documentation/bornagain/python-examples/fitting/FitCylindersPrisms.md" %}}) example.
 
 This example uses the same sample geometry as in [Basic simulation tutorial]({{% relref "documentation/bornagain/working-with-bornagain/working-with-python/basic-simulation-tutorial/index.md" %}}).
 Cylindrical and prismatic particles in equal proportion are deposited on a substrate layer,
@@ -27,7 +27,7 @@ As a result, the fitting procedure is able to find the correct value of 5 nm for
 
 ### Importing python libraries
 
-{{< highlight python "linenos=table,hl_lines=5,linenostart=4" >}}
+{{< highlight python "linenos=table,linenostart=4" >}}
 
 import bornagain as ba
 from bornagain import deg, angstrom, nm
@@ -38,7 +38,7 @@ We start from import of the BornAgain Python API and particularly dimension unit
 
 ### Building the sample
 
-{{< highlight python "linenos=table,hl_lines=35,linenostart=8" >}}
+{{< highlight python "linenos=table,linenostart=8" >}}
 
 def get_sample(cylinder_height=5.0*nm, cylinder_radius=5.0*nm,
                prism_length=5.0*nm, prism_height=5.0*nm):
@@ -79,7 +79,7 @@ multilayered sample are given in the [Basic simulation tutorial]({{% relref "doc
 
 ### Creating the simulation
 
-{{< highlight python "linenos=table,hl_lines=35,linenostart=39" >}}
+{{< highlight python "linenos=table,linenostart=39" >}}
 
 def get_simulation():
     """
@@ -98,7 +98,7 @@ The function starting at line 39 creates the simulation object with the definiti
 
 ### Preparing the fitting pair
 
-{{< highlight python "linenos=table,hl_lines=35,linenostart=51" >}}
+{{< highlight python "linenos=table,linenostart=51" >}}
 
 def run_fitting():
     """
@@ -121,7 +121,7 @@ Lines 59-60 create the real data object by loading the ASCII data fromthe input 
 
 ### Setting up FitSuite
 
-{{< highlight python "linenos=table,hl_lines=35,linenostart=62" >}}
+{{< highlight python "linenos=table,linenostart=62" >}}
 
     fit_suite = ba.FitSuite()
     fit_suite.addSimulationAndRealData(simulation, real_data)
@@ -133,7 +133,7 @@ Line 62 creates a FitSuite object which provides the main interface to the minim
 Line 63 submits simulation description and real data pair to the subsequent fitting.
 Line 64 sets up FitSuite to print on the screen the information about fit progress once per 10 iterations.
 
-{{< highlight python "linenos=table,hl_lines=35,linenostart=66" >}}
+{{< highlight python "linenos=table,linenostart=66" >}}
 
     # setting fitting parameters with starting values
     fit_suite.addFitParameter("*Cylinder/Height", 4.*nm).setLowerLimited(0.01)
@@ -149,7 +149,7 @@ to 6 nm before the minimization. For each fit parameter the lower boundary is im
 
 ### Running the fit and accessing the results
 
-{{< highlight python "linenos=table,hl_lines=35,linenostart=72" >}}
+{{< highlight python "linenos=table,linenostart=72" >}}
 
     # running fit
     fit_suite.runFit()
