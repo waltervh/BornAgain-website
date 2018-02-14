@@ -112,4 +112,4 @@ The complete example can be found here.[FIXME]
 
 To Initialize InterferenceFunctionRadialParacrystal in the graphical user interface, the corresponding object has to be connected with ParticleLayout and the corresponding parameters (PeakDistance, DampingLength and parameters of probability density function) have to be adjusted in the property editor.
 
-{{< figscg src="tutorial_interference_para1d_gui.png" width="600px" class="center">}}
+{{< figscg src="tutorial_interference_para1d_gui.png" width="800px" class="center">}}
