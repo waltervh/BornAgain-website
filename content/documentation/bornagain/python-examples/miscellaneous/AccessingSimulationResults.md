@@ -1,11 +1,12 @@
 +++
-title = "Accessing simulation results"
+title = "Accessing simulation results - example"
 weight = 11
 +++
 
-### Accessing simulation results
+### Accessing simulation results - example
 
-This is an extended example for the further treatment of simulation results: accessing the results, plotting, cropping, slicing and exporting. This serves as a supporting example to the ????Accessing Simulation Results tutorial????.
+This is an extended example for the further treatment of simulation results: accessing the results, plotting, cropping, slicing and exporting. This serves as a supporting example to the [Accessing simulation results
+]({{% relref "documentation/bornagain/working-with-bornagain/working-with-python/accessing-simulation-results/index.md" %}}) tutorial.
 
 * The standard "Cylinders in DWBA" sample (see [this example]({{%relref "documentation/bornagain/python-examples/embedded-particles/CylindersInDWBA.md" %}})) is used for running the simulation.
 * The simulation results are retrieved as a `Histogram2D` object and then processed in various functions to achieve a resulting image.
