@@ -16,8 +16,8 @@ Scattering from cuboidal core-shell particles.
 
 
 {{< galleryscg >}}
-{{< figscg src="../CoreShellNanoparticles_setup.jpg" width="450px" caption="Real-space model">}}
-{{< figscg src="../CoreShellNanoparticles.png" width="450px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/real_space_images/CoreShellNanoparticles_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="/files/Examples_images/PyExamples/CoreShellNanoparticles.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

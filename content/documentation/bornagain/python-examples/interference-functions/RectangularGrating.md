@@ -15,8 +15,8 @@ In this example we simulate the scattering from infinite 1D repetition of rectan
 * To avoid the problem of rapidly oscillating form factors of long boxes (see [this example]({{% relref "documentation/bornagain/python-examples/complex-shapes/LargeParticlesFormFactor.md" %}}) for more details), the simulation is performed in monte carlo integration mode.
 
 {{< galleryscg >}}
-{{< figscg src="../RectangularGrating_setup.jpg" width="450px" caption="Real-space model">}}
-{{< figscg src="../RectangularGrating.png" width="450px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/real_space_images/RectangularGrating_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="/files/Examples_images/PyExamples/RectangularGrating.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

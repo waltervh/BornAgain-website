@@ -31,8 +31,8 @@ Scattering from a multilayered sample with correlated roughness.
 > * The cross correlation length $\xi\_{\perp}$ is the vertical distance over which the correlation between layers is damped by a factor $1/e$. It is assumed to be the same for all interfaces. If $\xi\_{\perp} = 0$ there is no correlations between layers. If $\xi\_{\perp}$ is much larger than the layer thickness, the layers are perfectly correlated.
 
 {{< galleryscg >}}
-{{< figscg src="../CorrelatedRoughness_setup.jpg" width="450px" caption="Real-space model">}}
-{{< figscg src="../CorrelatedRoughness.png" width="450px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/real_space_images/CorrelatedRoughness_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="/files/Examples_images/PyExamples/CorrelatedRoughness.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script

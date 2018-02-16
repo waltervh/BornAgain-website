@@ -15,7 +15,7 @@ Scattering from a monodisperse distribution of cylindrical particles with a Gaus
 * The incident angles are $\sigma_{\alpha\_i} = \sigma\_{\phi\_i} = 0.1^{\circ}$.
   
 {{< galleryscg >}}
-{{< figscg src="../DetectorResolutionFunction.png" width="450px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/PyExamples/DetectorResolutionFunction.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

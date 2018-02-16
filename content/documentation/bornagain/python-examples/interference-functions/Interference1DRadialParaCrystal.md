@@ -16,7 +16,7 @@ Scattering from a monodisperse distribution of cylinders positioned following a 
 > A damping length is used to introduce finite size effects by applying a multiplicative coefficient equal to $exp \left(-\frac{peak\\_distance}{damping\\_length}\right)$ to the Fourier transform of the probability densities.
 
 {{< galleryscg >}}
-{{< figscg src="../Interference1DRadialParaCrystal.png" width="450px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/PyExamples/Interference1DRadialParaCrystal.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

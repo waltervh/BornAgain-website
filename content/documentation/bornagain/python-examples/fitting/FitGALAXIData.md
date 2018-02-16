@@ -8,8 +8,8 @@ weight = 11
 This is an example of real data fit. We use our own measurements performed at the laboratory diffractometer [GALAXI](http://www.fz-juelich.de/jcns/jcns-2//DE/Leistungen/GALAXI/_node.html) in Forschungszentrum Jülich. The example supports [Importing experimental data]({{% relref "documentation/bornagain/working-with-bornagain/working-with-python/importing-experimental-data/index.md" %}}) tutorial.
 
 {{< galleryscg >}}
-{{< figscg src="../FitGALAXIData_setup.jpg" width="500px" caption="Real-space model">}}
-{{< figscg src="../FitGALAXIData.png" width="600px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/real_space_images/FitGALAXIData_setup.jpg" width="450px" caption="Real-space model">}}
+{{< figscg src="/files/Examples_images/PyExamples/FitGALAXIData.png" width="600px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

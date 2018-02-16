@@ -15,8 +15,8 @@ Scattering from a polydisperse distribution of cylinders in Born Approximation.
 * No interference effects from inter-particle correlations (dilute-particles approximation).
 
 {{< galleryscg >}}
-{{< figscg src="../CylindersWithSizeDistribution_setup.jpg" width="450px" caption="Real-space model">}}
-{{< figscg src="../CylindersWithSizeDistribution.png" width="450px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/real_space_images/CylindersWithSizeDistribution_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="/files/Examples_images/PyExamples/CylindersWithSizeDistribution.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

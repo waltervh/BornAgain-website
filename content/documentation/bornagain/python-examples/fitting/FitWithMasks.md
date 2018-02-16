@@ -20,7 +20,7 @@ where `Rectangle` is related to the shape of the mask in detector coordinates, `
 
 
 {{< galleryscg >}}
-{{< figscg src="../FitWithMasks.png" width="600px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/PyExamples/FitWithMasks.png" width="600px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

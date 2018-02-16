@@ -18,8 +18,8 @@ Both simulations looks very much alike. The relative difference plot indicates t
 * Please have in mind, that `Simulation::getIntensityData()` returns a `Histogram2D` object with axes defined in native detector coordinates (radians for `SphericalDetector` and millimeters for `RectangularDetector`). In the case of `SphericalDetector`, radians are converted during the plotting into degrees for convenience.
 
 {{< galleryscg >}}
-{{< figscg src="../RectangularDetector_setup.jpg" width="650px" caption="Real-space model">}}
-{{< figscg src="../RectangularDetector.png" width="700px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/real_space_images/RectangularDetector_setup.jpg" width="650px" caption="Real-space model">}}
+{{< figscg src="/files/Examples_images/PyExamples/RectangularDetector.png" width="700px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

@@ -16,7 +16,7 @@ To do this, we define one dataset (a pair of real data and corresponding simulat
 * The majority of the code is located in custom `DrawObserver` class defined at line 68, which plots the fit progress for both datasets simultaneously every 10th iteration.
 
 {{< galleryscg >}}
-{{< figscg src="../SimultaneousFitOfTwoDatasets.png" width="650px" caption="Intensity images">}}
+{{< figscg src="/files/Examples_images/PyExamples/SimultaneousFitOfTwoDatasets.png" width="600px" caption="Intensity images">}}
 {{< /galleryscg >}}
 
 #### Python script:
