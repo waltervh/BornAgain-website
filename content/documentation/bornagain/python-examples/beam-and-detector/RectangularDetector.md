@@ -7,10 +7,10 @@ weight = 11
 
 In this example we demonstrate the difference between GISAS simulation using default spherical detector and using special rectangular detector. The later provides more accurate representation of real experimental detectors.
 
-> See ????Detector types tutorial???? for detailed explanations about various detector types in BornAgain.
- 
+> See the [Detector types]({{% relref "documentation/bornagain/working-with-bornagain/working-with-python/detector-types" %}}) tutorial for detailed explanations about various detector types in BornAgain.
+
 * As an example we take typical PILATUS detector ($981\times1043$ pixels) placed at the distance $2000$ mm from sample origin. The detector is perpendicular to the $x$-axis of sample reference frame, as shown on the plot.
-* Scattering from monodisperce distribution of cylindrical particles in DWBA is simulated.
+* Scattering from monodisperse distribution of cylindrical particles in DWBA is simulated.
 * Two detectors are defined in the code: a spherical detector (line 42) and rectangular detector (line 58). They parameters are selected to represent a real PILATUS detector as close as possible.
 * We run two simulations for two different detectors independently, and then compare results.
 Both simulations looks very much alike. The relative difference plot indicates the difference on the level $10^{-1}-10^{-3}$.
@@ -18,8 +18,8 @@ Both simulations looks very much alike. The relative difference plot indicates t
 * Please have in mind, that `Simulation::getIntensityData()` returns a `Histogram2D` object with axes defined in native detector coordinates (radians for `SphericalDetector` and millimeters for `RectangularDetector`). In the case of `SphericalDetector`, radians are converted during the plotting into degrees for convenience.
 
 {{< galleryscg >}}
-{{< figscg src="../RectangularDetector_setup.jpg" width="650px" caption="Real-space model">}}
-{{< figscg src="../RectangularDetector.png" width="700px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/real_space_images/RectangularDetector_setup.jpg" width="650px" caption="Real-space model">}}
+{{< figscg src="/files/Examples_images/PyExamples/RectangularDetector.png" width="700px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

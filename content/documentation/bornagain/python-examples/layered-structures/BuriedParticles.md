@@ -15,8 +15,8 @@ Scattering from a sample containing spherical embedded particles.
 * The incident angles are $\alpha\_i = 0.15 ^{\circ}$ and $\phi\_i = 0^{\circ}$.
 
 {{< galleryscg >}}
-{{< figscg src="../BuriedParticles_setup.jpg" width="450px" caption="Real-space model">}}
-{{< figscg src="../BuriedParticles.png" width="450px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/real_space_images/BuriedParticles_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="/files/Examples_images/PyExamples/BuriedParticles.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

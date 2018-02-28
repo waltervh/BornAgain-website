@@ -17,8 +17,8 @@ The simulation generates four plots using different sizes of the particles, (rad
   
   
 {{< galleryscg >}}
-{{< figscg src="../LargeParticlesFormFactor_setup.jpg" width="650px" caption="Real-space model">}}
-{{< figscg src="../LargeParticlesFormFactor.png" width="650px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/real_space_images/LargeParticlesFormFactor_setup.jpg" width="650px" caption="Real-space model">}}
+{{< figscg src="/files/Examples_images/PyExamples/LargeParticlesFormFactor.png" width="650px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

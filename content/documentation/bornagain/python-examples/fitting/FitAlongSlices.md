@@ -16,7 +16,7 @@ Technically, the idea is to mask the whole detector except thin lines, one verti
 * The majority of the code is located in custom `DrawObserver` class (defined in line 70, and invoked at lines 188, 189), which plots the fit progress along slices every 5th iteration.
 
 {{< galleryscg >}}
-{{< figscg src="../FitAlongSlices.png" width="600px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/PyExamples/FitAlongSlices.png" width="600px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

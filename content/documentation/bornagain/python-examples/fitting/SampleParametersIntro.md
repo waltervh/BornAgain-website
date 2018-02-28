@@ -17,7 +17,7 @@ This example shows how to create a sample with fixed parameters and then change 
 * Lines 97-98: both dimensions of the prism (half_side and height) will be changed.
 
 {{< galleryscg >}}
-{{< figscg src="../SampleParametersIntro.png" width="600px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/PyExamples/SampleParametersIntro.png" width="600px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

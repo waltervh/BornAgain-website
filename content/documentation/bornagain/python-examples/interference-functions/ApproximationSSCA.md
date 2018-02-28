@@ -18,7 +18,7 @@ Scattering from cylinders of two different sizes using the Size-Spacing Coupling
 * For this size-distribution model, an additional dimensionless parameter, the coupling parameter `Kappa`, has to be specified (see line 33). It defines how the distance between particles is linked with their sizes.
 
 {{< galleryscg >}}
-{{< figscg src="../ApproximationSSCA.png" width="450px" caption="Intensity image">}}
+{{< figscg src="/files/Examples_images/PyExamples/ApproximationSSCA.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:
