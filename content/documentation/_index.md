@@ -1,9 +1,9 @@
 +++
-title = "BornAgain"
+title = "Documentation"
 weight = 50
 +++
 
-### BornAgain
+### Documentation
 
 BornAgain has two bodies of documentation:
 
