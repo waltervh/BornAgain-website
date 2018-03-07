@@ -1,5 +1,5 @@
 baseURL = "https://scgmlz.github.io/scgdoc-hugo/"
-theme = "scgclean"
+theme = "hugo-theme-scgdoc"
 languageCode = "en-us"
 title = "My New Hugo Site"
 MetaDataFormat = "toml"

@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-scgdoc"]
+	path = themes/hugo-theme-scgdoc
+	url = https://github.com/scgmlz/hugo-theme-scgdoc.git
