@@ -1,24 +1,22 @@
 +++
-title = "Documentation"
-weight = 10
+title = "BornAgain"
+weight = 50
 +++
 
-### Documentation
+### BornAgain
 
-{{% alert theme="success" %}}
-**Welcome!**
+BornAgain has two bodies of documentation:
 
-This is a playground to test prototype of the documentation site for 
-various software projects of the Scientific Computing Group at MLZ.
+* web-only documentation, accessible from this start page;
+* the User Manual, available online or as PDF download.
+
+The web-only documentation concentrates on practicalities: functionality and architecture overviews, installation instructions, tutorials and usage examples.
+The User Manual explains the theoretical models and their implementation in BornAgain.
+
+{{% alert theme="info" %}}
+
+Software and documentation are work in progress. Some features of the software are not yet documented. Contact us for any questions.
+
 {{% /alert %}}
 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. 
-
-#### Key features of the documentation page
-
-* Documentation page has the layout which is different from other pages of web site
-* `breadcrumb` and `sidemenu` are automatically generated from markdown directory structure
-* Side menu is collapsible
-
-{{% children depth="2" %}}
+{{% children  %}}
