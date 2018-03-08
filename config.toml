@@ -16,6 +16,7 @@ PygmentsStyle = "vs"
   Description = "Simulate and fit grazing insidence small angle scattering"
   Author = "James Bond"
   email = "contact@bornagainproject.org"
+  custom_css = ["assets/css/bornagain.css"]
 
 [[params.social]]
     title = "github"
