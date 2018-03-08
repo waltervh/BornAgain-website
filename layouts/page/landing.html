@@ -1,0 +1,29 @@
+{{- partial "header_landing.html" . }}
+
+    <div class="container">
+
+        <div class="row align-items-center">
+            <div class="col-6 mx-auto col-md-6 order-md-2">
+              <img class="img-fluid mb-3 mb-md-0" src="/assets/img/setup_galaxi_experiment.png" alt="" width="1000" height="1000">
+            </div>
+            <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+              <h1 class="mb-3 bd-text-purple-bright">{{ .Site.Title }}</h1>
+              <p class="lead">
+                Software package to simulate and fit small-angle scattering at grazing incidence. 
+              </p>
+              <p class="lead mb-4">
+                  Its name, BornAgain, indicates the central role of the distorted wave Born approximation  in the physical description of the scattering process.  The software provides a generic framework for modeling multilayer samples with smooth or rough interfaces and with various types of embedded nanoparticles.
+              </p>
+              <div class="d-flex flex-column flex-md-row lead mb-3">
+                <a href="/docs/4.0/getting-started/introduction/" class="btn btn-lg btn-outline-secondary mb-3 mb-md-0 mr-md-3">Get started</a>
+                <a href="/docs/4.0/getting-started/download/" class="btn btn-lg btn-outline-secondary">Download</a>
+              </div>
+              <p class="text-muted mb-0">
+                Currently v4.0.0
+              </p>
+            </div>
+          </div>
+
+    </div>
+
+{{- partial "footer.html" . }}

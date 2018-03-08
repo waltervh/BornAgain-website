@@ -1,7 +1,7 @@
 baseURL = "https://scgmlz.github.io/BornAgain-website/"
 theme = "hugo-theme-scgdoc"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "BornAgain"
 MetaDataFormat = "toml"
 canonifyURLs = true
 
@@ -13,13 +13,13 @@ PygmentsStyle = "vs"
 
 [params]
   DateForm = "Mon, Jan 2, 2006"
-  Description = "Your site description"
+  Description = "Simulate and fit grazing insidence small angle scattering"
   Author = "James Bond"
-  email = "james.bond@gmail.com"
+  email = "contact@bornagainproject.org"
 
 [[params.social]]
     title = "github"
-    url = "https://github.com/gamesbond"
+    url = "https://github.com/scgmlz/BornAgain"
 
 [[menu.main]]
   name = "Home"
