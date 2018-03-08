@@ -17,6 +17,7 @@ PygmentsStyle = "vs"
   Author = "James Bond"
   email = "contact@bornagainproject.org"
   custom_css = ["assets/css/bornagain.css"]
+  logo = "assets/img/bornagain-logo.png"
   version_major = "1"
   version_minor = "11"
   version_patch = "0"
