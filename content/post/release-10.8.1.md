@@ -1,11 +1,12 @@
 +++
 title = "BornAgain hotfix: 1.8.1"
 date = "2017-05-12T08:30:10+02:00"
-tags = ["Release"]
-categories = ["News"]
-description = "A bugfix release for BornAgain is now available.."
+description = "A bugfix release for BornAgain is now available."
 draft = false
 comments = false
+authors = ["herck"]
+tags = ["Release"]
+categories = ["News"]
 +++
 
 {{% alert theme="success" %}}

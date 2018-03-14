@@ -1,11 +1,12 @@
 +++
 title = "New release of BornAgain: version 1.10"
 date = "2017-10-09T08:30:10+02:00"
-tags = ["Release"]
-categories = ["News"]
 description = "BornAgain 1.10 has been released"
 draft = false
 comments = false
+authors = ["herck"]
+tags = ["Release"]
+categories = ["News"]
 +++
 
 {{% alert theme="success" %}}

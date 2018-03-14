@@ -22,6 +22,26 @@ PygmentsStyle = "vs"
   version_minor = "11"
   version_patch = "0"
 
+[params.authors.herck]
+  name = "Walter"
+  url = "https://github.com/waltervh"
+  
+[params.authors.pospelov]
+  name = "Gennady"
+  url = "https://github.com/gpospelov"
+
+[params.authors.ganeva]
+  name = "Marina"
+  url = "https://github.com/mganeva"
+
+[params.authors.yurov]
+  name = "Dmitry"
+  url = "https://github.com/DmitryYurov"
+
+[params.authors.wuttke]
+  name = "Joachim"
+  url = "https://github.com/jwuttke"
+
 [[params.social]]
     title = "github"
     url = "https://github.com/scgmlz/BornAgain"
@@ -43,7 +63,7 @@ PygmentsStyle = "vs"
 
 [[menu.main]]
   name = "News"
-  url = "/news/"
+  url = "/post/"
   weight = 40
 
 [[menu.main]]
