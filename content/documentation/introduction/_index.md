@@ -1,5 +1,5 @@
 +++
-title = "Welcome to BornAgain"
+title = "Introduction"
 weight = 10
 +++
 
