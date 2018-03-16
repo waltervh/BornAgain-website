@@ -133,7 +133,7 @@ particle_layout.setInterferenceFunction(interference)
 
 {{< /highlight >}}
 
-The complete example can be found [here]({{% relref "documentation/python-examples/interference-functions/Interference2DParaCrystal.md" %}}).
+The complete example can be found [here]({{% ref-example "interference-functions/Interference2DParaCrystal.md" %}}).
 
 ### 2D paracrystal in GUI
 

@@ -7,9 +7,9 @@ weight = 75
 
 In this section we are going to go through a complete example of fitting using BornAgain.
 Each step will be associated with a detailed piece of code written in Python.
-The script can also be found in the [Fit Cylinders and Prisms]({{% relref "documentation/python-examples/fitting/FitCylindersPrisms.md" %}}) example.
+The script can also be found in the [Fit Cylinders and Prisms]({{% ref-example "fitting/FitCylindersPrisms.md" %}}) example.
 
-This example uses the same sample geometry as in [Basic simulation tutorial]({{% relref "documentation/working-with-python/basic-simulation-tutorial/index.md" %}}).
+This example uses the same sample geometry as in [Basic simulation tutorial]({{% ref-tutorial "basic-simulation-tutorial/index.md" %}}).
 Cylindrical and prismatic particles in equal proportion are deposited on a substrate layer,
 with no interference between the particles. We consider the following parameters to be unkown:
 
@@ -75,7 +75,7 @@ def get_sample(cylinder_height=5.0*nm, cylinder_radius=5.0*nm,
 The function starting at line 8 creates a multilayered sample 
 with cylinders and prisms using arbitrary 1 nm value for all size's of particles.
 The details about the generation of this
-multilayered sample are given in the [Basic simulation tutorial]({{% relref "documentation/working-with-python/basic-simulation-tutorial/index.md" %}}).
+multilayered sample are given in the [Basic simulation tutorial]({{% ref-tutorial "basic-simulation-tutorial/index.md" %}}).
 
 ### Creating the simulation
 

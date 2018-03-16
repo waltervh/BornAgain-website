@@ -187,7 +187,7 @@ fit_suite.printResults()
 
 {{< /highlight >}}
 
-[This example]({{% relref "documentation/python-examples/fitting/FitCylindersPrisms.md" %}}) gives more details on accessing the fitting results.
+[This example]({{% ref-example "fitting/FitCylindersPrisms.md" %}}) gives more details on accessing the fitting results.
 
 ### How to get the right answer from fitting
 

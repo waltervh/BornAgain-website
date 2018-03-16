@@ -1,6 +1,6 @@
 +++
 title = "Examples of BornAgain usage"
-weight = 40
+weight = 60
 +++
 
 ### Examples of BornAgain usage

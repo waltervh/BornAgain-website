@@ -5,7 +5,7 @@ weight = 11
 
 ### Working with sample parameters
 
-This example shows how to create a sample with fixed parameters and then change these parameters on the fly during runtime. The example doesn't contain any fitting and serves as a gentle introduction to other fitting examples. See the [Python script]({{% relref "documentation/python-examples/fitting/SampleParametersIntro.md#python-script" %}}) below:
+This example shows how to create a sample with fixed parameters and then change these parameters on the fly during runtime. The example doesn't contain any fitting and serves as a gentle introduction to other fitting examples. See the [Python script]({{% ref-example "fitting/SampleParametersIntro.md#python-script" %}}) below:
 
 * Lines 14-42: the sample representing cylinders and prisms on top of substrate without interference is created.
 * Lines 45-53: beam and detector parameters are defined.

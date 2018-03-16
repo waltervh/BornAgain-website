@@ -7,7 +7,7 @@ weight = 11
 
 Scattering from a monodisperse distribution of cylindrical particles with a Gaussian resolution function of the detectors.
 
-* The sample is made of cylindrical particles randomly deposited on a substrate. It is similar to [Cylinders in DWBA]({{% relref "documentation/python-examples/embedded-particles/CylindersInDWBA.md" %}}) with the additional resolution function of the detectors.
+* The sample is made of cylindrical particles randomly deposited on a substrate. It is similar to [Cylinders in DWBA]({{% ref-example "embedded-particles/CylindersInDWBA.md" %}}) with the additional resolution function of the detectors.
 * The radii and heights of the cylinders are equal to $5$ nm.
 * There is no interference between the scattered waves.
 * The detector resolution function is a two-dimensional Gaussian with the same width for the $x$ and $y$ axes: $\sigma\_x = \sigma\_y = 0.0025^{\circ}$.

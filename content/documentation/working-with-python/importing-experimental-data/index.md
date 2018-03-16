@@ -10,7 +10,7 @@ This tutorial covers some practical aspects of importing experimental data in Bo
 As an example we will use our own measurements performed  at the laboratory diffractometer [GALAXI](http://www.fz-juelich.de/jcns/jcns-2//DE/Leistungen/GALAXI/_node.html) in Forschungszentrum Jülich.
 
 A complete example, containing less explanations but more code, can be found in
-[Real life fit example: experiment at GALAXI]({{% relref "documentation/python-examples/fitting/FitGALAXIData.md" %}}).
+[Real life fit example: experiment at GALAXI]({{% ref-example "fitting/FitGALAXIData.md" %}}).
 
 ### Experiment
 
@@ -26,8 +26,8 @@ The results of the measurement are represented by the intensity image taken in c
 * prepare a description of the simulation
 * load the experimental data in BornAgain's fitting engine
 
-Please refer to [Introduction to fitting]({{% relref "documentation/working-with-python/introduction-to-fitting/index.md" %}})
-and [Basic fitting]({{% relref "documentation/working-with-python/basic-fitting-tutorial/index.md" %}}) tutorials which explain fitting workflow in more detail.
+Please refer to [Introduction to fitting]({{% ref-tutorial "introduction-to-fitting/index.md" %}})
+and [Basic fitting]({{% ref-tutorial "basic-fitting-tutorial/index.md" %}}) tutorials which explain fitting workflow in more detail.
 
 ### Preparing simulation description
 
@@ -68,8 +68,8 @@ detector.setPerpendicularToDirectBeam(detector_distance, u0, v0)
 
 {{< /highlight >}}
 
-See also [Rectangular detector tutorial]({{% relref "documentation/working-with-python/detector-types/rectangular-detector/index.md" %}})
-and [Rectangular detector example]({{% relref "documentation/python-examples/beam-and-detector/RectangularDetector.md" %}}).
+See also [Rectangular detector tutorial]({{% ref-tutorial "detector-types/rectangular-detector/index.md" %}})
+and [Rectangular detector example]({{% ref-example "beam-and-detector/RectangularDetector.md" %}}).
 
 The final simulation setup looks like the following:
 
@@ -85,7 +85,7 @@ simulation.setBeamIntensity(1.2e7)
 
 ### Importing real data
 
-As explained in [Accessing simulation results]({{% relref "documentation/working-with-python/accessing-simulation-results/index.md" %}}) tutorial,
+As explained in [Accessing simulation results]({{% ref-tutorial "accessing-simulation-results/index.md" %}}) tutorial,
 the intensity data are stored in BornAgain in special objects of `Histogram2D` type.
 They are used both for retrieving the simulation results, and for passing the intensity data inside the fitting kernel.
 
@@ -153,7 +153,7 @@ simulation.addMask(Rectangle(101.9, 82.1, 103.7, 85.2), True)
 
 {{< /highlight >}}
 
-See [Fitting with masks]({{% relref "documentation/python-examples/fitting/FitWithMasks.md" %}}) example for more details.
+See [Fitting with masks]({{% ref-example "fitting/FitWithMasks.md" %}}) example for more details.
 
 ### Setting up the fit
 
@@ -173,4 +173,4 @@ fitSuite.runFit()
 
 During the fit, only non-masked areas of the detector corresponding to the `cropped_hist` will be simulated and used for $\chi^2$ calculations.
 
-Complete example can be found in [Real life fit example: experiment at GALAXI]({{% relref "documentation/python-examples/fitting/FitGALAXIData.md" %}}).
+Complete example can be found in [Real life fit example: experiment at GALAXI]({{% ref-example "fitting/FitGALAXIData.md" %}}).
