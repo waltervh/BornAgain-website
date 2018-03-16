@@ -1,0 +1,14 @@
+{{- partial "header_def.html" . }}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            {{ if .Site.Params.Debug}}theme/layout/page/gallery.html{{end}}
+            {{ block "main_body" . }}
+            {{ .Content}}
+            {{ end }}
+        </div>
+      </div>
+    </div>
+
+{{- partial "footer.html" . }}

@@ -6,7 +6,7 @@
               <img class="img-fluid mb-3 mb-md-0" src="/assets/img/setup_galaxi_experiment.png" alt="" width="1000" height="1000">
             </div>
             <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
-              <h1 class="mb-3 bd-text-purple-bright">{{ .Site.Title }}</h1>
+              <h1 class="mb-3 bd-text-turquoise-bright">{{ .Site.Title }}</h1>
               <p class="lead">
                 Open-source software package to simulate and fit neutron and x-rays small-angle scattering at grazing incidence. 
               </p>
@@ -14,8 +14,8 @@
                   Its name, BornAgain, indicates the central role of the distorted wave Born approximation  in the physical description of the scattering process.  The software provides a generic framework for modeling multilayer samples with smooth or rough interfaces and with various types of embedded nanoparticles.
               </p>
               <div class="d-flex flex-column flex-md-row lead mb-3">
-                <a href="/docs/4.0/getting-started/introduction/" class="btn btn-lg btn-outline-secondary mb-3 mb-md-0 mr-md-3">Get started</a>
-                <a href="/docs/4.0/getting-started/download/" class="btn btn-lg btn-outline-secondary">Download</a>
+                <a href="{{ .Site.BaseURL }}/documentation/getting-started" class="btn btn-lg btn-outline-primary mb-3 mb-md-0 mr-md-3">Get started</a>
+                <a href="{{ .Site.BaseURL }}/download" class="btn btn-lg btn-outline-secondary">Download</a>
               </div>
               <p class="text-muted mb-0">
                 Currently v{{.Site.Params.version_major}}.{{.Site.Params.version_minor}}.{{.Site.Params.version_patch}}
