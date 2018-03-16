@@ -202,4 +202,4 @@ The following image should be displayed on the screen
 
 #### Complete script
 
-{{< highlightloc file="CylindersAndPrisms.py">}}
+{{< highlightfile file="CylindersAndPrisms.py">}}
