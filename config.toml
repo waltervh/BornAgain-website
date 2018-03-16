@@ -76,8 +76,3 @@ PygmentsStyle = "vs"
   url = "/contact/"
   weight = 60
 
-[[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 70
-
