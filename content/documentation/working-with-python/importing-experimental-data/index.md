@@ -26,8 +26,8 @@ The results of the measurement are represented by the intensity image taken in c
 * prepare a description of the simulation
 * load the experimental data in BornAgain's fitting engine
 
-Please refer to [Introduction to fitting]({{% relref "documentation/working-with-bornagain/working-with-python/introduction-to-fitting/index.md" %}})
-and [Basic fitting]({{% relref "documentation/working-with-bornagain/working-with-python/basic-fitting-tutorial/index.md" %}}) tutorials which explain fitting workflow in more detail.
+Please refer to [Introduction to fitting]({{% relref "documentation/working-with-python/introduction-to-fitting/index.md" %}})
+and [Basic fitting]({{% relref "documentation/working-with-python/basic-fitting-tutorial/index.md" %}}) tutorials which explain fitting workflow in more detail.
 
 ### Preparing simulation description
 
@@ -68,7 +68,7 @@ detector.setPerpendicularToDirectBeam(detector_distance, u0, v0)
 
 {{< /highlight >}}
 
-See also [Rectangular detector tutorial]({{% relref "documentation/working-with-bornagain/working-with-python/detector-types/rectangular-detector/index.md" %}})
+See also [Rectangular detector tutorial]({{% relref "documentation/working-with-python/detector-types/rectangular-detector/index.md" %}})
 and [Rectangular detector example]({{% relref "documentation/python-examples/beam-and-detector/RectangularDetector.md" %}}).
 
 The final simulation setup looks like the following:
@@ -85,7 +85,7 @@ simulation.setBeamIntensity(1.2e7)
 
 ### Importing real data
 
-As explained in [Accessing simulation results]({{% relref "documentation/working-with-bornagain/working-with-python/accessing-simulation-results/index.md" %}}) tutorial,
+As explained in [Accessing simulation results]({{% relref "documentation/working-with-python/accessing-simulation-results/index.md" %}}) tutorial,
 the intensity data are stored in BornAgain in special objects of `Histogram2D` type.
 They are used both for retrieving the simulation results, and for passing the intensity data inside the fitting kernel.
 

@@ -6,7 +6,7 @@ weight = 11
 ### Plotting with axes in different units
 
 In this example we demonstrate how to plot intensity data with detector axes expressed in different units. It serves as a supporting example to the [Accessing simulation results
-]({{% relref "documentation/working-with-bornagain/working-with-python/accessing-simulation-results/index.md" %}}) tutorial.
+]({{% relref "documentation/working-with-python/accessing-simulation-results/index.md" %}}) tutorial.
 
 * The standard "Cylinders in DWBA" sample (see [this example]({{%relref "documentation/python-examples/embedded-particles/CylindersInDWBA.md" %}})) is used to setup the simulation.
 * When the simulation is completed, the `Simulation::getIntensityData()` method is used to get a `Histogram2D` object.

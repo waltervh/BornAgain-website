@@ -5,7 +5,7 @@ weight = 11
 
 ### Real life fit example: Experiment at GALAXI
 
-This is an example of real data fit. We use our own measurements performed at the laboratory diffractometer [GALAXI](http://www.fz-juelich.de/jcns/jcns-2//DE/Leistungen/GALAXI/_node.html) in Forschungszentrum Jülich. The example supports [Importing experimental data]({{% relref "documentation/working-with-bornagain/working-with-python/importing-experimental-data/index.md" %}}) tutorial.
+This is an example of real data fit. We use our own measurements performed at the laboratory diffractometer [GALAXI](http://www.fz-juelich.de/jcns/jcns-2//DE/Leistungen/GALAXI/_node.html) in Forschungszentrum Jülich. The example supports [Importing experimental data]({{% relref "documentation/working-with-python/importing-experimental-data/index.md" %}}) tutorial.
 
 {{< galleryscg >}}
 {{< figscg src="/files/Examples_images/real_space_images/FitGALAXIData_setup.jpg" width="450px" caption="Real-space model">}}

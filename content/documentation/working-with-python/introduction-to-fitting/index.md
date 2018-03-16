@@ -9,9 +9,9 @@ In addition to the simulation of grazing incidence X-ray and neutron scattering 
 BornAgain also offers the option to fit the numerical model to reference data by modifying a
 selection of sample parameters from the numerical model.
 
-* [Implementation in BornAgain]({{% relref "documentation/working-with-bornagain/working-with-python/introduction-to-fitting/index.md#implementation-in-bornagain" %}})
-* [Stages to run fitting procedure]({{% relref "documentation/working-with-bornagain/working-with-python/introduction-to-fitting/index.md#stages-to-run-fitting-procedure" %}})
-* [How to get the right answer from fitting]({{% relref "documentation/working-with-bornagain/working-with-python/introduction-to-fitting/index.md#how-to-get-the-right-answer-from-fitting" %}})
+* [Implementation in BornAgain]({{% relref "documentation/working-with-python/introduction-to-fitting/index.md#implementation-in-bornagain" %}})
+* [Stages to run fitting procedure]({{% relref "documentation/working-with-python/introduction-to-fitting/index.md#stages-to-run-fitting-procedure" %}})
+* [How to get the right answer from fitting]({{% relref "documentation/working-with-python/introduction-to-fitting/index.md#how-to-get-the-right-answer-from-fitting" %}})
 
 ### Implementation in BornAgain
 
@@ -57,7 +57,7 @@ They include the best $\chi^2$ value found, the corresponding optimal sample par
 
 #### Preparing the sample and the simulation description
 
-This step is similar for any simulation using BornAgain (see [Basic simulation tutorial]({{% relref "documentation/working-with-bornagain/working-with-python/basic-simulation-tutorial/index.md" %}})).
+This step is similar for any simulation using BornAgain (see [Basic simulation tutorial]({{% relref "documentation/working-with-python/basic-simulation-tutorial/index.md" %}})).
 It consists in first characterizing the geometry of the system: the particles (shapes, sizes, refractive indices), 
 the different layers (thickness, order, refractive index, a possible roughness of the interface), 
 the interference between the particles and theway they are distributed in the layers 
@@ -68,7 +68,7 @@ Then we specify the parameters of the input beam and of the output detector.
 
 Every parameter used in the construction of the sample can be used as a fitting parameter.
 For example, the particles' heights, radii or the layer's roughness or thickness could be selected using the parameter pool mechanism.
-This mechanism is explained in detail in [Working with sample parameters]({{% relref "documentation/working-with-bornagain/working-with-python/working-with-sample-parameters/index.md" %}})
+This mechanism is explained in detail in [Working with sample parameters]({{% relref "documentation/working-with-python/working-with-sample-parameters/index.md" %}})
 tutorial and it is therefore recommended to read it before proceeding any further.
 
 The user specifies selected sample parameters as fit parameters using `FitSuite` and its `addFitParameter` method:
