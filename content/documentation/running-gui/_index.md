@@ -1,6 +1,6 @@
 +++
 title = "Using Graphical User Interface"
-weight = 10
+weight = 40
 +++
 
 ### Using Graphical User Interface
