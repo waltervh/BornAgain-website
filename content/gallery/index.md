@@ -7,7 +7,7 @@ showresizedimages = true
 
 ### BornAgain graphical user interface
 
-{{< galleryscg>}}
+{{< galleryscg class="tz-gallery">}}
 {{< imgproc src="welcome-view.png" command="Resize" options="450x" caption="Welcome view" >}}
 {{< imgproc src="instrument-view.png" command="Resize" options="450x" caption="Instrument view" >}}
 {{< imgproc src="sample-view.png" command="Resize" options="450x" caption="Sample view" >}}
