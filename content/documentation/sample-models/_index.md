@@ -1,9 +1,9 @@
 +++
-title = "Examples of BornAgain usage"
+title = "Sample model reference"
 weight = 60
 +++
 
-### Examples of BornAgain usage
+### Sample model reference
 
 This section presents BornAgain simulations of various model systems. All Python scripts are shipped with BornAgain. They can be found in the "Examples" directory:
 

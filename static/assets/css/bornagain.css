@@ -10,11 +10,27 @@
     border-radius: .3rem;
 }
 
-.bd-text-purple-bright {
+.bd-text-turquoise-bright {
     color: #2a6783;
     font-family: 'Libre Baskerville', serif;
     letter-spacing: 3px;
 }
+
+/* Buttons 'Get Started' and 'Download' on landing page */
+
+.btn-outline-primary {
+  color: #2a6783;
+  border-color: #2a6783;
+  font-weight: 500;
+}
+
+.btn-outline-primary:active, .btn-outline-primary:hover {
+  color: #fff;
+  background-color: #2a6783;
+  border-color: #2a6783;
+}
+
+/* Logo container */
 
 .page-brand {
     background-color: #f6f8f8;
@@ -22,6 +38,8 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+/* Container with main features */
 
 .page-features {
   margin-top: 40px;
