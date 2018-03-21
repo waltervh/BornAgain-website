@@ -3,6 +3,8 @@ title = "Gallery"
 layout="gallery"
 showimages = true
 showresizedimages = true
+menu = "main"
+weight = 20
 +++
 
 ### BornAgain graphical user interface

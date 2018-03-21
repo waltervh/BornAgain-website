@@ -1,6 +1,5 @@
 +++
 title = "Documentation"
-weight = 50
 +++
 
 ### Documentation
