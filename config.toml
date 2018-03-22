@@ -18,10 +18,14 @@ PygmentsStyle = "vs"
   Author = "James Bond"
   email = "contact@bornagainproject.org"
   custom_css = ["assets/css/bornagain.css"]
+  custom_js = ["assets/js/bornagain.js"]
   logo = "assets/img/bornagain-logo.png"
   version_major = "1"
   version_minor = "11"
-  version_patch = "0"
+  version_patch = "1"
+  download_loc = "http://apps.jcns.fz-juelich.de/src/BornAgain"
+  manual_version = "1.7.1"
+  Debug = false
 
 [params.authors.herck]
   name = "Walter"
