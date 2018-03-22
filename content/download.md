@@ -9,7 +9,7 @@ breadcrumb = true
   <div class="row">
     <div class="col-lg-10 mx-auto">
     <h5> Current release {{% release-string %}}</h5>
-    <p> View changes made in this release </p>
+    <p> View changes made in <a href="{{% last-release-letter %}}">this release</a> </p>
     </div>
   </div>
   <hr class="feature-divider">
@@ -90,11 +90,15 @@ breadcrumb = true
   
   <div class="tab-pane fade" id="Linux" role="tabpanel" aria-labelledby="messages-tab">
     <div class="d-flex flex-column flex-md-row justify-content-center">
-      <div class="card text-center bg-light mx-3 my-5 border-primary ba-custom-border" style="width: 22rem;">        
-        <div class="card-header">Source tarball</div>
+      <div class="card text-center bg-light mx-5 my-5 border-primary ba-custom-border" style="width: 80%;">        
+        <div class="card-header">Get source code</div>
         <div class="card-body">
-          <h5 class="card-title">Source, tarball</h5>
-          <a href="{{% ref-tarball %}}" class="btn btn-primary ba-custom">Download</a>
+          <h5 class="card-title">Clone Git repository</h5>
+          <p>
+          <pre><code>{{% git-clone %}}</code></pre>
+          </p>
+          <h5 class="card-title">or</h5>
+          <a href="{{% ref-tarball %}}" class="btn btn-primary ba-custom">Download tarball</a>
         </div>
       </div>
     </div>
