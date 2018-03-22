@@ -7,15 +7,19 @@ breadcrumb = true
 
 <div class="container page-download">
   <div class="row">
-    <div class="col-lg-10 mx-auto ">
-      BornAgain is supported under Windows, Mac OS X and Linux operating systems. For Windows and MacOS we provide binary installer packages, both for Python2 and Python3. For Unix-like operating systems (including Linux and Mac OS X) we support installation from source.
+    <div class="col-lg-10 mx-auto">
+    <h5> Current release {{% release-string %}}</h5>
+    <p> View changes made in this release </p>
     </div>
   </div>
   <hr class="feature-divider">
   <div class="row">
-    <div class="col-lg-10 mx-auto mb-5">
-    <h5> Current release {{% release-string %}}</h5>
-    <p> View changes made in this release </p>
+    <div class="col-lg-10 mx-auto mt-1 mb-5">
+    <p class ="text-sm-center font-italic">
+      BornAgain is supported under Windows, Mac OS X and Linux operating systems. For Windows and MacOS we provide binary installer packages, both for Python2 and Python3. For Unix-like operating systems (including Linux and Mac OS X) we support installation from source.
+    </p>
+  <hr class="feature-divider">
+    <p>Select and download the appropriate package from the <a href="{{% download-loc %}}">site<a> or use one of direct links below.</p>
     </div>
   </div>
   
@@ -112,11 +116,10 @@ breadcrumb = true
 
   <hr class="feature-divider">
   <div class="row">
-    <div class="col-lg-10 mx-auto mb-3">
-    <h5> Current release {{% release-string %}}</h5>
-    <p> View changes made in this release </p>
+    <div class="col-lg-10 mx-auto mt-4">
+      To use BornAgain from Python you have to have Python interpreter installed.
+      See {{< local-link "documentation/installation">}} installation instructions {{< /local-link >}}for more details.
     </div>
   </div>
-
 
   </div>
