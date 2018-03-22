@@ -9,7 +9,7 @@ weight = 30
 BornAgain is supported under Windows, Mac OS X and Linux operating systems. For Windows and MacOS we provide binary installer packages, both for Python2 and Python3. For Unix-like operating systems (including Linux and Mac OS X) we support installation from source.
 
 <!-- Nav tabs -->
-<ul class="nav nav-tabs nav-pills nav-fill" id="myTab3" role="tablist">
+<ul class="nav nav-tabs nav-pills nav-fill " id="DownloadTab" role="tablist">
   <li class="nav-item">
     <a class="nav-link" id="home-tab" data-toggle="tab" href="#Windows" role="tab" aria-controls="home" aria-selected="true">Windows</a>
   </li>
@@ -20,44 +20,71 @@ BornAgain is supported under Windows, Mac OS X and Linux operating systems. For 
     <a class="nav-link" id="messages-tab" data-toggle="tab" href="#Linux" role="tab" aria-controls="messages" aria-selected="false">Linux</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#All" role="tab" aria-controls="messages" aria-selected="false">Linux</a>
+    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#Manual" role="tab" aria-controls="messages" aria-selected="false">Manual</a>
   </li>
 </ul>
 
 <!-- Tab panes -->
-<div class="tab-content" id="myTab3Content">
-  <div class="tab-pane fade" id="Windows" role="tabpanel" aria-labelledby="profile-tab">
+<div class="tab-content" id="DownloadTabContent">
+  <div class="tab-pane fade" id="Windows" role="tabpanel" aria-labelledby="profile-tab">  
     <div class="d-flex flex-column flex-md-row justify-content-center">
-      <div class="card text-center bg-light mx-3 my-5 border-primary" style="width: 18rem;">        
+      <div class="card text-center bg-light mx-3 my-5 border-success" style="width: 18rem;">        
         <div class="card-header">Windows, 64-bit (x86)</div>
         <div class="card-body">
           <h5 class="card-title">Windows, Python3</h5>
+          <p><span class="badge badge-success mr-1">Recommended</span></p>
           <p class="card-text">Windows 7,8,10 binary installer package, intended for Python3.</p>
-          <a href="#" class="btn btn-primary">Download</a>
+          <a href="{{% ref-installer-win-py3 %}}" class="btn btn-success">Download</a>
         </div>
       </div>
       <div class="card text-center bg-light mx-3 my-5 border-secondary" style="width: 18rem;">        
         <div class="card-header">Windows, 64-bit (x86)</div>
         <div class="card-body">
           <h5 class="card-title">Windows, Python2</h5>
+          <p><span class="badge badge-default mr-1">Obsolete</span></p>
           <p class="card-text">Windows 7,8,10 binary installer package, intended for Python2.</p>
-          <a href="#" class="btn btn-secondary">Download</a>
+          <a href="{{% ref-installer-win-py2 %}}" class="btn btn-secondary">Download</a>
         </div>
       </div>      
     </div>
   </div>
 
   <div class="tab-pane fade" id="MacOS" role="tabpanel" aria-labelledby="profile-tab">
-    <h5>MacOS content</h5>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+    <div class="d-flex flex-column flex-md-row justify-content-center">
+      <div class="card text-center bg-light mx-3 my-5 border-success" style="width: 22rem;">        
+        <div class="card-header">MacOS, 64-bit (x86)</div>
+        <div class="card-body">
+          <h5 class="card-title">MacOS, Python3</h5>
+          <p><span class="badge badge-success mr-1">Recommended</span></p>
+          <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra) and 10.13 (High Sierra).</p>
+          <a href="{{% ref-installer-mac-py3 %}}" class="btn btn-success">Download</a>
+        </div>
+      </div>
+      <div class="card text-center bg-light mx-3 my-5 border-secondary" style="width: 22rem;">        
+        <div class="card-header">MacOS, 64-bit (x86)</div>
+        <div class="card-body">
+          <h5 class="card-title">MacOS, Python2</h5>
+          <p><span class="badge badge-default mr-1">Obsolete</span></p>
+          <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra) and 10.13 (High Sierra).</p>
+          <a href="{{% ref-installer-mac-py2 %}}" class="btn btn-secondary">Download</a>
+        </div>
+      </div>      
+    </div>
   </div>
-
+  
   <div class="tab-pane fade" id="Linux" role="tabpanel" aria-labelledby="messages-tab">
-    <h5>Linux content</h5>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.  
+    <div class="d-flex flex-column flex-md-row justify-content-center">
+      <div class="card text-center bg-light mx-3 my-5 border-primary" style="width: 22rem;">        
+        <div class="card-header">Source tarball</div>
+        <div class="card-body">
+          <h5 class="card-title">Source, tarball</h5>
+          <a href="{{% ref-tarball %}}" class="btn btn-primary">Download</a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="tab-pane fade" id="All" role="tabpanel" aria-labelledby="messages-tab">
+  <div class="tab-pane fade" id="Manual" role="tabpanel" aria-labelledby="messages-tab">
     <h5>Linux content</h5>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.  
   </div>

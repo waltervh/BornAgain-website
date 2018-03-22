@@ -22,7 +22,8 @@ PygmentsStyle = "vs"
   logo = "assets/img/bornagain-logo.png"
   version_major = "1"
   version_minor = "11"
-  version_patch = "0"
+  version_patch = "1"
+  download_loc = "http://apps.jcns.fz-juelich.de/src/BornAgain"
   Debug = false
 
 [params.authors.herck]
