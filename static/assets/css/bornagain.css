@@ -45,3 +45,17 @@
   margin-top: 40px;
   text-align:center;
 }
+
+/* color of active tab in nav-pils style */
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color:#2a6783;
+}
+
+.btn-primary.ba-custom{
+  background-color:#2a6783;
+  border-color: #2a6783;
+}
+
+.border-primary.ba-custom-border{
+  border-color: #2a6783 !important;
+}

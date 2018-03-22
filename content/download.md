@@ -28,13 +28,13 @@ BornAgain is supported under Windows, Mac OS X and Linux operating systems. For 
 <div class="tab-content" id="DownloadTabContent">
   <div class="tab-pane fade" id="Windows" role="tabpanel" aria-labelledby="profile-tab">  
     <div class="d-flex flex-column flex-md-row justify-content-center">
-      <div class="card text-center bg-light mx-3 my-5 border-primary" style="width: 18rem;">        
+      <div class="card text-center bg-light mx-3 my-5 border-primary ba-custom-border" style="width: 18rem;">        
         <div class="card-header">Windows, 64-bit (x86)</div>
         <div class="card-body">
           <h5 class="card-title">Windows, Python3</h5>
           <p><span class="badge badge-primary mr-1">Recommended</span></p>
           <p class="card-text">Windows 7,8,10 binary installer package, intended for Python3.</p>
-          <a href="{{% ref-installer-win-py3 %}}" class="btn btn-primary">Download</a>
+          <a href="{{% ref-installer-win-py3 %}}" class="btn btn-primary ba-custom">Download</a>
         </div>
       </div>
       <div class="card text-center bg-light mx-3 my-5 border-secondary" style="width: 18rem;">        
@@ -51,13 +51,13 @@ BornAgain is supported under Windows, Mac OS X and Linux operating systems. For 
 
   <div class="tab-pane fade" id="MacOS" role="tabpanel" aria-labelledby="profile-tab">
     <div class="d-flex flex-column flex-md-row justify-content-center">
-      <div class="card text-center bg-light mx-3 my-5 border-primary" style="width: 22rem;">        
+      <div class="card text-center bg-light mx-3 my-5 border-primary ba-custom-border" style="width: 22rem;">        
         <div class="card-header">MacOS, 64-bit (x86)</div>
         <div class="card-body">
           <h5 class="card-title">MacOS, Python3</h5>
           <p><span class="badge badge-primary mr-1">Recommended</span></p>
           <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra) and 10.13 (High Sierra).</p>
-          <a href="{{% ref-installer-mac-py3 %}}" class="btn btn-primary">Download</a>
+          <a href="{{% ref-installer-mac-py3 %}}" class="btn btn-primary ba-custom">Download</a>
         </div>
       </div>
       <div class="card text-center bg-light mx-3 my-5 border-secondary" style="width: 22rem;">        
@@ -74,11 +74,11 @@ BornAgain is supported under Windows, Mac OS X and Linux operating systems. For 
   
   <div class="tab-pane fade" id="Linux" role="tabpanel" aria-labelledby="messages-tab">
     <div class="d-flex flex-column flex-md-row justify-content-center">
-      <div class="card text-center bg-light mx-3 my-5 border-primary" style="width: 22rem;">        
+      <div class="card text-center bg-light mx-3 my-5 border-primary ba-custom-border" style="width: 22rem;">        
         <div class="card-header">Source tarball</div>
         <div class="card-body">
           <h5 class="card-title">Source, tarball</h5>
-          <a href="{{% ref-tarball %}}" class="btn btn-primary">Download</a>
+          <a href="{{% ref-tarball %}}" class="btn btn-primary ba-custom">Download</a>
         </div>
       </div>
     </div>
@@ -86,11 +86,11 @@ BornAgain is supported under Windows, Mac OS X and Linux operating systems. For 
 
   <div class="tab-pane fade" id="Manual" role="tabpanel" aria-labelledby="messages-tab">
     <div class="d-flex flex-column flex-md-row justify-content-center">
-      <div class="card text-center bg-light mx-3 my-5 border-primary" style="width: 22rem;">        
+      <div class="card text-center bg-light mx-3 my-5 border-primary ba-custom-border" style="width: 22rem;">        
         <div class="card-header">Manual</div>
         <div class="card-body">
           <h5 class="card-title">Manual, pdf</h5>
-          <a href="{{% ref-manual %}}" class="btn btn-primary">Download</a>
+          <a href="{{% ref-manual %}}" class="btn btn-primary ba-custom">Download</a>
         </div>
       </div>
     </div>  
