@@ -23,7 +23,7 @@ PygmentsStyle = "vs"
   version_major = "1"
   version_minor = "11"
   version_patch = "0"
-  Debug = true
+  Debug = false
 
 [params.authors.herck]
   name = "Walter"
