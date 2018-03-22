@@ -24,6 +24,7 @@ PygmentsStyle = "vs"
   version_minor = "11"
   version_patch = "1"
   download_loc = "http://apps.jcns.fz-juelich.de/src/BornAgain"
+  manual_version = "1.7.1"
   Debug = false
 
 [params.authors.herck]
