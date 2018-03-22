@@ -2,11 +2,23 @@
 title = "Download"
 menu = "main"
 weight = 30
+breadcrumb = true
 +++
 
-## Download
-
-BornAgain is supported under Windows, Mac OS X and Linux operating systems. For Windows and MacOS we provide binary installer packages, both for Python2 and Python3. For Unix-like operating systems (including Linux and Mac OS X) we support installation from source.
+<div class="container page-download">
+  <div class="row">
+    <div class="col-lg-10 mx-auto ">
+      BornAgain is supported under Windows, Mac OS X and Linux operating systems. For Windows and MacOS we provide binary installer packages, both for Python2 and Python3. For Unix-like operating systems (including Linux and Mac OS X) we support installation from source.
+    </div>
+  </div>
+  <hr class="feature-divider">
+  <div class="row">
+    <div class="col-lg-10 mx-auto mb-5">
+    <h5> Current release {{% release-string %}}</h5>
+    <p> View changes made in this release </p>
+    </div>
+  </div>
+  
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs nav-pills nav-fill " id="DownloadTab" role="tablist">
@@ -98,3 +110,13 @@ BornAgain is supported under Windows, Mac OS X and Linux operating systems. For 
 
 </div>
 
+  <hr class="feature-divider">
+  <div class="row">
+    <div class="col-lg-10 mx-auto mb-3">
+    <h5> Current release {{% release-string %}}</h5>
+    <p> View changes made in this release </p>
+    </div>
+  </div>
+
+
+  </div>

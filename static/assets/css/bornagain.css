@@ -59,3 +59,15 @@
 .border-primary.ba-custom-border{
   border-color: #2a6783 !important;
 }
+
+/* Styling for download page */
+.page-download {
+  margin-top: 2rem;
+  text-align:center;
+}
+
+.page-download hr.feature-divider {
+  margin: 2rem auto 0.25rem auto;
+  max-width: 200px;
+}
+
