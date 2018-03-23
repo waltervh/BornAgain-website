@@ -120,7 +120,7 @@ breadcrumb = true
 
   <hr class="feature-divider">
   <div class="row">
-    <div class="col-lg-10 mx-auto mt-4">
+    <div class="col-lg-10 mx-auto mt-2">
       To use BornAgain from Python you have to have Python interpreter installed.
       See {{< local-link "documentation/installation">}} installation instructions {{< /local-link >}}for more details.
     </div>
