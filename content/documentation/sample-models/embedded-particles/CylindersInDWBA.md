@@ -15,8 +15,8 @@ This example is similar to the simulation [Cylinders in Born Approximation]({{% 
 * No interference effects from inter-particle correlations (dilute-particles approximation).
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/real_space_images/CylindersInDWBA_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="/files/Examples_images/PyExamples/CylindersInDWBA.png" width="350px" caption="Intensity image">}}
+{{< figscg src="../CylindersInDWBA_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="../CylindersInDWBA.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

@@ -17,8 +17,8 @@ This example illustrates how the in-plane rotation of non-radially symmetric par
 * The incident angles are $\alpha\_i = 0.2 ^{\circ}$ and $\phi\_i = 0^{\circ}$.
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/real_space_images/RotatedPyramids_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="/files/Examples_images/PyExamples/RotatedPyramids.png" width="350px" caption="Intensity image">}}
+{{< figscg src="../RotatedPyramids_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="../RotatedPyramids.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:
