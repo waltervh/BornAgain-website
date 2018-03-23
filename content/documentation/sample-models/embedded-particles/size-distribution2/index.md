@@ -17,8 +17,8 @@ Scattering of a polydisperse distribution of two types of cylinders.
 
 
 {{< galleryscg >}}
-{{< figscg src="../TwoTypesOfCylindersWithSizeDistribution_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="../TwoTypesOfCylindersWithSizeDistribution.png" width="350px" caption="Intensity image">}}
+{{< figscg src="TwoTypesOfCylindersWithSizeDistribution_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="TwoTypesOfCylindersWithSizeDistribution.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

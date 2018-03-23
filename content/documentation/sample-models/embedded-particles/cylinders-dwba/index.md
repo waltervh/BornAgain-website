@@ -7,7 +7,7 @@ weight = 20
 
 Scattering from a monodisperse distribution of cylindrical particles using the Distorted Wave Born Approxiamtion (DWBA).
 
-This example is similar to the simulation [Cylinders in Born Approximation]({{% ref-example "embedded-particles/CylindersInBA.md" %}}), but now the particles sit on top of a substrate. Therefore incoming and scattered waves are distorted by reflections from the substrate surface, as described by the DWBA.
+This example is similar to the simulation [Cylinders in Born Approximation]({{% ref-example "embedded-particles/cylinders-dwba" %}}), but now the particles sit on top of a substrate. Therefore incoming and scattered waves are distorted by reflections from the substrate surface, as described by the DWBA.
 
 * The distribution of cylinders is monodisperse with heights and radii of $5$ nm.
 * The wavelength is equal to $1$ $\unicode{x212B}$.
@@ -15,8 +15,8 @@ This example is similar to the simulation [Cylinders in Born Approximation]({{% 
 * No interference effects from inter-particle correlations (dilute-particles approximation).
 
 {{< galleryscg >}}
-{{< figscg src="../CylindersInDWBA_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="../CylindersInDWBA.png" width="350px" caption="Intensity image">}}
+{{< figscg src="CylindersInDWBA_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="CylindersInDWBA.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

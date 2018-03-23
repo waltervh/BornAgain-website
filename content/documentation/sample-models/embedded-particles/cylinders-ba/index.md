@@ -14,8 +14,8 @@ Scattering from a monodisperse distribution of cylinders using the Born approxim
 * Scattering is not affected by inter-particle correlations (dilute-particles approximation).
 
 {{< galleryscg >}}
-{{< figscg src="../CylindersInBA_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="../CylindersInBA.png" width="350px" caption="Intensity image">}}
+{{< figscg src="CylindersInBA_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="CylindersInBA.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:
