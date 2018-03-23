@@ -1,6 +1,8 @@
 +++
 title = "All available form factors"
 weight = 11
+showimages = true
+showresizedimages = true
 +++
 
 ### All available form factors
@@ -18,8 +20,8 @@ The dimensions of the object are chosen only in order to get a characteristic si
   
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/real_space_images/AllFormFactorsAvailable_setup.jpg" width="700px" caption="Real-space models">}}
-{{< figscg src="/files/Examples_images/PyExamples/AllFormFactorsAvailable.png" width="750px" caption="Intensity images">}}
+{{< figscg src="AllFormFactorsAvailable_setup.jpg" width="700px" caption="Real-space models">}}
+{{< figscg src="AllFormFactorsAvailable.png" width="750px" caption="Intensity images">}}
 {{< /galleryscg >}}  
   
 #### Python script:

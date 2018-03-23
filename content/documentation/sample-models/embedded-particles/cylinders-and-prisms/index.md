@@ -18,8 +18,8 @@ Scattering from a mixture of cylinders and prisms without interference.
 * The simulation is performed using the Distorted Wave Born Approximation (due to the presence of a substrate).
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/real_space_images/CylindersAndPrisms_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="/files/Examples_images/PyExamples/CylindersAndPrisms.png" width="350px" caption="Intensity image">}}
+{{< figscg src="CylindersAndPrisms_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="CylindersAndPrisms.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:
