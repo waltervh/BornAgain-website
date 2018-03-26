@@ -19,7 +19,7 @@ breadcrumb = true
       BornAgain is supported under Windows, Mac OS X and Linux operating systems. For Windows and MacOS we provide binary installer packages, both for Python2 and Python3. For Unix-like operating systems (including Linux and Mac OS X) we support installation from source.
     </p>
   <hr class="feature-divider">
-    <p>Select and download the appropriate package from the <a href="{{% download-loc %}}">site<a> or use one of direct links below.</p>
+    <p>Use links below to download the appropriate package. Previous versions are available <a href="{{% download-loc %}}">here<a>.</p>
     </div>
   </div>
   

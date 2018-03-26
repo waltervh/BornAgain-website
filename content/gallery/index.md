@@ -5,9 +5,12 @@ showimages = true
 showresizedimages = true
 menu = "main"
 weight = 20
+breadcrumb = true
 +++
 
-### BornAgain graphical user interface
+## Gallery
+
+This page contains a collection of screenshots demonstrating BornAgain graphical user interface.
 
 {{< galleryscg class="tz-gallery">}}
 {{< imgproc src="welcome-view.png" command="Resize" options="450x" caption="Welcome view" >}}
