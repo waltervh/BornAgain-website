@@ -18,7 +18,7 @@ breadcrumb = true
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-10 mx-auto">
+    <div class="col-lg-10 mx-auto mb-3">
       <p class="text-muted">
         This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement 
         No 654000 <a href="http://www.sine2020.eu/">(SINE2020)</a>.
@@ -31,6 +31,12 @@ breadcrumb = true
       <p class="lead"><h5> Citing BornAgain </h5></p>
       <p> J. Burle, C. Durniak, J. M. Fisher, M. Ganeva, G. Pospelov, W. Van Herck, J. Wuttke (2017), <br>
 BornAgain - Software for simulating and fitting X-ray and neutron small-angle scattering at grazing incidence, http://www.bornagainproject.org, Version N.n</p>
+    </div>  
+  </div>
+  <hr style="max-width: 200px;">
+  <div class="row">
+    <div class="col-lg-10 mx-auto mt-5">
+    <p>{{< local-link "about/about-website" >}} About this website</p>
     </div>  
   </div>
 </div>
