@@ -1,6 +1,6 @@
 +++
 title = "Rectangular Detector"
-weight = 11
+weight = 40
 +++
 
 ### Rectangular Detector

@@ -1,6 +1,6 @@
 +++
 title = "Rectangular grating"
-weight = 11
+weight = 120
 +++
 
 ### Rectangular grating

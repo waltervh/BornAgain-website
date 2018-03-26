@@ -1,8 +1,6 @@
 +++
 title = "All available form factors"
-weight = 11
-showimages = true
-showresizedimages = true
+weight = 70
 +++
 
 ### All available form factors

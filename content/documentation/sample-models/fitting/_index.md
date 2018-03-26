@@ -1,6 +1,6 @@
 +++
 title = "Fitting"
-weight = 20
+weight = 60
 +++
 
 ### Fitting

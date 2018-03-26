@@ -1,6 +1,6 @@
 +++
 title = "Size-distribution model: Size-Spacing Coupling Approximation"
-weight = 11
+weight = 110
 +++
 
 ### Size-distribution model: Size-Spacing Coupling Approximation

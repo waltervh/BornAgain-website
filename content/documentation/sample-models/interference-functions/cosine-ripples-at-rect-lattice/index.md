@@ -1,6 +1,6 @@
 +++
 title = "Cosine ripples on Rectangular Lattice"
-weight = 11
+weight = 60
 +++
 
 ### Cosine ripples on Rectangular Lattice

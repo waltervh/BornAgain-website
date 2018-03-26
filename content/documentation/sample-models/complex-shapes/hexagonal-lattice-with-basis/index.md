@@ -1,6 +1,6 @@
 +++
 title = "Hexagonal Lattices with Basis"
-weight = 11
+weight = 20
 +++
 
 ### Hexagonal Lattices with Basis

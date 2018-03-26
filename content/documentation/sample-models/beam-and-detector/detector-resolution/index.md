@@ -1,6 +1,6 @@
 +++
 title = "Detector Resolution Function"
-weight = 11
+weight = 20
 +++
 
 ### Detector Resolution Function

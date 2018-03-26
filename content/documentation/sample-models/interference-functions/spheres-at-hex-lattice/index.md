@@ -1,6 +1,6 @@
 +++
 title = "Spheres on Hexagonal Lattice"
-weight = 11
+weight = 50
 +++
 
 ### Spheres on Hexagonal Lattice

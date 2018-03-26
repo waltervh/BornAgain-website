@@ -1,6 +1,6 @@
 +++
 title = "Interference 2D Centered Square Lattice"
-weight = 11
+weight = 40
 +++
 
 ### Interference 2D Centered Square Lattice

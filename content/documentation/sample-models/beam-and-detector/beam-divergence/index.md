@@ -1,6 +1,6 @@
 +++
 title = "Beam divergence"
-weight = 11
+weight = 10
 +++
 
 ### Beam divergence

@@ -1,6 +1,6 @@
 +++
 title = "Complex Shapes"
-weight = 20
+weight = 40
 +++
 
 ### Complex Shapes

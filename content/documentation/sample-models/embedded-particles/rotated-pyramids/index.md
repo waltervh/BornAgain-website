@@ -1,6 +1,6 @@
 +++
 title = "Rotated Pyramids"
-weight = 11
+weight = 50
 +++
 
 ### Rotated Pyramids

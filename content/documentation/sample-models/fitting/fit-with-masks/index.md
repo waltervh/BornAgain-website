@@ -1,6 +1,6 @@
 +++
 title = "Fitting with masks"
-weight = 11
+weight = 30
 +++
 
 ### Fitting with masks

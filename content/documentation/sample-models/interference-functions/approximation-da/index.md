@@ -1,6 +1,6 @@
 +++
 title = "Size-distribution model: Decoupling Approximation"
-weight = 11
+weight = 90
 +++
 
 ### Size-distribution model: Decoupling Approximation

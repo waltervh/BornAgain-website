@@ -1,6 +1,6 @@
 +++
 title = "Size-distribution model: Local Monodisperse Approximation"
-weight = 11
+weight = 100
 +++
 
 ### Size-distribution model: Local Monodisperse Approximation

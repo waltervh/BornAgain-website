@@ -1,6 +1,6 @@
 +++
 title = "Fitting along slices"
-weight = 11
+weight = 40
 +++
 
 ### Fitting along slices

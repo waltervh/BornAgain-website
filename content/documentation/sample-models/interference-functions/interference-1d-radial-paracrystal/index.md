@@ -1,6 +1,6 @@
 +++
 title = "Interference 1D Radial Paracrystal"
-weight = 11
+weight = 80
 +++
 
 ### Interference 1D Radial Paracrystal

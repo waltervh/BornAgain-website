@@ -1,6 +1,6 @@
 +++
 title = "Simultaneous fit of two datasets"
-weight = 11
+weight = 50
 +++
 
 ### Simultaneous fit of two datasets

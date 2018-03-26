@@ -1,6 +1,6 @@
 +++
 title = "Interference 1D Lattice"
-weight = 11
+weight = 10
 +++
 
 ### Interference 1D Lattice

@@ -1,6 +1,6 @@
 +++
 title = "Beam and Detector"
-weight = 20
+weight = 50
 +++
 
 ### Beam and Detector

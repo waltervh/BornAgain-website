@@ -1,6 +1,6 @@
 +++
 title = "Real life fit example: Experiment at GALAXI"
-weight = 11
+weight = 60
 +++
 
 ### Real life fit example: Experiment at GALAXI

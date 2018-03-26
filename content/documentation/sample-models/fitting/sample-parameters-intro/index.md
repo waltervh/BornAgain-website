@@ -1,6 +1,6 @@
 +++
 title = "Working with sample parameters"
-weight = 11
+weight = 10
 +++
 
 ### Working with sample parameters

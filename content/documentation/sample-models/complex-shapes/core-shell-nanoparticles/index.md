@@ -1,6 +1,6 @@
 +++
 title = "Core shell nanoparticles"
-weight = 11
+weight = 10
 +++
 
 ### Core shell nanoparticles

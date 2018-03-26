@@ -3,7 +3,7 @@ title = "Sample model reference"
 weight = 60
 +++
 
-### Sample model reference
+## Sample model reference
 
 This section presents BornAgain simulations of various model systems. All Python scripts are shipped with BornAgain. They can be found in the "Examples" directory:
 
@@ -34,7 +34,7 @@ This section presents BornAgain simulations of various model systems. All Python
 </div>
 
 
-The examples are subdivided into the following categories:
+###### The examples are subdivided into the following categories:
 {{% children %}}
 
 #### Embedded particles
