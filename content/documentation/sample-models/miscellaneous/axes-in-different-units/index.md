@@ -15,7 +15,7 @@ In this example we demonstrate how to plot intensity data with detector axes exp
 
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/PyExamples/AxesInDifferentUnits.png" width="670px" caption="Intensity image">}}
+{{< figscg src="AxesInDifferentUnits.png" width="670px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

@@ -48,3 +48,7 @@ The examples are subdivided into the following categories:
 #### Fitting
 
 {{% examples-preview "documentation/sample-models/fitting" %}}
+
+#### Miscellaneous
+
+{{% examples-preview "documentation/sample-models/miscellaneous" %}}

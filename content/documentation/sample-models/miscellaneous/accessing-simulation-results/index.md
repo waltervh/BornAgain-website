@@ -13,7 +13,7 @@ This is an extended example for the further treatment of simulation results: acc
 
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/PyExamples/AccessingSimulationResults.png" width="670px" caption="Intensity image">}}
+{{< figscg src="AccessingSimulationResults.png" width="670px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:
