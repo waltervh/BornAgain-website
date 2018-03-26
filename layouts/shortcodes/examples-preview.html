@@ -1,26 +1,32 @@
-<div class="d-flex flex-column">
+<div class="d-flex flex-column my-3">
 
-    {{- range .Page.Pages }}
-    <div class="card h-100">
-      <div class="card-body">
+  {{- range .Page.Pages }}
+    <div class="card h-100 my-1">
+      <a href = "{{.Permalink}}" class="card-context">
+        
+        <!-- card body -->
+        <div class="card-body">
     
-        <div class="row">
+          <div class="row">
             {{ with .Resources.ByType "image" }}
-            {{ range . }} 
-              <div class="col">
-                  <img class="img-fluid" src="{{ .RelPermalink }}" width="100px" height="px">
+              {{ range . }} 
+                {{ $original := . }}
+                {{ $image := ($original.Resize "256x") }}
+                <div class="col">
+                  <img class="img-fluid" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
                 </div>
-                {{end}}
-          {{ end }}
-    
-          <div class="col-8">
-              <h5 class="card-title"> {{ .Title }} </h5>
+              {{end}}
+            {{ end }}
+            <div class="col-8 text-center">
+              <h6 > {{ .Title }} </h6>
+            </div>
           </div>
         </div>
-      </div>
+        <!-- end of card body -->
+      </a>
     </div>
-    {{- end}}
+  {{- end}}
     
-    </div>
+</div>
     
     
