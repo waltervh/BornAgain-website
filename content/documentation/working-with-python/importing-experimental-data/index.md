@@ -69,7 +69,7 @@ detector.setPerpendicularToDirectBeam(detector_distance, u0, v0)
 {{< /highlight >}}
 
 See also [Rectangular detector tutorial]({{% ref-tutorial "detector-types/rectangular-detector/index.md" %}})
-and [Rectangular detector example]({{% ref-example "beam-and-detector/RectangularDetector.md" %}}).
+and [Rectangular detector example]({{% ref-example "beam-and-detector/rectangular-detector" %}}).
 
 The final simulation setup looks like the following:
 

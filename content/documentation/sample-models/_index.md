@@ -25,7 +25,11 @@ Applications/BornAgain.app/Contents/share/BornAgain-1.10/Examples/python/simulat
 The examples are subdivided into the following categories:
 {{% children %}}
 
+#### Embedded particles
+
 {{% examples-preview "documentation/sample-models/embedded-particles" %}}
 
+#### Beam and detector
 
+{{% examples-preview "documentation/sample-models/beam-and-detector" %}}
 

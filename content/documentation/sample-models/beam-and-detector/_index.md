@@ -5,7 +5,4 @@ weight = 20
 
 ### Beam and Detector
 
-The following examples are available: 
-{{% children %}}
-\
-\ 
+{{% examples-preview %}}

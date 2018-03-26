@@ -22,8 +22,8 @@ Specular scattering from a multilayered sample with surface roughness.
 * The numerical result is a plot of the detected signal data for the selected layer as a function of the incident angle $\alpha\_i$.
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/real_space_images/BasicSpecularSimulation_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="/files/Examples_images/PyExamples/BasicSpecularSimulation.png" width="350px" caption="Intensity image">}}
+{{< figscg src="BasicSpecularSimulation_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="BasicSpecularSimulation.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

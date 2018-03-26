@@ -17,8 +17,8 @@ Off-specular scattering from a monodisperse distribution of long boxes.
 > The two-dimensional output intensity is plotted as a function of $\alpha\_i$ and $\alpha\_f$.
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/real_space_images/OffSpecularSimulation_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="/files/Examples_images/PyExamples/OffSpecularSimulation.png" width="350px" caption="Intensity image">}}
+{{< figscg src="OffSpecularSimulation_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="OffSpecularSimulation.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

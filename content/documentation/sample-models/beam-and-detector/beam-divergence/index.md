@@ -17,8 +17,8 @@ Scattering from a random distribution of monodisperse cylinders impinged by an i
 > Please note the different definitions for the incident angle $\alpha\_i$  (convention of sign) in the functions `DistributionGaussian` and `setBeamParameters`.
   
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/real_space_images/BeamDivergence_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="/files/Examples_images/PyExamples/BeamDivergence.png" width="350px" caption="Intensity image">}}
+{{< figscg src="BeamDivergence_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="BeamDivergence.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:
