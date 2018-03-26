@@ -29,6 +29,10 @@ The examples are subdivided into the following categories:
 
 {{% examples-preview "documentation/sample-models/embedded-particles" %}}
 
+#### Complex shapes
+
+{{% examples-preview "documentation/sample-models/complex-shapes" %}}
+
 #### Beam and detector
 
 {{% examples-preview "documentation/sample-models/beam-and-detector" %}}

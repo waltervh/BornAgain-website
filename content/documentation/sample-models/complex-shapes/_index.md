@@ -5,7 +5,4 @@ weight = 20
 
 ### Complex Shapes
 
-The following examples are available: 
-{{% children %}}
-\
-\ 
+{{% examples-preview %}}

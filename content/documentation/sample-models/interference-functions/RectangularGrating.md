@@ -12,7 +12,7 @@ In this example we simulate the scattering from infinite 1D repetition of rectan
 * The size of boxes is initially chosen to form a grating which is perpendicular to the beam (long side of the box is along $y$-axis).
 * Please keep in mind, that `length`, `width`, `height` in the `FormFactorBox(length, width, height)` constructor correspond to the directions in the $x,y,z$ axes, in that order, so to achieve the desired setup we use the values: `length`= $10$ nm, `width`= $10000$ nm, `height`= $10$ nm.
 * The whole grating is rotated at the end by an angle of $45^{\circ}$ with respect to the beam axis. This is achieved by rotating _both_ the 1D lattice and the long boxes (see lines 25 and 34).
-* To avoid the problem of rapidly oscillating form factors of long boxes (see [this example]({{% ref-example "complex-shapes/LargeParticlesFormFactor.md" %}}) for more details), the simulation is performed in monte carlo integration mode.
+* To avoid the problem of rapidly oscillating form factors of long boxes (see [this example]({{% ref-example "complex-shapes/large-particles-formfactor" %}}) for more details), the simulation is performed in monte carlo integration mode.
 
 {{< galleryscg >}}
 {{< figscg src="/files/Examples_images/real_space_images/RectangularGrating_setup.jpg" width="350px" caption="Real-space model">}}
