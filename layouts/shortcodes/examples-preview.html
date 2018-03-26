@@ -1,6 +1,15 @@
-<div class="d-flex flex-column my-3">
+{{- .Scratch.Set "current" .Page }}
 
-  {{- range .Page.Pages }}
+{{- if (.Get 0)}}
+	{{- with .Site.GetPage "section" (.Get 0) }}
+		{{- $.Scratch.Set "current" . }}
+	{{- end }}
+{{- end }}
+
+{{- $cpage := (.Scratch.Get "current") }}
+
+<div class="d-flex flex-column my-3">
+  {{- range $cpage.Pages }}
     <div class="card h-100 my-1">
       <a href = "{{.Permalink}}" class="card-context">
         <div class="card-body">
@@ -23,5 +32,3 @@
     </div>
   {{- end}}
 </div>
-    
-    
