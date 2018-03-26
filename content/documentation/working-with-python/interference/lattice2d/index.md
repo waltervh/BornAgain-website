@@ -120,7 +120,7 @@ particle_layout.setInterferenceFunction(interference)
 
 {{< /highlight >}}
 
-The complete example can be found [here]({{% ref-example "interference-functions/Interference2DSquareLattice.md" %}}).
+The complete example can be found [here]({{% ref-example "interference-functions/interference-2d-square-lattice" %}}).
 
 ### Interference function of 2D lattice in GUI
 

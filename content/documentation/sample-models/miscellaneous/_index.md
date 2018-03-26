@@ -1,11 +1,8 @@
 +++
 title = "Miscellaneous"
-weight = 20
+weight = 70
 +++
 
 ### Miscellaneous
 
-The following examples are available: 
-{{% children %}}
-\
-\ 
+{{% examples-preview %}}

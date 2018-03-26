@@ -10,7 +10,7 @@ This tutorial covers some practical aspects of importing experimental data in Bo
 As an example we will use our own measurements performed  at the laboratory diffractometer [GALAXI](http://www.fz-juelich.de/jcns/jcns-2//DE/Leistungen/GALAXI/_node.html) in Forschungszentrum Jülich.
 
 A complete example, containing less explanations but more code, can be found in
-[Real life fit example: experiment at GALAXI]({{% ref-example "fitting/FitGALAXIData.md" %}}).
+[Real life fit example: experiment at GALAXI]({{% ref-example "fitting/fit-galaxi-data" %}}).
 
 ### Experiment
 
@@ -69,7 +69,7 @@ detector.setPerpendicularToDirectBeam(detector_distance, u0, v0)
 {{< /highlight >}}
 
 See also [Rectangular detector tutorial]({{% ref-tutorial "detector-types/rectangular-detector/index.md" %}})
-and [Rectangular detector example]({{% ref-example "beam-and-detector/RectangularDetector.md" %}}).
+and [Rectangular detector example]({{% ref-example "beam-and-detector/rectangular-detector" %}}).
 
 The final simulation setup looks like the following:
 
@@ -153,7 +153,7 @@ simulation.addMask(Rectangle(101.9, 82.1, 103.7, 85.2), True)
 
 {{< /highlight >}}
 
-See [Fitting with masks]({{% ref-example "fitting/FitWithMasks.md" %}}) example for more details.
+See [Fitting with masks]({{% ref-example "fitting/fit-with-masks" %}}) example for more details.
 
 ### Setting up the fit
 
@@ -173,4 +173,4 @@ fitSuite.runFit()
 
 During the fit, only non-masked areas of the detector corresponding to the `cropped_hist` will be simulated and used for $\chi^2$ calculations.
 
-Complete example can be found in [Real life fit example: experiment at GALAXI]({{% ref-example "fitting/FitGALAXIData.md" %}}).
+Complete example can be found in [Real life fit example: experiment at GALAXI]({{% ref-example "fitting/fit-galaxi-data" %}}).

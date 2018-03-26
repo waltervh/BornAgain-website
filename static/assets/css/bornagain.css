@@ -71,3 +71,8 @@
   max-width: 200px;
 }
 
+/* styling examples page */
+a.card-context {
+  color: #404040;
+  text-decoration: none;
+}

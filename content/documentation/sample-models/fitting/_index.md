@@ -1,11 +1,8 @@
 +++
 title = "Fitting"
-weight = 20
+weight = 60
 +++
 
 ### Fitting
 
-The following examples are available: 
-{{% children %}}
-\
-\ 
+{{% examples-preview %}}

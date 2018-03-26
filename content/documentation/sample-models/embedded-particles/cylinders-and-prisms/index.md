@@ -1,6 +1,6 @@
 +++
 title = "Cylinders and Prisms"
-weight = 11
+weight = 60
 +++
 
 ### Cylinders and Prisms

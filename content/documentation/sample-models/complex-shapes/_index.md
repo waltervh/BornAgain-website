@@ -1,11 +1,8 @@
 +++
 title = "Complex Shapes"
-weight = 20
+weight = 40
 +++
 
 ### Complex Shapes
 
-The following examples are available: 
-{{% children %}}
-\
-\ 
+{{% examples-preview %}}

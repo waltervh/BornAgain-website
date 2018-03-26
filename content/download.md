@@ -25,7 +25,7 @@ breadcrumb = true
   
 
 <!-- Nav tabs -->
-<ul class="nav nav-tabs nav-pills nav-fill " id="DownloadTab" role="tablist">
+<ul class="nav nav-tabs nav-pills nav-fill " id="OperationSystemTab" role="tablist">
   <li class="nav-item">
     <a class="nav-link" id="home-tab" data-toggle="tab" href="#Windows" role="tab" aria-controls="home" aria-selected="true">Windows</a>
   </li>
@@ -41,7 +41,7 @@ breadcrumb = true
 </ul>
 
 <!-- Tab panes -->
-<div class="tab-content" id="DownloadTabContent">
+<div class="tab-content" id="OperationSystemTabContent">
   <div class="tab-pane fade" id="Windows" role="tabpanel" aria-labelledby="profile-tab">  
     <div class="d-flex flex-column flex-md-row justify-content-center">
       <div class="card text-center bg-light mx-3 my-5 border-primary ba-custom-border" style="width: 18rem;">        

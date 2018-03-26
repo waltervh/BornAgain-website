@@ -106,7 +106,7 @@ layout.setParticleDensity(0.0001)
 
 {{< /highlight >}}
 
-The complete example can be found [here]({{% ref-example "interference-functions/Interference1DRadialParaCrystal.md" %}}).
+The complete example can be found [here]({{% ref-example "interference-functions/interference-1d-radial-paracrystal" %}}).
 
 ### Radial paracrystal in GUI.
 

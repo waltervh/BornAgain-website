@@ -7,7 +7,7 @@ weight = 75
 
 In this section we are going to go through a complete example of fitting using BornAgain.
 Each step will be associated with a detailed piece of code written in Python.
-The script can also be found in the [Fit Cylinders and Prisms]({{% ref-example "fitting/FitCylindersPrisms.md" %}}) example.
+The script can also be found in the [Fit Cylinders and Prisms]({{% ref-example "fitting/fit-cylinders-and-prisms" %}}) example.
 
 This example uses the same sample geometry as in [Basic simulation tutorial]({{% ref-tutorial "basic-simulation-tutorial/index.md" %}}).
 Cylindrical and prismatic particles in equal proportion are deposited on a substrate layer,

@@ -60,7 +60,7 @@ im = matplotlib.pyplot.imshow(result.getArray(),
 ```
 
 In this case the axes units will be radians (which are the axes units of `SphericalDetector` initialized by default).
-See also [Accessing simulation results]({{% ref-example "miscellaneous/AccessingSimulationResults.md" %}})
+See also [Accessing simulation results]({{% ref-example "miscellaneous/accessing-simulation-results" %}})
 example for more convenience methods.
 
 ### Plotting with axes in different units.
@@ -93,7 +93,7 @@ result = simulation.getIntensityData(IDetector2D.QYQZ)
 
 ```
 
-See also [Plotting with axes in different units]({{% ref-example "miscellaneous/AxesInDifferentUnits.md" %}}) example.
+See also [Plotting with axes in different units]({{% ref-example "miscellaneous/axes-in-different-units" %}}) example.
 
 ### Saving results on disk
 
@@ -166,8 +166,8 @@ to perform basic data treatment tasks
 
 Additional information can be found in the following pages:
 
-* [Accessing simulation results example]({{% ref-example "miscellaneous/AccessingSimulationResults.md" %}})
-* [Plotting with axes in different units]({{% ref-example "miscellaneous/AxesInDifferentUnits.md" %}})
+* [Accessing simulation results example]({{% ref-example "miscellaneous/accessing-simulation-results" %}})
+* [Plotting with axes in different units]({{% ref-example "miscellaneous/axes-in-different-units" %}})
 * [Histogram1D C++ class reference](http://apps.jcns.fz-juelich.de/doxy/BornAgain/classHistogram1D.html)
 * [Histogram2D C++ class reference](http://apps.jcns.fz-juelich.de/doxy/BornAgain/classHistogram2D.html)
 
