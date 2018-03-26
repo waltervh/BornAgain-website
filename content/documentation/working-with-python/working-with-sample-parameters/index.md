@@ -15,7 +15,7 @@ is used for fitting real data. In this case, the fitting kernel requires a list 
 mechanism for changing the values of these parameters in order to find their optima.
 
 In BornAgain this is done using the so-called sample parameter pool mechanism.
-We are going to briefly explain this approach using the code from the example [Working With Sample Parameters]({{% ref-example "fitting/SampleParametersIntro.md" %}}).
+We are going to briefly explain this approach using the code from the example [Working With Sample Parameters]({{% ref-example "fitting/sample-parameters-intro" %}}).
 
 In BornAgain a sample is described by a hierarchical tree of objects. For the multilayer created in this example,
 this tree can be printed in a Python session by running
@@ -104,4 +104,4 @@ sample.setParameterValue("*/Prism3/*", 10.0*nm)
 
 {{< /highlight >}}
 
-See the complete code in the [Working with sample parameters]({{% ref-example "fitting/SampleParametersIntro.md" %}}) example.
+See the complete code in the [Working with sample parameters]({{% ref-example "fitting/sample-parameters-intro" %}}) example.

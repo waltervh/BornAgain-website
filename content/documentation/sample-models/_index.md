@@ -37,3 +37,6 @@ The examples are subdivided into the following categories:
 
 {{% examples-preview "documentation/sample-models/beam-and-detector" %}}
 
+#### Fitting
+
+{{% examples-preview "documentation/sample-models/fitting" %}}
