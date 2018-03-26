@@ -18,7 +18,7 @@
               {{- range first 2 $resources }} 
                 {{- $original := . }}
                 {{- $image := ($original.Resize "256x") }}
-                <div class="col">
+                <div class="col my-auto">
                   <img class="img-fluid" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
                 </div>
               {{- end }}
