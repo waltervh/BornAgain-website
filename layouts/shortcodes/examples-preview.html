@@ -23,6 +23,10 @@
                 </div>
               {{- end }}
             {{- end }}
+            {{- if eq (len $numberOfImages) 1 }}
+            <div class="col">
+              </div>
+            {{- end}}            
             <div class="col-8 text-center">
               <h6 > {{- .Title }} </h6>
             </div>
