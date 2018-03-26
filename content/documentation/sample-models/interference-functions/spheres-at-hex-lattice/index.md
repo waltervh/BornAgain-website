@@ -13,8 +13,8 @@ Scattering from spheres distributed along a hexagonal lattice.
 * The incident angles are $\alpha\_i = 0.2 ^{\circ}$ and $\phi\_i = 0^{\circ}$.
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/real_space_images/SpheresAtHexLattice_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="/files/Examples_images/PyExamples/SpheresAtHexLattice.png" width="350px" caption="Intensity image">}}
+{{< figscg src="SpheresAtHexLattice_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="SpheresAtHexLattice.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

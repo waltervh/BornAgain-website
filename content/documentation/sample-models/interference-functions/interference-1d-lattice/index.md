@@ -23,8 +23,8 @@ Scattering from long boxes distributed along a one-dimensional lattice.
 
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/real_space_images/Interference1DLattice_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="/files/Examples_images/PyExamples/Interference1DLattice.png" width="350px" caption="Intensity image">}}
+{{< figscg src="Interference1DLattice_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="Interference1DLattice.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

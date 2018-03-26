@@ -29,6 +29,10 @@ The examples are subdivided into the following categories:
 
 {{% examples-preview "documentation/sample-models/embedded-particles" %}}
 
+#### Interference functions
+
+{{% examples-preview "documentation/sample-models/interference-functions" %}}
+
 #### Complex shapes
 
 {{% examples-preview "documentation/sample-models/complex-shapes" %}}

@@ -16,7 +16,7 @@ Scattering from a distribution of cylinders of two different sizes using the Dec
 * The incident angles are $\alpha\_i = 0.2 ^{\circ}$ and $\phi\_i = 0^{\circ}$.
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/PyExamples/ApproximationDA.png" width="350px" caption="Intensity image">}}
+{{< figscg src="ApproximationDA.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

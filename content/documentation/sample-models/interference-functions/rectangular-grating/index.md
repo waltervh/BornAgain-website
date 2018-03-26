@@ -5,7 +5,7 @@ weight = 11
 
 ### Rectangular grating
 
-In this example we simulate the scattering from infinite 1D repetition of rectangular patches (rectangular grating). This is done by using the interference function of a 1D lattice together with very long boxes. While being similar to the [Interference 1D lattice]({{% ref-example "interference-functions/Interference1DLattice.md" %}}) example, this example explains the lattice orientation in more details.
+In this example we simulate the scattering from infinite 1D repetition of rectangular patches (rectangular grating). This is done by using the interference function of a 1D lattice together with very long boxes. While being similar to the [Interference 1D lattice]({{% ref-example "interference-functions/interference-1d-lattice" %}}) example, this example explains the lattice orientation in more details.
 
 * By-default, the axis of the one-dimensional lattice coincides with the $x$-axis of the reference cartesian frame, so it coinsides with the beam direction.
 * Long boxes are placed along a one-dimensional lattice on top of substrate, the lattice_length parameter corresponds to the grating period.
@@ -15,8 +15,8 @@ In this example we simulate the scattering from infinite 1D repetition of rectan
 * To avoid the problem of rapidly oscillating form factors of long boxes (see [this example]({{% ref-example "complex-shapes/large-particles-formfactor" %}}) for more details), the simulation is performed in monte carlo integration mode.
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/real_space_images/RectangularGrating_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="/files/Examples_images/PyExamples/RectangularGrating.png" width="350px" caption="Intensity image">}}
+{{< figscg src="RectangularGrating_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="RectangularGrating.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script:

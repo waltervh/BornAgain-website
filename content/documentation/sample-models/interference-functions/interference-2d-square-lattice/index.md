@@ -16,8 +16,8 @@ Scattering from cylindrical particles distributed along a square lattice.
 * The incident angles are $\alpha\_i = 0.2 ^{\circ}$ and $\phi\_i = 0^{\circ}$.
 
 {{< galleryscg >}}
-{{< figscg src="/files/Examples_images/real_space_images/Interference2DSquareLattice_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="/files/Examples_images/PyExamples/Interference2DSquareLattice.png" width="350px" caption="Intensity image">}}
+{{< figscg src="Interference2DSquareLattice_setup.jpg" width="350px" caption="Real-space model">}}
+{{< figscg src="Interference2DSquareLattice.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 #### Python script: 

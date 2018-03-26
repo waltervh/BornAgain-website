@@ -125,7 +125,7 @@ layout.setInterferenceFunction(ba.InterferenceFunction1DLattice(40*nm, 30.0*deg)
 
 ### Complete example
 
-The complete example can be found [here]({{% ref-example "interference-functions/RectangularGrating.md" %}}).
+The complete example can be found [here]({{% ref-example "interference-functions/rectangular-grating" %}}).
 
 ### Interference function of 1D lattice in GUI
 
