@@ -29,6 +29,10 @@ The examples are subdivided into the following categories:
 
 {{% examples-preview "documentation/sample-models/embedded-particles" %}}
 
+#### Layered structures
+
+{{% examples-preview "documentation/sample-models/layered-structures" %}}
+
 #### Interference functions
 
 {{% examples-preview "documentation/sample-models/interference-functions" %}}

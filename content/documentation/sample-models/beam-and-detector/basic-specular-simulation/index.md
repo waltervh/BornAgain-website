@@ -7,12 +7,12 @@ weight = 11
 
 Specular scattering from a multilayered sample with surface roughness.
 
-* The sample is composed of a substrate on which is sitting a stack of layers (similar to [Correlated Roughness]({{% ref-example "layered-structures/CorrelatedRoughness.md" %}})). These layers consist in a repetition of $10$ times two different superimposed layers (from bottom to top):
+* The sample is composed of a substrate on which is sitting a stack of layers (similar to [Correlated Roughness]({{% ref-example "layered-structures/correlated-roughness" %}})). These layers consist in a repetition of $10$ times two different superimposed layers (from bottom to top):
 
     * layer A: $5$ nm thick with a real refractive index $n = 5\cdot10^{-6}$
     * layer B: $10$ nm thick with a real refractive index $n = 10\cdot10^{-6}$
 * There is no added particle.
-* All layers present the same type of roughness on the top surface, which is characterized by (see [Correlated Roughness]({{% ref-example "layered-structures/CorrelatedRoughness.md" %}}) for a definition of the "roughness" parameters) :
+* All layers present the same type of roughness on the top surface, which is characterized by (see [Correlated Roughness]({{% ref-example "layered-structures/correlated-roughness" %}}) for a definition of the "roughness" parameters) :
     * a rms roughness of the interfaces $\sigma=1$ nm,
     * a Hurst parameter $H$ equal to $0.3$,
     * a lateral correlation length $\xi$ of $500$ nm,
