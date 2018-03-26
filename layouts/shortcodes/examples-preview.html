@@ -3,30 +3,25 @@
   {{- range .Page.Pages }}
     <div class="card h-100 my-1">
       <a href = "{{.Permalink}}" class="card-context">
-        
-        <!-- card body -->
         <div class="card-body">
-    
           <div class="row">
-            {{ with .Resources.ByType "image" }}
-              {{ range . }} 
-                {{ $original := . }}
-                {{ $image := ($original.Resize "256x") }}
+            {{- with .Resources.ByType "image" }}
+              {{- range . }} 
+                {{- $original := . }}
+                {{- $image := ($original.Resize "256x") }}
                 <div class="col">
                   <img class="img-fluid" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
                 </div>
-              {{end}}
-            {{ end }}
+              {{- end }}
+            {{- end }}
             <div class="col-8 text-center">
-              <h6 > {{ .Title }} </h6>
+              <h6 > {{- .Title }} </h6>
             </div>
           </div>
         </div>
-        <!-- end of card body -->
       </a>
     </div>
   {{- end}}
-    
 </div>
     
     
