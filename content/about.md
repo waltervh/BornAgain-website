@@ -36,7 +36,7 @@ BornAgain - Software for simulating and fitting X-ray and neutron small-angle sc
   <hr style="max-width: 200px;">
   <div class="row">
     <div class="col-lg-10 mx-auto mt-5">
-    <p>{{< local-link "about/about-website" >}} About this website</p>
+    <p>{{< local-link "about-website" >}} About this website</p>
     </div>  
   </div>
 </div>
