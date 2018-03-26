@@ -76,3 +76,12 @@ a.card-context {
   color: #404040;
   text-decoration: none;
 }
+
+/* Styling contact page */
+.page-contact {
+  text-align:center;
+}
+
+.page-about {
+  text-align:center;
+}
