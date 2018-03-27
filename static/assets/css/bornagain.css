@@ -141,3 +141,10 @@ a.card-context {
   text-decoration: none;
 }
 
+/* ------------------------------------------------------------- *
+ *  documentation sidebar
+/* ------------------------------------------------------------- */
+
+ul.doctree li.active, ul.doctree li.active > a {
+  color: #2a7283 !important;
+}
