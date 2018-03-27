@@ -1,6 +1,6 @@
 +++
 title = "Getting help"
-weight = 70
+weight = 60
 +++
 
 ## Getting help

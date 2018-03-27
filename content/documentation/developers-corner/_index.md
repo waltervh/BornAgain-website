@@ -1,6 +1,6 @@
 +++
 title = "Developer's corner"
-weight = 80
+weight = 70
 +++
 
 ## Developer's corner

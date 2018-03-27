@@ -1,6 +1,6 @@
 +++
 title = "Sample model reference"
-weight = 60
+weight = 50
 +++
 
 ## Sample model reference
