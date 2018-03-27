@@ -20,16 +20,16 @@ fresh html of the site and updates `gh-pahes` branch.
 
 To modify documentation follow these steps:
 
-#### Install Hugo
+### Install Hugo
 
 * Downloads latest hugo from [here](https://github.com/gohugoio/hugo/releases).
 * Archive will contain single binary which you will have to put to your `$HOME/bin` directory, for example.
 
-#### Fork documentation repository
+### Fork documentation repository
 
 Make a fork of our [site repository](https://github.com/gpospelov/BornAgain-website) and clone your fork locally.
 
-#### Run Hugo locally
+### Run Hugo locally
 
 Go to cloned repository and run `Hugo`.
 
