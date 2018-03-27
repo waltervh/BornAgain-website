@@ -46,6 +46,23 @@
   text-align:center;
 }
 
+.page-multilayer {
+  background-color: #f6f8f8;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.featurette-heading {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------------------------------------- *
+ *  Styling for download page
+/* ------------------------------------------------------------- */
+
 /* color of active tab in nav-pils style */
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   background-color:#2a6783;
@@ -60,7 +77,6 @@
   border-color: #2a6783 !important;
 }
 
-/* Styling for download page */
 .page-download {
   margin-top: 0rem;
   text-align:center;
@@ -71,17 +87,51 @@
   max-width: 200px;
 }
 
-/* styling examples page */
+/* ------------------------------------------------------------- *
+ * Styling contact page
+/* ------------------------------------------------------------- */
+
+.page-contact {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+
+.page-contact span.fa-github {
+  margin-right: 0.3em;
+  font-size: 125%;
+}
+
+.page-contact span.fa-envelope-o {
+  margin-right: 0.5em;
+}
+
+.page-contact a {
+  color: #404040;
+}
+
+.page-contact a:hover, a:focus {
+  color: grey;
+}
+
+.page-contact h2, h4 {
+  font-weight: 400;
+}
+
+/* ------------------------------------------------------------- *
+ * Styling about page
+/* ------------------------------------------------------------- */
+
+.page-about {
+  text-align:center;
+}
+
+/* ------------------------------------------------------------- *
+ *  styling examples page
+/* ------------------------------------------------------------- */
+
 a.card-context {
   color: #404040;
   text-decoration: none;
 }
 
-/* Styling contact page */
-.page-contact {
-  text-align:center;
-}
-
-.page-about {
-  text-align:center;
-}
