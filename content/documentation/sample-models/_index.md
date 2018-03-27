@@ -23,13 +23,13 @@ This section presents BornAgain simulations of various model systems. All Python
 <!-- Tab panes -->
 <div class="tab-content id="OperationSystemTabContent">
   <div class="tab-pane active" id="Windows" role="tabpanel" aria-labelledby="windows-tab">
-    <p><pre><code>C:\BornAgain-{{< release-string >}}\Examples\python\simulation</code></pre></p>
+    <p><pre><code>C:\BornAgain-{{< release-string >}}\Examples\python</code></pre></p>
   </div>
   <div class="tab-pane" id="MacOS" role="tabpanel" aria-labelledby="macos-tab">
-    <p><pre><code>/Applications/BornAgain.app/Contents/share/BornAgain-{{< release-string-short >}}/Examples/python/simulation</code></pre></p>  
+    <p><pre><code>/Applications/BornAgain.app/Contents/share/BornAgain-{{< release-string-short >}}/Examples/python</code></pre></p>  
   </div>
   <div class="tab-pane" id="Linux" role="tabpanel" aria-labelledby="linux-tab">
-    <p><pre><code>install_dir/share/BornAgain-{{< release-string-short >}}/Examples/python/simulation</code></pre></p>  
+    <p><pre><code>install_dir/share/BornAgain-{{< release-string-short >}}/Examples/python</code></pre></p>  
   </div>
 </div>
 
