@@ -79,9 +79,35 @@ a.card-context {
 
 /* Styling contact page */
 .page-contact {
-  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
 }
+
+.page-contact span.fa-github {
+  margin-right: 0.3em;
+  font-size: 125%;
+}
+
+.page-contact span.fa-envelope-o {
+  margin-right: 0.5em;
+}
+
+.page-contact a {
+  color: #404040;
+}
+
+.page-contact a:hover, a:focus {
+  color: grey;
+}
+
+.page-contact h2, h4 {
+  font-weight: 400;
+}
+
+/* Styling about page */
 
 .page-about {
   text-align:center;
 }
+
