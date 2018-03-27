@@ -46,6 +46,19 @@
   text-align:center;
 }
 
+.page-multilayer {
+  background-color: #f6f8f8;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.featurette-heading {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
 /* ------------------------------------------------------------- *
  *  Styling for download page
 /* ------------------------------------------------------------- */
