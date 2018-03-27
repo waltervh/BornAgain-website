@@ -29,6 +29,13 @@ To modify documentation follow these steps:
 
 Make a fork of our [site repository](https://github.com/gpospelov/BornAgain-website) and clone your fork locally.
 
+Please note, that repository contains submodule (external Hugo theme), so clone command should be
+
+```
+git clone --recurse-submodules https://github.com/<your-name>/BornAgain-website.git
+```
+
+
 ### Run Hugo locally
 
 Go to cloned repository and run `Hugo`.
@@ -60,7 +67,7 @@ Depending on `Travis` mood and load, the build can be completed in less than a m
 > External users will have to wait a bit for a person with admin rights to approve.
 
 After pull request merge, check site [online](https://scgmlz.github.io/BornAgain-website/).
-It make take few minutes before changes will be propagated by hosting service.
+It might take a few minutes before changes will be propagated to hosting service.
 
 {{% alert theme="info" %}}
 Because of browser cashing you might need to reload the page from scratch (e.g. push `reload` button while holding `shift` key).
