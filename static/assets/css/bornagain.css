@@ -112,11 +112,11 @@ a.navbar-brand {
   margin-right: 0.5em;
 }
 
-.page-contact a {
+.page-contact h4 a {
   color: #404040;
 }
 
-.page-contact a:hover, a:focus {
+.page-contact h4 a:hover, a:focus {
   color: grey;
 }
 
