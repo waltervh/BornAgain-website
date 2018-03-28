@@ -1,0 +1,21 @@
+
+<div class="card {{ with .Get "class" }}{{.}}{{end}}" {{ with .Get "style"}}style="{{.}};"{{end}}>
+    {{ with .Get "header" }}
+    <div class="card-header">{{.}}</div>
+    {{end}}
+    <div class="card-body">
+      {{ with .Get "title" }}
+        <h5 class="card-title">{{.}}</h5>
+      {{ end }}
+      <p class="card-text">
+        {{ .Inner }}
+      </p>
+      {{ with .Get "href"}}
+      <a href="{{.}}" class="btn btn-secondary">
+      {{ end }}
+      {{ with .Get "btn-text"}}{{.}}{{end}}
+      {{ with .Get "href"}}
+       </a>
+      {{ end }}
+  </div>
+  </div>
