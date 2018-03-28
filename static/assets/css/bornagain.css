@@ -6,7 +6,8 @@
 
 a.navbar-brand {
   font-family: 'Libre Baskerville', serif;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  font-weight: 500;
 }
 .btn-group-lg > .btn, .btn-lg {
     width: 100%;
