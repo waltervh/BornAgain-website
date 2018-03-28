@@ -2,6 +2,13 @@
  *  Landing page styling
 /* ------------------------------------------------------------- */
   
+/* logo font */
+
+a.navbar-brand {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5em;
+  font-weight: 500;
+}
 .btn-group-lg > .btn, .btn-lg {
     width: 100%;
     padding: .5rem 1rem;
@@ -55,7 +62,7 @@
 }
 
 .featurette-heading {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   margin-bottom: 1rem;
 }
 
@@ -106,11 +113,11 @@
   margin-right: 0.5em;
 }
 
-.page-contact a {
+.page-contact h4 a {
   color: #404040;
 }
 
-.page-contact a:hover, a:focus {
+.page-contact h4 a:hover, a:focus {
   color: grey;
 }
 
@@ -135,3 +142,10 @@ a.card-context {
   text-decoration: none;
 }
 
+/* ------------------------------------------------------------- *
+ *  documentation sidebar
+/* ------------------------------------------------------------- */
+
+ul.doctree li.active, ul.doctree li.active > a {
+  color: #2a7283 !important;
+}
