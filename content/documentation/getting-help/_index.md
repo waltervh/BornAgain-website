@@ -5,7 +5,7 @@ weight = 60
 
 ## Getting help
 
-Let us know if you encounter a problem during installation or while running BornAgain or 
+Let us know if you encounter a problem during installation or while running BornAgain or
 if you have a question related to BornAgain models.
 
 Please use [GitHub Issue System](https://github.com/scgmlz/BornAgain/issues) for all kind of problems/questions you might have.
@@ -18,6 +18,6 @@ This will help us to track user requests and set our priorities.
 * pose a question about BornAgain API or model implementations
 {{% /card %}}
 
-Alternatively, fill free to write us [email](mailto:contact@bornagainproject.org). We very much welcome your comments and feedback!
+Alternatively, feel free to write us [email](mailto:contact@bornagainproject.org). We very much welcome your comments and feedback!
 
 {{% children  %}}
