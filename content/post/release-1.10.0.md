@@ -23,8 +23,8 @@ categories = ["News"]
 
 **API changes:**
 
-1. FormFactorTrivial renamed to FormFactorDot.
-1. IParticle: applyTranslation -> translate; applyRotation -> rotate.
+1. `FormFactorTrivial` renamed to `FormFactorDot`.
+1. `IParticle`: `applyTranslation` -> `translate`; `applyRotation` -> `rotate`.
 
 **Other changes:**
 
