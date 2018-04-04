@@ -9,7 +9,7 @@ Here we explain how to make change in the documentation and make it available on
 
 ### General information
 
-Our web [site repository](https://github.com/gpospelov/BornAgain-website) contains two branches.
+Our web [site repository](https://github.com/scgmlz/BornAgain-website) contains two branches.
 `Master` branch contains markdown content of the site, `gh-pages` branch contains static html of the site.
 [Hugo](https://gohugo.io/) static site generator is used to produce html content from markdown pages.
 
@@ -27,7 +27,7 @@ To modify documentation follow these steps:
 
 ### Fork documentation repository
 
-Make a fork of our [site repository](https://github.com/gpospelov/BornAgain-website) and clone your fork locally.
+Make a fork of our [site repository](https://github.com/scgmlz/BornAgain-website) and clone your fork locally.
 
 Please note, that repository contains submodule (external Hugo theme), so clone command should be
 
