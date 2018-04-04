@@ -28,6 +28,6 @@ None
 1. Documentation: tutorials explaining interference functions and magnetic scattering
 1. Bugfixes.
 
-More details on our [Issue Tracker](http://apps.jcns.fz-juelich.de/redmine/versions/41).
+More details on our issue [tracker](http://apps.jcns.fz-juelich.de/redmine/versions/41).
 
 As always, we very much welcome your comments and feedback!
