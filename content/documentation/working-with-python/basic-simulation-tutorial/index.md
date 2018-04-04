@@ -161,7 +161,7 @@ setBeamParameters(wavelength, alpha_i, phi_i)
 where `wavelength` is the incident beam wavelength, `alpha_i` is the incident grazing angle on the surface of the sample and `phi_i` is the in-plane direction of the incident beam (measured with respect to the x-axis).
 
 {{% notice note %}}
-In BornAgain, the scattering vector $q$ is defined as $ki - kf$, where $ki$ is the incident wave vector and $kf$ the scattered one.
+In BornAgain, the scattering vector $q$ is defined as $k_i - k_f$, where $k_i$ and $k_f$ are the initial (incident) and final (scattered) wave vector, respectively.
 {{% /notice %}}
 
 #### Running the simulation and plotting the results
