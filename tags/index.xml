@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on BornAgain</title>
+    <link>https://scgmlz.github.io/BornAgain-website/tags/</link>
+    <description>Recent content in Tags on BornAgain</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Mar 2018 08:30:10 +0200</lastBuildDate>
+    
+	<atom:link href="https://scgmlz.github.io/BornAgain-website/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Release</title>
+      <link>https://scgmlz.github.io/BornAgain-website/tags/release/</link>
+      <pubDate>Thu, 22 Mar 2018 08:30:10 +0200</pubDate>
+      
+      <guid>https://scgmlz.github.io/BornAgain-website/tags/release/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Website</title>
+      <link>https://scgmlz.github.io/BornAgain-website/tags/website/</link>
+      <pubDate>Fri, 30 Jan 2015 08:30:10 +0200</pubDate>
+      
+      <guid>https://scgmlz.github.io/BornAgain-website/tags/website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workshop</title>
+      <link>https://scgmlz.github.io/BornAgain-website/tags/workshop/</link>
+      <pubDate>Wed, 11 May 2016 08:30:10 +0200</pubDate>
+      
+      <guid>https://scgmlz.github.io/BornAgain-website/tags/workshop/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

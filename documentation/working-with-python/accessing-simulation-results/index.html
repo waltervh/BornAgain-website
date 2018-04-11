@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Accessing simulation results -- BornAgain</title>
+
+
+<link href="https://scgmlz.github.io/BornAgain-website//css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://scgmlz.github.io/BornAgain-website//css/theme.css" rel="stylesheet">
+
+<link href="https://scgmlz.github.io/BornAgain-website//css/mathjax-style.css" rel="stylesheet">
+
+<link href="https://scgmlz.github.io/BornAgain-website//css/vs.css" rel="stylesheet">
+
+<link href="https://scgmlz.github.io/BornAgain-website//css/baguetteBox.min.css" rel="stylesheet">
+<link href="https://scgmlz.github.io/BornAgain-website//css/gallery-grid.css" rel="stylesheet">
+
+<link href="https://scgmlz.github.io/BornAgain-website/assets/css/bornagain.css" rel="stylesheet">
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet'  type='text/css'> 
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    var TEX = MathJax.InputJax.TeX;
+    var PREFILTER = TEX.prefilterMath;
+    TEX.Augment({
+      prefilterMath: function (math,displaymode,script) {
+        if (!displaymode) {math = "\\small{"+math+"}"}
+        return PREFILTER.call(TEX,math,displaymode,script);
+      }
+    });
+  });
+  </script>
+
+</head>
+
+
+  <body>
+    <header class="hero overlay"><div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-primary">
+    <a class="navbar-brand" href="https://scgmlz.github.io/BornAgain-website/">
+        <img src="https://scgmlz.github.io/BornAgain-website/assets/img/bornagain-logo.png" class="d-inline-block align-top" alt="">
+        BornAgain
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        
+        
+          <li class="nav-item "> <a class="nav-link" href="https://scgmlz.github.io/BornAgain-website/">Home</a></li>
+        
+          <li class="nav-item "> <a class="nav-link" href="https://scgmlz.github.io/BornAgain-website/gallery/">Gallery</a></li>
+        
+          <li class="nav-item "> <a class="nav-link" href="https://scgmlz.github.io/BornAgain-website/download/">Download</a></li>
+        
+          <li class="nav-item "> <a class="nav-link" href="https://scgmlz.github.io/BornAgain-website/post/">News</a></li>
+        
+          <li class="nav-item active"> <a class="nav-link" href="https://scgmlz.github.io/BornAgain-website/documentation/">Documentation</a></li>
+        
+          <li class="nav-item "> <a class="nav-link" href="https://scgmlz.github.io/BornAgain-website/contact/">Contact</a></li>
+        
+          <li class="nav-item "> <a class="nav-link" href="https://scgmlz.github.io/BornAgain-website/about/">About</a></li>
+          
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/scgmlz/BornAgain" target="_blank" rel="noopener" aria-label="GitHub">
+              <span class="fa fa-github fa-2x"></span>
+            </a>
+          </li>        
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+  
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12"> <br></div>
+        </div>
+      </div>
+    </header>
+
+    
+  <div class="breadcrumb">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+
+
+
+
+
+
+ <a href='https://scgmlz.github.io/BornAgain-website/'>Home</a> > <a href='https://scgmlz.github.io/BornAgain-website/documentation/'>Documentation</a> > <a href='https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/'>Working with Python scripts</a> > Accessing simulation results
+
+ 
+
+ 
+
+ 
+
+   
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      
+      
+  
+  
+
+<h2 id="accessing-simulation-results">Accessing simulation results</h2>
+
+<p>In this tutorial we explain how to access GISAS simulation results,
+how to plot the simulated detector 2D intensity map as a color map,
+how to export the result into various formats and how to import experimental data into BornAgain for further fitting.</p>
+
+<p>The detector intensity in BornAgain can be retrieved via special objects of <code>Histogram2D</code> types. Two possible user scenarios are further detailed:</p>
+
+<ul>
+<li>A user runs a simulation and then accesses the detector intensity data either for immediate plotting or for saving it in some external format for later processing in the software of his choice.</li>
+<li>A user imports his experimental data into BornAgain to performe some fitting procedures.</li>
+</ul>
+
+<h3 id="accessing-simulation-results-1">Accessing simulation results</h3>
+
+<p>The <code>Histogram2D</code> object is used to store the intensity data in detector
+channels together with the detector axes definition.
+The object can be retrieved from the simulation after it is completed using the method <code>Simulation::getIntensityData</code>, as shown in code snippet below.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">simulation</span> <span class="o">=</span> <span class="n">GISASSimulation</span><span class="p">()</span>
+<span class="n">simulation</span><span class="o">.</span><span class="n">setDetectorParameters</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">deg</span><span class="p">,</span> <span class="mf">1.0</span><span class="o">*</span><span class="n">deg</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.0</span><span class="o">*</span><span class="n">deg</span><span class="p">,</span> <span class="mf">1.0</span><span class="o">*</span><span class="n">deg</span><span class="p">)</span>
+<span class="n">simulation</span><span class="o">.</span><span class="n">setSample</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span>
+<span class="n">simulation</span><span class="o">.</span><span class="n">runSimulation</span><span class="p">()</span>
+ 
+<span class="n">result</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">getIntensityData</span><span class="p">()</span></code></pre></div>
+<p>The user can convert a <code>Histogram2D</code> object into a numpy array and proceed
+with it in the manner he is more comfortable with.
+In the code snippet below the method <code>Histogram2D::getArray</code> returns a numpy array of the same shape as the detector pixel array.
+The method <code>numpy.savetxt</code> from the numpy library saves the data to an ASCII file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">arr</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">getIntensityData</span><span class="p">()</span><span class="o">.</span><span class="n">getArray</span><span class="p">()</span>
+<span class="n">numpy</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;intensity.txt&#34;</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span></code></pre></div>
+<h3 id="plotting-simulation-results">Plotting simulation results</h3>
+
+<p>The <code>Histogram2D</code> object offers a few convenience methods that can be used during the plotting to get,
+for example, the dimension of the axes and the maximum intensity value. In the code example below,
+the intensity data is plotted as a colormap in logarithmic scale using <code>matplotlib.pyplot</code>
+library and convenience methods provided by <code>Histogram2D</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">im</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">getArray</span><span class="p">(),</span>
+        <span class="n">norm</span><span class="o">=</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">getMaximum</span><span class="p">()),</span>
+        <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="n">result</span><span class="o">.</span><span class="n">getXmin</span><span class="p">(),</span> <span class="n">result</span><span class="o">.</span><span class="n">getXmax</span><span class="p">(),</span> <span class="n">result</span><span class="o">.</span><span class="n">getYmin</span><span class="p">(),</span> <span class="n">result</span><span class="o">.</span><span class="n">getYmax</span><span class="p">()],</span>
+        <span class="n">aspect</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;auto&#39;</span><span class="p">)</span></code></pre></div>
+<p>In this case the axes units will be radians (which are the axes units of <code>SphericalDetector</code> initialized by default).
+See also <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/miscellaneous/accessing-simulation-results/">Accessing simulation results</a>
+example for more convenience methods.</p>
+
+<h3 id="plotting-with-axes-in-different-units">Plotting with axes in different units.</h3>
+
+<p>By default, the <code>Simulation::getIntensityData</code> method returns a <code>Histogram2D</code> object
+whose axes are defined in the default detector&rsquo;s units. Namely, in the case of a
+simulation with a <code>SphericalDetector</code> these units are radians,
+while for <code>RectangularDetector</code> axes units will be expressed in millimeters.
+By providing an additional parameter it is also possible to get the histogram axes defined in other units:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># in default units (radians for SphericalDetector, millimeters for RectangularDetector)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">getIntensityData</span><span class="p">()</span>
+ 
+<span class="c1"># in millimeters (only for RectangularDetector)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">getIntensityData</span><span class="p">(</span><span class="n">IDetector2D</span><span class="o">.</span><span class="n">MM</span><span class="p">)</span>
+ 
+<span class="c1"># in detector bins</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">getIntensityData</span><span class="p">(</span><span class="n">IDetector2D</span><span class="o">.</span><span class="n">NBINS</span><span class="p">)</span>
+ 
+<span class="c1"># in degrees</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">getIntensityData</span><span class="p">(</span><span class="n">IDetector2D</span><span class="o">.</span><span class="n">DEGREES</span><span class="p">)</span>
+ 
+<span class="c1"># in radians</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">getIntensityData</span><span class="p">(</span><span class="n">IDetector2D</span><span class="o">.</span><span class="n">RADIANS</span><span class="p">)</span>
+ 
+<span class="c1"># in Qy, Qz space [1/nm] </span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">getIntensityData</span><span class="p">(</span><span class="n">IDetector2D</span><span class="o">.</span><span class="n">QYQZ</span><span class="p">)</span></code></pre></div>
+<p>See also <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/miscellaneous/axes-in-different-units/">Plotting with axes in different units</a> example.</p>
+
+<h3 id="saving-results-on-disk">Saving results on disk</h3>
+
+<p>A <code>Histogram2D::save</code> method can be used to save histograms on disk. For the moment we support three formats:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">result</span> <span class="o">=</span> <span class="n">simulation</span><span class="o">.</span><span class="n">getIntensityData</span><span class="p">()</span>
+ 
+<span class="c1"># writes simple ASCII file suitable for numpy/matlab etc (equivalent to numpy.savetxt).</span>
+<span class="n">result</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;result.txt&#34;</span><span class="p">)</span>
+ 
+<span class="c1"># writes 32-bit tiff file</span>
+<span class="n">result</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;result.tif&#34;</span><span class="p">)</span>
+ 
+<span class="c1"># writes ASCII file in BornAgain format (axes information added)</span>
+<span class="n">result</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;result.int&#34;</span><span class="p">)</span></code></pre></div>
+<p>By providing an additional suffix to file name extention, it is possible to zip files on the fly:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># writes simple ASCII file</span>
+<span class="n">result</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;result.txt&#34;</span><span class="p">)</span>
+ 
+<span class="c1"># writes g-zipped version of ASCII file</span>
+<span class="n">result</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;result.txt.gz&#34;</span><span class="p">)</span>
+ 
+<span class="c1"># writes b-zipped version of ASCII file</span>
+<span class="n">result</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;result.txt.bz2&#34;</span><span class="p">)</span></code></pre></div>
+<div class="alert 
+alert-info"
+ 
+role="alert"><p>Please note, that  the histogram axes information (min, max, variable axes binning, if any)
+is serialized only while saving into *.int files.
+For *.tif and *.txt files only the intensity map is stored.</p>
+</div>
+
+
+<h3 id="reading-results-from-disk">Reading results from disk</h3>
+
+<p>A new histogram object can be created from a file using:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">result</span> <span class="o">=</span> <span class="n">IHistogram</span><span class="o">.</span><span class="n">createFrom</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;result.txt&#34;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">IHistogram</span><span class="o">.</span><span class="n">createFrom</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;result.tif.gz&#34;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">IHistogram</span><span class="o">.</span><span class="n">createFrom</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;result.int.bz2&#34;</span><span class="p">)</span></code></pre></div>
+<div class="alert 
+alert-info"
+ 
+role="alert"><p>Please note, that since simple *.txt and *.tif file do not contain axes definitions,
+the axes of the created histogram will be given in pixels numbers (i.e. <code>xmin=0.0</code>, <code>xmax = npx</code>, <code>ymin=0.0</code>, <code>ymax=npy</code>)</p>
+</div>
+
+
+<p>It is also possible to create an empty histogram with the definition of the correct axes,
+and then fill its content using data stored in, for example, tiff file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">histogram</span> <span class="o">=</span> <span class="n">Histogram2D</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="o">*</span><span class="n">deg</span><span class="p">,</span> <span class="mf">1.0</span><span class="o">*</span><span class="n">deg</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">0.0</span><span class="o">*</span><span class="n">deg</span><span class="p">,</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">deg</span><span class="p">)</span>
+<span class="n">histogram</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;data.tif.bz&#34;</span><span class="p">)</span></code></pre></div>
+<p>The size of the tiff image <code>width</code> x <code>height</code> should coincide with the histogram dimensions <code>nBinsX</code> x <code>nBinsY</code>.</p>
+
+<h3 id="other-convenience-methods">Other convenience methods</h3>
+
+<p>The <code>Histogram1D</code> and <code>Histogram2D</code> classes have a set of additional convenience methods
+to perform basic data treatment tasks</p>
+
+<ul>
+<li>Histogram clipping to draw only the region of interest</li>
+<li>Slicing of 2D histograms into 1D histograms</li>
+<li>Creation of relative difference histograms, and many other</li>
+</ul>
+
+<p>Additional information can be found in the following pages:</p>
+
+<ul>
+<li><a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/miscellaneous/accessing-simulation-results/">Accessing simulation results example</a></li>
+<li><a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/miscellaneous/axes-in-different-units/">Plotting with axes in different units</a></li>
+<li><a href="http://apps.jcns.fz-juelich.de/doxy/BornAgain/classHistogram1D.html">Histogram1D C++ class reference</a></li>
+<li><a href="http://apps.jcns.fz-juelich.de/doxy/BornAgain/classHistogram2D.html">Histogram2D C++ class reference</a></li>
+</ul>
+
+
+      <div class="container next-prev">
+<nav>
+  <ul class="pagination pagination-sm justify-content-end"><li class="page-item ">
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/detector-types/rectangular-detector/" class="page-link"><i class="fa fa-chevron-left fa-1g "></i>
+      </a>
+    </li>  
+
+    <li class="page-item ">
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/particle-positioning/" class="page-link"><i class="fa fa-chevron-right fa-1g "></i>
+      </a>
+    </li></ul>
+</nav>
+</div>
+
+    </div>
+    <div class="col-md-4">
+    <ul class="doctree">
+    <li class="dd-item parent">
+          <i class="fa liOpened li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/"><span>Documentation</span></a>
+        <ul>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/introduction/"><span>Introduction</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/introduction/architecture/"><span>Architectural overview</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/introduction/functionality/"><span>Functionality overview</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/"><span>Getting started</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/quick-install/"><span>Quick installation instructions</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/quick-start/"><span>Quick Start</span> </a>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/installation/"><span>Detailed installation instructions</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/installation/windows/"><span>Installation on Windows</span> </a>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/installation/macos/"><span>Installation on MacOS</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/installation/macos/advanced-tips/"><span>Advanced tips</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/installation/unix-short/"><span>Installation on Unix (short version)</span> </a>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/installation/unix-detailed/"><span>Installation on Unix (detailed version)</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/installation/unix-detailed/get-source/"><span>Get the source</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/installation/unix-detailed/third-party/"><span>Install the third party software</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/installation/unix-detailed/build-and-install/"><span>Build and install the framework</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-started/installation/unix-detailed/first-simulation/"><span>Run the first simulation</span> </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/running-gui/"><span>Using Graphical User Interface</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/running-gui/gui-overview/"><span>BornAgain GUI overview</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/running-gui/gui-fitting/"><span>Fitting in the GUI</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item parent">
+          <i class="fa liOpened li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/"><span>Working with Python scripts</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/setup-pycharm-project/"><span>Setup of a PyCharm project</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/basic-simulation-tutorial/"><span>Basic simulation tutorial</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/material-types/"><span>Material types</span> </a>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/detector-types/"><span>Detector types</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/detector-types/spherical-detector/"><span>Spherical detector</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/detector-types/rectangular-detector/"><span>Rectangular detector</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item active">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/accessing-simulation-results/"><span>Accessing simulation results</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/particle-positioning/"><span>Particle positioning</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/particle-rotation/"><span>Particle rotation</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/particle-composition/"><span>Particle composition</span> </a>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/interference/"><span>Interference functions</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/interference/lattice1d/"><span>Interference function of one-dimensional lattice</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/interference/lattice2d/"><span>Interference function of two-dimensional lattice</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/interference/para_radial/"><span>Interference function of radial paracrystal</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/interference/para2d/"><span>Interference function of 2D paracrystal</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/magnetic-particles/"><span>Magnetic particles</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/working-with-sample-parameters/"><span>Working with sample parameters</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/introduction-to-fitting/"><span>Introduction to fitting</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/basic-fitting-tutorial/"><span>Basic fitting tutorial</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/working-with-python/importing-experimental-data/"><span>Importing experimental data</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/"><span>Sample model reference</span></a>
+        <ul>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/embedded-particles/"><span>Embedded particles</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/embedded-particles/cylinders-ba/"><span>Cylinders in Born Approximation</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/embedded-particles/cylinders-dwba/"><span>Cylinders in Distorted Wave Born Approximation</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/embedded-particles/size-distribution/"><span>Cylinders with size distribution</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/embedded-particles/size-distribution2/"><span>Two types of cylinders with size distribution</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/embedded-particles/rotated-pyramids/"><span>Rotated Pyramids</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/embedded-particles/cylinders-and-prisms/"><span>Cylinders and Prisms</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/embedded-particles/all-formfactors/"><span>All available form factors</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/layered-structures/"><span>Layered structures</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/layered-structures/buried-particles/"><span>Buried particles</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/layered-structures/correlated-roughness/"><span>Correlated roughness</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/"><span>Interference functions</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/interference-1d-lattice/"><span>Interference 1D Lattice</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/interference-2d-square-lattice/"><span>Interference 2D Square Lattice</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/intereference-2d-rotated-square-lattice/"><span>Interference 2D Rotated Square Lattice</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/interference-2d-centered-square-lattice/"><span>Interference 2D Centered Square Lattice</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/spheres-at-hex-lattice/"><span>Spheres on Hexagonal Lattice</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/cosine-ripples-at-rect-lattice/"><span>Cosine ripples on Rectangular Lattice</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/interference-2d-paracrystal/"><span>Interference 2D Paracrystal</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/interference-1d-radial-paracrystal/"><span>Interference 1D Radial Paracrystal</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/approximation-da/"><span>Size-distribution model: Decoupling Approximation</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/approximation-lma/"><span>Size-distribution model: Local Monodisperse Approximation</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/approximation-ssca/"><span>Size-distribution model: Size-Spacing Coupling Approximation</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/interference-functions/rectangular-grating/"><span>Rectangular grating</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/complex-shapes/"><span>Complex Shapes</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/complex-shapes/core-shell-nanoparticles/"><span>Core shell nanoparticles</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/complex-shapes/hexagonal-lattice-with-basis/"><span>Hexagonal Lattices with Basis</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/complex-shapes/large-particles-formfactor/"><span>Large Particle Form Factor</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/complex-shapes/custom-formfactor/"><span>Custom Form Factor</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/beam-and-detector/"><span>Beam and Detector</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/beam-and-detector/beam-divergence/"><span>Beam divergence</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/beam-and-detector/detector-resolution/"><span>Detector Resolution Function</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/beam-and-detector/offspecular-simulation/"><span>Off-Specular</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/beam-and-detector/rectangular-detector/"><span>Rectangular Detector</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/beam-and-detector/basic-specular-simulation/"><span>Specular scattering</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/fitting/"><span>Fitting</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/fitting/sample-parameters-intro/"><span>Working with sample parameters</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/fitting/fit-cylinders-and-prisms/"><span>Fit cylinders and prisms</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/fitting/fit-with-masks/"><span>Fitting with masks</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/fitting/fit-along-slices/"><span>Fitting along slices</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/fitting/simultaneous-fit-of-two-datasets/"><span>Simultaneous fit of two datasets</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/fitting/fit-galaxi-data/"><span>Real life fit example: Experiment at GALAXI</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/miscellaneous/"><span>Miscellaneous</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/miscellaneous/accessing-simulation-results/"><span>Accessing simulation results - example</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/sample-models/miscellaneous/axes-in-different-units/"><span>Plotting with axes in different units</span> </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-help/"><span>Getting help</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-help/troubleshooting/"><span>Troubleshooting</span> </a>
+    </li>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/getting-help/frequently-asked-questions/"><span>Frequently asked questions</span> </a>
+    </li>
+        </ul>
+    </li>
+    <li class="dd-item"><i class="fa liClosed li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/developers-corner/"><span>Developer&#39;s corner</span></a>
+        <ul>
+    <li class="dd-item">
+      <i class="fa liSingle li-item-icon"></i>
+      <a href="https://scgmlz.github.io/BornAgain-website/documentation/developers-corner/contribute-to-documentation/"><span>Contribute to documentation</span> </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+
+    </div>
+  </div>
+</div>    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                  <ul class="list-inline text-center">
+                    
+                      <li class="list-inline-item social">
+                        <a href="mailto:contact@bornagainproject.org">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    
+                    
+                    <li class="list-inline-item social">
+                      <a href="https://github.com/scgmlz/BornAgain">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted"></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://scgmlz.github.io/BornAgain-website//js/bootstrap.min.js"></script>
+    
+    <script src="https://scgmlz.github.io/BornAgain-website//js/baguetteBox.min.js"></script>
+    <script>
+      baguetteBox.run('.galleryscg');
+    </script>    
+    
+    <script src="https://scgmlz.github.io/BornAgain-website//js/theme.js"></script>
+    <script src="https://scgmlz.github.io/BornAgain-website/assets/js/bornagain.js"></script>
+    
+    
+</body>
+</html>
+
+
