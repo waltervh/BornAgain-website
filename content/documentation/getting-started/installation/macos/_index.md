@@ -65,10 +65,10 @@ $ sudo port select --set python python36
 
 To make your Python installation aware of BornAgain, you have to install the BornAgain libraries into the `site-packages` of Python. 
 This can be done by running the `bornagain_install_python.py` script from the application bundle. Assuming that BornAgain is installed in the 
-`/Applications/BornAgain.app` folder, launch the Terminal application and run the following command (with the correct version number):
+`/Applications/BornAgain.app` folder, launch the Terminal application and run the following command:
 
 ```
-$ python /Applications/BornAgain.app/Contents/libexec/BornAgain-<X.xx>/bornagain_python_install.py
+$ python /Applications/BornAgain.app/Contents/libexec/BornAgain-{{< release-string-short >}}/bornagain_python_install.py
 ```
 
 During the execution of the scipt, just select the default options by pressing the enter key.
@@ -98,7 +98,7 @@ Run an example from BornAgain installation directory by typing in the terminal.
 <p style="clear: both;">
 
 ```
-$ python /Applications/BornAgain.app/Contents/share/BornAgain-<X.xx>/Examples/python/simulation/ex01_BasicParticles/CylindersAndPrisms.py
+$ python /Applications/BornAgain.app/Contents/share/BornAgain-{{< release-string-short >}}/Examples/python/simulation/ex01_BasicParticles/CylindersAndPrisms.py
 ```
 
 You should see a scattering image appearing on the screen.

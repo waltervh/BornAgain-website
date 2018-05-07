@@ -12,7 +12,7 @@ If your prefer to install the BornAgain python libraries not to the site-package
 * Run the `bornagain_install_python.py` script from application bundle:
 
 ```
-$ python /Applications/BornAgain.app/Contents/libexec/BornAgain-<X.xx>/bornagain_python_install.py
+$ python /Applications/BornAgain.app/Contents/libexec/BornAgain-{{< release-string-short >}}/bornagain_python_install.py
 ```
 
 * Choose the option '[0]' - Generate bundle with BornAgain libraries, do not install it. 
@@ -37,7 +37,7 @@ $ cd /var/folders/zt/0l4f_l_d46v5rkx668jqx0b4000lw7/T/bornagain_bundle
 $ export PYTHONUSERBASE=/Users/me/my_python_extra
 ```
 
-* Run the `setup.py` to install the BornAgain core libraries to the specified folder
+* Run the `setup.py` script to install the BornAgain core libraries to the specified folder
 
 ```
 $ python setup.py install --user

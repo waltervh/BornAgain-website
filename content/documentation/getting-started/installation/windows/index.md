@@ -37,8 +37,10 @@ Run an example from BornAgain installation directory by double-clicking on the P
 
 This step will work only if Python file extensions *.py are associated by the system with the Python interpreter. If it is not the case, Windows will ask to choose what program to use to open the file. Depending on your Python installation it might be, for example, `C:\Python36\python.exe`.
 
+Or, run a Python example directly from the command line:
+
 ```
-$ python C:/BornAgain-1.11/Examples/python/simulation/ex01_BasicParticles/CylindersAndPrisms.py
+$ python C:/BornAgain-{{< release-string-short >}}/Examples/python/simulation/ex01_BasicParticles/CylindersAndPrisms.py
 ```
 
 You should immediately see a scattering image appearing on the screen.
