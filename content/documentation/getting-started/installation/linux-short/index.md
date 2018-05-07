@@ -1,11 +1,11 @@
 +++
-title = "Installation on Unix (short version)"
+title = "Installation on Linux (short version)"
 weight = 31
 +++
 
-### Installation on Unix (short version)
+### Installation on Linux (short version)
 
-This page shortly explains how to build and install BornAgain from source on Unix platforms.
+This page shortly explains how to build and install BornAgain from source on Linux systems.
 
 #### Install third party software
 
