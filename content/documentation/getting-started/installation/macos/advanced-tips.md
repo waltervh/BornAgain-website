@@ -5,14 +5,14 @@ weight = 21
 
 ### MacOS advanced tips
 
-#### Installing BornAgain python core libraries to the custom folder
+#### Installing the BornAgain python libraries to a custom folder
 
-If your prefer to install the BornAgain core libraries not to the site-packages folder of your Python interpreter, but to some custom folder, you can do it in a following way.
+If your prefer to install the BornAgain python libraries not to the site-packages folder of your Python interpreter, but to some custom folder, you can do this in a following way.
 
 * Run the `bornagain_install_python.py` script from application bundle:
 
 ```
-$ python /Applications/BornAgain.app/Contents/libexec/BornAgain-1.10/bornagain_python_install.py
+$ python /Applications/BornAgain.app/Contents/libexec/BornAgain-<X.xx>/bornagain_python_install.py
 ```
 
 * Choose the option '[0]' - Generate bundle with BornAgain libraries, do not install it. 
@@ -25,13 +25,13 @@ BornAgain Python bundle is successfully created in temporary directory
 ...
 ```
 
-* Go to the specified directory, pay attention that on your system name of this directory may differ from the name in this instruction.
+* Go to the specified directory. Pay attention that on your system the name of this directory may differ from the name in this instruction.
 
 ```
 $ cd /var/folders/zt/0l4f_l_d46v5rkx668jqx0b4000lw7/T/bornagain_bundle
 ```
 
-* Set the environment variable `PYTHONUSERBASE` to the directory where you want BornAgain libraries to be installed:
+* Set the environment variable `PYTHONUSERBASE` to the directory where you want the BornAgain libraries to be installed:
 
 ```
 $ export PYTHONUSERBASE=/Users/me/my_python_extra
@@ -49,7 +49,9 @@ $ python setup.py install --user
 $ python -c "import bornagain"
 ```
 
-You need to pay attention that the `PYTHONUSERBASE` environment variable is allways defined when you run your python scripts. You may also insert  corresponding export directive  into your `.profile` configuration file:
+If no error is displayed, the installation was successful.
+
+You need to make sure that the `PYTHONUSERBASE` environment variable is always defined when you run your python scripts. You may also insert the corresponding export directive into your `.profile` configuration file:
 
 ```
 export PYTHONUSERBASE=/Users/me/my_python_extra

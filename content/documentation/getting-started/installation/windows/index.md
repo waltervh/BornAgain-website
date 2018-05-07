@@ -17,7 +17,9 @@ The BornAgain graphical user interface doesn't require any additional libraries 
 
 The current version of BornAgain requires `python, matplotlib, numpy` to be installed on the system. This set of packages is known as the [SciPy](http://www.scipy.org/) stack and for most users the easiest way to install it is to download one of the free Python distributions, which includes all the key packages. The list of possible options is given on the [SciPy installation website](http://www.scipy.org/install.html). You can also directly install Python from their main website [Python](https://www.python.org/downloads/) and then use `pip` to install `matplotlib` and `numpy` as detailed on the [SciPy installation website](http://www.scipy.org/install.html).
 
+{{% alert theme="info" %}}
 We recommend users to install Python3, as support for BornAgain with Python2 might be dropped in the future.
+{{% /alert %}}
 
 #### Use BornAgain installer
 
