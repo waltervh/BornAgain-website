@@ -39,19 +39,19 @@ All required packages can be easily installed on most Linux distributions using 
 <div class="tab-content id="OperationSystemTabContent">
   <div class="tab-pane active" id="Ubuntu" role="tabpanel" aria-labelledby="ubuntu-tab">
     <p><pre><code># Install required packages
-    $ sudo apt-get install build-essential git cmake libgsl-dev libboost-all-dev \
-      libfftw3-dev python3 python3-dev python3-numpy python3-matplotlib libtiff5-dev</code></pre></p>
+$ sudo apt-get install build-essential git cmake libgsl-dev libboost-all-dev \
+  libfftw3-dev python3 python3-dev python3-numpy python3-matplotlib libtiff5-dev</code></pre></p>
     <p><pre><code># Install Qt5
-    $ sudo apt-get install qt5-default libqt5designercomponents5 qttools5-dev \
-      libqt5svg5-dev</code></pre></p>
+$ sudo apt-get install qt5-default libqt5designercomponents5 qttools5-dev \
+  libqt5svg5-dev</code></pre></p>
   </div>
   <div class="tab-pane" id="OpenSuse" role="tabpanel" aria-labelledby="opensuse-tab">
     <p><pre><code># Install required packages
-    $ sudo zypper install gcc-c++ git-core cmake gsl-devel boost-devel fftw3-devel \
-      python3-devel python3-numpy-devel python3-matplotlib libtiff-devel</code></pre></p>
+$ sudo zypper install gcc-c++ git-core cmake gsl-devel boost-devel fftw3-devel \
+  python3-devel python3-numpy-devel python3-matplotlib libtiff-devel</code></pre></p>
     <p><pre><code># Install Qt5
-    $ sudo zypper install libqt5-qtbase-devel libqt5-qttools-devel \
-      libqt5-qtsvg-devel</code></pre></p>
+$ sudo zypper install libqt5-qtbase-devel libqt5-qttools-devel \
+  libqt5-qtsvg-devel</code></pre></p>
   </div>
   <div class="tab-pane" id="CentOS" role="tabpanel" aria-labelledby="centos-tab">
     <p><pre><code>install_dir/share/BornAgain-{{< release-string-short >}}/Examples/python</code></pre></p>  
