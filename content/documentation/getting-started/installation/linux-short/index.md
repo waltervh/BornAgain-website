@@ -9,20 +9,19 @@ This page shortly explains how to build and install BornAgain from source on Lin
 
 #### Install third party software
 
-* `Compiler with C++-11 full support (i.e. gcc>= 4.9)`
-* `cmake (>= 2.8.11)`
+* `Compiler with C++-14 support (i.e. gcc>= 4.9)`
+* `cmake (>= 3.1)`
 * `boost library (>= 1.48)`
 * `eigen3 (>= 2.91.0)`
 * `fftw3 library (>= 3.3.1)`
 * `gsl (GNU scientific library, >= 1.15)`
 * `libtiff library (>=4.0.2)`
-* `python-2.7, python-devel, python-numpy-devel`
+* `python, python-devel, python-numpy-devel`
 * `Qt5 (>=5.4)`
-* `libyaml-cpp (>=0.5)`
 
 #### Get the source
 
-Download the BornAgain source [tarball](http://apps.jcns.fz-juelich.de/src/BornAgain/BornAgain-1.10.0.tar.gz) or use the following git repository
+Download the BornAgain source [tarball](http://apps.jcns.fz-juelich.de/src/BornAgain/BornAgain-{{< release-string >}}.tar.gz) or use the following git repository
   
 ```
 $ git clone https://github.com/scgmlz/BornAgain.git
@@ -38,8 +37,8 @@ $ ctest -j4
 $ make install 
 ```
 
-#### For Python3
+#### For Python2 (not recommended)
 
 ```
-$ cmake -DBORNAGAIN_USE_PYTHON3=ON -DCMAKE_INSTALL_PREFIX=<install_dir> <source_dir>
+$ cmake -DBORNAGAIN_USE_PYTHON3=OFF -DCMAKE_INSTALL_PREFIX=<install_dir> <source_dir>
 ```
