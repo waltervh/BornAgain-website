@@ -46,7 +46,12 @@ All required packages can be easily installed on most Linux distributions using 
       libqt5svg5-dev</code></pre></p>
   </div>
   <div class="tab-pane" id="OpenSuse" role="tabpanel" aria-labelledby="opensuse-tab">
-    <p><pre><code>/Applications/BornAgain.app/Contents/share/BornAgain-{{< release-string-short >}}/Examples/python</code></pre></p>  
+    <p><pre><code># Install required packages
+    $ sudo zypper install gcc-c++ git-core cmake gsl-devel boost-devel fftw3-devel \
+      python3-devel python3-numpy-devel python3-matplotlib libtiff-devel</code></pre></p>
+    <p><pre><code># Install Qt5
+    $ sudo zypper install libqt5-qtbase-devel libqt5-qttools-devel \
+      libqt5-qtsvg-devel</code></pre></p>
   </div>
   <div class="tab-pane" id="CentOS" role="tabpanel" aria-labelledby="centos-tab">
     <p><pre><code>install_dir/share/BornAgain-{{< release-string-short >}}/Examples/python</code></pre></p>  
