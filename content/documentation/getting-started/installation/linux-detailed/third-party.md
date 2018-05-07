@@ -10,7 +10,6 @@ weight = 10
 * `Compiler with C++-14 support (i.e. gcc>= 4.9)`
 * `cmake (>= 3.1)`
 * `boost library (>= 1.48)`
-* `eigen3 (>= 2.91.0)`
 * `fftw3 library (>= 3.3.1)`
 * `gsl (GNU scientific library, >= 1.15)`
 * `libtiff library (>=4.0.2)`
@@ -54,6 +53,8 @@ $ sudo zypper install libqt5-qtbase-devel libqt5-qttools-devel \
   libqt5-qtsvg-devel</code></pre></p>
   </div>
   <div class="tab-pane" id="CentOS" role="tabpanel" aria-labelledby="centos-tab">
+    <p></p>
+    <p>CentOS 7 and Redhat 7 ship with gcc-4.8.5, which does not fully support C++ 14. The installation instruction thus also explains how to get a newer compiler on your system.</p>
     <p><pre><code>install_dir/share/BornAgain-{{< release-string-short >}}/Examples/python</code></pre></p>  
   </div>
   <div class="tab-pane" id="MacOS" role="tabpanel" aria-labelledby="macos-tab">

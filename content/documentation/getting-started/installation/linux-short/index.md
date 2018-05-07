@@ -12,7 +12,6 @@ This page shortly explains how to build and install BornAgain from source on Lin
 * `Compiler with C++-14 support (i.e. gcc>= 4.9)`
 * `cmake (>= 3.1)`
 * `boost library (>= 1.48)`
-* `eigen3 (>= 2.91.0)`
 * `fftw3 library (>= 3.3.1)`
 * `gsl (GNU scientific library, >= 1.15)`
 * `libtiff library (>=4.0.2)`
@@ -24,7 +23,7 @@ This page shortly explains how to build and install BornAgain from source on Lin
 Download the BornAgain source [tarball](http://apps.jcns.fz-juelich.de/src/BornAgain/BornAgain-{{< release-string >}}.tar.gz) or use the following git repository
   
 ```
-$ git clone https://github.com/scgmlz/BornAgain.git
+$ git clone --recursive https://github.com/scgmlz/BornAgain.git
 ```
 
 #### Build and install the framework
