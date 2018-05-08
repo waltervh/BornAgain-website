@@ -21,7 +21,7 @@ All required packages can be easily installed on most Linux distributions using 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="OperationSystemTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#Ubuntu" role="tab" aria-controls="ubuntu" aria-selected="true">Ubuntu/Debian</a>
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#Ubuntu" role="tab" aria-controls="ubuntu" aria-selected="true">Ubuntu</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#OpenSuse" role="tab" aria-controls="opensuse" aria-selected="false">OpenSuse</a>
@@ -37,12 +37,12 @@ All required packages can be easily installed on most Linux distributions using 
 <!-- Tab panes -->
 <div class="tab-content id="OperationSystemTabContent">
   <div class="tab-pane active" id="Ubuntu" role="tabpanel" aria-labelledby="ubuntu-tab">
-    <p><pre><code># Install required packages
-$ sudo apt-get install build-essential git cmake libgsl-dev libboost-all-dev \
-  libfftw3-dev python3 python3-dev python3-numpy python3-matplotlib libtiff5-dev</code></pre></p>
-    <p><pre><code># Install Qt5
-$ sudo apt-get install qt5-default libqt5designercomponents5 qttools5-dev \
-  libqt5svg5-dev</code></pre></p>
+    <p><ul><li>Install required packages:
+<pre><code>$ sudo apt-get install build-essential git cmake libgsl-dev libboost-all-dev \
+  libfftw3-dev python3 python3-dev python3-numpy python3-matplotlib libtiff5-dev</code></pre></li></p>
+    <p><li>Install Qt5:
+<pre><code>$ sudo apt-get install qt5-default libqt5designercomponents5 qttools5-dev \
+  libqt5svg5-dev</code></pre></li></p>
   </div>
   <div class="tab-pane" id="OpenSuse" role="tabpanel" aria-labelledby="opensuse-tab">
     <p><pre><code># Install required packages
@@ -53,9 +53,27 @@ $ sudo zypper install libqt5-qtbase-devel libqt5-qttools-devel \
   libqt5-qtsvg-devel</code></pre></p>
   </div>
   <div class="tab-pane" id="CentOS" role="tabpanel" aria-labelledby="centos-tab">
-    <p></p>
-    <p>CentOS 7 and Redhat 7 ship with gcc-4.8.5, which does not fully support C++ 14. The installation instruction thus also explains how to get a newer compiler on your system.</p>
-    <p><pre><code>install_dir/share/BornAgain-{{< release-string-short >}}/Examples/python</code></pre></p>  
+    <p>CentOS 7 and Redhat 7 ship with gcc-4.8.5, which does not fully support C++ 14. This instruction thus also explains how to get a newer compiler on your system.</p>
+    <p><ul><li>Install extra packages:
+    <pre><code>$ sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</code></pre></li>
+    <p><li>Install BornAgain dependencies:
+    <pre><code>$ sudo yum -y install make cmake3 gcc-c++
+$ sudo yum -y install fftw-devel boost-devel gsl-devel libtiff-devel
+$ sudo yum -y install python3-devel numpy 
+$ sudo yum -y install qt5-qtbase-devel qt5-qttools-devel qt5-qtsvg-devel</code></pre></li>
+    <p><li>Install 'devtoolset' with additional development tools.<br/>
+    See 
+<a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-4">Devtoolset-4</a>
+ for more details.
+    <pre><code>$ sudo yum install centos-release-scl  # if you are on CentOS</code></pre>or
+    <pre><code>$ sudo yum-config-manager --enable rhel-server-rhscl-7-rpms # if you are on RHEL</code></pre></li>
+    <p><li>Install newer compiler:
+    <pre><code>$ sudo yum install devtoolset-4-gcc-c++</code></pre></li>
+    <p><li>Enable the new compiler (you will have to run this command for every new terminal):
+    <pre><code>$ scl enable devtoolset-4 bash</code></pre></li>
+    <p><li>Make sure, that gcc gives you version 5.0 or higher:
+    <pre><code>$ g++ --version</code></pre></li>
+    </ul></p>
   </div>
   <div class="tab-pane" id="MacOS" role="tabpanel" aria-labelledby="macos-tab">
     <p><pre><code>install_dir/share/BornAgain-{{< release-string-short >}}/Examples/python</code></pre></p>  
