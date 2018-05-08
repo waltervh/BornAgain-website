@@ -16,7 +16,7 @@ weight = 10
 * `python3, python3-devel, python3-numpy, python3-matplotlib`
 * `Qt5 (>=5.4)`
 
-All required packages can be easily installed on most Linux distributions using the system's package manager. Below are a few examples for several selected operating systems. Please note, that other distributions (Fedora, Mint, etc) may have different commands for invoking the package manager and slightly different names of packages (like boost instead of libboost etc). Besides that, the installation should be very similar.
+All required packages can be easily installed on most Linux distributions using the system's package manager. Below are a few examples for several selected operating systems. Please note, that other distributions (Fedora, Mint, etc) may have different commands for invoking the package manager and slightly different names of packages (like `boost` instead of `libboost` etc). Besides that, the installation should be very similar.
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="OperationSystemTab" role="tablist">

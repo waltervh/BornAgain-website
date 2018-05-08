@@ -10,7 +10,7 @@ We provide 64-bit installer package which can be installed into 64-bit Windows 7
 The BornAgain graphical user interface doesn't require any additional libraries to be installed on the system. You can start using the BornAgain application right after the installation. However, to use the framework via scripting you have to have a Python framework installed. To install and run BornAgain for the first time proceed with the following steps:
 
 * [Install Python](#install-python")
-* [Use BornAgain installer](#use-bornagain-installer)
+* [Use the BornAgain installer](#use-the-bornagain-installer)
 * [Test the installation](#test-the-installation)
 
 ####  Install Python
@@ -21,7 +21,7 @@ The current version of BornAgain requires `python, matplotlib, numpy` to be inst
 We recommend users to install Python3, as support for BornAgain with Python2 might be dropped in the future.
 {{% /alert %}}
 
-#### Use BornAgain installer
+#### Use the BornAgain installer
 
 The BornAgain installation package for Windows 7, 8 and 10 can be downloaded from [here](http://apps.jcns.fz-juelich.de/src/BornAgain). There are two installers provided: one for usage with Python3 (recommended) and one for Python2. After downloading the installer, double click the `.exe` file and follow the instructions on the screen.
 
