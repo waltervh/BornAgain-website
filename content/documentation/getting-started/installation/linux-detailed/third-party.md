@@ -53,6 +53,7 @@ $ sudo zypper install libqt5-qtbase-devel libqt5-qttools-devel \
   libqt5-qtsvg-devel</code></pre></p>
   </div>
   <div class="tab-pane" id="CentOS" role="tabpanel" aria-labelledby="centos-tab">
+    <p/>
     <p>CentOS 7 and Redhat 7 ship with gcc-4.8.5, which does not fully support C++ 14. This instruction thus also explains how to get a newer compiler on your system.</p>
     <p><ul><li>Install extra packages:
     <pre><code>$ sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</code></pre></li>
@@ -76,6 +77,21 @@ $ sudo yum -y install qt5-qtbase-devel qt5-qttools-devel qt5-qtsvg-devel</code><
     </ul></p>
   </div>
   <div class="tab-pane" id="MacOS" role="tabpanel" aria-labelledby="macos-tab">
-    <p><pre><code>install_dir/share/BornAgain-{{< release-string-short >}}/Examples/python</code></pre></p>  
+    <p/>
+    <p>MacOS comes with no package manager, but fortunately there are several free and well maintained package managers that significantly simplify the installation of third-party open-source software. Here, we provide recepies for <a href=https://brew.sh/>Homebrew</a> and <a href=https://www.macports.org/>MacPorts</a>.</p>
+    <h4>Important note</h4>
+    <p>Homebrew installs all packages in <pre>/usr/local</pre>, while MacPorts prefers the <pre>/opt/local</pre> folder. Depending on your package manager selection, the corresponding path has to be specified explicitly during the BornAgain CMake configuration as explained in <a href=../build-and-install>Build and install BornAgain<a>.</p>
+    <h4>Homebrew</h4>
+    <p>Install Homebrew as explained <a href=https://brew.sh/>here</a> and then install all BornAgain dependencies by running the following command:
+    <pre><code>$ brew install git cmake fftw gsl python homebrew/science/matplotlib numpy \
+  boost qt5 libtiff</code></pre>
+    </p>
+    <p>Finally, add Qt to your path environment variable:
+    <pre><code>$ export PATH=/usr/local/opt/qt5/bin/:$PATH</code></pre></p>
+    <h4>Macports</h4>
+    <p>Install Macports by downloading and running the installer from <a href=https://www.macports.org/install.php>here</a>. Then install all BornAgain dependencies by running the following command:
+    <pre><code>$ sudo port install git cmake fftw-3 gsl py3-matplotlib py3-numpy \
+  tiff boost qt5-mac</code></pre>
+    </p>
   </div>
 </div>
