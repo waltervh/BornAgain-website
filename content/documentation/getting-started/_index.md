@@ -3,7 +3,7 @@ title = "Getting started"
 weight = 20
 +++
 
-### Getting started
+## Getting started
 
 See how to quickly install BornAgain and run first simulation in a graphical user interface.
 
