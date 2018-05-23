@@ -7,4 +7,5 @@ weight = 20
 
 See how to quickly install BornAgain and run first simulation in a graphical user interface.
 
-{{% children  %}}
+{{% children depth="2" %}}
+
