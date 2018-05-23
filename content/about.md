@@ -29,8 +29,8 @@ breadcrumb = true
   <div class="row">
     <div class="col-lg-10 mx-auto">
       <p class="lead"><h5> Citing BornAgain </h5></p>
-      <p> J. Burle, C. Durniak, J. M. Fisher, M. Ganeva, G. Pospelov, W. Van Herck, J. Wuttke (2017), <br>
-BornAgain - Software for simulating and fitting X-ray and neutron small-angle scattering at grazing incidence, http://www.bornagainproject.org, Version N.n</p>
+      <p> J. Burle, C. Durniak, J. M. Fisher, M. Ganeva, G. Pospelov, W. Van Herck, J. Wuttke (2018), <br>
+BornAgain - Software for simulating and fitting X-ray and neutron small-angle scattering at grazing incidence, version N.n, http://www.bornagainproject.org.</p>
     </div>  
   </div>
   <hr style="max-width: 200px;">
