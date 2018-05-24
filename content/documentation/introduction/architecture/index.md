@@ -1,6 +1,6 @@
 +++
 title = "Architectural overview"
-weight = 10
+weight = 20
 +++
 
 ## Architectural overview
