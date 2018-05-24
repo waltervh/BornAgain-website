@@ -3,7 +3,7 @@ title = "Run a first simulation"
 weight = 40
 +++
 
-### Run a first simulation
+## Run a first simulation
 
 This section explains how to run a first simulation.
 
