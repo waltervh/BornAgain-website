@@ -23,7 +23,7 @@ We recommend users to install Python3, as support for BornAgain with Python2 mig
 
 ### Use the BornAgain installer
 
-The BornAgain installation package for Windows 7, 8 and 10 can be downloaded from [here](http://apps.jcns.fz-juelich.de/src/BornAgain). There are two installers provided: one for usage with Python3 (recommended) and one for Python2. After downloading the installer, double click the `.exe` file and follow the instructions on the screen.
+The BornAgain installation package for Windows 7, 8 and 10 can be downloaded from [here]({{% relref "download#Windows" %}}). There are two installers provided: one for usage with Python3 (recommended) and one for Python2. After downloading the installer, double click the `.exe` file and follow the instructions on the screen.
 
 ### Test the installation
 

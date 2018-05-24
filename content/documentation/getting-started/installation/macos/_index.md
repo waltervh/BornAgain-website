@@ -22,7 +22,7 @@ To install and run BornAgain for the first time proceed with the following steps
  
 #### Run the BornAgain installer
 
-The BornAgain installer can be downloaded from [here](http://apps.jcns.fz-juelich.de/src/BornAgain). There are two installers provided: one for usage with Python3 (recommended) and one for Python2.
+The BornAgain installer can be downloaded from [here]({{% relref "download#MacOS" %}}). There are two installers provided: one for usage with Python3 (recommended) and one for Python2.
 After downloading the installer, double click `.dmg` file to mount it, accept the license agreement and then drag the BornAgain icon onto the Applications shortcut icon.
 
 {{< figscg src="installation_macdmg2.png" class="center">}}
