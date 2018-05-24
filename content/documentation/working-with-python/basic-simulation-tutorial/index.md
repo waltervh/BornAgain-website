@@ -3,13 +3,26 @@ title = "Basic simulation tutorial"
 weight = 15
 +++
 
-### Basic simulation tutorial
+## Basic simulation tutorial
 
-{{< figscg src="cylinders-prisms.jpg" class="center">}}
+A simulation of GISAS using BornAgain consists of following steps:
 
-In this example, we simulate the scattering from a mixture of cylinder and prism nanoparticles without any interference between them. These particles are placed in air, on top of a substrate. We will go through each step of the simulation. Each section starts with a short Python code snippet, followed by a discussion. The full code can be found at the end of this page.
+* define materials by specifying name and refractive index
+* define layers by specifying thickness, roughness, material
+* define embedded particles by specifying shape, size, constituting material, interference function
+* include particles in layers, specifying density, position, orientation
+* assemble a multilayered sample
+* specify input beam and detector characteristics
+* run the simulation
+* save the simulated detector image
 
-#### Importing the Python modules
+In this example, we simulate the scattering from a mixture of cylinder and prism nanoparticles without any interference between them.
+
+{{< figscg src="cylinders-prisms.jpg" width="400" class="center">}}
+
+These particles are placed in air, on top of a substrate. We will go through each step of the simulation. Each section starts with a short Python code snippet, followed by a discussion. The full code can be found at the end of this page.
+
+### Importing the Python modules
 
 We start by importing the BornAgain Python API and alias it as `ba`. Then we import some often used unit designations from BornAgain.
 
@@ -20,8 +33,7 @@ from bornagain import deg, nm
 
 {{< /highlight >}}
 
-
-#### Defining materials
+### Defining materials
 
 The different materials that will be used in the sample description will now be defined.
 
@@ -46,7 +58,7 @@ The first line marks the beginning of the function to define our sample. We then
 
 where `name` is the arbitrary name of the material associated with its complex refractive index $n = 1 - delta + i \cdot beta$. Variable `<material>` is later used when referring to this particular material. The three materials defined in this example are `Air` with a refractive index of 1 (delta = beta = 0), a `Substrate` associated with a complex refractive index equal to $1 - 6\cdot 10^{-6} + i2\cdot 10^{-8}$, and the material of the particles, whose refractive index is $n = 1 - 6\cdot 10^{-4} + i2\cdot 10^{-8}$.
 
-#### Defining particles
+### Defining particles
 
 We define two different shapes of particles: cylinders and prisms (elongated particles with a constant equilateral triangular cross section):
 
@@ -60,12 +72,11 @@ We define two different shapes of particles: cylinders and prisms (elongated par
 
 {{< /highlight >}}
 
-All particles implemented in BornAgain are defined by their form factors (see formfactors), their sizes and the material they are made of. Here, for the cylindrical particle, we input its radius and height.  For the prism, the possible inputs are the length of one side of its equilateral triangular base and its height.
+All particles implemented in BornAgain are defined by their form factors, their sizes and the material they are made of. Here, for the cylindrical particle, we input its radius and height.  For the prism, the possible inputs are the length of one side of its equilateral triangular base and its height.
 
 In order to define a particle, we proceed in two steps. For example, for the cylindrical particle, we first specify the form factor of a cylinder with its radius and height, both equal to 5 nanometers in this particular case. Then we associate this shape with the correct material. The same procedure is been used for the prism in the following two lines.
 
-#### Characterizing a particle assembly
-
+### Characterizing a particle assembly
 
 {{< highlight python >}}
 
@@ -86,12 +97,13 @@ addParticle(<particle>, abundance=1.0, position=kvector_t(0,0,0), rotation=None)
 Here `<particle>` is the name of the variable used to define the particles. `abundance` is the proportion of the given type of particles, normalized to the total number of particles. Here we have 50% of cylinders and 50% of prisms. The parameter `position` represents coordinates of particle's reference point (expressed in nanometers) in the coordinate system of a given layer (the association with a particular layer will be done during the next step). In this example the position is set to the default value $(0,0,0)$ which means particles sitting on top of the interface.
 
 {{% notice note %}}
-See tutorials Particles positioning *FIXME* and Particles rotation *FIXME* for more detailed explanations.
+See tutorials [Particles positioning]({{% ref-tutorial "particle-positioning" %}}) and
+[Particles rotation]({{% ref-tutorial "particle-rotation" %}}) for more detailed explanations.
 {{% /notice %}}
 
 Finally, the last two lines specify that there is no coherent interference between the waves scattered by particles at different locations. In this case, the intensity is calculated by the incoherent sum of the scattered waves. By default, the `ParticleLayout` object has no interference function, so these lines could be omitted. Other examples will present more complex cases of interference by the particles' position.
 
-#### Define a multilayer
+### Define a multilayer
 
 {{< highlight python >}}
 
@@ -119,7 +131,7 @@ Our two layers are now fully characterized. The whole sample is represented by a
 
 The last line of the function returns the fully constructed sample.
 
-#### Define the beam and detector
+### Define the beam and detector
 
 {{< highlight python >}}
 
@@ -137,7 +149,7 @@ def get_simulation():
 
 The function `get_simulation` creates and returns a simulation object. The first step is to create a simulation object of type GISASSimulation. Then we define the detector and the beam parameters using the corresponding class methods.
 
-{{< figscg src="beam-detector.png" class="center">}}
+{{< figscg src="beam-detector.png" width="400" class="center">}}
 
 The GISAS setup and the coordinate system used in `BornAgain`. The incoming beam propagates with the incidence angles $\alpha_i$ and $\phi_i$ with respect to the sample axes as shown. A scattered (outgoing) beam, characterized by $\alpha_f$ and $\phi_f$ propagates toward the area detector. The angles $\alpha_i$ and $\alpha_f$ are defined in such a way that those shown in the figure are positive.
 
@@ -150,7 +162,7 @@ setDetectorParameters(n_phi, phi_f_min, phi_f_max, n_alpha, alpha_f_min, alpha_f
 where the number of bins `n_phi`, the low edge of first bin `phi_f_min` and the upper edge of last bin `phi_f_max` define the `phi_f` detector axis, while `n_alpha`, `alpha_f_min` and `alpha_f_max` are related to the `alpha_f` detector axis.
 
 {{% notice note %}}
-See Detector types tutorial *FIXME* for more details.
+See  [Detector types]({{% ref-tutorial "detector-types" %}}) tutorial for more details.
 {{% /notice %}}
 
 To characterize the beam we use the following method
@@ -164,7 +176,7 @@ where `wavelength` is the incident beam wavelength, `alpha_i` is the incident gr
 In BornAgain, the scattering vector $q$ is defined as $k_i - k_f$, where $k_i$ and $k_f$ are the initial (incident) and final (scattered) wave vector, respectively.
 {{% /notice %}}
 
-#### Running the simulation and plotting the results
+### Running the simulation and plotting the results
 
 {{< highlight python >}}
 
@@ -198,8 +210,8 @@ $ python CylindersAndPrisms.py
 
 The following image should be displayed on the screen
 
-{{< figscg src="result.png" class="center">}}
+{{< figscg src="CylindersAndPrisms.png" width="500" class="center">}}
 
-#### Complete script
+### Complete script
 
 {{< highlightfile file="CylindersAndPrisms.py">}}

@@ -3,7 +3,7 @@ title = "Build and install BornAgain"
 weight = 30
 +++
 
-### Build and install BornAgain
+## Build and install BornAgain
 
 BornAgain comes with configuration files for the cross-platform build system [CMake](https://cmake.org/). Using CMake, it takes the following commands to build and install BornAgain:
 ```bash

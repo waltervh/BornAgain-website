@@ -3,7 +3,7 @@ title = "Introduction"
 weight = 10
 +++
 
-### Introduction
+## Introduction
 
 BornAgain is a software package to simulate and fit small-angle scattering at grazing incidence. It supports analysis of both X-ray (GISAXS) and neutron (GISANS) data.  Its name, BornAgain, indicates the central role of the distorted wave Born approximation  in the physical description of the scattering process.  The software provides a generic framework for modeling multilayer samples with smooth or rough interfaces and with various types of embedded nanoparticles.
 
@@ -25,6 +25,6 @@ Software and documentation are work in progress. We cannot guarantee that they a
 {{% alert theme="info" %}}
 **Citing  BornAgain**
 
-C. Durniak, M. Ganeva, G. Pospelov, W. Van Herck, J. Wuttke (2015), BornAgain — Software for simulating and fitting X-ray and neutron small-angle scattering at grazing incidence, version <...>, [http://www.bornagainproject.org](http://www.bornagainproject.org)
+C. Durniak, M. Ganeva, G. Pospelov, W. Van Herck, J. Wuttke (2018), BornAgain — Software for simulating and fitting X-ray and neutron small-angle scattering at grazing incidence, version <...>, [http://www.bornagainproject.org](http://www.bornagainproject.org)
 
 {{% /alert %}}
