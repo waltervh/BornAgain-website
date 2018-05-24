@@ -61,7 +61,7 @@ In BornAgain, the in-plane and out-of-plane positions of particles are decoupled
 
 #### Use of BornAgain
 
-* Simulation of different scattering experiments: GISAXS, GISAS, off-specular and specular scattering
+* Simulation of different scattering experiments: GISAXS, GISANS, off-specular and specular scattering
 * Fitting of simulations to measured data
 * Interactions via Python scripts or Graphical User Interface (GUI)
 
