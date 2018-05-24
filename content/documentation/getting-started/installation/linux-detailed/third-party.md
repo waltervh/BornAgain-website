@@ -3,9 +3,9 @@ title = "Install the third party software"
 weight = 10
 +++
 
-### Install the third party software
+## Install the third party software
 
-#### Required software
+Required software:
 
 * `Compiler with C++-14 support (i.e. gcc>= 4.9)`
 * `cmake (>= 3.1)`

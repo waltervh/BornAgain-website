@@ -3,9 +3,7 @@ title = "Advanced tips"
 weight = 21
 +++
 
-### MacOS advanced tips
-
-#### Installing the BornAgain python libraries to a custom folder
+## MacOS advanced tips
 
 If your prefer to install the BornAgain python libraries not to the site-packages folder of your Python interpreter, but to some custom folder, you can do this in a following way.
 
@@ -54,5 +52,5 @@ If no error is displayed, the installation was successful.
 You need to make sure that the `PYTHONUSERBASE` environment variable is always defined when you run your python scripts. You may also insert the corresponding export directive into your `.profile` configuration file:
 
 ```
-export PYTHONUSERBASE=/Users/me/my_python_extra
+$ export PYTHONUSERBASE=/Users/me/my_python_extra
 ```

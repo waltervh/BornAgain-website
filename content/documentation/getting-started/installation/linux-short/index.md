@@ -3,7 +3,7 @@ title = "Installation on Linux (short version)"
 weight = 31
 +++
 
-### Installation on Linux (short version)
+## Installation on Linux (short version)
 
 This page shortly explains how to build and install BornAgain from source on Linux systems.
 
@@ -23,7 +23,7 @@ This page shortly explains how to build and install BornAgain from source on Lin
 Download the BornAgain source [tarball](http://apps.jcns.fz-juelich.de/src/BornAgain/BornAgain-{{< release-string >}}.tar.gz) or use the following git repository
   
 ```
-$ git clone --recursive https://github.com/scgmlz/BornAgain.git
+$ git clone --recurse-submodules https://github.com/scgmlz/BornAgain.git
 ```
 
 #### Build and install the framework

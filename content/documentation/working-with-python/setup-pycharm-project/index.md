@@ -3,15 +3,15 @@ title = "Setup of a PyCharm project"
 weight = 10
 +++
 
-### How to setup a PyCharm project
+## How to setup a PyCharm project
 
 In this tutorial we explain how to setup a Python development environment to be able to create, modify and run BornAgain simulations using Python scripts. The tutorial is oriented towards Windows users who are making their first steps in scientific computing with Python.
 
-At this point we assume that the user has already installed `BornAgain` and a Python distribution as explained in the [installation section]({{% relref "documentation/getting-started/installation" %}}). As the next step, we suggest you to install PyCharm - a free, lightweighted, multi-platform Python IDE - to be able to work with Python code in a convenient manner. Download PyCharm community edition from [here](https://www.jetbrains.com/pycharm/download).
+At this point we assume that the user has already installed `BornAgain` and a Python distribution as explained in the [Installation section]({{% relref "documentation/getting-started/installation" %}}). As the next step, we suggest you to install PyCharm - a free, lightweighted, multi-platform Python IDE - to be able to work with Python code in a convenient manner. Download PyCharm community edition from [here](https://www.jetbrains.com/pycharm/download).
 
 The rest of the tutorial explains how to setup Anaconda, BornAgain and a PyCharm project for the first time.
 
-#### Start PyCharm and create a new project
+### Start PyCharm and create a new project
 
 Open PyCharm and select `Create New Project`:
 
@@ -25,7 +25,7 @@ As soon as you push `Create` button, you will be presented with the initial proj
 
 {{< figscg src="create-new3.png" class="center">}}
 
-#### Add the BornAgain libraries to your project
+### Add the BornAgain libraries to your project
 
 At this point it might be necessary to help PyCharm find the correct `BornAgain` libraries. The easiest way to do this, is to add the BornAgain library path to your project. Go to the `File/Settings` menu:
 
@@ -41,7 +41,7 @@ A new window will appear, select the `C:\BornAgain-<X.x.x>\bin` directory and cl
 
 As a result, the directory `C:\BornAgain-<X.x.x>\bin` will be aded to your project. The directory contains the BornAgain core libraries and PyCharm will now be able to load them if other project files require this.
 
-#### Add the BornAgain example path to your project
+### Add the BornAgain example path to your project
 
 Optionally, you now might want to add the BornAgain examples path to you project to be able to see, modify and run the examples at any time. As was explained in the previous section, go to the project settings and add `C:\BornAgain-<X.x.x>\Examples` as a new content root. The final project settings window should look like this:
 
