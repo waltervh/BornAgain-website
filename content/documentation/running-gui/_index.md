@@ -3,7 +3,7 @@ title = "Using Graphical User Interface"
 weight = 30
 +++
 
-### Using Graphical User Interface
+## Using Graphical User Interface
 
 The current BornAgain GUI allows to create basic multi-layered samples, populate them with particles, run scattering simulations and save the results in a publication quality form. However, it is still limited with respect to the functionality available via Python scripting.
 
