@@ -3,6 +3,6 @@ title = "Embedded particles"
 weight = 10
 +++
 
-### Embedded particles
+## Embedded particles
 
 {{% examples-preview %}}

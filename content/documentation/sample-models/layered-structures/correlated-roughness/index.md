@@ -19,21 +19,18 @@ Scattering from a multilayered sample with correlated roughness.
 * The incident beam is characterized by a wavelength of $1$ $\unicode{x212B}$.
 * The incident angles are $\alpha\_i = 0.2 ^{\circ}$ and $\phi\_i = 0^{\circ}$.
 
-> #### Note:
-> The roughness profile is described by a normally-distributed random function. The roughness correlation function at the jth interface is expressed as: $$ < U\_j (x, y) U\_j (x', y')> = \sigma^2 e^{-\frac{\tau}{ξ}2H}, \tau=[(x-x')^2+(y-y')^2]^{\frac{1}{2}}$$ 
+**Note:**
 
-> * $U\_j(x, y)$ is the height deviation of the jth interface at position $(x, y)$.
+The roughness profile is described by a normally-distributed random function. The roughness correlation function at the jth interface is expressed as: $$ < U\_j (x, y) U\_j (x', y')> = \sigma^2 e^{-\frac{\tau}{ξ}2H}, \tau=[(x-x')^2+(y-y')^2]^{\frac{1}{2}}$$ 
 
-> * $\sigma$ gives the rms roughness of the interface. The Hurst parameter $H$, comprised between $0$ and $1$ is connected to the fractal dimension $D=3-H$ of the interface. The smaller $H$ is, the more serrate the surface profile looks. If $H = 1$, the interface has a non fractal nature.
-
-> * The lateral correlation length ξ acts as a cut-off for the lateral length scale on which an interface begins to look smooth. If $\xi \gg \tau$ the surface looks smooth.
-
-> * The cross correlation length $\xi\_{\perp}$ is the vertical distance over which the correlation between layers is damped by a factor $1/e$. It is assumed to be the same for all interfaces. If $\xi\_{\perp} = 0$ there is no correlations between layers. If $\xi\_{\perp}$ is much larger than the layer thickness, the layers are perfectly correlated.
+* $U\_j(x, y)$ is the height deviation of the jth interface at position $(x, y)$.
+* $\sigma$ gives the rms roughness of the interface. The Hurst parameter $H$, comprised between $0$ and $1$ is connected to the fractal dimension $D=3-H$ of the interface. The smaller $H$ is, the more serrate the surface profile looks. If $H = 1$, the interface has a non fractal nature.
+* The lateral correlation length ξ acts as a cut-off for the lateral length scale on which an interface begins to look smooth. If $\xi \gg \tau$ the surface looks smooth.
+* The cross correlation length $\xi\_{\perp}$ is the vertical distance over which the correlation between layers is damped by a factor $1/e$. It is assumed to be the same for all interfaces. If $\xi\_{\perp} = 0$ there is no correlations between layers. If $\xi\_{\perp}$ is much larger than the layer thickness, the layers are perfectly correlated.
 
 {{< galleryscg >}}
 {{< figscg src="CorrelatedRoughness_setup.jpg" width="350px" caption="Real-space model">}}
 {{< figscg src="CorrelatedRoughness.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script
 {{% highlightfile file="/static/files/python/simulation/ex02_LayeredStructures/CorrelatedRoughness.py" language="python" %}}

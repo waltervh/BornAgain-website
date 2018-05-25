@@ -21,5 +21,4 @@ This example illustrates how the in-plane rotation of non-radially symmetric par
 {{< figscg src="RotatedPyramids.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex01_BasicParticles/RotatedPyramids.py" language="python" %}}

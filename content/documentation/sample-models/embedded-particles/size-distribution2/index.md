@@ -15,11 +15,9 @@ Scattering of a polydisperse distribution of two types of cylinders.
 * The incident beam is characterized by a wavelength of $1$ $\unicode{x212B}$.
 * The incident angles $\alpha\_i = 0.2 ^{\circ}$ and $\phi\_i = 0^{\circ}$.
 
-
 {{< galleryscg >}}
 {{< figscg src="TwoTypesOfCylindersWithSizeDistribution_setup.jpg" width="350px" caption="Real-space model">}}
 {{< figscg src="TwoTypesOfCylindersWithSizeDistribution.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex01_BasicParticles/TwoTypesOfCylindersWithSizeDistribution.py" language="python" %}}

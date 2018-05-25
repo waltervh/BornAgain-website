@@ -3,6 +3,6 @@ title = "Layered structures"
 weight = 20
 +++
 
-### Layered structures
+## Layered structures
 
 {{% examples-preview %}}
