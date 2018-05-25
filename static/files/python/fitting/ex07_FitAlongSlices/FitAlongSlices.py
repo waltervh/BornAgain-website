@@ -8,8 +8,8 @@ from matplotlib import pyplot as plt
 import bornagain as ba
 from bornagain import deg, angstrom, nm
 
-phi_slice_value = 0.0*deg  # position of vertical slice
-alpha_slice_value = 0.2*deg  # position of horizontal slice
+phi_slice_value = 0.0  # position of vertical slice in deg
+alpha_slice_value = 0.2  # position of horizontal slice in deg
 
 
 def get_sample(radius=5.0*nm, height=10.0*nm):
@@ -82,31 +82,23 @@ class DrawObserver(ba.IFitObserver):
     def plot_real_data(self, data, nplot):
         plt.subplot(2, 2, nplot)
         plt.subplots_adjust(wspace=0.2, hspace=0.2)
-        im = plt.imshow(
-            data.getArray(),
-            norm=matplotlib.colors.LogNorm(1.0, data.getMaximum()),
-            extent=[data.getXmin()/deg, data.getXmax()/deg,
-                    data.getYmin()/deg, data.getYmax()/deg])
-        plt.colorbar(im)
-        plt.title("\"Real\" data")
-        plt.xlabel(r'$\phi_f$', fontsize=12)
-        plt.ylabel(r'$\alpha_f$', fontsize=12)
+        ba.plot_histogram(data, title="Experimental data")
         # line representing vertical slice
-        plt.plot([phi_slice_value / deg, phi_slice_value / deg],
-                 [data.getYmin() / deg, data.getYmax() / deg],
+        plt.plot([phi_slice_value, phi_slice_value],
+                 [data.getYmin(), data.getYmax()],
                  color='gray', linestyle='-', linewidth=1)
         # line representing horizontal slice
-        plt.plot([data.getXmin() / deg, data.getXmax() / deg],
-                 [alpha_slice_value / deg, alpha_slice_value / deg],
+        plt.plot([data.getXmin(), data.getXmax()],
+                 [alpha_slice_value, alpha_slice_value],
                  color='gray', linestyle='-', linewidth=1)
 
     def plot_slices(self, slices, title, nplot):
         plt.subplot(2, 2, nplot)
         plt.subplots_adjust(wspace=0.2, hspace=0.3)
         for label, slice in slices:
-            plt.semilogy(slice.getBinCenters()/deg,
+            plt.semilogy(slice.getBinCenters(),
                          slice.getBinValues(), label=label)
-            plt.xlim(slice.getXmin()/deg, slice.getXmax()/deg)
+            plt.xlim(slice.getXmin(), slice.getXmax())
             plt.ylim(1.0, slice.getMaximum()*10.0)
         plt.legend(loc='upper right')
         plt.title(title)
@@ -123,18 +115,15 @@ class DrawObserver(ba.IFitObserver):
             plt.text(0.01, 0.55 - index*0.1,
                      '{:30.30s}: {:6.3f}'.format(fitPar.name(), fitPar.value()))
 
+        plt.tight_layout()
         plt.draw()
         plt.pause(0.01)
 
     def update(self, fit_suite):
         self.fig.clf()
 
-        real_data = fit_suite.getRealData()
-        simul_data = fit_suite.getSimulationData()
-
-        # These lines add to make cast explicit, see Bug #1367
-        real_data = ba.Histogram2D.dynamicCast(real_data)
-        simul_data = ba.Histogram2D.dynamicCast(simul_data)
+        real_data = fit_suite.experimentalData().histogram2d()
+        simul_data = fit_suite.simulationResult().histogram2d()
 
         # plot real data
         self.plot_real_data(real_data, nplot=1)
@@ -145,7 +134,7 @@ class DrawObserver(ba.IFitObserver):
             ("simul", simul_data.projectionX(alpha_slice_value))
             ]
         title = ( "Horizontal slice at alpha =" +
-                  '{:3.1f}'.format(alpha_slice_value/deg) )
+                  '{:3.1f}'.format(alpha_slice_value) )
         self.plot_slices(slices, title, nplot=2)
 
         # vertical slices
@@ -153,7 +142,7 @@ class DrawObserver(ba.IFitObserver):
             ("real", real_data.projectionY(phi_slice_value)),
             ("simul", simul_data.projectionY(phi_slice_value))
             ]
-        title = "Vertical slice at phi =" + '{:3.1f}'.format(phi_slice_value/deg)
+        title = "Vertical slice at phi =" + '{:3.1f}'.format(phi_slice_value)
         self.plot_slices(slices, title, nplot=3)
 
         # display fit parameters
@@ -178,8 +167,8 @@ def run_fitting():
     # corresponding to the vertical and horizontal lines. This will make
     # simulation/fitting to be performed along slices only.
     simulation.maskAll()
-    simulation.addMask(ba.HorizontalLine(alpha_slice_value), False)
-    simulation.addMask(ba.VerticalLine(phi_slice_value), False)
+    simulation.addMask(ba.HorizontalLine(alpha_slice_value*deg), False)
+    simulation.addMask(ba.VerticalLine(phi_slice_value*deg), False)
 
     fit_suite = ba.FitSuite()
     fit_suite.addSimulationAndRealData(simulation, real_data)

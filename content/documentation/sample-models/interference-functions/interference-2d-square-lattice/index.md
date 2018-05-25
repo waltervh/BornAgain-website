@@ -1,9 +1,9 @@
 +++
-title = "Interference 2D Square Lattice"
+title = "Interference 2D square lattice"
 weight = 20
 +++
 
-### Interference 2D Square Lattice
+### Interference 2D square lattice
 
 Scattering from cylindrical particles distributed along a square lattice.
 
@@ -20,5 +20,4 @@ Scattering from cylindrical particles distributed along a square lattice.
 {{< figscg src="Interference2DSquareLattice.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script: 
 {{% highlightfile file="/static/files/python/simulation/ex03_InterferenceFunctions/Interference2DSquareLattice.py" language="python" %}}

@@ -3,7 +3,7 @@ title = "Rectangular detector"
 weight = 20
 +++
 
-### Rectangular detector
+## Rectangular detector
 
 A `RectangularDetector` object in BornAgain is used to represent a two dimensional neutron/x-ray detector. The following sections provide details on this type of detector:
 
@@ -15,12 +15,11 @@ A `RectangularDetector` object in BornAgain is used to represent a two dimension
 * [The detector is perpendicular to the reflected beam]({{% relref "#the-detector-is-perpendicular-to-the-reflected-beam" %}}) 
 * [Additional convenience methods]({{% relref "#additional-convenience-methods" %}}) 
 
-
-#### General description
+### General description
 
 A `RectangularDetector` has a plane rectangular shape, a total given width and height and a given amount of pixels. The detector plane can placed in an arbitrary position and orientation with respect to the sample position.
 
-{{< figscg src="rectangular_detector.png" class="center">}}
+{{< figscg src="rectangular_detector.png" width="600" class="center">}}
 
 {{% alert theme="info" %}}
 **Note**
@@ -29,7 +28,7 @@ Real experimental setups vary significantly from one GISAS instrument to another
 
 {{% /alert %}}
 
-#### Rectangular detector definition
+### Rectangular detector definition
 
 BornAgain's RectangularDetector is initialized using its constructor
 
@@ -51,7 +50,7 @@ The local detector coordinate system is defined in such a way, that its origin c
 detector = RectangularDetector(10, 200.0, 9, 180.0)
 ```
 
-{{< figscg src="xy_plane_with_labels.png" class="center">}}
+{{< figscg src="xy_plane_with_labels.png" width="600" class="center">}}
 
 Here, the vertical and horizontal lines denote the bin boundaries while the blue markers show the bin centers. During a simulation, the bin intensity will be calculated for values of $\phi_f$ and $\alpha_f$ corresponding to the bin centers and then normalized to the bin area.
 
@@ -62,7 +61,7 @@ Here, the vertical and horizontal lines denote the bin boundaries while the blue
 
 {{% /alert %}}
 
-#### Positioning the rectangular detector
+### Positioning the rectangular detector
 
 The position and the orientation of the detector can be defined in a generic way using the following parameters:
 
@@ -70,7 +69,7 @@ The position and the orientation of the detector can be defined in a generic way
 * the coordinate of the point `(u0, v0)` of intersection of the normal vector **n** and the detector plane, expressed in local detector coordinates
 * the detector axis direction vector **u** which defines the orientation of the detector axes with respect to the sample coordinate system
 
-{{< figscg src="rectangular_detector_genpos.png" class="center">}}
+{{< figscg src="rectangular_detector_genpos.png" width="600"  class="center">}}
 
 In the plot above, the detector is inclined towards the sample by an angle of 20 degrees.
 
@@ -92,17 +91,17 @@ direction: direction of detector u-axis with respect to the sample coordinate sy
 
 Please note, that the direction vector **u** is set by default to `(0.0, -1.0, 0.0)` which corresponds to the detector u-axis pointing to the right, as shown in the plot above (green arrow on the detector plane). This value should not be changed, unless the user has to deal with a rotation of the detector around the normal vector **n**.
 
-In the following, we will how to set the detector's parameters for the three most common cases in GISAS experimental setups:
+In the following, we will show how to set the detector's parameters for the three most common cases in GISAS experimental setups:
 
 * the detector plane is perpendicular to the sample plane
 * the detector plane is perpendicular to the direct beam
 * the detector plane is perpendicular to the reflected beam
 
-#### The detector is perpendicular to the sample plane
+### The detector is perpendicular to the sample plane
 
 In this case the normal vector **n** coincides with the x-axis of the sample coordinate system and the length of the vector is equal to the detector distance. The detector's local coordinates `(u0, v0)` denote the point where the sample x-axis crosses the detector plane.
 
-{{< figscg src="rectangular_detector_samplepos.png" class="center">}}
+{{< figscg src="rectangular_detector_samplepos.png" width="600" class="center">}}
 
 The following code demonstrates the creation of the detector shown in the plot. Please note, that the values of the parameters are given only as an example and do not reflect the relative proportions in the plot.
 
@@ -126,11 +125,11 @@ detector = RectangularDetector(nxbins, width, nybins, height)
 detector.setPerpendicularToSampleX(distance, u0, v0)
 ```
 
-#### The detector is perpendicular to the direct beam
+### The detector is perpendicular to the direct beam
 
 In this case the normal vector **n** coincides with the beam direction. The length of the vector is equal to the sample-detector distance. The detector local coordinates `(u0, v0)` again denote the point where the direct beam hits the detector plane.
 
-{{< figscg src="rectangular_detector_directbeam.png" class="center">}}
+{{< figscg src="rectangular_detector_directbeam.png" width="600" class="center">}}
 
 The normal vector **n** can be easily calculated from the beam inclination angle $\alpha_i$.
 
@@ -138,7 +137,7 @@ The normal vector **n** can be easily calculated from the beam inclination angle
 width, height = 200.0, 180.0
 distance = 2000.0
 u0, v0 = 100.0, 10.0
-alpha_i = 0.2*degree
+alpha_i = 0.2*deg
  
 detector = RectangularDetector(nxbins, width, nybins, height)
 normal = kvector_t(distance*cos(alpha_i), 0.0, -1.0*distance*sin(alpha_i)))
@@ -157,18 +156,18 @@ detector.setPerpendicularToDirectBeam(distance, u0, v0)
 
 In this case, the GISASSimulation will calculate the normal vector **n** during runtime, depending from the beam angle settings.
 
-#### The detector is perpendicular to the reflected beam
+### The detector is perpendicular to the reflected beam
 
 In this case the normal vector **n** coincides with the reflected beam direction. The length of the vector is equal to the sample-detector distance. The detector local coordinates `(u0, v0)` denote the point where the reflected beam hits the detector plane.
 
-{{< figscg src="rectangular_detector_reflectedbeam.png" class="center">}}
+{{< figscg src="rectangular_detector_reflectedbeam.png" width="600" class="center">}}
 
 The normal vector **n** can be easily calculated from the beam inclination angle $\alpha_i$.
 
 ```python
 distance = 2000.0
 u0, v0 = 100.0, 60.0
-alpha_i = 0.2*degree
+alpha_i = 0.2*deg
  
 detector = RectangularDetector(nxbins, width, nybins, height)
 normal = kvector_t(distance*cos(alpha_i), 0.0, distance*sin(alpha_i)))
@@ -187,7 +186,7 @@ detector.setPerpendicularToReflectedBeam(distance, u0, v0)
 
 In this case, the GISASSimulation will calculate the normal vector **n** during runtime, depending on the beam angle settings.
 
-#### Additional convenience methods
+### Additional convenience methods
 
 All methods described above to initialize a detector, use the coordinates `(u0, v0)` - the coordinates of the point where the normal vector **n** hits the detector plane, expressed in the local detector coordinates.
 

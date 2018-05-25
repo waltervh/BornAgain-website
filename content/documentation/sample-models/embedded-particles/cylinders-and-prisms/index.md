@@ -22,5 +22,4 @@ Scattering from a mixture of cylinders and prisms without interference.
 {{< figscg src="CylindersAndPrisms.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex01_BasicParticles/CylindersAndPrisms.py" language="python" %}}

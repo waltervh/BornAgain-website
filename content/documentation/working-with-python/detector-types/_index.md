@@ -3,7 +3,7 @@ title = "Detector types"
 weight = 25
 +++
 
-### Detector types
+## Detector types
 
 This tutorial explains the various types of detectors, the detector resolution functions and masking abilities implemented in BornAgain.
 

@@ -1,9 +1,9 @@
 +++
-title = "Cosine ripples on Rectangular Lattice"
+title = "Cosine ripples on rectangular lattice"
 weight = 60
 +++
 
-### Cosine ripples on Rectangular Lattice
+### Cosine ripples on rectangular lattice
 
 Scattering from elongated particles distributed along a two-dimensional rectangular lattice.
 
@@ -14,11 +14,9 @@ Scattering from elongated particles distributed along a two-dimensional rectangu
 * The wavelength is equal to $1.6$ $\unicode{x212B}$.
 * The incident angles are $\alpha\_i = 0.3 ^{\circ}$ and $\phi\_i = 0^{\circ}$.
 
-
 {{< galleryscg >}}
 {{< figscg src="CosineRipplesAtRectLattice_setup.jpg" width="350px" caption="Real-space model">}}
 {{< figscg src="CosineRipplesAtRectLattice.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex03_InterferenceFunctions/CosineRipplesAtRectLattice.py" language="python" %}}

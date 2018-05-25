@@ -3,11 +3,11 @@ title = "Spherical detector"
 weight = 10
 +++
 
-### Spherical detector
+## Spherical detector
 
 This shape of detector represents a portion of a sphere, defined by the range of $\phi$ and $\alpha$ angles as shown in the plot below. The sphere has its center located at the origin of the sample coordinate system.
 
-{{< figscg src="spherical_detector.png" class="center">}}
+{{< figscg src="spherical_detector.png" width="500" class="center">}}
 
 A GISAS or off-specular simulation creates a spherical detector by default. To set its parameters the method `setDetectorParameters` should be used
 
@@ -25,16 +25,16 @@ alpha_max : upper edge of last alpha-bin
 """
 ```
 
-All angles are expressed in radians. For convenience, a special `degree` multiplier can be used to define the detector range directly in degrees. For example, the following code snippet
+All angles are expressed in radians. For convenience, a special `deg` multiplier can be used to define the detector range directly in degrees. For example, the following code snippet
 
 ```python
 simulation = GISASSimulation()
-simulation.setDetectorParameters(20, -1.0*degree, 1.0*degree, 10, 0.0*degree, 1.0*degree)
+simulation.setDetectorParameters(20, -1.0*deg, 1.0*deg, 10, 0.0*deg, 1.0*deg)
 ```
 
-will create a detector plane with a total number of bins equal to 200 and with a fixed bin size equal to `0.1*degree` along both directions
+will create a detector plane with a total number of bins equal to 200 and with a fixed bin size equal to `0.1*deg` along both directions
 
-{{< figscg src="phi_alpha_plane.png" class="center">}}
+{{< figscg src="phi_alpha_plane.png" width="600" class="center">}}
 
 Here, the vertical and horizontal lines denote bin boundaries while blue dots show the bin centers. During the simulation, the bin intensity will be calculated for values of $\phi_f$ and $\alpha_f$ corresponding to the bin centers and then normalized to the bin area.
 
@@ -45,20 +45,19 @@ Here, the vertical and horizontal lines denote bin boundaries while blue dots sh
 
 {{% /alert %}}
 
-
-#### Alternative way to create SphericalDetector
+### Alternative way to create SphericalDetector
 
 The detector can be initialized separately and then later assigned to the simulation object as shown in the script below. The results will be exactly the same as in the previous example
 
 ```python	
-detector = SphericalDetector(20, -1.0*degree, 1.0*degree, 10, 0.0*degree, 1.0*degree)
+detector = SphericalDetector(20, -1.0*deg, 1.0*deg, 10, 0.0*deg, 1.0*deg)
 simulation = GISASSimulation()
 simulation.setDetector(detector)
 ```
 
-#### Spherical detector with variable bin size
+### Spherical detector with variable bin size
 
-It is possible to create a spherical detector with a non-equidistant binning. This is done by creating custom axes and using them as SphericalDetector initializers.
+It is possible to create a spherical detector with a non-equidistant binning. This is done by creating custom axes and using them as `SphericalDetector` initializers.
 
 There are two basic axis types in BornAgain: `FixedBinAxis` and `VariableBinAxis`. Their signatures are shown in the code snippet below.
 
@@ -99,4 +98,4 @@ simulation = GISASSimulation()
 simulation.setDetector(detector)
 ```
 
-{{< figscg src="phi_alpha_plane_variable.png" class="center">}}
+{{< figscg src="phi_alpha_plane_variable.png" width="600" class="center">}}

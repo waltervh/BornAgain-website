@@ -3,6 +3,6 @@ title = "Interference functions"
 weight = 30
 +++
 
-### Interference functions
+## Interference functions
 
 {{% examples-preview %}}

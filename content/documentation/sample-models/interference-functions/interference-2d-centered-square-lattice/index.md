@@ -1,9 +1,9 @@
 +++
-title = "Interference 2D Centered Square Lattice"
+title = "Interference 2D centered square lattice"
 weight = 40
 +++
 
-### Interference 2D Centered Square Lattice
+### Interference 2D centered square lattice
 
 Scattering from cylinders distributed along a squared centered lattice.
 
@@ -20,5 +20,4 @@ Scattering from cylinders distributed along a squared centered lattice.
 {{< figscg src="Interference2DCenteredSquareLattice.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex03_InterferenceFunctions/Interference2DCenteredSquareLattice.py" language="python" %}}

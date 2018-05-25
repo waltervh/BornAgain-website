@@ -17,5 +17,4 @@ Scattering from spheres distributed along a hexagonal lattice.
 {{< figscg src="SpheresAtHexLattice.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex03_InterferenceFunctions/SpheresAtHexLattice.py" language="python" %}}
