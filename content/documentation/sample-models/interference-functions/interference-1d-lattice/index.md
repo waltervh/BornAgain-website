@@ -1,9 +1,9 @@
 +++
-title = "Interference 1D Lattice"
+title = "Interference 1D lattice"
 weight = 10
 +++
 
-### Interference 1D Lattice
+### Interference 1D lattice
 
 Scattering from long boxes distributed along a one-dimensional lattice.
 
@@ -16,16 +16,14 @@ Scattering from long boxes distributed along a one-dimensional lattice.
 * The wavelength is equal to $24$ $\unicode{x212B}$.
 * The incident angles are $\alpha\_i = 0.2 ^{\circ}$ and $\phi\_i = 0^{\circ}$.
 
-> #### Note:
-> * By default, the axis of the one-dimensional lattice is the $x$-axis. A rotation can be applied to the particles (like in this example) or to the 1D lattice.  
+**Note:**
 
-> * In the real-space model picture, the full length of a boxes cannot be seen as it is too large compared to its width and heigth.    
-
+* By default, the axis of the one-dimensional lattice is the $x$-axis. A rotation can be applied to the particles (like in this example) or to the 1D lattice.
+* In the real-space model picture, the full length of a boxes cannot be seen as it is too large compared to its width and heigth.    
 
 {{< galleryscg >}}
 {{< figscg src="Interference1DLattice_setup.jpg" width="350px" caption="Real-space model">}}
 {{< figscg src="Interference1DLattice.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex03_InterferenceFunctions/Interference1DLattice.py" language="python" %}}

@@ -19,6 +19,5 @@ In this example we simulate the scattering from infinite 1D repetition of rectan
 {{< figscg src="RectangularGrating.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
-{{% highlightfile 
-file="/static/files/python/simulation/ex03_InterferenceFunctions/RectangularGrating.py" language="python" %}}
+{{% highlightfile file="/static/files/python/simulation/ex03_InterferenceFunctions/RectangularGrating.py" language="python" %}}
+
