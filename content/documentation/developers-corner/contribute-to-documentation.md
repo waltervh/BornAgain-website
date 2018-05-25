@@ -16,7 +16,7 @@ Our web [site repository](https://github.com/scgmlz/BornAgain-website) contains 
 GitHub is configured to host content of `gh-pages` branch at [this address](https://scgmlz.github.io/BornAgain-website).
 
 Users are modifying site content by providing pull requests to `master` branch. `Travis` continuous integration automatically generates
-fresh html of the site and updates `gh-pahes` branch. 
+fresh html of the site and updates `gh-pages` branch.
 
 To modify documentation follow these steps:
 
