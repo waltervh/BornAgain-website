@@ -36,7 +36,6 @@ During this release we have worked on preparing the implementation of fitting in
 
 **New examples:**
 
-1. [Rectangular grating]({{< relref "documentation/sample-models/interference-functions/rectangular-grating/index.md" >}})
 1. [Rectangular detector]({{< relref "documentation/sample-models/beam-and-detector/rectangular-detector/index.md" >}})
 1. [Real life fit example: experiment at GALAXI]({{< relref "documentation/sample-models/fitting/fit-galaxi-data/index.md" >}})
 1. [Accessing simulation results]({{< relref "documentation/sample-models/miscellaneous/accessing-simulation-results/index.md" >}})

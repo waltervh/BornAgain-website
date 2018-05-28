@@ -13,7 +13,8 @@ Off-specular scattering from a monodisperse distribution of long boxes.
 * The incident wavelength is equal to $1$ $\unicode{x212B}$.
 * The output intensity is the result of an average over $\phi\_i$ comprised between $-1^{\circ}$ and $1^{\circ}$ and of a scan of $\alpha\_i$ and $\alpha\_f$ between $0^{\circ}$ and $10^{\circ}$.
 
-> #### Note:  
+**Note:**
+
 > The two-dimensional output intensity is plotted as a function of $\alpha\_i$ and $\alpha\_f$.
 
 {{< galleryscg >}}
@@ -21,7 +22,4 @@ Off-specular scattering from a monodisperse distribution of long boxes.
 {{< figscg src="OffSpecularSimulation.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex05_BeamAndDetector/OffSpecularSimulation.py" language="python" %}}
-
-

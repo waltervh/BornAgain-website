@@ -13,7 +13,8 @@ Scattering from a random distribution of monodisperse cylinders impinged by an i
 * The wavelength follows a log-normal distribution around the mean value of $1$ $\unicode{x212B}$ with a scale parameter equal to $0.1$.
 * Both incident angles follow a Gaussian distribution around the average values $\alpha\_i = 0.2 ^{\circ}$ and $\phi\_i = 0^{\circ}$, respectively and $\sigma_{\alpha\_i} = \sigma\_{\phi\_i} = 0.1^{\circ}$.  
 
-> #### Note:  
+**Note:**
+
 > Please note the different definitions for the incident angle $\alpha\_i$  (convention of sign) in the functions `DistributionGaussian` and `setBeamParameters`.
   
 {{< galleryscg >}}
@@ -21,5 +22,4 @@ Scattering from a random distribution of monodisperse cylinders impinged by an i
 {{< figscg src="BeamDivergence.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex05_BeamAndDetector/BeamDivergence.py" language="python" %}}

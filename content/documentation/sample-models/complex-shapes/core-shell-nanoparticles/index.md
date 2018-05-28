@@ -14,12 +14,9 @@ Scattering from cuboidal core-shell particles.
 * The incident wavelength is equal to $1$ $\unicode{x212B}$.
 * The incident angles are $\alpha\_i = 0.2 ^{\circ}$ and $\phi\_i = 0^{\circ}$.  
 
-
 {{< galleryscg >}}
 {{< figscg src="CoreShellNanoparticles_setup.jpg" width="350px" caption="Real-space model">}}
 {{< figscg src="CoreShellNanoparticles.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex04_ComplexShapes/CoreShellNanoparticles.py" language="python" %}}
-

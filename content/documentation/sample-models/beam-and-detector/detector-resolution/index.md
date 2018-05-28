@@ -1,9 +1,9 @@
 +++
-title = "Detector Resolution Function"
+title = "Detector resolution function"
 weight = 20
 +++
 
-### Detector Resolution Function
+### Detector resolution function
 
 Scattering from a monodisperse distribution of cylindrical particles with a Gaussian resolution function of the detectors.
 
@@ -18,5 +18,4 @@ Scattering from a monodisperse distribution of cylindrical particles with a Gaus
 {{< figscg src="DetectorResolutionFunction.png" width="350px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex05_BeamAndDetector/DetectorResolutionFunction.py" language="python" %}}

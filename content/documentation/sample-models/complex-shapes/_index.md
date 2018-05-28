@@ -1,8 +1,8 @@
 +++
-title = "Complex Shapes"
+title = "Complex shapes"
 weight = 40
 +++
 
-### Complex Shapes
+### Complex shapes
 
 {{% examples-preview %}}
