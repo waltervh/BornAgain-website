@@ -13,10 +13,8 @@ In this example we demonstrate how to plot intensity data with detector axes exp
 * Depending on an additional parameter `IDetector2D.NBINS`, `IDetector2D.DEGREES`, `IDetector2D.QYQZ`, the axes of the histogram will be defined either in millimeters (default units of `RectangularDetector`), detector bins, degrees or in $Q$-space.
 * Please note, that the given parameter only affects min/max values of histogram axes (there is no rebinning involved).
 
-
 {{< galleryscg >}}
-{{< figscg src="AxesInDifferentUnits.png" width="670px" caption="Intensity image">}}
+{{< figscg src="AxesInDifferentUnits.png" width="670px" caption="Intensity images">}}
 {{< /galleryscg >}}
 
-#### Python script:
 {{% highlightfile file="/static/files/python/simulation/ex07_Miscellaneous/AxesInDifferentUnits.py" language="python" %}}
