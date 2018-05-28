@@ -1,8 +1,8 @@
 +++
-title = "Beam and Detector"
+title = "Beam and detector"
 weight = 50
 +++
 
-### Beam and Detector
+### Beam and detector
 
 {{% examples-preview %}}
