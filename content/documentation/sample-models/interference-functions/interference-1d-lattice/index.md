@@ -5,25 +5,19 @@ weight = 10
 
 ### Interference 1D lattice
 
-Scattering from long boxes distributed along a one-dimensional lattice.
+In this example we simulate the scattering from infinite 1D repetition of rectangular patches (rectangular grating). This is done by using the interference function of a 1D lattice together with very long boxes. 
 
-* The particles are long boxes.
-* Each box has a length of $1000$ nm, a width of $10$ nm and a height of $15$ nm.
-* The particles are placed along a one-dimensional lattice on top of a substrate.
-* They are rotated in the $(x,y)$ plane by $10^{\circ}$ with respect the the $x$-axis of the reference cartesian frame.
-* The 1D lattice is characterized by a lattice length of $30$ nm.
-* The lattice's base vector coincides with $x$-axis of the reference cartesian frame.
-* The wavelength is equal to $24$ $\unicode{x212B}$.
-* The incident angles are $\alpha\_i = 0.2 ^{\circ}$ and $\phi\_i = 0^{\circ}$.
-
-**Note:**
-
-* By default, the axis of the one-dimensional lattice is the $x$-axis. A rotation can be applied to the particles (like in this example) or to the 1D lattice.
-* In the real-space model picture, the full length of a boxes cannot be seen as it is too large compared to its width and heigth.    
+* By-default, the axis of the one-dimensional lattice coincides with the $x$-axis of the reference cartesian frame, so it coinsides with the beam direction.
+* Long boxes are placed along a one-dimensional lattice on top of substrate, the lattice_length parameter corresponds to the grating period.
+* The size of boxes is initially chosen to form a grating which is perpendicular to the beam (long side of the box is along $y$-axis).
+* Please keep in mind, that `length`, `width`, `height` in the `FormFactorBox(length, width, height)` constructor correspond to the directions in the $x,y,z$ axes, in that order, so to achieve the desired setup we use the values: `length`= $10$ nm, `width`= $10000$ nm, `height`= $10$ nm.
+* The whole grating is rotated at the end by an angle of $45^{\circ}$ with respect to the beam axis. This is achieved by rotating _both_ the 1D lattice and the long boxes (see lines 25 and 34).
+* To avoid the problem of rapidly oscillating form factors of long boxes (see [this example]({{% ref-example "complex-shapes/large-particles-formfactor" %}}) for more details), the simulation is performed in monte carlo integration mode.
 
 {{< galleryscg >}}
-{{< figscg src="Interference1DLattice_setup.jpg" width="350px" caption="Real-space model">}}
-{{< figscg src="Interference1DLattice.png" width="350px" caption="Intensity image">}}
+{{< figscg src="Interference1DLattice_setup.jpg" width="200px" caption="Real-space model">}}
+{{< figscg src="Interference1DLattice_sketch.jpg" width="200px" caption="Sketch">}}
+{{< figscg src="Interference1DLattice.png" width="200px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
 {{% highlightfile file="/static/files/python/simulation/ex03_InterferenceFunctions/Interference1DLattice.py" language="python" %}}
