@@ -1,4 +1,4 @@
-baseURL = "http://scgmlz.github.io/BornAgain-website/"
+baseURL = "https://www.bornagainproject.org"
 theme = "hugo-theme-scgdoc"
 languageCode = "en-us"
 title = "BornAgain"
