@@ -5,6 +5,7 @@ title = "BornAgain"
 MetaDataFormat = "toml"
 canonifyURLs = true
 sectionPagesMenu = "main"
+googleAnalytics = "UA-120020802-1"
 
 # Code
 PygmentsCodeFences = true
