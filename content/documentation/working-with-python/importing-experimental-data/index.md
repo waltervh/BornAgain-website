@@ -5,17 +5,35 @@ weight = 80
 
 ## Importing experimental data
 
-This tutorial covers some practical aspects of importing experimental data in BornAgain for further fitting.
+This tutorial covers some practical aspects of importing experimental data in BornAgain for further fitting using Python interface.
+Fitting from GUI is covered in [this]({{% relref "documentation/running-gui/gui-fitting/index.md" %}}) tutorial.
+
+BornAgain i/o module supports only very few file formats: `ascii`, `tiff` and our own internal format. This might be not enough when
+it comes to the fitting the data obtained from some particular instrument.
+However, we fully support fitting of the data presented in the form of `numpy` arrays.
+
+Thus, fitting workflow is following
+
+* User imports the data into numpy array.
+* User creates simulation with beam, sample and detector defined.
+  * The number of detector pixels must match the shape of numpy array.
+  * User create region of interest to simulate/fit only some selected rectangle on his experimental image.
+* User passes simulation and numpy array to fitting engine.
+
+{{% alert theme="info" %}}
+To load experimental data into numpy array one can use [Fabio library](https://github.com/silx-kit/fabio)
+which supports many of common file formats in scattering community.
+{{% /alert %}}
+
+### Experiment
 
 As an example we will use our own measurements performed  at the laboratory diffractometer [GALAXI](http://www.fz-juelich.de/jcns/jcns-2//DE/Leistungen/GALAXI/_node.html) in Forschungszentrum Jülich.
 
 A complete example, containing less explanations but more code, can be found in
 [Real life fit example: experiment at GALAXI]({{% ref-example "fitting/fit-galaxi-data" %}}).
 
-### Experiment
-
-Our sample represents a 3-layer system (substrate, teflon and air) 
-with Ag nanoparticles sitting on top of teflon layer. 
+Our sample represents a 3-layer system (substrate, teflon and air)
+with Ag nanoparticles sitting on top of teflon layer.
 The PILATUS 1M detector was placed at a distance of 1730 mm downstream of the sample.
 
 {{< figscg src="./setup_galaxi_experiment.png" class="center" >}}
@@ -46,7 +64,7 @@ npx, npy = 981, 1043
 pixel_size = 0.172  # in mm
 width = npx*pixel_size
 height = npy*pixel_size
- 
+
 detector = RectangularDetector(npx, width, npy, height)
 
 {{< /highlight >}}
@@ -71,6 +89,23 @@ detector.setPerpendicularToDirectBeam(detector_distance, u0, v0)
 See also [Rectangular detector tutorial]({{% ref-tutorial "detector-types/rectangular-detector/index.md" %}})
 and [Rectangular detector example]({{% ref-example "beam-and-detector/rectangular-detector" %}}).
 
+### Setting region of interest
+
+To speed-up the simulation
+and to avoid influence of unnecessary areas on the fit flow it is often convenient to
+define a certain region of interest `roi`. In our example we set the `roi` to the rectangle with
+lower left corner coordinates (85.0, 70.0) and upper right corner coordinates (120.0, 92.0), where coordinates are expressed in native detector units 
+(`mm` for `RectangularDetector`)
+
+```python
+simulation.setRegionOfInterest(85.0, 70.0, 120.0, 92.)
+```
+
+{{< galleryscg >}}
+{{< figscg src="./galaxi_imported_data.png" width="350px" class="center">}}
+{{< figscg src="./galaxi_cropped_data.png" width="350px" class="center">}}
+{{< /galleryscg >}}
+
 The final simulation setup looks like the following:
 
 {{< highlight python >}}
@@ -80,80 +115,20 @@ simulation.setDetector(detector)  # this is our rectangular detector
 simulation.setSample(sample)  # sample creation is not covered by this tutorial
 simulation.setBeamParameters(1.34*angstrom, 0.463*degree, 0.0)
 simulation.setBeamIntensity(1.2e7)
+simulation.setRegionOfInterest(85.0, 70.0, 120.0, 92.)
 
 {{< /highlight >}}
 
-### Importing real data
+### Importing real data using Fabio library
 
-As explained in [Accessing simulation results]({{% ref-tutorial "accessing-simulation-results/index.md" %}}) tutorial,
-the intensity data are stored in BornAgain in special objects of `Histogram2D` type.
-They are used both for retrieving the simulation results, and for passing the intensity data inside the fitting kernel.
+[Fabio library](https://github.com/silx-kit/fabio) provide a convenient way to import experimental data in the form of `numpy` array.
 
-In the code snippet below, such an object is created with the same parameters as our rectangular detector,
-and than filled with intensity values from our experimental data file.
+```python
+import fabio
 
-{{< highlight python >}}
-
-hist = Histogram2D(npx, 0.0, width, npy, 0.0, height)
-hist.load("galaxi_data.tif.gz")
-
-{{< /highlight >}}
-
-Alternatively, one can retrieve the histogram directly from the simulation and than fill it with experimental intensity values
-
-{{< highlight python >}}
-
-hist = simulation.getIntensityData()
-hist.load("galaxi_data.tif.gz")
-
-{{< /highlight >}}
-
-{{% alert theme="warning" %}}Please note, that the size of the tiff image (width x height) in file should coincide with the dimensions of the histogram.{{% /alert %}}
-
-The resulting image can be plotted as colormap using `matplotlib.pyplot` library using
-
-{{< highlight python >}}
-
-im = matplotlib.pyplot.imshow(hist.getArray(),
-        norm=matplotlib.colors.LogNorm(1.0, hist.getMaximum()),
-        extent=[hist.getXmin(), hist.getXmax(), hist.getYmin(), hist.getYmax()],
-        aspect='auto')
-
-{{< /highlight >}}
-
-{{< figscg src="./galaxi_imported_data.png" width="400px" class="center">}}
-
-Here the axes are labelled $U\_{mm}, V\_{mm}$ instead of the usual $X\_{mm}, Y\_{mm}$ to emphasize the fact,
-that `Histogram2D` represents the detector's local coordinates, and not the main BornAgain reference frame related to the sample.
-
-### Cropping, masking
-
-At this point we have created the simulation, initialised it with `RectangularDetector`,
-prepared `Histogram2D` object whose axes correspond to the detector axes. Finally we have filled histogram with experimental intensity values.
-
-The next step will be to crop the experimental image to a certain region of interest to speed-up the simulation
-and to avoid influence of unnecessary areas on the fit flow. This is done simply by
-
-{{< highlight python >}}
-
-cropped_hist = hist.crop(85.0, 70.0, 120.0, 92.)  # xmin, ymin, xmax, ymax
-
-{{< /highlight >}}
-
-where the cropped area is represented by a rectangle with lower left and upper right corners defined in
-the detector's local coordinates and units (i.e. millimeters in the case of `RectangularDetector`). The resulting image will be
-
-{{< figscg src="./galaxi_cropped_data.png" width="600px" class="center">}}
-
-As the last step before fitting, we mask the reflected beam (as it is not simulated by BornAgain) by adding rectangular mask to the simulation
-
-{{< highlight python >}}
-
-simulation.addMask(Rectangle(101.9, 82.1, 103.7, 85.2), True)
-
-{{< /highlight >}}
-
-See [Fitting with masks]({{% ref-example "fitting/fit-with-masks" %}}) example for more details.
+img = fabio.open("galaxi_data.tif.gz")
+data = img.data.astype("float64")
+```
 
 ### Setting up the fit
 
@@ -162,7 +137,7 @@ To perform fitting a special FitSuite object is required. Setting it up is strai
 {{< highlight python >}}
 
 fitSuite = FitSuite()
-fitSuite.addSimulationAndRealData(simulation, cropped_hist)
+fitSuite.addSimulationAndRealData(simulation, data)
  
 # fit parameters setup
 ...
@@ -171,6 +146,6 @@ fitSuite.runFit()
 
 {{< /highlight >}}
 
-During the fit, only non-masked areas of the detector corresponding to the `cropped_hist` will be simulated and used for $\chi^2$ calculations.
+During the fit, only the detector corresponding to the `roi` will be simulated and used for $\chi^2$ calculations.
 
 Complete example can be found in [Real life fit example: experiment at GALAXI]({{% ref-example "fitting/fit-galaxi-data" %}}).
