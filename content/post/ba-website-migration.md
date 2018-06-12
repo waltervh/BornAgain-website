@@ -4,7 +4,7 @@ date = "2018-05-30T08:30:10+02:00"
 description = "Please register for new mailing list"
 draft = false
 comments = false
-authors = ["Gennady"]
+authors = ["pospelov"]
 tags = ["Website"]
 categories = ["News"]
 +++
