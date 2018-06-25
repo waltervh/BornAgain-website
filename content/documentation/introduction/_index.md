@@ -25,6 +25,6 @@ Software and documentation are work in progress. We cannot guarantee that they a
 {{% alert theme="info" %}}
 **Citing  BornAgain**
 
-C. Durniak, M. Ganeva, G. Pospelov, W. Van Herck, J. Wuttke (2018), BornAgain — Software for simulating and fitting X-ray and neutron small-angle scattering at grazing incidence, version <...>, [http://www.bornagainproject.org](http://www.bornagainproject.org)
+C. Durniak, M. Ganeva, G. Pospelov, W. Van Herck, J. Wuttke, D. Yurov (2018), BornAgain — Software for simulating and fitting X-ray and neutron small-angle scattering at grazing incidence, version <...>, [http://www.bornagainproject.org](http://www.bornagainproject.org)
 
 {{% /alert %}}
