@@ -57,10 +57,12 @@ They include the best $\chi^2$ value found, the corresponding optimal sample par
 
 #### Preparing the sample and the simulation description
 
-This step is similar for any simulation using BornAgain (see [Basic simulation tutorial]({{% relref "documentation/working-with-python/basic-simulation-tutorial/index.md" %}})).
-It consists in first characterizing the geometry of the system: the particles (shapes, sizes, refractive indices), 
-the different layers (thickness, order, refractive index, a possible roughness of the interface), 
-the interference between the particles and theway they are distributed in the layers 
+This step is similar for any simulation using BornAgain (see basic simulation tutorials on
+  [GISAS]({{% relref "documentation/working-with-python/basic-simulation-tutorial/gisas/index.md" %}}) or
+  [reflectometry]({{% relref "documentation/working-with-python/basic-simulation-tutorial/reflectometry/index.md" %}})).
+It consists in first characterizing the geometry of the system: the particles (shapes, sizes, refractive indices),
+the different layers (thickness, order, refractive index, a possible roughness of the interface),
+the interference between the particles and theway they are distributed in the layers
 (buried particles or particles sitting on top of a layer).
 Then we specify the parameters of the input beam and of the output detector.
 
@@ -212,5 +214,3 @@ Below we give some recommendations which might help the user to achieve reliable
 * Start from the default minimizer settings and perform some fine tuning after some experience has been acquired
 * Repeat the fit using different starting values for the parameters or their limits
 * Repeat the fit, fixing and varying different groups of parameter
-
-

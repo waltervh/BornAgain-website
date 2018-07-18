@@ -1,9 +1,9 @@
 +++
-title = "Basic simulation tutorial"
+title = "GISAS"
 weight = 15
 +++
 
-## Basic simulation tutorial
+## GISAS simulation tutorial
 
 A simulation of GISAS using BornAgain consists of following steps:
 

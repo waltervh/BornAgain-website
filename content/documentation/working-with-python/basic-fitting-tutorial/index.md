@@ -9,7 +9,7 @@ In this section we are going to go through a complete example of fitting using B
 Each step will be associated with a detailed piece of code written in Python.
 The script can also be found in the [Fit Cylinders and Prisms]({{% ref-example "fitting/fit-cylinders-and-prisms" %}}) example.
 
-This example uses the same sample geometry as in [Basic simulation tutorial]({{% ref-tutorial "basic-simulation-tutorial/index.md" %}}).
+This example uses the same sample geometry as in [Basic GISAS simulation tutorial]({{% ref-tutorial "basic-simulation-tutorial/gisas/index.md" %}}).
 Cylindrical and prismatic particles in equal proportion are deposited on a substrate layer,
 with no interference between the particles. We consider the following parameters to be unkown:
 
@@ -18,10 +18,10 @@ with no interference between the particles. We consider the following parameters
 * the length of the prisms' triangular basis,
 * the height of prisms.
 
-Our reference data are a "noisy" two-dimensional intensity map obtained from the simulation of the same geometry 
+Our reference data are a "noisy" two-dimensional intensity map obtained from the simulation of the same geometry
 with a fixed value of 5nmfor the height and radius of cylinders and for the height
 of prisms which have a 10-nanometer-long side length.
-Then we run our fitting using default minimizer settings starting with a cylinder's height of 4 nm, 
+Then we run our fitting using default minimizer settings starting with a cylinder's height of 4 nm,
 a cylinder's radius of 6 nm, a prism's half side of 6 nm and a height equal to 4 nm.
 As a result, the fitting procedure is able to find the correct value of 5 nm for all four parameters.
 
@@ -72,10 +72,10 @@ def get_sample(cylinder_height=5.0*nm, cylinder_radius=5.0*nm,
 
 {{< /highlight >}}
 
-The function starting at line 8 creates a multilayered sample 
+The function starting at line 8 creates a multilayered sample
 with cylinders and prisms using arbitrary 1 nm value for all size's of particles.
 The details about the generation of this
-multilayered sample are given in the [Basic simulation tutorial]({{% ref-tutorial "basic-simulation-tutorial/index.md" %}}).
+multilayered sample are given in the [Basic GISAS simulation tutorial]({{% ref-tutorial "basic-simulation-tutorial/gisas/index.md" %}}).
 
 ### Creating the simulation
 
@@ -164,4 +164,3 @@ to 6 nm before the minimization. For each fit parameter the lower boundary is im
 Line 73 shows the command to start the fitting process.
 During the fitting the progress will be displayed on the screen.
 Lines 76–78 show different ways of accessing the fit results.
-
