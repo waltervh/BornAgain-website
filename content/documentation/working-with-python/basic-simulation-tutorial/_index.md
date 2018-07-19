@@ -9,4 +9,5 @@ This tutorial describes a typical simulation workflow for the main types of simu
 in BornAgain and includes the following pages:
 
 * [GISAS simulation]({{% ref-tutorial "basic-simulation-tutorial/gisas" %}})
-* [Reflectometry simulations]({{% ref-tutorial "basic-simulation-tutorial/reflectometry" %}})
+* [Reflectometry simulation]({{% ref-tutorial "basic-simulation-tutorial/reflectometry" %}})
+* [Depth-probe simulation]({{% ref-tutorial "basic-simulation-tutorial/depth-probe" %}})
