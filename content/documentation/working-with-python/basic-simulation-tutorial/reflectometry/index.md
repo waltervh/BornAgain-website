@@ -27,9 +27,9 @@ Our sample will consist of (in the order from top to bottom):
 1. Ambient layer (which is not the sample by itself, but is used as initial media
    of beam propagation) with scattering length density (SLD) exactly equal to zero.
 1. Ten repetitions of
-  * 3 nm thick titanium layer with SLD $\rho_{Ti} = -1.9493 \cdot 10^{-6}$ Angstrom$^{-2}$.
-  * 7 nm thick nickel layer with SLD $\rho_{Ni} = 9.4245 \cdot 10^{-6}$ Angstrom$^{-2}$.
-1. Substrate silicon layer with SLD $\rho_{Si} = 2.0704 \cdot 10^{-6}$ Angstrom$^{-2}$.
+  * 3 nm thick titanium layer with SLD $\rho_{Ti} = -1.9493 \cdot 10^{-6}$ $\unicode{x212B}^{-2}$.
+  * 7 nm thick nickel layer with SLD $\rho_{Ni} = 9.4245 \cdot 10^{-6}$ $\unicode{x212B}^{-2}$.
+1. Substrate silicon layer with SLD $\rho_{Si} = 2.0704 \cdot 10^{-6}$ $\unicode{x212B}^{-2}$.
 
 As in many other tutorials we will create the sample with dedicated function
 
@@ -49,7 +49,7 @@ general syntax of which is as follows
 <material> = MaterialBySLD("name", sld_real, sld_imag)
 ```
 
-where `name` is the arbitrary name of the material, `sld_real` and `sld_imag` correspond to real and imaginary part of material scattering length density in inverse square Angstroms. Variable `<material>` is later used when referring to this particular material. In this example we will create four materials: `m_ambient`, `m_ti`, `m_ni` and `m_substrate`:
+where `name` is the arbitrary name of the material, `sld_real` and `sld_imag` correspond to real and imaginary part of material scattering length density in $\unicode{x212B}^{-2}$. Variable `<material>` is later used when referring to this particular material. In this example we will create four materials: `m_ambient`, `m_ti`, `m_ni` and `m_substrate`:
 
 {{< highlight python >}}
 
@@ -88,7 +88,7 @@ defined materials:
 
 {{< /highlight >}}
 
-Note that here we used Angstroms as thickness units by multiplying thickness values
+Note that here we used angstroms as thickness units by multiplying thickness values
 by imported `angstrom` factor.
 
 Finally, we create the `MultiLayer` --- enclosing object, which contains all sample

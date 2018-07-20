@@ -7,7 +7,7 @@ from bornagain import deg, angstrom, nm
 
 def get_sample():
     """
-    Constructs a sample with one resonating Ti/Pt layer
+    Constructs a sample with one resonating Ti/Pt bilayer
     """
 
     # define materials
