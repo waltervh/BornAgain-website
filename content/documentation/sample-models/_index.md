@@ -57,6 +57,10 @@ This section presents BornAgain simulations of various model systems. All Python
 
 {{% examples-preview "documentation/sample-models/beam-and-detector" %}}
 
+#### Reflectometry
+
+{{% examples-preview "documentation/sample-models/reflectometry" %}}
+
 #### Fitting
 
 {{% examples-preview "documentation/sample-models/fitting" %}}

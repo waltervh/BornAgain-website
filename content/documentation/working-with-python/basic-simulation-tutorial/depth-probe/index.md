@@ -9,8 +9,8 @@ Depth-probe simulation is an auxiliary simulation type, which helps to visualize
 the total intensity in dependence on the beam incidence angle and the position in
 the sample.
 
-Here we will consider the intensity map produced by the so-called neutron resonator,
-composed of one Ti/Pt/Ti layer.
+Here we will consider the intensity map produced by a neutron resonator,
+composed of one Ti/Pt bilayer.
 
 ### Used conventions
 
@@ -51,7 +51,7 @@ tutorials. First of all we will define the `get_sample` function:
 
 def get_sample():
     """
-    Constructs a sample with one resonating Ti/Pt layer
+    Constructs a sample with one resonating Ti/Pt bilayer
     """
 
 {{< /highlight >}}
