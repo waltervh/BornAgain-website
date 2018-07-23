@@ -221,6 +221,14 @@ The following image should be displayed on the screen
 
 {{< figscg src="BasicSpecResult.png" width="500" class="center">}}
 
+### Further topics
+
+Further examples of specular simulations with `BornAgain` can be found on the following pages:
+
+* [specular signal from a rough sample]({{% relref "documentation/sample-models/reflectometry/specular-simulation-with-roughness/index.md" %}})
+* [beam footprint correction]({{% relref "documentation/sample-models/reflectometry/footprint-correction/index.md" %}})
+* [beam divergence in specular simulations]({{% relref "documentation/sample-models/reflectometry/beam-divergence/index.md" %}})
+
 ### Complete script
 
 {{< highlightfile file="BasicSpecularSimulation.py">}}
