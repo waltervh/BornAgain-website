@@ -42,7 +42,7 @@ iff.setDecayFunction(FTDecayFunction1DCauchy(1000.0*nm))
 
 {{< /highlight >}}
 
-BornAgain supports four types of one-dimensional decay functions in reciprocal space:
+BornAgain supports four types of one-dimensional decay functions:
 
 {{< highlight python >}}
 
