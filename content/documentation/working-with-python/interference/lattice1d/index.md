@@ -19,21 +19,21 @@ The interference function is created using its constructor
 
 InterferenceFunction1DLattice(length, xi)
 """
-length   : length of the lattice cell, in nanometers
+length   : lattice constant, in nanometers
 xi       : rotation of the lattice with respect to the x-axis, in radians
 """
 
 {{< /highlight >}}
 
-Length is the length of the lattice basis vector a expressed in nanometers (see plot below). `xi` ($\xi$) is the angle defining the lattice orientation. It is taken as the angle between the a vector of the lattice basis and the x-axis of the reference cartesian frame. It is defined in radians and set to 0 by default.
+`Length` is the length of the lattice basis vector `a` expressed in nanometers (see plot below). `xi` ($\xi$) is the angle defining the lattice orientation. It is taken as the angle between the basis vector of the lattice and the x-axis of the Cartesian coordinate system. It is defined in radians and set to 0 by default.
 
 {{< figscg src="interference_1d_C.png" width="800px" class="center">}}
 
-When the beam azimuthal angle $\varphi_f$ is zero, the beam direction coincides with x-axis of the reference frame, so the $\xi$ angle can be considered as the lattice rotation with respect to the beam.
+When the beam azimuthal angle $\varphi_f$ is zero, the beam direction coincides with x-axis. In this case, the $\xi$ angle can be considered as the lattice rotation with respect to the beam.
 
 ### Decay function
 
-To account for finite size effects of the lattice, a decay function should be assigned to the interference function. This is done using the setDecayFunction(decay) method of the  1D interference function.
+To account for finite size effects of the lattice, a decay function should be assigned to the interference function. This function encodes the loss of coherent scattering from lattice points with increasing distance between them. The origin of this loss of coherence could be attributed to the coherence length of the beam or to the domain structure of the lattice. A decay function can be set using the setDecayFunction(decay) method of the 1D interference function.
 
 {{< highlight python >}}
 
@@ -42,7 +42,7 @@ iff.setDecayFunction(FTDecayFunction1DCauchy(1000.0*nm))
 
 {{< /highlight >}}
 
-BornAgain supports four types of one-dimensional decay functions in reciprocal space:
+BornAgain supports four types of one-dimensional decay functions:
 
 {{< highlight python >}}
 
@@ -60,7 +60,7 @@ FTDecayFunction1DVoigt(decay_length, eta)
 
 {{< /highlight >}}
 
-The parameter `decay_length` is used to set the half-width of the distribution in nanometers. In the case of the pseudo-Voigt distribution an additional dimensionless parameter `eta` is used to balance between the Gaussian and Cauchy profiles.
+The parameter `decay_length`, given in nanometers, is used to set the characteristic length scale at which loss of coherence takes place. In the case of the pseudo-Voigt distribution an additional dimensionless parameter `eta` is used to balance between the Gaussian and Cauchy profiles.
 
 ### Particle Density
 
