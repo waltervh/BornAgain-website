@@ -1,6 +1,6 @@
 +++
 title = "Contribute to documentation"
-weight = 10
+weight = 20
 +++
 
 ## Contribute to documentation 
