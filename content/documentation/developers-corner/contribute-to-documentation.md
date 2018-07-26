@@ -3,7 +3,7 @@ title = "Contribute to documentation"
 weight = 10
 +++
 
-## Contribute to documentation
+## Contribute to documentation 
 
 Here we explain how to make change in the documentation and make it available online.
 
