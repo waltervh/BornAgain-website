@@ -149,3 +149,10 @@ a.card-context {
 ul.doctree li.active, ul.doctree li.active > a {
   color: #2a7283 !important;
 }
+
+
+/* ------------------------------------------------------------- *
+ *  Styling list with latest commits
+/* ------------------------------------------------------------- */
+
+.latest-commits ul li { margin: 10px 10px 10px 10px; }
