@@ -231,4 +231,4 @@ Further examples of specular simulations with `BornAgain` can be found on the fo
 
 ### Complete script
 
-{{< highlightfile file="BasicSpecularSimulation.py">}}
+{{< highlightfile file="/static/files/python/simulation/ex06_Reflectometry/BasicSpecularSimulation.py">}}
