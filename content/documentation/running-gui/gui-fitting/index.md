@@ -10,11 +10,17 @@ This tutorial gives a brief overview of the fitting functionality in the GUI, in
 In the future the following tutorial will be revised to reflect the actual status of the fitting in the GUI.
 
 As a first example, this tutorial will focus on fitting data simulated with BornAgain itself. More complex fitting examples will be considered in coming releases. This tutorial is organized as follows:
-   
-   * [Preparing the "experimental" data for fitting.]({{% relref "#1-preparing-data-to-fit" %}}) 
-   * [Importing "experimental" data in BornAgain]({{% relref "#2-importing-the-experimental-data" %}}) 
-   * [Setting up the fit job]({{% relref "#3-setting-up-the-fit-job" %}}) 
-   * [Running the fit]({{% relref "#4-running-the-fit" %}}) 
+
+   * [Preparing the "experimental" data for fitting.]({{% relref "#1-preparing-data-to-fit" %}})
+   * [Importing "experimental" data in BornAgain]({{% relref "#2-importing-the-experimental-data" %}})
+   * [Setting up the fit job]({{% relref "#3-setting-up-the-fit-job" %}})
+   * [Running the fit]({{% relref "#4-running-the-fit" %}})
+
+{{% notice note %}}
+Although this tutorial consideres GISAS data fitting, the steps described are
+equally applicable to fitting reflectometry or off-specular data (after choosing
+the appropriate type of instrument).
+{{% /notice %}}
 
 ### 1. Preparing data to fit
 
@@ -53,7 +59,7 @@ Once the simulation is complete, the display is once again switched to the JobVi
 In the Fitting Activity view (below) the following elements are visible
 
    * (1) An intensity map of the selected "Real Data".
-   * (2) A simulated intensity map of the job itself 
+   * (2) A simulated intensity map of the job itself
    * (3) A relative difference map between (1) and (2)
    * (4) A plot showing how the fit is progressing
    * (5) A sample parameter tuning widget
@@ -91,4 +97,3 @@ Define the fit parameter limits: `min = 3 nm`, `max = 15 nm` and `starting value
 Push the "Run" button at the bottom of the "Fit Parameters" view. The fitting should start. Using the slider at the bottom area one can change the rate of updating the plot. The plot below shows the view after the fitting was completed. The green histogram in the lower right corner shows how $\chi^2$ evolves as a function of the number of fit iterations.
 
 {{< figscg src="tutorial_fitintro10_runfit.png" width="800px" class="center" >}}
-
