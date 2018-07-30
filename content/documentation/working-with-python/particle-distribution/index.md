@@ -174,5 +174,8 @@ def get_sample():
     return my_multiLayer
 {{< /highlight >}}
 
-Note that in the preceding snippet the actual particle is not needed
-until the last step, i.e. the actual creation of the particle distribution.
+Note that in the preceding snippet:
+
+1. `my_particle` is not needed until the the actual creation 
+of the particle distribution (line 29).
+2. `abundance` is not needed until the distribution is added to the layout (line 37).
