@@ -57,14 +57,14 @@ number_of_samples = 5
 sigma_factor = 2.0
 limits = ba.RealLimits.limited(1.0*nm, 9.0*nm))
 my_parameter_distribution = ba.ParameterDistribution(parameter_to_modify, 
-                                                         distribution, 
-                                                         number_of_samples, 
-                                                         sigma_factor, 
-                                                         limits)
+                                                     distribution, 
+                                                     number_of_samples, 
+                                                     sigma_factor, 
+                                                     limits)
     
 #Create the particle distribution with the sampled values:
 my_particle_distribution = ba.ParticleDistribution(my_particle,
-                                                       my_parameter_distribution)
+                                                   my_parameter_distribution)
     
 # Now we can add this distribution to the particle layout.
 {{< /highlight >}}
