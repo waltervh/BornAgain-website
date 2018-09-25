@@ -4,6 +4,3 @@ weight = 10
 +++
 
 ## Latest commits to this site
-
-{{< partial "latest-commits.html" >}}
-
