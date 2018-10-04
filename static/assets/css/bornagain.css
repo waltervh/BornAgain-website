@@ -73,6 +73,7 @@ a.navbar-brand {
   
   .important-news a {
     color: #2a6783;
+    text-decoration: underline;
   }
 
   .stripe-4 {
