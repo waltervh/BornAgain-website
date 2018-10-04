@@ -3,8 +3,9 @@ title = "News"
 weight = 40
 +++
 
-{{% alert theme="info" %}}
-
-[Sign up](https://lists.fz-juelich.de/mailman/listinfo/BornAgain-announcements) to receive email notifications when new release is ready.
-
-{{% /alert %}}
+<div class="container important-news stripe-4 text-center">
+    <h6> 
+        Sign up to the <a href="https://lists.fz-juelich.de/mailman/listinfo/BornAgain-announcements">BornAgain announcements mailing list</a>
+         to receive notifications when new release is ready
+    </h6>
+</div>
