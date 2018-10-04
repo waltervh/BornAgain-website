@@ -7,6 +7,7 @@ comments = false
 authors = ["yurov"]
 tags = ["Workshop"]
 categories = ["News"]
+promote = true
 +++
 
 {{% alert theme="success" %}}

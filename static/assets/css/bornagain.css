@@ -66,6 +66,27 @@ a.navbar-brand {
   margin-bottom: 1rem;
 }
 
+.important-news {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .important-news a {
+    color: #2a6783;
+  }
+
+  .stripe-4 {
+    color: #2a6783;
+    background: repeating-linear-gradient(
+      -55deg,
+      #fafafa,
+      #fafafa 10px,
+      #ededed 10px,
+      #ededed 20px
+    );
+  }
+  
+  
 /* ------------------------------------------------------------- *
  *  Styling for download page
 /* ------------------------------------------------------------- */
