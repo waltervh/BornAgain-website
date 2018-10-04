@@ -25,5 +25,6 @@ This page contains a collection of screenshots demonstrating BornAgain graphical
 {{< imgproc src="import-view.png" command="Resize" options="450x" caption="Experimental data" >}}
 {{< imgproc src="import-view-and-masks.png" command="Resize" options="450x" caption="Mask editor" >}}
 {{< imgproc src="fit-view.png" command="Resize" options="450x" caption="Fit view" >}}
+{{< imgproc src="3dview.png" command="Resize" options="450x"caption="Real space viewer" >}}
 {{< imgproc src="tech-view.png" command="Resize" options="450x"caption="Tech view" >}}
 {{< /galleryscg >}}
