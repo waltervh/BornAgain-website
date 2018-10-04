@@ -1,0 +1,10 @@
+{{ define "main_body" }}
+  {{ if .Site.Params.Debug}}theme/layout/post/single.html{{end}}
+  <div class="row">
+      <div class="col-md-12 text-right">
+            <p style="font-size: 0.85em;" > posted on {{.Date.Format "January 2, 2006"}}   </p>
+      </div>
+  </div>
+  {{ .Content }}
+  {{ partial "next-prev-page.html" . }}
+  {{ end }}
