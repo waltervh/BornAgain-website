@@ -13,7 +13,7 @@ categories = ["News"]
 #### New release of BornAgain: version 1.13
 {{% /alert %}}
 
-This release was focused on stabilizing the distribution, thus it contains numerous bug fixes. Two major features available from now are third-party compatible
+This release was focused on stabilizing the software, thus it contains numerous bug fixes. Two major features available from now are third-party compatible
 minimization interface and GUI-side fitting of reflectometry data.
 
 **This release has the following highlights:**
