@@ -19,7 +19,7 @@ breadcrumb = true
       BornAgain is supported under Windows, Mac OS X and Linux operating systems. For Windows and MacOS we provide binary installer packages, both for Python2 and Python3. For Unix-like operating systems (including Linux and Mac OS X) we support installation from source.
     </p>
   <hr class="feature-divider">
-    <p>Use links below to download the appropriate package. Previous versions are available <a href="{{% download-loc %}}">here<a>.</p>
+    <p>Use links below to download the appropriate package. Previous versions are available <a href="{{% download-loc %}} " onclick="ga('send', 'event', 'download', 'click', 'previous-ver');">here<a>.</p>
     </div>
   </div>
   
@@ -50,7 +50,7 @@ breadcrumb = true
           <h5 class="card-title">Windows, Python3</h5>
           <p><span class="badge badge-primary mr-1">Recommended</span></p>
           <p class="card-text">Windows 7,8,10 binary installer package, intended for Python3.</p>
-          <a href="{{% ref-installer-win-py3 %}}" class="btn btn-primary ba-custom">Download</a>
+          <a href="{{% ref-installer-win-py3 %}}" onclick="ga('send', 'event', 'download', 'click', 'win-py3');" class="btn btn-primary ba-custom">Download</a>
         </div>
       </div>
       <div class="card text-center bg-light mx-3 my-5 border-secondary" style="width: 18rem;">        
@@ -59,7 +59,7 @@ breadcrumb = true
           <h5 class="card-title">Windows, Python2</h5>
           <p><span class="badge badge-default mr-1">Obsolete</span></p>
           <p class="card-text">Windows 7,8,10 binary installer package, intended for Python2.</p>
-          <a href="{{% ref-installer-win-py2 %}}" class="btn btn-secondary">Download</a>
+          <a href="{{% ref-installer-win-py2 %}}" onclick="ga('send', 'event', 'download', 'click', 'win-py2');" class="btn btn-secondary">Download</a>
         </div>
       </div>      
     </div>
@@ -73,7 +73,7 @@ breadcrumb = true
           <h5 class="card-title">MacOS, Python3</h5>
           <p><span class="badge badge-primary mr-1">Recommended</span></p>
           <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra) and 10.13 (High Sierra).</p>
-          <a href="{{% ref-installer-mac-py3 %}}" class="btn btn-primary ba-custom">Download</a>
+          <a href="{{% ref-installer-mac-py3 %}}" onclick="ga('send', 'event', 'download', 'click', 'mac-py3')" class="btn btn-primary ba-custom">Download</a>
         </div>
       </div>
       <div class="card text-center bg-light mx-3 my-5 border-secondary" style="width: 22rem;">        
@@ -82,7 +82,7 @@ breadcrumb = true
           <h5 class="card-title">MacOS, Python2</h5>
           <p><span class="badge badge-default mr-1">Obsolete</span></p>
           <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra) and 10.13 (High Sierra).</p>
-          <a href="{{% ref-installer-mac-py2 %}}" class="btn btn-secondary">Download</a>
+          <a href="{{% ref-installer-mac-py2 %}}" onclick="ga('send', 'event', 'download', 'click', 'mac-py2');" class="btn btn-secondary">Download</a>
         </div>
       </div>      
     </div>
@@ -98,7 +98,7 @@ breadcrumb = true
           <pre><code>{{% git-clone %}}</code></pre>
           </p>
           <h5 class="card-title">or</h5>
-          <a href="{{% ref-tarball %}}" class="btn btn-primary ba-custom">Download tarball</a>
+          <a href="{{% ref-tarball %}}" onclick="ga('send', 'event', 'download', 'click', 'tarball');" class="btn btn-primary ba-custom">Download tarball</a>
         </div>
       </div>
     </div>
@@ -110,7 +110,7 @@ breadcrumb = true
         <div class="card-header">Manual</div>
         <div class="card-body">
           <h5 class="card-title">Manual, pdf</h5>
-          <a href="{{% ref-manual %}}" class="btn btn-primary ba-custom">Download</a>
+          <a href="{{% ref-manual %}}" onclick="ga('send', 'event', 'download', 'click', 'manual');" class="btn btn-primary ba-custom">Download</a>
         </div>
       </div>
     </div>  
