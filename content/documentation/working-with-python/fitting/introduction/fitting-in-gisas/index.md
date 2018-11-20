@@ -5,6 +5,7 @@ weight = 20
 
 ## Fitting in GISAS
 
+
 GISAS data fit, similarly to the ordinary curve fitting, deal with following components.
 
 + Real data: two dimensional array of intensities in channels of 2D detector.

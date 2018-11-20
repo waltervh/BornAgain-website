@@ -12,12 +12,11 @@ Objective function has to be passed to the minimization engine, together with st
 
 Following code snippet was borrowed from 
 [Getting started with Non-Linear Least-Squares Fitting](https://lmfit.github.io/lmfit-py/intro.html) 
-tutorial of [lmfit](https://lmfit.github.io/lmfit-py) package.
+tutorial of [lmfit](https://lmfit.github.io/lmfit-py) package to demonstrate basic principle of curve fitting.
 
 {{< highlight python >}}
 from numpy import exp, sin
 from scipy.optimize import leastsq
-
 
 def residual(vars, x, data, eps_data):
     amp = vars[0]
@@ -37,3 +36,20 @@ Objective function `residual` accepts values of fit parameters, data points and 
 of residuals using the `model` of data - decaying `sin` wave.
 
 The minimum of objective function is found then using `leastsq` method of `scipy.optimize` package.
+
+{{% alert theme="info" %}}
+Similarly, fitting in BornAgain is all about composing an objective function, representing the difference between
+simulation and data and passing it to one of existing minimization engines.
+{{% /alert %}}
+
+
+##### Available minimization packages
+
+BornAgain fitting module contains a variety of minimization algorithms. However, it is designed in such a way, that internal minimizers
+can be replaced with minimizers of user choice. Below you will find a link for several well established `python` based minimization packages.
+
++ [scipy.optimize](https://docs.scipy.org/doc/scipy/reference/optimize.html)
++ [lmfit](https://lmfit.github.io/lmfit-py/)
++ [bumps](https://bumps.readthedocs.io/en/latest/)
+
+
