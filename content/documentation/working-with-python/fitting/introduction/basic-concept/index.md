@@ -39,17 +39,26 @@ The minimum of objective function is found then using `leastsq` method of `scipy
 
 {{% alert theme="info" %}}
 Similarly, fitting in BornAgain is all about composing an objective function, representing the difference between
-simulation and data and passing it to one of existing minimization engines.
+simulation and data and passing it to minimization engines.
 {{% /alert %}}
 
+Conceptually, the `residual` objective function should construct scattering sample using fit parameters provided,
+run the simulation and then calculate the difference between experimental and simulated scattering images.
 
-##### Available minimization packages
+The corresponding pseudo code is shown below.
 
-BornAgain fitting module contains a variety of minimization algorithms. However, it is designed in such a way, that internal minimizers
-can be replaced with minimizers of user choice. Below you will find a link for several well established `python` based minimization packages.
+{{< highlight python >}}
+from scipy.optimize import leastsq
 
-+ [scipy.optimize](https://docs.scipy.org/doc/scipy/reference/optimize.html)
-+ [lmfit](https://lmfit.github.io/lmfit-py/)
-+ [bumps](https://bumps.readthedocs.io/en/latest/)
+def residual(sample_pars):
+    sample = create_sample(sample_pars)
+    simulation.setSample(sample)
+    simulation.runSimulation()
+    return exp_intensities-simulation.result()
+
+sample_pars = [42]
+out = leastsq(residual, sample_pars)
+{{< /highlight >}}
+
 
 
