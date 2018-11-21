@@ -1,9 +1,13 @@
 +++
-title = "Minimal working example"
+title = "Minimal fitting example"
 weight = 30
 +++
 
-## Minimal working example
+## Minimal fitting example
+
+On this page you will find an example of minimal script that need to be created to run fitting. 
+Scattering from spherical nano particles in Born approximation is used here as an example.
+Short explanations follow below.
 
 {{< highlight python "linenos=table" >}}
 """
@@ -64,3 +68,26 @@ def run_fitting():
 if __name__ == '__main__':
     run_fitting()
 {{< /highlight >}}
+
+##### The model
+
+The *model* is represented by `get_simulation` function. It returns GISAS simulation object with beam, detector and user sample defined.
+Here we are simulating scattering from spherical nano particles in Born approximation. The function has one free parameter - radius of spheres in nanometers.
+This is the value we will try to find in the course of minimization.
+
+##### The data
+
+*Experimental data* is represented by `real_data` function. It return 2D `numpy` array with intensity values obtained
+from the same simulation with radius of spheres equals to $5~nm$.
+
+##### Fit objective
+
+The method `FitObjective.addSimulationAndData` is used to put the *model* and the *data* to correspondence.
+Please pay attention how `get_simulation` (no brackets) and `real_data()` (with brackets) are used.
+Absence of brackets in `get_simulation` means that we pass callable object (aka function pointer) to `FitObjective`.
+During the fit it will be used on every iteration to generate new simulation for every new set of fit parameters.
+
+##### Fit parameters and minimizers
+
+Fit parameters collection contains a single fit parameter with name *radius* and starting value $4~nm$.
+The method `FitObjective.evaluate` serve as objective function. It is passed to the minimizer together with fit parameters.
