@@ -38,11 +38,11 @@ of residuals using the `model` of data - decaying `sin` wave.
 The minimum of objective function is found then using `leastsq` method of `scipy.optimize` package.
 
 {{% alert theme="info" %}}
-Similarly, fitting in BornAgain is all about composing an objective function, representing the difference between
-simulation and data and passing it to minimization engines.
+Similarly, fitting in BornAgain is all about composing an objective function, that represents the difference between
+simulation and data, and passing it to minimization engines.
 {{% /alert %}}
 
-Conceptually, the `residual` objective function should construct scattering sample using fit parameters provided,
+Conceptually, the `residual` objective function should adjust scattering sample using fit parameters provided,
 run the simulation and then calculate the difference between experimental and simulated scattering images.
 
 The corresponding pseudo code is shown below.
