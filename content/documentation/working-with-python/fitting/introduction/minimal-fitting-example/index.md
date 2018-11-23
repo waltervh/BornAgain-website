@@ -69,9 +69,11 @@ if __name__ == '__main__':
     run_fitting()
 {{< /highlight >}}
 
-##### The model
+##### Simulation builder
 
-The *model* is represented by `get_simulation` function. It returns GISAS simulation object with beam, detector and user sample defined.
+*Simulation builder* is represented by `get_simulation` function. Its main task is to generate 
+new simulation object for given values of fit parameters, which will serve as the model for our data fit.
+In given case it returns GISAS simulation object with beam, detector and user sample defined.
 Here we are simulating scattering from spherical nano particles in Born approximation. The function has one free parameter - radius of spheres in nanometers.
 This is the value we will try to find in the course of minimization.
 
