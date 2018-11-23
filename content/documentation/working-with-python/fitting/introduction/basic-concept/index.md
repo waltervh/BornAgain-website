@@ -33,7 +33,7 @@ out = leastsq(residual, vars, args=(x, data, eps_data))
 {{< /highlight >}}
 
 Objective function `residual` accepts values of fit parameters, data points and errors, and then calculates vector 
-of residuals using the `model` of data - decaying `sin` wave.
+of residuals using hard coded `model` of the data - decaying `sin` wave.
 
 The minimum of objective function is found then using `leastsq` method of `scipy.optimize` package.
 
@@ -54,7 +54,7 @@ def residual(sample_pars):
     sample = create_sample(sample_pars)
     simulation.setSample(sample)
     simulation.runSimulation()
-    return exp_intensities-simulation.result()
+    return exp_intensities-simulation
 
 sample_pars = [42]
 out = leastsq(residual, sample_pars)
