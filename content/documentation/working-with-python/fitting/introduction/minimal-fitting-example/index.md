@@ -79,7 +79,7 @@ This is the value we will try to find in the course of minimization.
 
 ##### The data
 
-*Experimental data* is represented by `real_data` function. It return 2D `numpy` array with intensity values obtained
+*Experimental data* is represented by `real_data` function. It returns 2D `numpy` array with intensity values obtained
 from the same simulation with radius of spheres equals to $5~nm$.
 
 ##### Fit objective

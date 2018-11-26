@@ -37,8 +37,8 @@ def get_simulation(params):
 
 {{< /highlight >}}
 
-The main requirement here is that the geometry of the detector defined in the `GISASSimulation` object, 
-should match the shape of numpy array, containing experimental intensities.
+The main requirement here is that the geometry of the detector defined in the `GISASSimulation` object
+should match the shape of numpy array with experimental intensities.
 
 #### Fit parameters
 
@@ -63,8 +63,8 @@ fit_objective.addSimulationAndData(get_simulation, real_data)
 
 The `FitObjective` public interface provides access to two objective functions
 
-+ `FitObjective.evaluate(params)` return $\chi\_{2}$ calculated for experimental/simulated images
-+ `FitObjective.evaluate_residuals(params)` 1d vector of residuals for all bins of experimental/simulated images
++ `FitObjective.evaluate(params)` returns $\chi\_{2}$ calculated for experimental/simulated images
++ `FitObjective.evaluate_residuals(params)` returns 1d vector of residuals for all bins of experimental/simulated images
 
 #### Minimizer
 
