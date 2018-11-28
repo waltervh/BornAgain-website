@@ -1,26 +1,17 @@
 +++
 title = "Working with sample parameters"
-weight = 60
+weight = 30
 +++
 
-## Working with sample parameters
+### Working with sample parameters
 
-This section gives additional details about the manipulation of sample parameters during run time,
-after the sample has already been constructed. 
-For a single simulation this is normally not necessary.
-However, it might be useful during interactive work when the user tries to 
-find optimal sample parameters by running a series of simulations.
-A similar task also arises when the theoretical model, composed of the description of the sample and of the simulation,
-is used for fitting real data. In this case, the fitting kernel requires a list of the existing sample parameters and a 
-mechanism for changing the values of these parameters in order to find their optima.
+This example shows how to get an access to sample structure information and how to manipulate
+sample parameters on already constructed sample. This can be useful for debugging and for quick simulations.
 
-In BornAgain this is done using the so-called sample parameter pool mechanism.
-We are going to briefly explain this approach using the code from the example [Working With Sample Parameters]({{% ref-example "fitting/sample-parameters-intro" %}}).
+In BornAgain a sample is described by a hierarchical tree of objects.
+For example, the tree representing a multilayer can be printed in a Python session by running.
 
-In BornAgain a sample is described by a hierarchical tree of objects. For the multilayer created in this example,
-this tree can be printed in a Python session by running
-
-{{< highlight python "linenos=table,linenostart=63">}}
+{{< highlight python>}}
 
 print(sample.treeToString())
 
@@ -104,4 +95,11 @@ sample.setParameterValue("*/Prism3/*", 10.0*nm)
 
 {{< /highlight >}}
 
-See the complete code in the [Working with sample parameters]({{% ref-example "fitting/sample-parameters-intro" %}}) example.
+Example below demonstrates how to create a sample with fixed parameters and then change these parameters on the fly during runtime. 
+Four simulations are performed one after another. Parameters of the sample are adjusted in between using different matching criteria.
+
+{{< galleryscg >}}
+{{< figscg src="SampleParametersIntro.png" width="600px" caption="Intensity images">}}
+{{< /galleryscg >}}
+
+{{% highlightfile file="/static/files/python/simulation/ex07_Miscellaneous/SimulationParameters.py" language="python" %}}

@@ -70,7 +70,7 @@ Then we specify the parameters of the input beam and of the output detector.
 
 Every parameter used in the construction of the sample can be used as a fitting parameter.
 For example, the particles' heights, radii or the layer's roughness or thickness could be selected using the parameter pool mechanism.
-This mechanism is explained in detail in [Working with sample parameters]({{% relref "documentation/working-with-python/working-with-sample-parameters/index.md" %}})
+This mechanism is explained in detail in 
 tutorial and it is therefore recommended to read it before proceeding any further.
 
 The user specifies selected sample parameters as fit parameters using `FitSuite` and its `addFitParameter` method:
