@@ -24,8 +24,4 @@ evaluate method to run simulation and prepare intensity arrays. At lines 30-34 w
 
 Later in the code, the `MyObjective.evaluate_residual` function is used to setup custom objective for minimizer (line 116).
 
-
-
-
-
 {{% highlightfile file="/static/files/python/fitting-new/ex03_ExtendedExamples/custom_objective_function/custom_objective_function.py" language="python" %}}
