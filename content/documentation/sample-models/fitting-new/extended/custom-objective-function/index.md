@@ -8,14 +8,14 @@ weight = 20
 BornAgain fitting API allows to define custom objective function to pass to minimization engine.
 
 In this example we are going to construct vector of residuals calculated between 
-experimental and simulated intensity values after applying additional function to amplitudes.
+experimental and simulated intensity values after applying additional $sqrt$ function to amplitudes.
 
 $$
 residuals = [r\_{0}, r_{1}, ... , r\_{n-1}], ~~~ r\_{i} = \sqrt{e\_{i}} - \sqrt{s\_{i}}
 $$
 
 The length of vector `n` corresponds to the total number of *non-masked* detector channels. The residual
-in calculated as simple difference between experimental $e\_{i}$ and simulated $s\_{i}$ intensities
+in calculated as simple difference between experimental $e\_{i}$ and simulated $s\_{i}$ bin intensity
 after applying $sqrt$ to both values.
 
 This is done by defining our own `MyObjective` class at line 14. It is derived from parent `FitObjective` class
