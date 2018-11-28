@@ -157,7 +157,7 @@ The `FitObjective` created here is used to put into correspondence a real data, 
 the simulation, represented by `get_simulation` callable. On every fit iteration `FitObjective`
 
 + will generate new simulation object for every set of fit parameters using `get_simulation` callable,
-+ run it to obtained simulated detector intensities,
++ run it to obtain simulated detector intensities,
 + calculate chi2 between simulated and real data.
 
 ### Setting fit parameters
