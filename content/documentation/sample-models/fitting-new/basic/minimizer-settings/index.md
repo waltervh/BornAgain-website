@@ -23,6 +23,6 @@ print(ba.MinimizerFactory().catalogueDetailsToString())
 
 
 For more information, see
-[minimizer settings tutorial]({{% relref "ocumentation/working-with-python/fitting/fitting-highlights/minimizers/index.md" %}}).
+[minimizer settings tutorial]({{% relref "documentation/working-with-python/fitting/fitting-highlights/minimizers/index.md" %}}).
 
 {{% highlightfile file="/static/files/python/fitting-new/ex01_BasicExamples/minimizer_settings.py" language="python" %}}
