@@ -7,7 +7,7 @@ weight = 20
 
 In this section we are going to go through a complete example of fitting using BornAgain.
 Each step will be associated with a detailed piece of code written in Python.
-The script can also be found in the [Fit Cylinders and Prisms]({{% ref-example "fitting-new/basic/basic-fit-tutorial" %}}) example.
+The script can also be found in the [Fit Cylinders and Prisms]({{% ref-example "fitting/basic/basic-fit-tutorial" %}}) example.
 
 This example uses the same sample geometry as in [Basic GISAS simulation tutorial]({{% ref-tutorial "basic-simulation-tutorial/gisas/index.md" %}}).
 Cylindrical and prismatic particles are deposited on a substrate layer in equal proportion,
@@ -196,4 +196,4 @@ The method is passed to the minimizer together with initial fit parameters. The 
 continue further without user intervention unit the minimum is found or minimizer failed to converge.
 The rest of the code demonstrates how to access fit results.
 
-See full script in the [Fit Cylinders and Prisms]({{% ref-example "fitting-new/basic/basic-fit-tutorial" %}}) example.
+See full script in the [Fit Cylinders and Prisms]({{% ref-example "fitting/basic/basic-fit-tutorial" %}}) example.

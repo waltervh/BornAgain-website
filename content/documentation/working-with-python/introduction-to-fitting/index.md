@@ -189,7 +189,7 @@ fit_suite.printResults()
 
 {{< /highlight >}}
 
-[This example]({{% ref-example "fitting-new/basic/basic-fit-tutorial" %}}) gives more details on accessing the fitting results.
+[This example]({{% ref-example "fitting/basic/basic-fit-tutorial" %}}) gives more details on accessing the fitting results.
 
 ### How to get the right answer from fitting
 

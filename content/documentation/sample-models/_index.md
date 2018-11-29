@@ -66,13 +66,13 @@ This section presents BornAgain simulations of various model systems. All Python
 {{% examples-preview "documentation/sample-models/fitting" %}}
 
 **Basic**
-{{% examples-preview "documentation/sample-models/fitting-new/basic" %}}
+{{% examples-preview "documentation/sample-models/fitting/basic" %}}
 
 **Advanced**
-{{% examples-preview "documentation/sample-models/fitting-new/advanced" %}}
+{{% examples-preview "documentation/sample-models/fitting/advanced" %}}
 
 **Extended**
-{{% examples-preview "documentation/sample-models/fitting-new/extended" %}}
+{{% examples-preview "documentation/sample-models/fitting/extended" %}}
 
 #### Miscellaneous
 

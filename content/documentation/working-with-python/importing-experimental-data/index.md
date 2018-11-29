@@ -30,7 +30,7 @@ which supports many of common file formats in scattering community.
 As an example we will use our own measurements performed  at the laboratory diffractometer [GALAXI](http://www.fz-juelich.de/jcns/jcns-2//DE/Leistungen/GALAXI/_node.html) in Forschungszentrum Jülich.
 
 A complete example, containing less explanations but more code, can be found in
-[Real life fit example: experiment at GALAXI]({{% ref-example "fitting-new/extended/experiment-at-galaxi" %}}).
+[Real life fit example: experiment at GALAXI]({{% ref-example "fitting/extended/experiment-at-galaxi" %}}).
 
 Our sample represents a 3-layer system (substrate, teflon and air)
 with Ag nanoparticles sitting on top of teflon layer.
@@ -148,4 +148,4 @@ fitSuite.runFit()
 
 During the fit, only the detector corresponding to the `roi` will be simulated and used for $\chi^2$ calculations.
 
-Complete example can be found in [Real life fit example: experiment at GALAXI]({{% ref-example "fitting-new/extended/experiment-at-galaxi" %}}).
+Complete example can be found in [Real life fit example: experiment at GALAXI]({{% ref-example "fitting/extended/experiment-at-galaxi" %}}).
