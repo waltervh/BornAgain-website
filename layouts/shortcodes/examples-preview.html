@@ -18,14 +18,18 @@
               {{- range first 2 $resources }} 
                 {{- $original := . }}
                 {{- $image := ($original.Resize "256x") }}
-                <div class="col my-auto">
-                  <img class="img-fluid" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+                <div class="col my-auto ">
+                  <img class="img-fluid"  src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
                 </div>
               {{- end }}
-            {{- if eq (len $resources) 1 }}
+              {{- if eq (len $resources) 1 }}
               <div class="col"></div>
             {{- end}}            
-            <div class="col-8 text-center">
+            {{- if eq (len $resources) 0 }}
+            <div class="col"></div>
+            <div class="col"></div>
+            {{- end}}            
+            <div class="col-8 text-left ml-3 my-auto">
               <h6 > {{- .Title }} </h6>
             </div>
           </div>
