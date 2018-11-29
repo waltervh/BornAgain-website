@@ -7,11 +7,11 @@ weight = 75
 
 In this section we are going to go through a complete example of fitting using BornAgain.
 Each step will be associated with a detailed piece of code written in Python.
-The script can also be found in the [Fit Cylinders and Prisms]({{% ref-example "fitting/fit-cylinders-and-prisms" %}}) example.
+The script can also be found in the [Fit Cylinders and Prisms]({{% ref-example "fitting-new/basic/basic-fit-tutorial" %}}) example.
 
 This example uses the same sample geometry as in [Basic GISAS simulation tutorial]({{% ref-tutorial "basic-simulation-tutorial/gisas/index.md" %}}).
 Cylindrical and prismatic particles in equal proportion are deposited on a substrate layer,
-with no interference between the particles. We consider the following parameters to be unkown:
+with no interference between the particles. We consider the following parameters to be unknown:
 
 * the radius of cylinders,
 * the height of cylinders,
@@ -19,7 +19,7 @@ with no interference between the particles. We consider the following parameters
 * the height of prisms.
 
 Our reference data are a "noisy" two-dimensional intensity map obtained from the simulation of the same geometry
-with a fixed value of 5nmfor the height and radius of cylinders and for the height
+with a fixed value of 5nm for the height and radius of cylinders and for the height
 of prisms which have a 10-nanometer-long side length.
 Then we run our fitting using default minimizer settings starting with a cylinder's height of 4 nm,
 a cylinder's radius of 6 nm, a prism's half side of 6 nm and a height equal to 4 nm.
