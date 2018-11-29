@@ -43,6 +43,22 @@ The rest of the page gives additional details on
 
 ### Fit parameters setup
 
+BornAgain `Parameters` class allows to define collection of fit parameters which will be varied during the fit.
+Fit parameter should have a unique name, starting value and possible bounds on fit parameter value.
+
+{{< highlight python >}}
+params = ba.Parameters()
+params.add("a", value=-1.2)
+params.add("b", value=-1.2, min=0.0)
+params.add("c", value=-1.2, min=-5.0, max=5.0, step=0.01)
+params.add("d", value=1.0, vary=False)
+{{< /highlight >}}
+
+It is not possible to use mathematical expressions to constrain the value, as it is done
+in more advanced
+[parameter machinery](https://lmfit.github.io/lmfit-py/parameters.html)
+of `lmfit` package.
+
 ### List of available minimization algorithms
 
 BornAgain minimizer is a wrapper around a variety of minimization engines 
@@ -178,16 +194,21 @@ Default             | Default algorithm
   </div>
 </div>
 
-For example, to run Minuit minimizer with Migrad algorithm and limit the maximum number of objective function calls
+For example, to run `Minuit` minimizer with `Migrad` algorithm, limit the maximum number of objective function calls and set minimizer strategy parameter to certain value
 one have to use
 
 {{< highlight python >}}
-minimizer.setMinimizer("Minuit2", "Migrad", "MaxFunctionCalls=50")
+minimizer.setMinimizer("Minuit2", "Migrad", "MaxFunctionCalls=50;Strategy=2")
 {{< /highlight >}}
 
 ### Third party minimizers
 
+BornAgain fitting can be done using other minimization packages. List of some of them are given below:
+
 + [scipy.optimize](https://docs.scipy.org/doc/scipy/reference/optimize.html)
 + [lmfit](https://lmfit.github.io/lmfit-py/)
 + [bumps](https://bumps.readthedocs.io/en/latest/)
+
+In [this example]({{% ref-example "fitting/extended/external-minimizer" %}}) we demonstrate how to use `lmfit`
+minimizer for typical fit of GISAS data.
 

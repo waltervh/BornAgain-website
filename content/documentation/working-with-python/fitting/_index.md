@@ -1,9 +1,9 @@
 +++
-title = "Fitting (under construction)"
+title = "Fitting"
 weight = 100
 +++
 
-## Fitting (under construction)
+## Fitting
 
 Fitting in BornAgain is intended to find the best set of parameter values
 describing user sample to represent the data obtained in
