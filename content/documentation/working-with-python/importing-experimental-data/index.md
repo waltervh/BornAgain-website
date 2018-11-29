@@ -44,8 +44,7 @@ The results of the measurement are represented by the intensity image taken in c
 * prepare a description of the simulation
 * load the experimental data in BornAgain's fitting engine
 
-Please refer to [Introduction to fitting]({{% ref-tutorial "introduction-to-fitting/index.md" %}})
-and [Basic fitting]({{% ref-tutorial "basic-fitting-tutorial/index.md" %}}) tutorials which explain fitting workflow in more detail.
+Please refer to OBSOLETE
 
 ### Preparing simulation description
 
