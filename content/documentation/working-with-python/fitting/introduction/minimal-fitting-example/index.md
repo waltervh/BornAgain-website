@@ -5,8 +5,8 @@ weight = 30
 
 ## Minimal fitting example
 
-On this page you will find an example of minimal script that need to be created to run fitting. 
-Scattering from spherical nano particles in Born approximation is used here as an example.
+On this page you will find a small example of a script that needs to be created to run a fitting. 
+The scattering from spherical nano particles in the Born approximation is used here as an example.
 Short explanations follow below.
 
 {{< highlight python "linenos=table" >}}
@@ -69,27 +69,25 @@ if __name__ == '__main__':
     run_fitting()
 {{< /highlight >}}
 
-##### Simulation builder
+#### Simulation builder
 
-*Simulation builder* is represented by `get_simulation` function. Its main task is to generate 
-new simulation object for given values of fit parameters, which will serve as the model for our data fit.
-In given case it returns GISAS simulation object with beam, detector and user sample defined.
-Here we are simulating scattering from spherical nano particles in Born approximation. The function has one free parameter - radius of spheres in nanometers.
-This is the value we will try to find in the course of minimization.
+*Simulation builder* is represented by the `get_simulation` function. Its main task is to generate a
+new simulation object for the given values of the fit parameters.
+In the given case it returns a GISAS simulation object with a beam, detector and user sample defined.
+Here we are simulating the scattering from spherical nano particles in the Born approximation. The function has one free parameter: the radius of the spheres in nanometers.
+This is the value we will try to find in the course of the minimization.
 
-##### The data
+#### The data
 
-*Experimental data* is represented by `real_data` function. It returns 2D `numpy` array with intensity values obtained
-from the same simulation with radius of spheres equals to $5~nm$.
+*Experimental data* is represented by the `real_data` function. It returns a 2D `numpy` array with intensity values obtained from the same simulation with the radius of the spheres equals to $5~nm$.
 
-##### Fit objective
+#### Fit objective
 
-The method `FitObjective.addSimulationAndData` is used to put the *model* and the *data* to correspondence.
-Please pay attention how `get_simulation` (no brackets) and `real_data()` (with brackets) are used.
-Absence of brackets in `get_simulation` means that we pass callable object (aka function pointer) to `FitObjective`.
-During the fit it will be used on every iteration to generate new simulation for every new set of fit parameters.
+The method `FitObjective.addSimulationAndData` is used to put the *model* and the *data* in correspondence.
+Please pay attention on how `get_simulation` (no brackets) and `real_data()` (with brackets) are used.
+The absence of brackets in `get_simulation` means that we pass a callable object (aka function pointer) to `FitObjective`.
+During the fit it will be used on every iteration to generate a new simulation for every new set of fit parameter values.
 
-##### Fit parameters and minimizers
+#### Fit parameters and minimizers
 
-Fit parameters collection contains a single fit parameter with name *radius* and starting value $4~nm$.
-The method `FitObjective.evaluate` serve as objective function. It is passed to the minimizer together with fit parameters.
+The fit parameters collection contains a single fit parameter with the name *radius* and a starting value of $4~nm$. The method `FitObjective.evaluate` serves as the objective function. It is passed to the minimizer together with the fit parameters.

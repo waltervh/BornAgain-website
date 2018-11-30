@@ -13,15 +13,15 @@ This example uses the same sample geometry as in [Basic GISAS simulation tutoria
 Cylindrical and prismatic particles are deposited on a substrate layer in equal proportion,
 with no interference between the particles. We consider the following parameters to be unknown:
 
-+ the radius of cylinders,
-+ the height of cylinders,
++ the radius of the cylinders,
++ the height of the cylinders,
 + the length of the prisms' triangular basis,
-+ the height of prisms.
++ the height of the prisms.
 
 Our reference data are a "noisy" two-dimensional intensity map obtained from the simulation of the same geometry
-with a fixed value of 5nm for all sizes of cylinder and prisms.
+with a fixed value of 5nm for all sizes of cylinders and prisms.
 
-### Importing python libraries
+### Importing the python libraries
 
 {{< highlight python "linenos=table,linenostart=6" >}}
 
@@ -30,7 +30,7 @@ from bornagain import deg, angstrom, nm
 
 {{< /highlight >}}
 
-We start from import of the BornAgain Python API and particularly dimension units defined in BornAgain.
+We start with importing the BornAgain Python API and particularly the dimension units defined in BornAgain.
 
 ### Building the sample
 
@@ -72,7 +72,7 @@ def get_sample(params):
 
 The function starting at line 12 creates a multilayered sample
 with cylinders and prisms randomly distributed on a surface.
-The function accepts a dictionary as input parameters and use its key/value pairs to define particle sizes.
+The function accepts a dictionary as input parameters and use its key/value pairs to define the particle sizes.
 
 ### Creating the simulation
 
@@ -93,11 +93,10 @@ def get_simulation(params):
 {{< /highlight >}}
 
 The function starting at line 45 creates the simulation object with beam, detector and user sample defined.
-This function is intended to be called on every minimization iteration to provide
-new simulation object for every new set of fit parameters. In given example set of parameters is used 
-to construct a new sample by calling `get_sample` method described earlier.
+This function is intended to be called on every minimization iteration to provide a new simulation object for every new set of fit parameter values. In the given example the set of parameters is used 
+to construct a new sample by calling the `get_sample` method described earlier.
 
-### Creating "experimental" data
+### Creating the "experimental" data
 
 {{< highlight python "linenos=table,linenostart=58" >}}
 
@@ -126,11 +125,9 @@ def create_real_data():
 
 {{< /highlight >}}
 
-Experimental data here is represented by 2D numpy array with detector intensities obtained from the same simulation.
-The "experimental" data file is prepared by running once a simulation with default parameters, 
-spoiling it with noise and saving on disk.
+The experimental data here is represented by a 2D numpy array with detector intensities obtained from the same simulation. The "experimental" data file is prepared by running once a simulation with default parameters, adding noise to it and saving it on disk.
 
-### Setting fit objective up
+### Setting up the fit objective
 
 {{< highlight python "linenos=table,linenostart=89" >}}
 
@@ -153,14 +150,13 @@ def run_fitting():
 
 {{< /highlight >}}
 
-The `FitObjective` created here is used to put into correspondence a real data, represented by numpy array, and
-the simulation, represented by `get_simulation` callable. On every fit iteration `FitObjective`
+The `FitObjective` created here is used to put into correspondence the real data, represented by a numpy array, and the simulation, represented by the `get_simulation` callable. On every fit iteration `FitObjective`
 
-+ will generate new simulation object for every set of fit parameters using `get_simulation` callable,
++ will generate a new simulation object for a given set of fit parameter values using the `get_simulation` callable,
 + run it to obtain simulated detector intensities,
 + calculate chi2 between simulated and real data.
 
-### Setting fit parameters
+### Setting the fit parameters
 
 {{< highlight python "linenos=table,linenostart=105" >}}
 
@@ -172,11 +168,10 @@ the simulation, represented by `get_simulation` callable. On every fit iteration
 
 {{< /highlight >}}
 
-Creation of fit parameters is straightforward. We give names, starting values and lower bound to 4 fit parameters, 
-representing the dimensions of the cylinders and prisms.
-The fit parameter names must coincide with names that `get_simulation` callable expects.
+The creation of fit parameters is straightforward. We give names, starting values and lower bounds to 4 fit parameters, representing the dimensions of the cylinders and prisms.
+The fit parameter names must coincide with the names that the `get_simulation` callable expects.
 
-### Creating minimizer and running the fit
+### Creating the minimizer and running the fit
 
 {{< highlight python "linenos=table,linenostart=111" >}}
 
@@ -188,12 +183,11 @@ The fit parameter names must coincide with names that `get_simulation` callable 
     print("chi2:", result.minValue())
 {{< /highlight >}}
 
-The method `fit_objective.evaluate` provided by `FitObjective` class interface is used here as an objective function.
-The method accepts fit parameters and return chi2 value, calculated between experimental and simulated images for given
-values of fit parameters.
+The method `fit_objective.evaluate` provided by the `FitObjective` class interface is used here as an objective function.
+The method accepts fit parameters and returns the chi2 value, calculated between experimental and simulated images for the given values of the fit parameters.
 
-The method is passed to the minimizer together with initial fit parameters. The `minimizer.minimize` starts the fit that will
-continue further without user intervention unit the minimum is found or minimizer failed to converge.
-The rest of the code demonstrates how to access fit results.
+The method is passed to the minimizer together with the initial fit parameter values. The `minimizer.minimize` starts a fit that will
+continue further without user intervention until the minimum is found or the minimizer failed to converge.
+The rest of the code demonstrates how to access the fit results.
 
-See full script in the [Fit Cylinders and Prisms]({{% ref-example "fitting/basic/basic-fit-tutorial" %}}) example.
+See the full script in the [Fit Cylinders and Prisms]({{% ref-example "fitting/basic/basic-fit-tutorial" %}}) example.

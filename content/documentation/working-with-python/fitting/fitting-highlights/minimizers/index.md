@@ -5,16 +5,16 @@ weight = 30
 
 ## Minimizer settings
 
-BornAgain minimizer interface was developed with following ideas in mind:
+The BornAgain minimizer interface was developed with the following ideas in mind:
 
-+ Provide an interface which looks more or less familiar for users of other minimization packages.
-+ Make possible the usage of our minimizer for optimization problems beside BornAgain context.
-+ Allow usage of other, possibly more advanced minimization libraries, for BornAgain fits.
++ Provide an interface which looks more or less familiar for users of other Python minimization packages.
++ Enable the use of our minimizer for optimization problems outside the BornAgain context.
++ Allow the usage of other, possibly more advanced minimization libraries, for BornAgain fits.
 
-Particularly, we have been inspired by [lmfit Python package](https://lmfit.github.io/lmfit-py/),
-so BornAgain setup looks very similar.
-In code snippet below we give an example of finding the minimum of [Rosenbrock function]([https://en.wikipedia.org/wiki/Rosenbrock_function])
-using BornAgain minimizer at default settings.
+Particularly, we have been inspired by the [lmfit Python package](https://lmfit.github.io/lmfit-py/),
+so the BornAgain setup looks very similar.
+In the code snippet below we give an example of finding the minimum of the [Rosenbrock function]([https://en.wikipedia.org/wiki/Rosenbrock_function])
+using the BornAgain minimizer with default settings.
 
 {{< highlight python >}}
 def rosenbrock(params):
@@ -36,15 +36,15 @@ print(result.toString())
 
 The rest of the page gives additional details on
 
-+ [Fit parameters setup](#fit-parameters-setup)
++ [Fit parameter setup](#fit-parameters-setup)
 + [List of available minimization algorithms](#list-of-available-minimization-algorithms)
 + [Additional minimizer settings](#additional-minimizer-settings)
 + [Third party minimizers](#third-party-minimizers)
 
-### Fit parameters setup
+### Fit parameter setup
 
-BornAgain `Parameters` class allows to define collection of fit parameters which will be varied during the fit.
-Fit parameter should have a unique name, starting value and possible bounds on fit parameter value.
+The BornAgain `Parameters` class allows to define a collection of fit parameters which will be varied during the fit.
+Each fit parameter should have a unique name, starting value and possible bounds on its value.
 
 {{< highlight python >}}
 params = ba.Parameters()
@@ -54,21 +54,21 @@ params.add("c", value=-1.2, min=-5.0, max=5.0, step=0.01)
 params.add("d", value=1.0, vary=False)
 {{< /highlight >}}
 
-It is not possible to use mathematical expressions to constrain the value, as it is done
-in more advanced
+It is not possible to use mathematical expressions to constrain these value, as it is done
+in the more advanced
 [parameter machinery](https://lmfit.github.io/lmfit-py/parameters.html)
 of `lmfit` package.
 
 ### List of available minimization algorithms
 
-BornAgain minimizer is a wrapper around a variety of minimization engines 
+The BornAgain minimizer is a wrapper around a variety of minimization engines 
 from [ROOT](https://root.cern.ch) and [GSL](https://www.gnu.org/software/gsl/doc/html/index.html) libraries.
 They are listed in the table below. By default, `Minuit2/Migrad` will be used and no additional configuration needs to be done.
 
 | Minimizer name| Algorithm | Description |
 |:--|:--|:--|
 | [Minuit2](http://seal.web.cern.ch/seal/documents/minuit/mnusersguide.pdf)                                                     | Migrad          | According to the [tutorial](http://seal.web.cern.ch/seal/documents/minuit/mntutorial.pdf), best minimizer for nearly all functions, variable-metric method with inexact line search, a stable metric updating scheme, and checks for positive-definiteness. |
-|                                                                                                                               | Simplex         | Simplex method of Nelder and Mead usually slower than `Migrad`, rather robust with respect to gross fluctuations in the function value, gives no reliable information about parameter errors. |
+|                                                                                                                               | Simplex         | Simplex method of Nelder and Mead usually, slower than `Migrad`, rather robust with respect to gross fluctuations in the function value, gives no reliable information about parameter errors. |
 |                                                                                                                               | Combined        | Minimizes with `Migrad`, but switches to `Simplex` if `Migrad` fails to converge. |
 |                                                                                                                               | Scan            | Not intended to minimize, just scans the function, one parameter at a time, retains the best value after each scan. |
 |                                                                                                                               | Fumili          | Optimized method for least square and log likelihood minimizations. |
@@ -82,7 +82,7 @@ They are listed in the table below. By default, `Minuit2/Migrad` will be used an
 | [Genetic](https://root.cern.ch/download/doc/tmva/TMVAUsersGuide.pdf)                                                        |                 | Genetic Algorithm |
 | Test                                                        |                 | Single-shot minimizer |
 
-To change minimize engine and it's algorithm one have to use
+To change the minimize engine and its algorithm one has to use
 
 {{< highlight python >}}
 minimizer = ba.Minimizer()
@@ -91,8 +91,8 @@ minimizer.setMinimizer("GSLMultiMin", "BFGS2")
 
 ### Additional minimizer settings
 
-There are number of minimizer options that can be changed.
-The commands below print detailed info about available minimizers, their options and default option values.
+There are a number of minimizer options that can be changed.
+The commands below print the detailed info about the available minimizers, their options and the default option values.
 
 {{< highlight python >}}
 # prints info about available minimizers
@@ -194,8 +194,8 @@ Default             | Default algorithm
   </div>
 </div>
 
-For example, to run `Minuit` minimizer with `Migrad` algorithm, limit the maximum number of objective function calls and set minimizer strategy parameter to certain value
-one have to use
+For example, to run the `Minuit` minimizer with the `Migrad` algorithm, limit the maximum number of objective function calls and set the minimizer strategy parameter to a certain value
+one can use
 
 {{< highlight python >}}
 minimizer.setMinimizer("Minuit2", "Migrad", "MaxFunctionCalls=50;Strategy=2")
@@ -203,12 +203,10 @@ minimizer.setMinimizer("Minuit2", "Migrad", "MaxFunctionCalls=50;Strategy=2")
 
 ### Third party minimizers
 
-BornAgain fitting can be done using other minimization packages. List of some of them are given below:
+BornAgain fitting can also be done using other minimization packages. A short list of some of them is given below:
 
 + [scipy.optimize](https://docs.scipy.org/doc/scipy/reference/optimize.html)
 + [lmfit](https://lmfit.github.io/lmfit-py/)
 + [bumps](https://bumps.readthedocs.io/en/latest/)
 
-In [this example]({{% ref-example "fitting/extended/external-minimizer" %}}) we demonstrate how to use `lmfit`
-minimizer for typical fit of GISAS data.
-
+In [this example]({{% ref-example "fitting/extended/external-minimizer" %}}) we demonstrate how to use the `lmfit` minimizer for a typical fit of GISAS data.
