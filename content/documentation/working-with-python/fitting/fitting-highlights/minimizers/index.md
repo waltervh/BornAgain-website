@@ -79,7 +79,7 @@ They are listed in the table below. By default, `Minuit2/Migrad` will be used an
 |                                                                                                                               | SteepestDescent | Follows the downhill gradient of the function at each step. |
 | [GSLLMA](https://www.gnu.org/software/gsl/doc/html/nls.html?highlight=levenberg%20marquardt%20algorithm#levenberg-marquardt)  |                 | Levenberg-Marquardt Algorithm |
 | [GSLSimAn](https://www.gnu.org/software/gsl/doc/html/siman.html?highlight=simulated%20annealing%20algorithm)                  |                 | Simulated Annealing Algorithm |
-| [Genetic](http://tmva.sourceforge.net/docu/TMVAUsersGuide.pdf#page=55)                                                        |                 | Genetic Algorithm |
+| [Genetic](https://root.cern.ch/download/doc/tmva/TMVAUsersGuide.pdf)                                                        |                 | Genetic Algorithm |
 | Test                                                        |                 | Single-shot minimizer |
 
 To change minimize engine and it's algorithm one have to use
