@@ -28,9 +28,9 @@ This time we have been working on a deep refactoring of the machinery related to
 1. [Particles positioning tutorial]({{< relref "documentation/working-with-python/particle-positioning/index.md" >}})
 1. [Particles rotation tutorial]({{< relref "documentation/working-with-python/particle-rotation/index.md" >}})
 1. [Particle composition tutorial]({{< relref "documentation/working-with-python/particle-composition/index.md" >}})
-1. [Working with sample parameters tutorial]({{< relref "documentation/working-with-python/working-with-sample-parameters/index.md" >}})
-1. [Introduction to fitting]({{< relref "documentation/working-with-python/introduction-to-fitting/index.md" >}})
-1. [Basic fitting tutorial]({{< relref "documentation/working-with-python/basic-fitting-tutorial/index.md" >}})
+1. Working with sample parameters tutorial (*obsolete link*)
+1. [Introduction to fitting]({{< relref "documentation/working-with-python/fitting/introduction" >}})
+1. [Basic fitting tutorial]({{< relref "documentation/working-with-python/fitting/basic-fitting-tutorial/index.md" >}})
 
 **API changes:**
 

@@ -32,12 +32,12 @@ During this release we have worked on preparing the implementation of fitting in
 1. [How to setup PyCharm project]({{< relref "documentation/working-with-python/setup-pycharm-project/index.md" >}})
 1. [Detector types tutorial]({{< relref "documentation/working-with-python/detector-types" >}})
 1. [Accessing simulation results tutorial]({{< relref "documentation/working-with-python/accessing-simulation-results/index.md" >}})
-1. [Importing experimental data]({{< relref "documentation/working-with-python/importing-experimental-data/index.md" >}})
+1. [Importing experimental data]({{< relref "documentation/working-with-python/fitting/fitting-highlights/instrument-description" >}})
 
 **New examples:**
 
 1. [Rectangular detector]({{< relref "documentation/sample-models/beam-and-detector/rectangular-detector/index.md" >}})
-1. [Real life fit example: experiment at GALAXI]({{< relref "documentation/sample-models/fitting/fit-galaxi-data/index.md" >}})
+1. [Real life fit example: experiment at GALAXI]({{< relref "documentation/sample-models/fitting/extended/experiment-at-galaxi/index.md" >}})
 1. [Accessing simulation results]({{< relref "documentation/sample-models/miscellaneous/accessing-simulation-results/index.md" >}})
 1. [Plotting with axes in different units]({{< relref "documentation/sample-models/miscellaneous/axes-in-different-units/index.md" >}})
 
