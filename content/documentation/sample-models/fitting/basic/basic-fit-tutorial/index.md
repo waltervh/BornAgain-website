@@ -5,15 +5,15 @@ weight = 20
 
 ## Basic fit example
 
-In this example we use a simple geometry: cylinders and prisms in air layer, deposited on a substrate layer, with no interference. There are 4 fitting parameters:
+In this example we use a simple geometry: cylinders and prisms in an air layer, deposited on a substrate layer, with no interference. There are 4 fitting parameters:
 
-1. radius of cylinders
-2. height of cylinders
-3. side length of prisms
-4. height of prisms
+1. the radius of the cylinders
+2. the height of the cylinders
+3. the side length of the prisms
+4. the height of the prisms
 
-Our reference data are a “noisy” two-dimensional intensity map obtained from the simulation of the same geometry with a fixed value of 5nm for all sizes of cylinder and prisms.
-Then we run our fitting using default minimizer settings starting with a cylinder’s height of $4$ nm, a cylinder’s radius of $6$ nm, a prism’s half side of $12$ nm and a height equal to $4$ nm. 
+Our reference data is a “noisy” two-dimensional intensity map obtained from the simulation of the same geometry with a fixed value of 5nm for all sizes of the cylinders and prisms.
+Then we run the fit using the default minimizer settings starting with a cylinder height of $4$ nm, a cylinder radius of $6$ nm, a prism half side of $12$ nm and height equal to $4$ nm. 
 As a result, the fitting procedure is able to find the correct value of $5$ nm for all four parameters.
 
 {{< galleryscg >}}

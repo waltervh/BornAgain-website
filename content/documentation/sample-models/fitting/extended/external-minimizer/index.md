@@ -5,15 +5,14 @@ weight = 40
 
 ## External minimizer
 
-In this example we are demonstrating how to run typical fitting task in BornAgain using third party minimizer.
+In this example we are demonstrating how to run a typical fitting task in BornAgain using a third party minimizer.
 
-BornAgain fit parameters and minimizer interface was developed with the idea to simplify switch between
-our own minimization engines and other, possibly more advanced minimization libraries.
-Particularly, we have been inspired by [lmfit Python package](https://lmfit.github.io/lmfit-py/).
+The BornAgain fit parameters and minimizer interface were developed with the idea to simplify the switch between our own minimization engines and other, possibly more advanced minimization libraries.
+Particularly, we have been inspired by the [lmfit Python package](https://lmfit.github.io/lmfit-py/).
 
-All these make switch between BornAgain and `lmfit` minimizers very easy.
+This makes the switch between the BornAgain and `lmfit` minimizers very easy.
 
-**Using BornAgain default minimizer**
+**Using the BornAgain default minimizer**
 
 {{< highlight python >}}
 import bornagain as ba
@@ -26,7 +25,7 @@ result = ba.Minimizer().minimize(fit_objective.evaluate_residuals, params)
 fit_objective.finalize(result)
 {{< /highlight >}}
 
-**Using lmfit minimizer**
+**Using the lmfit minimizer**
 
 {{< highlight python >}}
 import lmfit
@@ -41,6 +40,6 @@ fit_objective.finalize(result)
 print(result.params.pretty_print())
 {{< /highlight >}}
 
-Whole script for `lmfit` based fitting is shown below.
+The complete script for the `lmfit` based fitting is shown below.
 
 {{% highlightfile file="/static/files/python/fitting-new/ex03_ExtendedExamples/external_minimizer/lmfit_basics.py" language="python" %}}
