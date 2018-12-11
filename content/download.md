@@ -44,22 +44,32 @@ breadcrumb = true
 <div class="tab-content" id="OperationSystemTabContent">
   <div class="tab-pane fade" id="Windows" role="tabpanel" aria-labelledby="profile-tab">  
     <div class="d-flex flex-column flex-md-row justify-content-center">
+
       <div class="card text-center bg-light mx-3 my-5 border-primary ba-custom-border" style="width: 18rem;">        
         <div class="card-header">Windows, 64-bit (x86)</div>
         <div class="card-body">
-          <h5 class="card-title">Windows, Python3</h5>
+          <h5 class="card-title">Windows, Python 3.7</h5>
           <p><span class="badge badge-primary mr-1">Recommended</span></p>
-          <p class="card-text">Windows 7,8,10 binary installer package, intended for Python3.</p>
-          <a href="{{% ref-installer-win-py3 %}}" onclick="ga('send', 'event', 'download', 'click', 'win-py3');" class="btn btn-primary ba-custom">Download</a>
+          <p class="card-text">Windows 7,8,10 binary installer intended for Python 3.7</p>
+          <a href="{{% ref-installer-win "3.7" %}}" onclick="ga('send', 'event', 'download', 'click', 'win-py37');" class="btn btn-primary ba-custom">Download</a>
+        </div>
+      </div>
+      <div class="card text-center bg-light mx-3 my-5 border-primary ba-custom-border" style="width: 18rem;">        
+        <div class="card-header">Windows, 64-bit (x86)</div>
+        <div class="card-body">
+          <h5 class="card-title">Windows, Python 3.6</h5>
+          <p><span class="badge badge-default mr-1">Previous</span></p>
+          <p class="card-text">Windows 7,8,10 binary installer intended for Python 3.6</p>
+          <a href="{{% ref-installer-win "3.6" %}}" onclick="ga('send', 'event', 'download', 'click', 'win-py36');" class="btn btn-primary ba-custom">Download</a>
         </div>
       </div>
       <div class="card text-center bg-light mx-3 my-5 border-secondary" style="width: 18rem;">        
         <div class="card-header">Windows, 64-bit (x86)</div>
         <div class="card-body">
-          <h5 class="card-title">Windows, Python2</h5>
+          <h5 class="card-title">Windows, Python 2.7</h5>
           <p><span class="badge badge-default mr-1">Obsolete</span></p>
-          <p class="card-text">Windows 7,8,10 binary installer package, intended for Python2.</p>
-          <a href="{{% ref-installer-win-py2 %}}" onclick="ga('send', 'event', 'download', 'click', 'win-py2');" class="btn btn-secondary">Download</a>
+          <p class="card-text">Windows 7,8,10 binary installer intended for Python 2.7</p>
+          <a href="{{% ref-installer-win "2.7" %}}" onclick="ga('send', 'event', 'download', 'click', 'win-py27');" class="btn btn-secondary">Download</a>
         </div>
       </div>      
     </div>
@@ -70,19 +80,28 @@ breadcrumb = true
       <div class="card text-center bg-light mx-3 my-5 border-primary ba-custom-border" style="width: 22rem;">        
         <div class="card-header">MacOS, 64-bit (x86)</div>
         <div class="card-body">
-          <h5 class="card-title">MacOS, Python3</h5>
+          <h5 class="card-title">MacOS, Python 3.7</h5>
           <p><span class="badge badge-primary mr-1">Recommended</span></p>
           <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra) and 10.13 (High Sierra).</p>
-          <a href="{{% ref-installer-mac-py3 %}}" onclick="ga('send', 'event', 'download', 'click', 'mac-py3')" class="btn btn-primary ba-custom">Download</a>
+          <a href="{{% ref-installer-mac "3.7" %}}" onclick="ga('send', 'event', 'download', 'click', 'mac-py37')" class="btn btn-primary ba-custom">Download</a>
         </div>
       </div>
       <div class="card text-center bg-light mx-3 my-5 border-secondary" style="width: 22rem;">        
         <div class="card-header">MacOS, 64-bit (x86)</div>
         <div class="card-body">
-          <h5 class="card-title">MacOS, Python2</h5>
+          <h5 class="card-title">MacOS, Python 3.6</h5>
+          <p><span class="badge badge-default mr-1">Previous</span></p>
+          <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra) and 10.13 (High Sierra).</p>
+          <a href="{{% ref-installer-mac "3.6" %}}" onclick="ga('send', 'event', 'download', 'click', 'mac-py36');" class="btn btn-secondary">Download</a>
+        </div>
+      </div>      
+      <div class="card text-center bg-light mx-3 my-5 border-secondary" style="width: 22rem;">        
+        <div class="card-header">MacOS, 64-bit (x86)</div>
+        <div class="card-body">
+          <h5 class="card-title">MacOS, Python 2.7</h5>
           <p><span class="badge badge-default mr-1">Obsolete</span></p>
           <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra) and 10.13 (High Sierra).</p>
-          <a href="{{% ref-installer-mac-py2 %}}" onclick="ga('send', 'event', 'download', 'click', 'mac-py2');" class="btn btn-secondary">Download</a>
+          <a href="{{% ref-installer-mac "2.7" %}}" onclick="ga('send', 'event', 'download', 'click', 'mac-py27');" class="btn btn-secondary">Download</a>
         </div>
       </div>      
     </div>
