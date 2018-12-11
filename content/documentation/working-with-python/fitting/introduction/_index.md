@@ -16,7 +16,7 @@ by minimizing the difference between simulated and reference data. The features 
 
 {{% alert theme="info" %}}
 The BornAgain fitting interface was redesigned in October, 2018 for better compatibility
-with third party minimizers (scipy.optimize, lmfit, bump).
+with third party minimizers ([scipy.optimize](https://docs.scipy.org/doc/scipy/reference/optimize.html), [lmfit](https://lmfit.github.io/lmfit-py/), [bumps](https://bumps.readthedocs.io/en/latest/)).
 {{% /alert %}}
 
 In the following explanations we will be mostly focused on GISAS data. However, all of the following is also applicable for specular and off-specular fits.
