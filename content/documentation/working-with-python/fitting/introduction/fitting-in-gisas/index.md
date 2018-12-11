@@ -21,7 +21,7 @@ The experimental data is a 2D numpy array, obtained in the course of a GISAS exp
 
 #### Simulation builder
 
-This is a Python callable, a function or a class method, returning a `GISASSImulation` object with beam, detector and user sample defined.
+This is a Python callable, a function or a class method, returning a `GISASSimulation` object with beam, detector and user sample defined.
 The function accepts a Python dictionary as input parameters, which it uses to build a new simulation object. The parameter values will be varied during the fit and `get_simulation` will be called on every fit iteration.
 
 {{< highlight python >}}

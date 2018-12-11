@@ -13,7 +13,7 @@ The BornAgain minimizer interface was developed with the following ideas in mind
 
 Particularly, we have been inspired by the [lmfit Python package](https://lmfit.github.io/lmfit-py/),
 so the BornAgain setup looks very similar.
-In the code snippet below we give an example of finding the minimum of the [Rosenbrock function]([https://en.wikipedia.org/wiki/Rosenbrock_function])
+In the code snippet below we give an example of finding the minimum of the [Rosenbrock function](https://en.wikipedia.org/wiki/Rosenbrock_function)
 using the BornAgain minimizer with default settings.
 
 {{< highlight python >}}
