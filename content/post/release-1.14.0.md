@@ -13,7 +13,7 @@ categories = ["News"]
 #### New release of BornAgain: version 1.14
 {{% /alert %}}
 
-In this release the number of instruments accesible through GUI was expanded with
+In this release the number of instruments accessible through GUI was expanded with
 depth probe instrument. It also becomes possible in the GUI to fit material parameters
 and import ascii columnwise-formatted user data for reflectivity simulations.
 
@@ -31,8 +31,8 @@ and import ascii columnwise-formatted user data for reflectivity simulations.
 
 **Other changes:**
 
-* Futher expansion of 3D View
-* Numerous bugfixes
+* Further expansion of 3D View
+* Numerous bug fixes
 
 More details on our [issue tracker](http://apps.jcns.fz-juelich.de/redmine/versions/46).
 
