@@ -1,12 +1,11 @@
 # BornAgain-website
 
-Documentation for [BornAgain project](www.bornagainproject.org). The documentation is generated using the static site generator [Hugo](https://gohugo.io/)
-and documentation theme [hugo-theme-scgdoc](https://github.com/scgmlz/hugo-theme-scgdoc).
+Documentation for [BornAgain](http://www.bornagainproject.org).
 
-# About BornAgain project
+BornAgain is an open-source research software for simulating and fitting neutron and x-ray reflectometry and grazing-incidence small-angle scattering, developed by the [Scientific Computing Group](http://apps.jcns.fz-juelich.de) at [JCNS](http://fz-juelich.de/jcns)-[MLZ](http://www.mlz-garching.de/).
 
-[BornAgain](www.bornagainproject.org) is an open-source software package to simulate and fit neutron and x-rays small-angle scattering at grazing incidence
-and reflectometry. Developed by the [Scientific Computing Group](http://www.fz-juelich.de/jcns/EN/Leistungen/ScientificComputing/_node.html) at [MLZ, Garching](http://www.mlz-garching.de/).
+This Git repository contains the sources for the documentation shown at http://www.bornagainproject.org. The sources are processed by the static site generator [Hugo](https://gohugo.io/), using
+the documentation theme [hugo-theme-scgdoc](https://github.com/scgmlz/hugo-theme-scgdoc).
 
 ## CI Status
 
