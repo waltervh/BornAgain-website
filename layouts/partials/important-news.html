@@ -1,6 +1,8 @@
 {{ range first 5 (where .Data.Pages "Type" "post") }}
 {{ if isset .Params "promote"}}
-<h6 class = "text-center"> IMPORTANT IN NEWS  </h6>
-<h3 class = "text-center"> <a href="{{.Permalink}}"> {{.Title}}</a></h3>
+<div class="container important-news stripe-4 ">
+    <h6 class = "text-center"> IMPORTANT IN NEWS  </h6>
+    <h3 class = "text-center"> <a href="{{.Permalink}}"> {{.Title}}</a></h3>
+</div>
 {{end}}
 {{ end }}
