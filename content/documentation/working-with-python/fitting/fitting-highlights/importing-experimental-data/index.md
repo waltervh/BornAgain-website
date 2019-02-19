@@ -46,5 +46,5 @@ If the file name contains `.gz` or `.bzip2` extensions, the module considers the
 {{< highlight python >}}
 import bornagain as ba
 
-data = readIntensityData("experimental_data.int.gz").array()
+data = ba.IntensityDataIOFactory.readIntensityData("experimental_data.int.gz").array()
 {{< /highlight >}}
