@@ -1,13 +1,13 @@
 +++
-title = "Install the third party software"
+title = "Install third-party software"
 weight = 10
 +++
 
-## Install the third party software
+## Install third-party software
 
 Required software:
 
-* `Compiler with C++-14 support (i.e. gcc>= 4.9)`
+* `Compiler with C++-14 support (e.g. gcc>= 4.9 or clang>=3.4)`
 * `cmake (>= 3.1)`
 * `boost library (>= 1.48)`
 * `fftw3 library (>= 3.3.1)`
@@ -59,10 +59,10 @@ All required packages can be easily installed on most Linux distributions using 
     <li>Install BornAgain dependencies:
     <pre><code>$ sudo yum -y install make cmake3 gcc-c++
 $ sudo yum -y install fftw-devel boost-devel gsl-devel libtiff-devel
-$ sudo yum -y install python3-devel numpy 
+$ sudo yum -y install python3-devel numpy
 $ sudo yum -y install qt5-qtbase-devel qt5-qttools-devel qt5-qtsvg-devel</code></pre></li>
     <li>Install 'devtoolset' with additional development tools.<br/>
-    See 
+    See
 <a href="https://www.softwarecollections.org/en/scls/rhscl/devtoolset-4">Devtoolset-4</a>
  for more details.
     <pre><code>$ sudo yum install centos-release-scl  # if you are on CentOS</code></pre>or

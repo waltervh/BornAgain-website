@@ -31,7 +31,7 @@ PygmentsStyle = "vs"
 [params.authors.herck]
   name = "Walter"
   url = "https://github.com/waltervh"
-  
+
 [params.authors.pospelov]
   name = "Gennady"
   url = "https://github.com/gpospelov"
