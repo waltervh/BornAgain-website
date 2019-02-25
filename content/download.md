@@ -44,7 +44,6 @@ breadcrumb = true
 <div class="tab-content" id="OperationSystemTabContent">
   <div class="tab-pane fade" id="Windows" role="tabpanel" aria-labelledby="profile-tab">  
     <div class="d-flex flex-column flex-md-row justify-content-center">
-
       <div class="card text-center bg-light mx-3 my-5 border-primary ba-custom-border" style="width: 18rem;">        
         <div class="card-header">Windows, 64-bit (x86)</div>
         <div class="card-body">
@@ -82,7 +81,7 @@ breadcrumb = true
         <div class="card-body">
           <h5 class="card-title">MacOS, Python 3.7</h5>
           <p><span class="badge badge-primary mr-1">Recommended</span></p>
-          <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra) and 10.13 (High Sierra).</p>
+          <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra), 10.13 (High Sierra) and 10.14 (Mojave).</p>
           <a href="{{% ref-installer-mac "3.7" %}}" onclick="ga('send', 'event', 'download', 'click', 'mac-py37')" class="btn btn-primary ba-custom">Download</a>
         </div>
       </div>
@@ -91,7 +90,7 @@ breadcrumb = true
         <div class="card-body">
           <h5 class="card-title">MacOS, Python 3.6</h5>
           <p><span class="badge badge-default mr-1">Previous</span></p>
-          <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra) and 10.13 (High Sierra).</p>
+          <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra), 10.13 (High Sierra) and 10.14 (Mojave).</p>
           <a href="{{% ref-installer-mac "3.6" %}}" onclick="ga('send', 'event', 'download', 'click', 'mac-py36');" class="btn btn-secondary">Download</a>
         </div>
       </div>      
@@ -100,7 +99,7 @@ breadcrumb = true
         <div class="card-body">
           <h5 class="card-title">MacOS, Python 2.7</h5>
           <p><span class="badge badge-default mr-1">Obsolete</span></p>
-          <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra) and 10.13 (High Sierra).</p>
+          <p class="card-text">MacOS 10.10 (Yosemite), suitable for 10.11 (El Capitan), 10.12 (Sierra), 10.13 (High Sierra) and 10.14 (Mojave).</p>
           <a href="{{% ref-installer-mac "2.7" %}}" onclick="ga('send', 'event', 'download', 'click', 'mac-py27');" class="btn btn-secondary">Download</a>
         </div>
       </div>      
