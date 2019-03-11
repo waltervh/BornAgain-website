@@ -32,7 +32,7 @@ Run Anaconda installer as usual. Agree with default settings.
 
 {{< figscg src="anaconda-install-step3.PNG" class="center" width="450px" caption="Agree with default installation folder">}}
 
-{{< figscg src="anaconda-install-step4.PNG" class="center" width="450px" caption="Agree with the fact that Anaconda will not be in the PATH">}}
+{{< figscg src="anaconda-install-step4.PNG" class="center" width="450px" caption="Agree with advanced options defaults">}}
 
 ### Select to install VS code editor
 
