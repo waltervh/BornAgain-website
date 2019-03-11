@@ -62,6 +62,21 @@ When installation is complete the window looks line on screen shot below.
 
 At this point Python and all dependencies are succesfully installed.
 
+### Validate Python + BornAgain installation
+
+To validate that BornAgain is working together with installed Python 
+start Windows command shell by typing `cmd` in Windows `Start menu`.
+To validate BornAgain installation type in
+
++ `python` to start Python interpreter
++ `import bornagain` as a first command
++ `print(bornagain.GetVersionNumber())` to print BornAgain version number on the screen.
+
+{{< figscg src="python-install-step6.PNG" class="center" width="450px">}}
+
+If no errors will come up, and you even see BornAgain version number printed on the screen, your installation is correct.
+
+
 ### Running BornAgain examples
 
 To run BornAgain example from command line launch command shell again and
@@ -71,7 +86,7 @@ type (or copy-and-paste) command as below to see scattering image appearing on t
 python C:/BornAgain-{{< release-string >}}/Examples/python/simulation/ex01_BasicParticles/CylindersAndPrisms.py
 ```
 
-{{< figscg src="python-install-step6.PNG" class="center" width="450px">}}
+{{< figscg src="python-install-step7.PNG" class="center" width="450px">}}
 
 Of course, this kind of manual launching is not very convenient for regular usage and should be considered rather as yet another validation step.
 
