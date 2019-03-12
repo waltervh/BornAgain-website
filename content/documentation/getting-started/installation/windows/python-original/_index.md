@@ -8,7 +8,7 @@ weight = 20
 In this instruction we explain how to install Python and all necessary site packages
 to be able to run BornAgain simulations via Python scripting.
 
-We advertise this as "Manual Python installation for advanced users", however, we find this way actually much
+We advertise this as `Manual Python installation for advanced users`, however, we find this way actually much
 easier and less messy, than Python installation using Anaconda explained [here]({{% relref "documentation/getting-started/installation/windows/python-anaconda" %}}).
 
 
@@ -55,7 +55,7 @@ The command `pip install matplotlib numpy` starts installation of `matplotlib` l
 {{< figscg src="python-install-step4.PNG" class="center" width="450px">}}
 
 {{% alert theme="info" %}}
-`Little hint:` if Windows complains that `pip` command is not found on the system, this means that you have forgotten to add Python to the PATH as explained above.
+If Windows complains that `pip` command is not found on the system, this means that you have forgotten to add Python to the PATH as explained above.
 {{% /alert %}}
 
 When installation is complete the window looks line on screenshot below.
@@ -101,7 +101,7 @@ python C:/BornAgain-{{< release-string >}}/Examples/python/simulation/ex01_Basic
 
 {{< figscg src="python-install-step7.PNG" class="center" width="450px">}}
 
-This implies, that BornAgain was installed to default place. If not, you will have to adjust path to BornAgain Python example accordingly.
+The used path implies, that BornAgain was installed to default location. If it was not the case, you will have to adjust path to BornAgain Python example accordingly.
 
 {{% alert theme="info" %}}
 `Little hint:` while typing long commands in command shell you can push `TAB` keyboard key - the Windows will help with long directory names.

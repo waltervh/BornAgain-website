@@ -16,7 +16,12 @@ The BornAgain graphical user interface doesn't require any additional libraries 
 
 The BornAgain installation package for Windows 7, 8 and 10 can be downloaded from [here]({{% relref "download#Windows" %}}). 
 
-There are several installers provided for various Python distributions. We recommend users to install BornAgain intended for latest Python {{% recommended-python %}} version.
+There are several installers provided for various Python distributions. 
+
+{{% alert theme="info" %}}
+We recommend users to install BornAgain intended for latest Python {{% recommended-python %}} version, as support for BornAgain with Python2 might be dropped in the future.
+{{% /alert %}}
+
 After downloading the installer, double click the `.exe` file and follow the instructions on the screen.
 
 {{< figscg src="/img/bornagainapp_32.png" class="float-left">}} Use BornAgain icon located on the desktop to start GUI.
@@ -39,7 +44,7 @@ step-by-step instruction.
 {{% collapse title="For advanced users" id="advanced-users" %}}
 Advanced users might find easier (and much faster) to install Python directly from their <a href="https://www.python.org/downloads">main website</a>
 and then install necessary dependencies `matplotlib` and `numpy` from command line.
-+ Please follow our [Manual Python installation]({{% relref "documentation/getting-started/installation/windows/python-original" %}}) instruction.
+> Please follow our [Manual Python installation]({{% relref "documentation/getting-started/installation/windows/python-original" %}}) instruction.
 {{% /collapse %}}
 
 ### Troubleshooting

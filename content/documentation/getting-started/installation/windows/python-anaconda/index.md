@@ -81,7 +81,7 @@ python C:/BornAgain-{{< release-string >}}/Examples/python/simulation/ex01_Basic
 
 {{< figscg src="anaconda-running-step3.PNG" class="center" width="450px">}}
 
-This implies, that BornAgain was installed to default place. If not, you will have to adjust path to BornAgain Python example accordingly.
+The used path implies, that BornAgain was installed to default location. If it was not the case, you will have to adjust path to BornAgain Python example accordingly.
 
 {{% alert theme="info" %}}
 `Little hint:` while typing long commands in command shell you can push `TAB` keyboard key - the Windows will help with long directory names.
@@ -102,7 +102,7 @@ the navigator.
 Anaconda navigator is important component of Anaconda eco-system. In given example it is not only starts `VSCode` editor, but also defines correct environment variables to make `VSCode` correctly working in `conda` environment.
 
 {{% alert theme="info" %}}
-`Little hint:` always use `Anaconda navigator` to start `VSCode` in correct environment.
+Always use `Anaconda navigator` to start `VSCode` in correct environment.
 {{% /alert %}}
 
 ### Add BornAgain examples to VSCode
