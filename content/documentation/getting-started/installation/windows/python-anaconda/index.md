@@ -91,7 +91,7 @@ This kind of manual launching is not very convenient for regular usage and shoul
 
 ### Running BornAgain examples using VSCode editor
 
-To start BornAgain scripts in convenient manner, one have to use one of Python integrated development environments (Spyder, PyCharm, VSCode). 
+To run BornAgain scripts in convenient manner, one have to use one of Python integrated development environments (Spyder, PyCharm, VSCode). 
 Our own choice is to use VSCode - light weighted by powerful community editor from Microsoft. 
 
 To run VSCode editor one have to start it using `Anaconda navigator`. Start `Anaconda navigator` from Windows start menu, and then start `VSCode` editor from

@@ -49,7 +49,7 @@ In new opened window type
 pip install matplotlib numpy
 ```
 
-'Pip' is a package manager which is used in Python world to add all necessary packages to default Python installation.
+`Pip` is a package manager which is used in Python world to add necessary packages to default Python installation.
 The command `pip install matplotlib numpy` starts installation of `matplotlib` library for plotting and `numpy` library for matrix manipulation.
 
 {{< figscg src="python-install-step4.PNG" class="center" width="450px">}}

@@ -1,5 +1,5 @@
 +++
-title = "Using PyCharm integrated development environment"
+title = "PyCharm integrated development environment"
 weight = 20
 +++
 
