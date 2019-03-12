@@ -79,7 +79,7 @@ on a system. Setup for multiple Python's versions on a system goes far beyond th
 
 To validate that BornAgain is working together with installed Python 
 start Windows command shell by typing `cmd` in Windows `Start menu`.
-To validate BornAgain installation type in
+To validate BornAgain installation type 
 
 + `python` to start Python interpreter
 + `import bornagain` as a first command
