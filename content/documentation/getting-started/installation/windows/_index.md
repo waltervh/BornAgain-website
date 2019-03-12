@@ -32,7 +32,8 @@ and for most users the easiest way to install it is to download one of the free 
 The list of possible options is given on the [SciPy installation website](http://www.scipy.org/install.html).
 
 For unexperienced users we recommend [Anaconda Python Distribution](http://www.anaconda.com) as all-in-one installer.
-Please follow our [Install Python with Anaconda installer]({{% relref "documentation/getting-started/installation/windows/python-anaconda" %}})
+
++ Please follow [Install Python with Anaconda installer]({{% relref "documentation/getting-started/installation/windows/python-anaconda" %}})
 step-by-step instruction.
 
 {{% collapse title="For advanced users" id="advanced-users" %}}

@@ -41,7 +41,7 @@ An editor provides Python code highlight and is extremely handy in Python code d
 
 {{< figscg src="anaconda-install-step5.PNG" class="center" width="450px">}}
 
-Push the button "Install Microsoft VSCode" and after installation is complete you are basically done.
+Push the button `Install Microsoft VSCode` and after installation is complete you are basically done.
 
 {{< figscg src="anaconda-install-step6.PNG" class="center" width="450px">}}
 
@@ -55,8 +55,8 @@ to have correct Python set up. Please see below.
 
 ### Validate Anaconda + BornAgain installation
 
-To validate that BornAgain is working together with installed Anaconda launch "Anaconda command prompt" from Start menu.
-Just click "Start menu" and start to type "Anaconda..." unless "Anaconda command prompt" appears in options.
+To validate that BornAgain is working together with installed Anaconda launch `Anaconda command prompt` from Start menu.
+Just click `Start menu` and start to type `Anaconda...` unless `Anaconda command prompt` appears in options.
 
 {{< figscg src="anaconda-running-step1.PNG" class="center" width="450px">}}
 
@@ -72,7 +72,7 @@ If no errors will come up, and you even see BornAgain version number printed on 
 
 ### Running BornAgain examples
 
-To run BornAgain example from command line launch "Anaconda command prompt" and
+To run BornAgain example from command line launch `Anaconda command prompt` and
 type (or copy-and-paste) command as below to see scattering image appearing on the screen.
 
 ```
@@ -91,8 +91,8 @@ This kind of manual launching is not very convenient for regular usage and shoul
 
 ### Running BornAgain examples using VSCode editor
 
-To run BornAgain scripts in convenient manner, one have to use one of Python integrated development environments (Spyder, PyCharm, VSCode). 
-Our own choice is to use VSCode - light weighted by powerful community editor from Microsoft. 
+To run BornAgain scripts in convenient manner, one have to use one of Python integrated development environments (`Spyder`, `PyCharm`, `VSCode`). 
+Our own choice is to use `VSCode` - light weighted by powerful community editor from Microsoft. 
 
 To run VSCode editor one have to start it using `Anaconda navigator`. Start `Anaconda navigator` from Windows start menu, and then start `VSCode` editor from
 the navigator.

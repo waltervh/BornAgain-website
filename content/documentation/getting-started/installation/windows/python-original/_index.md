@@ -16,13 +16,13 @@ easier and less messy, than Python installation using Anaconda explained [here](
 
 Download and install Python {{% recommended-python %}} 64-bit version from [official site](https://www.python.org/download). 
 
-This is actually the most complicated step since
+This is actually the most complicated step since the
 default download button leads to download of 32-bit version which will not work with BornAgain.
-To download correct version, click on `Windows` link marked on screenshot above.
+To download correct version, click on `Windows` link marked on screenshot below.
 
 {{< figscg src="python-download1.PNG" class="center" width="450px">}}
 
-On new page you will find list of `Windows` installers, select `Windows x86-64 executable installer". Make sure that you are in
+On new page you will find list of `Windows` installers, select `Windows x86-64 executable installer`. Make sure that you are in
 the section corresponding to Python {{% recommended-python %}}.
 
 {{< figscg src="python-download2.PNG" class="center" width="450px">}}
