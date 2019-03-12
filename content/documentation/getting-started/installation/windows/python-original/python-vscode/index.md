@@ -20,19 +20,21 @@ Download editor from [official website](https://code.visualstudio.com).
 
 ### Add BornAgain examples to VSCode
 
-Start `VSCode` and you will find out yourself  on welcome screen.
+Start `VSCode` and you will find yourself  on welcome screen.
 
 Add a folder with BornAgain Python examples to a workspace
 by clicking `Add workspace folder` as shown in screenshot below.
 
 {{< figscg src="../../python-anaconda/anaconda-running-step5-vscode.PNG" class="center" width="450px">}}
 
-Choose directory with BornAgain python examples at `C:/BornAgain-{{< release-string >}}/Examples/python`.
-Open any example, `VSCode` will require to configure Python interpreter to use. 
+Choose directory with BornAgain Python examples at `C:/BornAgain-{{< release-string >}}/Examples/python`.
+Open any example, `VSCode` will require to configure Python interpreter to use. In screenshot below, `VSCode` is complaining 
+that no Python interpreter was selected and also suggests to install so-called `pylint` plugin for better code development experience.
 
 {{< figscg src="python-code-step2.PNG" class="center" width="450px">}}
 
-Click on `Select Python Interpreter` and select your Python interpreter to use.
+Click on `Select Python Interpreter` and select the interpreter you have installed previously. Install `pylint` too.
+On screenshot below `VSCode` is fully configured and ready for work.
 
 {{< figscg src="python-code-step3.PNG" class="center" width="450px">}}
 
@@ -44,4 +46,5 @@ Script will be executed in terminal embedded in `VSCode`, scattering image will 
 
 {{< figscg src="../../python-anaconda/anaconda-running-step8-vscode.PNG" class="center" width="450px">}}
 
+Now you can select other BornAgain Python examples, run them one-by-one and so start your exciting journey in Python scripting with BornAgain.
 

@@ -38,7 +38,7 @@ Adding Python to a PATH is important step to be able to use Python from the comm
 
 ## Install site packages
 
-BornAgain required `matplotlib` and `numpy` installed in site-packages of your Python distribution.
+BornAgain requires `matplotlib` and `numpy` installed in site-packages of your Python distribution.
 Start Windows command shell by typing `cmd` in Windows `Start menu`.
 
 {{< figscg src="python-install-step3.PNG" class="center" width="450px">}}
@@ -49,7 +49,7 @@ In new opened window type
 pip install matplotlib numpy
 ```
 
-`Pip` is a package manager which is used in Python world to add necessary packages to default Python installation.
+`Pip` is a package manager which is used in Python world to add necessary packages to existing Python installation.
 The command `pip install matplotlib numpy` starts installation of `matplotlib` library for plotting and `numpy` library for matrix manipulation.
 
 {{< figscg src="python-install-step4.PNG" class="center" width="450px">}}
@@ -111,7 +111,7 @@ This kind of manual launching is not very convenient for regular usage and shoul
 
 ### Running BornAgain examples using Python IDE
 
-We have provide two more step-by-step tutorials to explain how to run BornAgain examples in convenient manner using one of integrated development environments.
+We have provided two more step-by-step tutorials to explain how to run BornAgain examples in convenient manner using one of integrated development environments.
 
 + [Using VSCode editor]({{% relref "documentation/getting-started/installation/windows/python-original/python-vscode" %}})
 + [Using PyCharm integrated development environment]({{% relref "documentation/getting-started/installation/windows/python-original/python-pycharm" %}})
