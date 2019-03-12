@@ -1,9 +1,9 @@
 +++
-title = "Install Python with Anaconda installer"
+title = "Install Python with Anaconda installer (recommended)"
 weight = 10
 +++
 
-## Install Python with Anaconda installer
+## Install Python with Anaconda installer (recommended)
 
 In this tutorial we explain how to install Python together with all possible science-related packages
 using Anaconda Python distribution and how to run BornAgain in `conda` environment.
