@@ -68,7 +68,7 @@ This can be done by running the `bornagain_install_python.py` script from the ap
 $ python /Applications/BornAgain.app/Contents/libexec/BornAgain-{{< release-string-short >}}/bornagain_python_install.py
 ```
 
-During the execution of the scipt, just select the default options by pressing the enter key.
+During the execution of the script, just select the default options by pressing the enter key.
 This script will install the BornAgain libraries into the site-packages of the given Python interpreter.
 
 Now check that the installation went successfully by typing
