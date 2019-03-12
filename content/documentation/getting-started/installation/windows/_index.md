@@ -39,6 +39,13 @@ step-by-step instruction.
 {{% collapse title="For advanced users" id="advanced-users" %}}
 Advanced users might find easier (and much faster) to install Python directly from their <a href="https://www.python.org/downloads">main website</a>
 and then install necessary dependencies `matplotlib` and `numpy` from command line.
-Please follow our [Manual Python installation]({{% relref "documentation/getting-started/installation/windows/python-original" %}}) instruction.
++ Please follow our [Manual Python installation]({{% relref "documentation/getting-started/installation/windows/python-original" %}}) instruction.
 {{% /collapse %}}
+
+### Troubleshooting
+
+If you are experiencing problems while running BornAgain Python scripts please refer to the following tutorial.
+
++ [Python troubleshooting]({{% relref "documentation/getting-started/installation/windows/python-troubleshooting" %}}).
+
 
