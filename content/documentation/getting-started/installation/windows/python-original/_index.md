@@ -112,3 +112,6 @@ This kind of manual launching is not very convenient for regular usage and shoul
 ### Running BornAgain examples using Python IDE
 
 We have provide two more step-by-step tutorials to explain how to run BornAgain examples in convenient manner using one of integrated development environments.
+
++ [Using VSCode editor]({{% relref "documentation/getting-started/installation/windows/python-original/python-vscode" %}})
++ [Using PyCharm integrated development environment]({{% relref "documentation/getting-started/installation/windows/python-original/python-pycharm" %}})
