@@ -11,13 +11,12 @@ The BornAgain graphical user interface doesn't require any additional libraries 
 
 * [Use the BornAgain installer](#use-the-bornagain-installer)
 * [Install Python](#install-python")
-* [Test the installation](#test-the-installation)
 
 ### Use the BornAgain installer
 
 The BornAgain installation package for Windows 7, 8 and 10 can be downloaded from [here]({{% relref "download#Windows" %}}). 
 
-There are several installers provided for various Python distributions. We recommend users to install BornAgain intended for latest Python 3.7 version.
+There are several installers provided for various Python distributions. We recommend users to install BornAgain intended for latest Python {{% recommended-python %}} version.
 After downloading the installer, double click the `.exe` file and follow the instructions on the screen.
 
 {{< figscg src="/img/bornagainapp_32.png" class="float-left">}} Use BornAgain icon located on the desktop to start GUI.

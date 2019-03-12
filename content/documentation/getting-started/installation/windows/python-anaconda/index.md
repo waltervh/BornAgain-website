@@ -18,7 +18,7 @@ Please make sure, that
 + your Anaconda Python version major number is the same as version of Python specified in BornAgain installer name.
 
 That means, that for BornAgain installed using installer with the name `{{% installer-win-name "3.7" %}}` 
-you need `Anaconda Python 3.7 64-Bit version`.
+you need `Anaconda Python {{% recommended-python %}} 64-Bit version`.
 
 {{< figscg src="anaconda-install-step0.PNG" class="center" width="450px" caption="Anaconda website download page">}}
 
