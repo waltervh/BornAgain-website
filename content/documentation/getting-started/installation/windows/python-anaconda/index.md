@@ -24,8 +24,6 @@ you need `Anaconda Python {{% recommended-python %}} 64-Bit version`.
 
 ### Run Anaconda installer
 
-Run Anaconda installer as usual. Agree with default settings.
-
 {{< figscg src="anaconda-install-step1.PNG" class="center" width="450px" caption="Run installer as usual">}}
 
 {{< figscg src="anaconda-install-step2.PNG" class="center" width="450px" caption="Agree with installation just-for-you">}}
@@ -33,6 +31,8 @@ Run Anaconda installer as usual. Agree with default settings.
 {{< figscg src="anaconda-install-step3.PNG" class="center" width="450px" caption="Agree with default installation folder">}}
 
 {{< figscg src="anaconda-install-step4.PNG" class="center" width="450px" caption="Agree with advanced options defaults">}}
+
+Push `Install` button, that will start lengthy installation process.
 
 ### Select to install VS code editor
 
@@ -44,6 +44,14 @@ An editor provides Python code highlight and is extremely handy in Python code d
 Push the button "Install Microsoft VSCode" and after installation is complete you are basically done.
 
 {{< figscg src="anaconda-install-step6.PNG" class="center" width="450px">}}
+
+{{% alert theme="info" %}}
+In this scenario you have installed Anaconda to your local home directory and you didn't change
+any system variables. This approach has the advantage that you can't break any other software and/or Python installations existing on your system.
+
+The disadvantage is that your Anaconda is not integrated with Windows installation. You will have to use `Anaconda command prompt` and `Anaconda navigator`
+to have correct Python set up. Please see below.
+{{% /alert %}}
 
 ### Validate Anaconda + BornAgain installation
 
@@ -71,15 +79,15 @@ type (or copy-and-paste) command as below to see scattering image appearing on t
 python C:/BornAgain-{{< release-string >}}/Examples/python/simulation/ex01_BasicParticles/CylindersAndPrisms.py
 ```
 
-
-
 {{< figscg src="anaconda-running-step3.PNG" class="center" width="450px">}}
 
-Of course, this kind of manual launching is not very convenient for regular usage and should be considered rather as yet another validation step.
+This implies, that BornAgain was installed to default place. If not, you will have to adjust path to BornAgain Python example accordingly.
 
 {{% alert theme="info" %}}
 `Little hint:` while typing long commands in command shell you can push `TAB` keyboard key - the Windows will help with long directory names.
 {{% /alert %}}
+
+This kind of manual launching is not very convenient for regular usage and should be considered rather as yet another validation step.
 
 ### Running BornAgain examples using VSCode editor
 
