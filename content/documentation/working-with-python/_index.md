@@ -14,10 +14,4 @@ The user creates a Python script with a sample description and simulation settin
 At this point we assume that the framework is installed as explained in the 
 [Installation instructions]({{% relref "documentation/getting-started/installation" %}}) and that the user is able to run Python examples from the installation directory.  In the next sections we go through a complete example of simulation and fitting using BornAgain.
 
-{{% alert theme="info" %}}
-For whose users who are making their first steps in Scientific Computing with Python and who are looking for a good Python editor we recommend 
-[PyCharm](https://www.jetbrains.com/pycharm/) - free, lightweight, multi-platform IDE for Python development.
-{{% /alert %}}
-
-
 {{% children %}}
