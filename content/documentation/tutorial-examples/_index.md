@@ -39,41 +39,41 @@ This section presents BornAgain simulations of various model systems. All Python
 
 #### Embedded particles
 
-{{% examples-preview "documentation/sample-models/embedded-particles" %}}
+{{% examples-preview "documentation/tutorial-examples/embedded-particles" %}}
 
 #### Layered structures
 
-{{% examples-preview "documentation/sample-models/layered-structures" %}}
+{{% examples-preview "documentation/tutorial-examples/layered-structures" %}}
 
 #### Interference functions
 
-{{% examples-preview "documentation/sample-models/interference-functions" %}}
+{{% examples-preview "documentation/tutorial-examples/interference-functions" %}}
 
 #### Complex shapes
 
-{{% examples-preview "documentation/sample-models/complex-shapes" %}}
+{{% examples-preview "documentation/tutorial-examples/complex-shapes" %}}
 
 #### Beam and detector
 
-{{% examples-preview "documentation/sample-models/beam-and-detector" %}}
+{{% examples-preview "documentation/tutorial-examples/beam-and-detector" %}}
 
 #### Reflectometry
 
-{{% examples-preview "documentation/sample-models/reflectometry" %}}
+{{% examples-preview "documentation/tutorial-examples/reflectometry" %}}
 
 #### Fitting
 
-{{% examples-preview "documentation/sample-models/fitting" %}}
+{{% examples-preview "documentation/tutorial-examples/fitting" %}}
 
 **Basic**
-{{% examples-preview "documentation/sample-models/fitting/basic" %}}
+{{% examples-preview "documentation/tutorial-examples/fitting/basic" %}}
 
 **Advanced**
-{{% examples-preview "documentation/sample-models/fitting/advanced" %}}
+{{% examples-preview "documentation/tutorial-examples/fitting/advanced" %}}
 
 **Extended**
-{{% examples-preview "documentation/sample-models/fitting/extended" %}}
+{{% examples-preview "documentation/tutorial-examples/fitting/extended" %}}
 
 #### Miscellaneous
 
-{{% examples-preview "documentation/sample-models/miscellaneous" %}}
+{{% examples-preview "documentation/tutorial-examples/miscellaneous" %}}

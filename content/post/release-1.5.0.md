@@ -36,10 +36,10 @@ During this release we have worked on preparing the implementation of fitting in
 
 **New examples:**
 
-1. [Rectangular detector]({{< relref "documentation/sample-models/beam-and-detector/rectangular-detector/index.md" >}})
-1. [Real life fit example: experiment at GALAXI]({{< relref "documentation/sample-models/fitting/extended/experiment-at-galaxi/index.md" >}})
-1. [Accessing simulation results]({{< relref "documentation/sample-models/miscellaneous/accessing-simulation-results/index.md" >}})
-1. [Plotting with axes in different units]({{< relref "documentation/sample-models/miscellaneous/axes-in-different-units/index.md" >}})
+1. [Rectangular detector]({{< relref "documentation/tutorial-examples/beam-and-detector/rectangular-detector/index.md" >}})
+1. [Real life fit example: experiment at GALAXI]({{< relref "documentation/tutorial-examples/fitting/extended/experiment-at-galaxi/index.md" >}})
+1. [Accessing simulation results]({{< relref "documentation/tutorial-examples/miscellaneous/accessing-simulation-results/index.md" >}})
+1. [Plotting with axes in different units]({{< relref "documentation/tutorial-examples/miscellaneous/axes-in-different-units/index.md" >}})
 
 **API changes:**
 

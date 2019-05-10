@@ -225,10 +225,10 @@ The following image should be displayed on the screen
 
 Further examples of specular simulations with `BornAgain` can be found on the following pages:
 
-* [specular signal from a rough sample]({{% relref "documentation/sample-models/reflectometry/specular-simulation-with-roughness/index.md" %}})
-* [beam footprint correction]({{% relref "documentation/sample-models/reflectometry/footprint-correction/index.md" %}})
-* [beam divergence in specular simulations]({{% relref "documentation/sample-models/reflectometry/beam-divergence/index.md" %}})
-* [fitting reflectometry data]({{% relref "documentation/sample-models/fitting/extended/fit-specular-data/index.md" %}})
+* [specular signal from a rough sample]({{% relref "documentation/tutorial-examples/reflectometry/specular-simulation-with-roughness/index.md" %}})
+* [beam footprint correction]({{% relref "documentation/tutorial-examples/reflectometry/footprint-correction/index.md" %}})
+* [beam divergence in specular simulations]({{% relref "documentation/tutorial-examples/reflectometry/beam-divergence/index.md" %}})
+* [fitting reflectometry data]({{% relref "documentation/tutorial-examples/fitting/extended/fit-specular-data/index.md" %}})
 
 ### Complete script
 

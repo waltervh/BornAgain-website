@@ -5,11 +5,11 @@ weight = 60
 
 ### Fitting
 
-[Basic examples]({{% relref "documentation/sample-models/fitting/basic" %}})
-{{% examples-preview "documentation/sample-models/fitting/basic" %}}
+[Basic examples]({{% relref "documentation/tutorial-examples/fitting/basic" %}})
+{{% examples-preview "documentation/tutorial-examples/fitting/basic" %}}
 
-[Advanced examples]({{% relref "documentation/sample-models/fitting/advanced" %}})
-{{% examples-preview "documentation/sample-models/fitting/advanced" %}}
+[Advanced examples]({{% relref "documentation/tutorial-examples/fitting/advanced" %}})
+{{% examples-preview "documentation/tutorial-examples/fitting/advanced" %}}
 
-[Extended examples]({{% relref "documentation/sample-models/fitting/extended" %}})
-{{% examples-preview "documentation/sample-models/fitting/extended" %}}
+[Extended examples]({{% relref "documentation/tutorial-examples/fitting/extended" %}})
+{{% examples-preview "documentation/tutorial-examples/fitting/extended" %}}
