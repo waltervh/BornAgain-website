@@ -1,5 +1,5 @@
 +++
-title = "Sample model reference"
+title = "Tutorial examples"
 weight = 50
 +++
 
