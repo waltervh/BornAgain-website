@@ -1,5 +1,5 @@
 +++
-title = "Using Graphical User Interface"
+title = "Using the Graphical User Interface"
 weight = 30
 +++
 
