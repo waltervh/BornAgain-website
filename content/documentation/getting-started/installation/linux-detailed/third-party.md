@@ -14,14 +14,14 @@ Required software:
 * `gsl (GNU scientific library, >= 1.15)`
 * `libtiff library (>=4.0.2)`
 * `python3, python3-devel, python3-numpy, python3-matplotlib`
-* `Qt5 (>=5.4)`
+* `Qt5 (>=5.4; required modules are listed below)`
 
 All required packages can be easily installed on most Linux distributions using the system's package manager. Below are a few examples for several selected operating systems. Please note, that other distributions (Fedora, Mint, etc) may have different commands for invoking the package manager and slightly different names of packages (like `boost` instead of `libboost` etc). Besides that, the installation should be very similar.
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="OperationSystemTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#Ubuntu" role="tab" aria-controls="ubuntu" aria-selected="true">Ubuntu</a>
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#Ubuntu" role="tab" aria-controls="ubuntu" aria-selected="true">Debian/Ubuntu</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#OpenSuse" role="tab" aria-controls="opensuse" aria-selected="false">OpenSuse</a>
