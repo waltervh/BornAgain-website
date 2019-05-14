@@ -1,6 +1,6 @@
 +++
 title = "Minimizer settings"
-weight = 30
+weight = 40
 +++
 
 ## Minimizer settings
@@ -61,7 +61,7 @@ of `lmfit` package.
 
 ### List of available minimization algorithms
 
-The BornAgain minimizer is a wrapper around a variety of minimization engines 
+The BornAgain minimizer is a wrapper around a variety of minimization engines
 from [ROOT](https://root.cern.ch) and [GSL](https://www.gnu.org/software/gsl/doc/html/index.html) libraries.
 They are listed in the table below. By default, `Minuit2/Migrad` will be used and no additional configuration needs to be done.
 
@@ -112,84 +112,84 @@ print(ba.MinimizerFactory().catalogueDetailsToString())
   <div class="card card-body">
   ```
 --------------------------------------------------------------------------------
-Minuit2             | Minuit2 minimizer from ROOT library                              
+Minuit2             | Minuit2 minimizer from ROOT library
 --------------------------------------------------------------------------------
 Algorithm names
 Migrad              | Variable-metric method with inexact line search, best minimizer according to ROOT.
 Simplex             | Simplex method of Nelder and Meadh, robust against big fluctuations in objective function.
-Combined            | Combination of Migrad and Simplex (if Migrad fails).             
-Scan                | Simple objective function scan, one parameter at a time.         
+Combined            | Combination of Migrad and Simplex (if Migrad fails).
+Scan                | Simple objective function scan, one parameter at a time.
 Fumili              | Gradient descent minimizer similar to Levenberg-Margquardt, sometimes can be better than all others.
-Default algorithm   | Migrad                                                           
+Default algorithm   | Migrad
 
 Options
-Strategy            | 1    Minimization strategy (0-low, 1-medium, 2-high quality)     
-ErrorDef            | 1    Error definition factor for parameter error calculation     
-Tolerance           | 0.01 Tolerance on the function value at the minimum              
-Precision           | -1   Relative floating point arithmetic precision                
-PrintLevel          | 0    Minimizer internal print level                              
-MaxFunctionCalls    | 0    Maximum number of function calls                            
+Strategy            | 1    Minimization strategy (0-low, 1-medium, 2-high quality)
+ErrorDef            | 1    Error definition factor for parameter error calculation
+Tolerance           | 0.01 Tolerance on the function value at the minimum
+Precision           | -1   Relative floating point arithmetic precision
+PrintLevel          | 0    Minimizer internal print level
+MaxFunctionCalls    | 0    Maximum number of function calls
 
 --------------------------------------------------------------------------------
-GSLMultiMin         | MultiMin minimizer from GSL library                              
+GSLMultiMin         | MultiMin minimizer from GSL library
 --------------------------------------------------------------------------------
 Algorithm names
-SteepestDescent     | Steepest descent                                                 
-ConjugateFR         | Fletcher-Reeves conjugate gradient                               
-ConjugatePR         | Polak-Ribiere conjugate gradient                                 
-BFGS                | BFGS conjugate gradient                                          
-BFGS2               | BFGS conjugate gradient (Version 2)                              
-Default algorithm   | ConjugateFR                                                      
+SteepestDescent     | Steepest descent
+ConjugateFR         | Fletcher-Reeves conjugate gradient
+ConjugatePR         | Polak-Ribiere conjugate gradient
+BFGS                | BFGS conjugate gradient
+BFGS2               | BFGS conjugate gradient (Version 2)
+Default algorithm   | ConjugateFR
 
 Options
-PrintLevel          | 0    Minimizer internal print level                              
-MaxIterations       | 0    Maximum number of iterations                                
+PrintLevel          | 0    Minimizer internal print level
+MaxIterations       | 0    Maximum number of iterations
 
 --------------------------------------------------------------------------------
-GSLLMA              | Levenberg-Marquardt from GSL library                             
+GSLLMA              | Levenberg-Marquardt from GSL library
 --------------------------------------------------------------------------------
 Algorithm names
-Default             | Default algorithm                                                
+Default             | Default algorithm
 
 Options
-Tolerance           | 0.01 Tolerance on the function value at the minimum              
-PrintLevel          | 0    Minimizer internal print level                              
-MaxIterations       | 0    Maximum number of iterations                                
+Tolerance           | 0.01 Tolerance on the function value at the minimum
+PrintLevel          | 0    Minimizer internal print level
+MaxIterations       | 0    Maximum number of iterations
 
 --------------------------------------------------------------------------------
-GSLSimAn            | Simmulated annealing minimizer from GSL library                  
+GSLSimAn            | Simmulated annealing minimizer from GSL library
 --------------------------------------------------------------------------------
 Algorithm names
-Default             | Default algorithm                                                
+Default             | Default algorithm
 
 Options
-PrintLevel          | 0    Minimizer internal print level                              
-MaxIterations       | 100  Number of points to try for each step                       
-IterationsAtTemp    | 10   Number of iterations at each temperature                    
-StepSize            | 1    Max step size used in random walk                           
-k                   | 1    Boltzmann k                                                 
-t_init              | 50   Boltzmann initial temperature                               
-mu                  | 1.05 Boltzmann mu                                                
-t_min               | 0.1  Boltzmann minimal temperature                               
+PrintLevel          | 0    Minimizer internal print level
+MaxIterations       | 100  Number of points to try for each step
+IterationsAtTemp    | 10   Number of iterations at each temperature
+StepSize            | 1    Max step size used in random walk
+k                   | 1    Boltzmann k
+t_init              | 50   Boltzmann initial temperature
+mu                  | 1.05 Boltzmann mu
+t_min               | 0.1  Boltzmann minimal temperature
 
 --------------------------------------------------------------------------------
-Genetic             | Genetic minimizer from TMVA library                              
+Genetic             | Genetic minimizer from TMVA library
 --------------------------------------------------------------------------------
 Algorithm names
-Default             | Default algorithm                                                
+Default             | Default algorithm
 
 Options
-Tolerance           | 0.01 Tolerance on the function value at the minimum              
-PrintLevel          | 0    Minimizer internal print level                              
-MaxIterations       | 3    Maximum number of iterations                                
-PopSize             | 300  Population size                                             
-RandomSeed          | 0    Random seed                                                 
+Tolerance           | 0.01 Tolerance on the function value at the minimum
+PrintLevel          | 0    Minimizer internal print level
+MaxIterations       | 3    Maximum number of iterations
+PopSize             | 300  Population size
+RandomSeed          | 0    Random seed
 
 --------------------------------------------------------------------------------
-Test                | One-shot minimizer to test whole chain                           
+Test                | One-shot minimizer to test whole chain
 --------------------------------------------------------------------------------
 Algorithm names
-Default             | Default algorithm                                                
+Default             | Default algorithm
 ```
   </div>
 </div>

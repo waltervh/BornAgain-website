@@ -1,6 +1,6 @@
 +++
 title = "Experiment description"
-weight = 20
+weight = 37
 +++
 
 ## Experiment description
@@ -57,14 +57,14 @@ Then we define the position of the direct beam in local detector coordinates (i.
 {{< highlight python >}}
 
 detector_distance = 1730.0  # in mm
- 
+
 # position of direct beam in pixels, (0,0) corresponds to lower left corner of the image
 beam_xpos, beam_ypos = 597.1, 323.4  # in pixels
- 
+
 # position of direct beam in local detector coordinates
 u0 = beam_xpos*pixel_size  # in mm
 v0 = beam_ypos*pixel_size  # in mm
- 
+
 detector.setPerpendicularToDirectBeam(detector_distance, u0, v0)
 
 {{< /highlight >}}
@@ -74,7 +74,7 @@ and [Rectangular detector example]({{% ref-example "beam-and-detector/rectangula
 
 ### Setting the region of interest
 
-To speed-up the simulation and to avoid an influence from uninteresting areas on the fit flow it is often convenient to define a certain region of interest `roi`. In our example we set the `roi` to the rectangle with lower left corner coordinates (85.0, 70.0) and upper right corner coordinates (120.0, 92.0), where coordinates are expressed in native detector units 
+To speed-up the simulation and to avoid an influence from uninteresting areas on the fit flow it is often convenient to define a certain region of interest `roi`. In our example we set the `roi` to the rectangle with lower left corner coordinates (85.0, 70.0) and upper right corner coordinates (120.0, 92.0), where coordinates are expressed in native detector units
 (`mm` for `RectangularDetector`)
 
 ```python

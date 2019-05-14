@@ -1,6 +1,6 @@
 +++
 title = "Importing experimental data"
-weight = 10
+weight = 34
 +++
 
 ## Importing experimental data

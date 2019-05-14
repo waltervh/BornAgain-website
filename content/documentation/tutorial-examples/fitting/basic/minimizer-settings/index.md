@@ -21,7 +21,7 @@ print(ba.MinimizerFactory().catalogueDetailsToString())
 {{< /highlight >}}
 
 
-For more information, see the 
-[minimizer settings tutorial]({{% relref "documentation/working-with-python/fitting/fitting-highlights/minimizers/index.md" %}}).
+For more information, see the
+[minimizer settings tutorial]({{% relref "documentation/working-with-python/fitting/minimizers/index.md" %}}).
 
 {{% highlightfile file="/static/files/python/fitting-new/ex01_BasicExamples/minimizer_settings.py" language="python" %}}
