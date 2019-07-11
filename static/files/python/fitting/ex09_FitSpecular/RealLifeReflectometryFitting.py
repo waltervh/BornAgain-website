@@ -90,13 +90,15 @@ def create_simulation(arg_dict, bin_start, bin_end):
     Creates and returns specular simulation
     """
     simulation = ba.SpecularSimulation()
-    alpha_distr = ba.DistributionGaussian(0.0, arg_dict["divergence"])
+    scan = ba.AngularSpecScan(1.54 * ba.angstrom,
+                              get_real_data_axis(bin_start, bin_end))
     footprint = ba.FootprintFactorGaussian(arg_dict["footprint_factor"])
-    simulation.setBeamParameters(1.54 * ba.angstrom,
-                                 get_real_data_axis(bin_start, bin_end), footprint)
+    scan.setFootprintFactor(footprint)
+    simulation.setScan(scan)
     simulation.setBeamIntensity(arg_dict["intensity"])
+    alpha_distr = ba.DistributionGaussian(0.0, arg_dict["divergence"])
     simulation.addParameterDistribution("*/Beam/InclinationAngle", alpha_distr,
-                                         30, 3)
+                                        30, 3)
     return simulation
 
 
@@ -210,7 +212,7 @@ def run_fitting():
     print("Start preliminary fitting of experimental data:\n")
 
     preliminary_result = differential_evolution(objective_primary, bounds,
-                                                maxiter=20, popsize=10,
+                                                maxiter=20, popsize=60,
                                                 mutation=(0.5, 1.5),
                                                 disp=True, tol=1e-5)
 
@@ -227,7 +229,7 @@ def run_fitting():
 
     fine_tuning_result = differential_evolution(objective_fine, bounds,
                                                 fixed_args, maxiter=20,
-                                                popsize=10, mutation=(0.5, 1.5),
+                                                popsize=40, mutation=(0.5, 1.5),
                                                 disp=True, tol=1e-5)
 
     result = create_par_dict(*fixed_args, *fine_tuning_result.x)
