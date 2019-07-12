@@ -1,0 +1,1 @@
+/home/juan/Github/BornAgain-website/static/files/python/simulation/ex06_Reflectometry/BeamFullDivergence.py
