@@ -24,7 +24,7 @@ the experimental conditions are not covered by other software.
 For example, other softwares provide no, or limited, support for polarized SANS.
 Here, we show how such experiments can be simulated with BornAgain.
 
-The main difference between simulation GISAS and SAS in BornAgain is the presence
+The main difference between simulating GISAS and SAS in BornAgain is the presence
 of only a single layer in the multilayer object. This triggers the software to
 calculate the differential scattering cross section in the Born Approximation:
 
