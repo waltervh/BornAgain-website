@@ -12,9 +12,10 @@ While BornAgain is designed for GISAS experiments (using the Distorted Wave Born
 Approximation), it naturally also contains the regular (plane wave) Born Approximation.
 Accordingly, BornAgain can also simulate standard small-angle scattering (SAS).
 
-However, there are several other specialized SAS softwares available. Therefore
-we do not advertise BornAgain for analysing SAS experiments, and in general we do
-not provide user support for this application domain.
+However, there exist
+[several other specialized SAS softwares](http://smallangle.org/content/software).
+Therefore we do not advertise BornAgain for analysing SAS experiments,
+and in general we do not provide user support for this application domain.
 We rather recommend [SASView](https://www.sasview.org/),
 which is institutionally supported by the European Spallation Source,
 and was designated as standard SAS software in the European SINE2020 project.
