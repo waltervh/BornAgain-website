@@ -9,16 +9,20 @@ This example shows how to simulate polarized SANS with BornAgain, using the Born
 Approximation.
 
 While BornAgain is designed for GISAS experiments (using the Distorted Wave Born
-Approximation), it naturally also contains the Born Approximation, which is the
-default way of simulating SAS experiments. Many software packages support the
-simulation of SAS experiments and in particular, we support the use of
-[SASView](https://www.sasview.org/).
+Approximation), it naturally also contains the regular (plain wave) Born Approximation.
+Accordingly, BornAgain can also simulate standard small-angle scattering (SAS).
 
-However, when the sample geometry or the experimental conditions are outside the
-scope of a third party simulation software, users can try to simulate it with
-BornAgain. For example, polarized SANS is often not supported (or in a limited way)
-by other tools. Here, we show how those experiments could be simulated with
-BornAgain.
+However, there are several other specialized SAS softwares available. Therefore
+we do not advertise BornAgain for analysing SAS experiments, and in general we do
+not provide user support for this application domain.
+We rather recommend [SASView](https://www.sasview.org/)
+which is institutionally supported by the European Spallation Source,
+and was designated as standard SAS software in the European SINE2020 project.
+
+Yet BornAgain can be an appropriate choice in cases where the sample structure or
+the experimental conditions are not covered by other software.
+For example, other softwares provide no, or limited, support for polarized SANS.
+Here, we show how such experiments can be simulated with BornAgain.
 
 The main difference between simulation GISAS and SAS in BornAgain is the presence
 of only a single layer in the multilayer object. This triggers the software to
