@@ -9,7 +9,7 @@ This example shows how to simulate polarized SANS with BornAgain, using the Born
 Approximation.
 
 While BornAgain is designed for GISAS experiments (using the Distorted Wave Born
-Approximation), it naturally also contains the regular (plain wave) Born Approximation.
+Approximation), it naturally also contains the regular (plane wave) Born Approximation.
 Accordingly, BornAgain can also simulate standard small-angle scattering (SAS).
 
 However, there are several other specialized SAS softwares available. Therefore
