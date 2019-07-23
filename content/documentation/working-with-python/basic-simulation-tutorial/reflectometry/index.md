@@ -145,39 +145,36 @@ def get_sample():
 
 {{< highlight python >}}
 
-def get_simulation():
+def get_simulation(scan_size=500):
     """
     Defines and returns a specular simulation.
     """
     simulation = ba.SpecularSimulation()
-    simulation.setBeamParameters(
-      1.54 * angstrom, 500, 0.0 * deg, 2.0 * deg)
+    scan = ba.AngularSpecScan(1.54 * angstrom, scan_size,
+                              0.0 * deg, 2.0 * deg)
+    simulation.setScan(scan)
     return simulation
 
 {{< /highlight >}}
 
-In this code snippet we have defined the specular simulation with `SpecularSimuation()` command
-and also set beam parameters required to produce reflectometry curve. The latter is done with
+In this code snippet we have 1. initialized a reflectometry specular simulation with `ba.SpecularSimuation()`, 
+2. defined the type of scan to be used for the simulation, and 
+3. use that scan for the simulation just created. The general sintax to define a scan is:
 
 ```python
-<simulation>.setBeamParameters(wavelength, n_bins, angle_min, angle_max)
+scan = ba.AngularSpecScan(wavelength, n_bins, angle_min, angle_max)
+simulation.setScan(scan)
 ```
 
-Here `<simulation>` is the simulation object created with `SpecularSimulation` command,
-`wavelength` is obviously the wavelength of the incident beam (in nanometers by default),
-`angle_min` and `angle_max` --- minimum and maximum incident angle (in radians by default).
-Units of the input arguments can be adjusted by multiplying factors `deg`, `angstrom`, etc.
-`n_bins` defines the number of points uniformly distributed from `angle_min` to `angle_max`.
+where the `wavelength` of the incident beam is in nanometers;
+the initial and final angles to be swept by the beam, `angle_min` and `angle_max`, are in radians; 
+and `n_bins` defines the number of points to be uniformly sampled between `angle_min` and `angle_max`.
 
-By default the incident beam has unit intensity. If necessary it can be adjusted by using
+One can express the input arguments in degrees and angstroms via the conversion factors `ba.deg` and `ba.angstrom`.
 
-```python
-<simulation>.setBeamIntensity(value)
-```
-
-As opposed to `GISASSimulation` (see [GISAS simulation tutorial]({{% relref "documentation/working-with-python/basic-simulation-tutorial/gisas/index.md" %}})),
-`SpecularSimuation` does not imply separate definition of a detector. The result of
-the simulation is always the total reflected intensity versus the selected incident angles.
+Note that, as opposed to a `GISASSimulation`s (see [GISAS simulation tutorial]({{% relref "documentation/working-with-python/basic-simulation-tutorial/gisas/index.md" %}})),
+`SpecularSimuation`s do not need to define a detector. Their outcomes are always reflected intensities as
+function of the selected incident angles.
 
 ### Running the simulation and plotting the results
 
