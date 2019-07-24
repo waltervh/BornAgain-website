@@ -64,4 +64,6 @@ simulation.setAnalyzerProperties(analyzer_dir, 1.0, 0.5)
 
 The full example embeds the previously defined spherical particle inside the substrate and simulates the spin-flip channel along the z-axis.
 
+{{< figscg src="MagneticSpheres.png" width="500px" class="center" caption="The figure shows the intensity map produced by the script below." >}}
+
 {{< highlightfile file="MagneticSpheres.py">}}
