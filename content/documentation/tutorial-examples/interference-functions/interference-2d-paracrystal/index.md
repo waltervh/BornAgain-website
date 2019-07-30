@@ -1,5 +1,5 @@
 +++
-title = "Interference 2D Paracrystal"
+title = "2D Paracrystal"
 weight = 70
 +++
 

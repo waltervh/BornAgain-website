@@ -1,5 +1,5 @@
 +++
-title = "Cosine ripples on rectangular lattice"
+title = "Ripples on rectangular lattice"
 weight = 60
 +++
 

@@ -1,5 +1,5 @@
 +++
-title = "Interference 1D lattice"
+title = "1D lattice"
 weight = 10
 +++
 
