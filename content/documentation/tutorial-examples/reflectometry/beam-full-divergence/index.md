@@ -1,23 +1,23 @@
 +++
-title = "Beam divergence"
+title = "Beam Wavelength Spread"
 weight = 30
 +++
 
-### Beam divergence in specular simulations
+### Beam Wavelength Spread in Specular Simulations
 
-This example demonstrates beam divergence effects in reflectivity computations.
-All simulation parameters (except for ones related to beam divergence itself)
+This example demonstrates beam wavelength spread effects in reflectivity computations.
+All simulation parameters (except for those related to beam spread itself)
 coincide with those defined in
 [reflectometry simulation tutorial]({{% ref-tutorial "basic-simulation-tutorial/reflectometry" %}}).
 
-In application to specular simulation, the observed intensity picture can be affected
-by divergence either in beam wavelength or incident angle.
+In real specular experiments the observed reflectivity is always affected
+by the beam spread in both wavelength and incident angle.
 
 {{< galleryscg >}}
 {{< figscg src="BeamDivergence.png" width="500px" caption="Intensity image">}}
 {{< /galleryscg >}}
 
-In this example the following parameters related to the beam divergence were set to the simulation:
+In this example the following parameters related to the spread of the beam were set to the simulation:
 
 * Gaussian distributions both in wavelength and incident angle
 * The mean value for beam wavelength $\lambda_0 = 1.54 \, \unicode{x212B}$

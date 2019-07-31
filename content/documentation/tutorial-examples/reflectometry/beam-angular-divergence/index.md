@@ -1,11 +1,11 @@
 +++
-title = "Beam Angular Smearing"
+title = "Beam Angular Spread"
 weight = 30
 +++
 
-### Beam Angualr Smearing in Specular Simulations
+### Beam Angualr Spread in Specular Simulations
 
-This example demonstrates beam angular divergence effects in reflectivity computations.
+This example demonstrates beam angular spread effects in reflectivity computations.
 It also offers a comparison with data generated using another well known code: GenX.
 Further information about reflectometry simulations can be found in the
 [Reflectometry Simulation Tutorial]({{% ref-tutorial "basic-simulation-tutorial/reflectometry" %}}).
