@@ -55,16 +55,16 @@ The following PDF distributions are available
 
 # Fourier transform of Cauchy-Lorentzian
 FTDistribution2DCauchy(omega_x, omega_y, delta=0)
-  
+
 # Fourier transform of a Gaussian
 FTDistribution2DGauss(omega_x, omega_y, delta=0)
-  
+
 # Fourier transform of a gate distribution
 FTDistribution2DGate(omega_x, omega_y, delta=0)
-  
+
 # Fourier transform of a triangle distribution
 FTDistribution2DTriangle(omega_x, omega_y, delta=0)
-  
+
 # Fourier transform of a pseudo-Voigt distribution: eta*Gauss + (1-eta)*Cauchy
 FTDistribution2DVoigt(omega_x, omega_y, eta, delta=0)
 
@@ -102,7 +102,7 @@ Two convenience functions allow to create square and hexagonal paracrystals with
 
 # interference function of a square lattice
 InterferenceFunction2DParaCrystal.createSquare(lattice_constant, damping_length=0, domain_size1=0, domain_size2=0)
-  
+
 # interference function of a hexagonal lattice
 InterferenceFunction2DLattice.createHexagonal(lattice_constant, damping_length=0, domain_size1=0, domain_size2=0)
 
@@ -113,7 +113,7 @@ InterferenceFunction2DLattice.createHexagonal(lattice_constant, damping_length=0
 The computational kernel provides an automatic calculation of particle densities using the parameters of the 2D lattice. This means, that the user's settings of particle densities via the `ParticleLayout.setParticleDensity()` method (which is a required step in the case of a radial paracrystal interference  function) is ignored.
 Averaging over lattice rotation angle.
 
-The paracrystal 2D interference function can be averaged over all azimuthal angles $\xi$ using the `setIntegrationOverXi(True)` method. In this case the initial lattice rotation angle $\xi$, if set, will be ingnored and Monte-Carlo integration will be performed for $\xi$ in the range 0, 360 degrees. Averaging provides a convenient way of getting an isotropic interference function for the cost of bigger computational time.
+The paracrystal 2D interference function can be averaged over all azimuthal angles $\xi$ using the `setIntegrationOverXi(True)` method. In this case the initial lattice rotation angle $\xi$, if set, will be ingnored and numeric integration will be performed for $\xi$ in the range 0, 360 degrees. Averaging provides a convenient way of getting an isotropic interference function for the cost of bigger computational time.
 
 ### Complete example
 
@@ -126,7 +126,7 @@ cylinder = ba.Particle(material, ff)
 interference = ba.InterferenceFunction2DParaCrystal.createSquare(10.0*nm, 0.0, 20.0*micrometer, 20.0*micrometer)
 pdf = ba.FTDistribution2DCauchy(1.0*nm, 1.0*nm)
 nterference.setProbabilityDistributions(pdf, pdf)
- 
+
 particle_layout = ba.ParticleLayout()
 particle_layout.addParticle(cylinder, 1.0)
 particle_layout.setInterferenceFunction(interference)
