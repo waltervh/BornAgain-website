@@ -1,11 +1,11 @@
 +++
-title = "Interference function of two-dimensional lattice"
+title = "2D lattice"
 weight = 20
 +++
 
-## Interference function of two-dimensional lattice
+## Interference function of a 2D lattice
 
-The interference function of a 2D lattice is used to model the scattering from particles positioned at some regular intervals.
+The interference function of a two-dimensional lattice is used to model the scattering from particles positioned at some regular intervals.
 
 {{< figscg src="particles_at_lattice.jpg" width="600px" class="center">}}
 
@@ -42,7 +42,7 @@ Two convenience functions allow to create square and hexagonal interference func
 
 # interference function of a square lattice
 f = InterferenceFunction2DLattice.createSquare(25.0*nm, 45.0*deg)
- 
+
 # interference function of a hexagonal lattice
 f = InterferenceFunction2DLattice.createHexagonal(25.0*nm, 45.0*deg)
 
@@ -111,7 +111,7 @@ In the code below we collect together all the code required for the initializati
 interference = ba.InterferenceFunction2DLattice.createSquare(25.0*nm, 45.*deg)
 pdf = ba.FTDecayFunction2DCauchy(300.0*nm, 300.0*nm)
 interference.setDecayFunction(pdf)
-  
+
 ff = ba.FormFactorCylinder(3.*nm, 3.*nm)
 cylinder = ba.Particle(m_particle, ff)
 particle_layout = ba.ParticleLayout()

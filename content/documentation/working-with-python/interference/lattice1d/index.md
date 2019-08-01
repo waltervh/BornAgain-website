@@ -1,11 +1,11 @@
 +++
-title = "Interference function of one-dimensional lattice"
+title = "1D lattice"
 weight = 10
 +++
 
-## Interference function of one-dimensional lattice
+## Interference function of 1D lattice
 
-A one dimensional lattice can be viewed as a chain of particles placed at regular intervals on a single axis. The plot below represents one possible use case, where infinitely long (or very long) boxes are placed at nodes of a 1d lattice to form a grating.
+A one-dimensional lattice can be viewed as a chain of particles placed at regular intervals on a single axis. The plot below represents one possible use case, where infinitely long (or very long) boxes are placed at nodes of a 1d lattice to form a grating.
 
 {{< figscg src="particles_at_1d_latice.jpg" width="600px" class="center">}}
 
@@ -48,13 +48,13 @@ BornAgain supports four types of one-dimensional decay functions:
 
 # One-dimensional Cauchy decay function
 FTDecayFunction1DCauchy(decay_length)
- 
+
 # One-dimensional Gauss decay function
 FTDecayFunction1DGauss(decay_length)
- 
+
 # One-dimensional triangle decay function
 FTDecayFunction1DTriangle(decay_length)
- 
+
 # One-dimensional pseudo-Voigt decay function
 FTDecayFunction1DVoigt(decay_length, eta)
 
@@ -87,7 +87,7 @@ To achieve such a setup, the following code should be used.
 {{< highlight python >}}
 
 layout = ba.ParticleLayout()
- 
+
 box = ba.Particle(material, ba.FormFactorBox(10*nm, 1000*nm, 10*nm))
 layout.addParticle(box)
 layout.setInterferenceFunction(ba.InterferenceFunction1DLattice(40*nm))

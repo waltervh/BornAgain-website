@@ -1,5 +1,5 @@
 +++
-title = "Interference function of radial paracrystal"
+title = "Radial paracrystal"
 weight = 30
 +++
 
@@ -50,16 +50,16 @@ The following distributions are available
 
 # Fourier transform of Cauchy-Lorentzian
 FTDistribution1DCauchy(omega)
- 
+
 # Fourier transform of a Gaussian
 FTDistribution1DGauss(omega)
- 
+
 # Fourier transform of a gate distribution
 FTDistribution1DGate(omega)
- 
+
 # Fourier transform of a triangle distribution
 FTDistribution1DTriangle(omega)
- 
+
 # Fourier transform of a pseudo-Voigt distribution: eta*Gauss + (1-eta)*Cauchy
 FTDistribution1DVoigt(omega, eta)
 
@@ -98,7 +98,7 @@ interference = ba.InterferenceFunctionRadialParaCrystal(20.0*nm, 1e3*nm)
 pdf = ba.FTDistribution1DGauss(7 * nm)
 interference.setProbabilityDistribution(pdf)
 # interference.setDomainSize(10000*nm)
- 
+
 layout = ba.ParticleLayout()
 layout.addParticle(cylinder)
 layout.setInterferenceFunction(interference)
