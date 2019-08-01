@@ -50,6 +50,22 @@ f = InterferenceFunction2DLattice.createHexagonal(25.0*nm, 45.0*deg)
 
 Here two lattices are created, one square and one hexagonal, rotated with respect to the beam by $45^{\circ}$.
 
+### Position variance
+
+Position variance parameter `Var`, allows to introduce uncertainty for each particle position around lattice point 
+for each relevant lattice direction, by applying corresponding Debye-Waller factor.
+
+It can be set using `setPositionVariance(value)` method, where `value` is given in $nm^2$.
+
+{{< highlight python >}}
+
+lattice = InterferenceFunction1DLattice(100*nm, 0.0*deg)
+lattice.setPositionVariance(0.1)
+{{< /highlight >}}
+
+By default variance is set to zero.
+
+
 ### Decay function
 
 To account for finite size effects of the lattice, a decay function should be assigned to the interference function. This function encodes the loss of coherent scattering from lattice points with increasing distance between them. The origin of this loss of coherence could be attributed to the coherence lengths of the beam or to the domain structure of the lattice. The two-dimensional decay function allows for an anisotropy of this effect.
