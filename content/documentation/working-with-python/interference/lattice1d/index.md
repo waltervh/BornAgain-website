@@ -56,7 +56,7 @@ $\sum F\_{decay}\cdot\delta(x-na)$.
 
 {{< figscg src="lattice1d_decay_real.png" width="800px" class="center">}}
 
-Fourier transformation, applied to the $P(x)$ distribution, provides scattering amplitude in reciprocal space. For exponential decay low with decay length $\lambda$, 
+Fourier transformation, applied to the $P(x)$ distribution, provides scattering amplitude in reciprocal space. For exponential decay law with decay length $\lambda$, 
 as depicted on plot above, it will give Cauchy distribution with characteristic width $1/\lambda$ in reciprocal space, as shown below.
 
 {{< figscg src="lattice1d_decay_reciprocal.png" width="800px" class="center">}}
