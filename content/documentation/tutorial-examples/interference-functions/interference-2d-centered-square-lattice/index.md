@@ -1,5 +1,5 @@
 +++
-title = "Interference 2D centered square lattice"
+title = "2D centered square lattice"
 weight = 40
 +++
 

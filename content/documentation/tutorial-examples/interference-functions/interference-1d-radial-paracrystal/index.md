@@ -1,5 +1,5 @@
 +++
-title = "Interference 1D radial paracrystal"
+title = "1D radial paracrystal"
 weight = 80
 +++
 

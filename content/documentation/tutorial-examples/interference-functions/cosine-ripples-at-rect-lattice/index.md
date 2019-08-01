@@ -1,9 +1,9 @@
 +++
-title = "Cosine ripples on rectangular lattice"
+title = "Cosine ripples in a lattice"
 weight = 60
 +++
 
-### Cosine ripples on rectangular lattice
+### Cosine Ripples in a Rectangular Lattice
 
 Scattering from elongated particles distributed along a two-dimensional rectangular lattice.
 
