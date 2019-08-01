@@ -3,9 +3,9 @@ title = "1D lattice"
 weight = 10
 +++
 
-## Interference function of 1D lattice
+## Interference function of one-dimensional lattice
 
-A one-dimensional lattice can be viewed as a chain of particles placed at regular intervals on a single axis. The plot below represents one possible use case, where infinitely long (or very long) boxes are placed at nodes of a 1d lattice to form a grating.
+A one dimensional lattice can be viewed as a chain of particles placed at regular intervals on a single axis. The plot below represents one possible use case, where infinitely long (or very long) boxes are placed at nodes of a 1d lattice to form a grating.
 
 {{< figscg src="particles_at_1d_latice.jpg" width="600px" class="center">}}
 
@@ -31,9 +31,38 @@ xi       : rotation of the lattice with respect to the x-axis, in radians
 
 When the beam azimuthal angle $\varphi_f$ is zero, the beam direction coincides with x-axis. In this case, the $\xi$ angle can be considered as the lattice rotation with respect to the beam.
 
+### Position variance
+
+Position variance parameter `Var`, as depicted on top plot, allows to introduce uncertainty for each particle position around lattice point 
+by applying corresponding Debye-Waller factor.
+
+It can be set using `setPositionVariance(value)` method, where `value` is given in $nm^2$.
+
+{{< highlight python >}}
+
+lattice = InterferenceFunction1DLattice(100*nm, 0.0*deg)
+lattice.setPositionVariance(0.1)
+{{< /highlight >}}
+
+By default variance is set to zero.
+
 ### Decay function
 
-To account for finite size effects of the lattice, a decay function should be assigned to the interference function. This function encodes the loss of coherent scattering from lattice points with increasing distance between them. The origin of this loss of coherence could be attributed to the coherence length of the beam or to the domain structure of the lattice. A decay function can be set using the setDecayFunction(decay) method of the 1D interference function.
+To account for finite size effects of the lattice, a decay function should be assigned to the interference function. This function encodes the loss of coherent scattering from lattice points with increasing distance between them. The origin of this loss of coherence could be attributed to the coherence length of the beam or to the domain structure of the lattice. 
+
+On picture below one dimensional lattice is represented in real space as a probability function to find lattice point at given coordinate.
+In the presence of decay function attenuating constructive interference, probability can be given as
+$\sum F\_{decay}\cdot\delta(x-na)$.
+
+{{< figscg src="lattice1d_decay_real.png" width="800px" class="center">}}
+
+Fourier transformation, applied to the $P(x)$ distribution, provides scattering amplitude in reciprocal space. Exponential decay law in real space with the decay length $\lambda$ 
+will give Cauchy distribution with characteristic width $1/\lambda$ in reciprocal space, as shown below.
+
+{{< figscg src="lattice1d_decay_reciprocal.png" width="800px" class="center">}}
+
+A decay function can be set using the setDecayFunction(decay) method of the 1D interference function.
+
 
 {{< highlight python >}}
 
@@ -42,25 +71,31 @@ iff.setDecayFunction(FTDecayFunction1DCauchy(1000.0*nm))
 
 {{< /highlight >}}
 
-BornAgain supports four types of one-dimensional decay functions:
+### List of decay functions
 
-{{< highlight python >}}
+BornAgain supports four types of one-dimensional decay functions. 
 
-# One-dimensional Cauchy decay function
-FTDecayFunction1DCauchy(decay_length)
++ `FTDecayFunction1DCauchy(decay_length)`
 
-# One-dimensional Gauss decay function
-FTDecayFunction1DGauss(decay_length)
+One-dimensional Cauchy decay function in reciprocal space,
+corresponds to $exp(-|x|/\lambda)$ in real space.
 
-# One-dimensional triangle decay function
-FTDecayFunction1DTriangle(decay_length)
 
-# One-dimensional pseudo-Voigt decay function
-FTDecayFunction1DVoigt(decay_length, eta)
++ `FTDecayFunction1DGauss(decay_length)`
 
-{{< /highlight >}}
+One-dimensional Gauss decay function in reciprocal space,
+corresponds to $exp(-x^2/(2*\lambda^2))$ in real space.
 
-The parameter `decay_length`, given in nanometers, is used to set the characteristic length scale at which loss of coherence takes place. In the case of the pseudo-Voigt distribution an additional dimensionless parameter `eta` is used to balance between the Gaussian and Cauchy profiles.
++ `FTDecayFunction1DTriangle(decay_length)`
+
+One-dimensional triangle decay function in reciprocal space,
+corresponds to $1-|x|/\lambda$, if $|x|<\lambda$, in real space.
+
++ `FTDecayFunction1DVoigt(decay_length, eta)`
+
+One-dimensional pseudo-Voigt decay function in reciprocal space, corresponds to $eta*Gauss + (1-eta)*Cauchy$.
+
+The parameter $\lambda$ (decay length) is given in nanometers, it is used to set the characteristic length scale at which loss of coherence takes place. In the case of the pseudo-Voigt distribution an additional dimensionless parameter `eta` is used to balance between the Gaussian and Cauchy profiles.
 
 ### Particle Density
 
@@ -87,7 +122,7 @@ To achieve such a setup, the following code should be used.
 {{< highlight python >}}
 
 layout = ba.ParticleLayout()
-
+ 
 box = ba.Particle(material, ba.FormFactorBox(10*nm, 1000*nm, 10*nm))
 layout.addParticle(box)
 layout.setInterferenceFunction(ba.InterferenceFunction1DLattice(40*nm))
