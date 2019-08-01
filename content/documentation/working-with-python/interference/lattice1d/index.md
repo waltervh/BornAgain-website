@@ -1,5 +1,5 @@
 +++
-title = "Interference function of one-dimensional lattice"
+title = "1D lattice"
 weight = 10
 +++
 
@@ -51,13 +51,13 @@ By default variance is set to zero.
 To account for finite size effects of the lattice, a decay function should be assigned to the interference function. This function encodes the loss of coherent scattering from lattice points with increasing distance between them. The origin of this loss of coherence could be attributed to the coherence length of the beam or to the domain structure of the lattice. 
 
 On picture below one dimensional lattice is represented in real space as a probability function to find lattice point at given coordinate.
-In the presence of decay function, attenuating constructive interference, probability can be given as
+In the presence of decay function attenuating constructive interference, probability can be given as
 $\sum F\_{decay}\cdot\delta(x-na)$.
 
 {{< figscg src="lattice1d_decay_real.png" width="800px" class="center">}}
 
-Fourier transformation, applied to the $P(x)$ distribution, provides scattering amplitude in reciprocal space. For exponential decay law with decay length $\lambda$, 
-as depicted on plot above, it will give Cauchy distribution with characteristic width $1/\lambda$ in reciprocal space, as shown below.
+Fourier transformation, applied to the $P(x)$ distribution, provides scattering amplitude in reciprocal space. Exponential decay law in real space with the decay length $\lambda$ 
+will give Cauchy distribution with characteristic width $1/\lambda$ in reciprocal space, as shown below.
 
 {{< figscg src="lattice1d_decay_reciprocal.png" width="800px" class="center">}}
 

@@ -71,7 +71,7 @@ By default variance is set to zero.
 To account for finite size effects of the lattice, a decay function should be assigned to the interference function. This function encodes the loss of coherent scattering from lattice points with increasing distance between them. The origin of this loss of coherence could be attributed to the coherence lengths of the beam or to the domain structure of the lattice. The two-dimensional decay function allows for an anisotropy of this effect.
 
 Decay functions for one-dimensional case are explained [here]({{% ref-tutorial "interference/lattice1d" %}}). 
-Decay functions for two-dimensional case work similarly, but requires to `decay_length` parameters abd orientatiion defined.
+Decay functions for two-dimensional case work similarly, but requires two `decay_length` parameters abd orientatiion defined.
 
 $x_d$, $y_d$ on the plot below represent an orthonormal coordinate system for the decay distribution in real space. It is rotated by the angle gamma with respect to the first lattice vector $a$. The decay lengths $\lambda_x$ and $\lambda_y$ are given in nanometers.
 
